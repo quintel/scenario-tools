@@ -1,4 +1,11 @@
-SCENARIOS = {
+EXISTING_SCENARIOS = {
+    'regionaal': { 'id': '754910' },
+    'nationaal': { 'id': '754911' },
+    'europees': { 'id': '754912' },
+    'internationaal': { 'id': '754913' }
+}
+
+NEW_SCENARIOS = {
     '2030_example': {
         'title': f"Example scenario for TenneT (2030)",
         'area_code': 'nl',

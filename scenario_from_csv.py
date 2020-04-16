@@ -4,7 +4,7 @@ from pathlib import Path
 
 # project modules
 from ETM_API import ETM_API, SessionWithUrlBase
-from config import SCENARIOS
+from config import NEW_SCENARIOS as scenarios
 
 base_url = 'https://engine.energytransitionmodel.com/api/v3'
 model_url = 'https://pro.energytransitionmodel.com'
@@ -15,7 +15,7 @@ def read_user_values():
     path = Path(__file__).parent / 'data' / 'input' / 'user_values.csv'
     df = pd.read_csv(f'{path}')
 
-    for scenario_name, scenario_properties in SCENARIOS.items():
+    for scenario_name, scenario_properties in scenarios.items():
         user_values = dict(zip(df['input'], df[scenario_name]))
         scenario_properties['user_values'].update(user_values)
 
@@ -35,7 +35,7 @@ def export_electricity_curves(ETM, scenario_name, scenario_properties):
 
 read_user_values()
 
-for scenario_name, scenario_properties in SCENARIOS.items():
+for scenario_name, scenario_properties in scenarios.items():
     if not scenario_properties['id']:
         ETM = ETM_API(session)
 

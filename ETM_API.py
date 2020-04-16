@@ -18,6 +18,7 @@ class SessionWithUrlBase(requests.Session):
         super(SessionWithUrlBase, self).__init__(*args, **kwargs)
         self.url_base = url_base
 
+
     def request(self, method, url, **kwargs):
         modified_url = self.url_base + url
 
@@ -37,6 +38,7 @@ class ETM_API(object):
         self.session = session
         self.scenario_id = scenario_id
 
+
     def return_gqueries(self,p):
         """
         Extracts information from object p by first converting to JSON and
@@ -47,12 +49,6 @@ class ETM_API(object):
         df = pd.DataFrame.from_dict(p_gqueries, orient = "index")
         return df
 
-    def get_hourly_electricity_curves(self):
-        """
-        """
-        energy_flows = self.session.get(f"/scenarios/{self.scenario_id}/curves/merit_order").content
-        df = pd.read_csv(io.StringIO(energy_flows.decode('utf-8')))
-        return df
 
     def get_energy_flows(self):
         """
@@ -60,6 +56,74 @@ class ETM_API(object):
         energy_flows = self.session.get(f"/scenarios/{self.scenario_id}/energy_flow").content
         df = pd.read_csv(io.StringIO(energy_flows.decode('utf-8')))
         return df
+
+
+    def get_application_demands(self):
+        """
+        """
+        application_demands = self.session.get(f"/scenarios/{self.scenario_id}/application_demands").content
+        df = pd.read_csv(io.StringIO(application_demands.decode('utf-8')))
+        return df
+
+
+    def get_production_parameters(self):
+        """
+        """
+        production_parameters = self.session.get(f"/scenarios/{self.scenario_id}/production_parameters").content
+        df = pd.read_csv(io.StringIO(production_parameters.decode('utf-8')))
+        return df
+
+
+    def get_hourly_electricity_curves(self):
+        """
+        """
+        electricity_curves = self.session.get(f"/scenarios/{self.scenario_id}/curves/merit_order").content
+        df = pd.read_csv(io.StringIO(electricity_curves.decode('utf-8')))
+        return df
+
+
+    def get_hourly_electricity_price_curve(self):
+        """
+        """
+        electricity_price_curve = self.session.get(f"/scenarios/{self.scenario_id}/curves/electricity_price").content
+        df = pd.read_csv(io.StringIO(electricity_price_curve.decode('utf-8')))
+        return df
+
+
+    def get_hourly_household_heat_curves(self):
+        """
+        """
+        household_heat_curves = self.session.get(f"/scenarios/{self.scenario_id}/curves/household_heat").content
+        df = pd.read_csv(io.StringIO(household_heat_curves.decode('utf-8')))
+        return df
+
+
+    def get_hourly_gas_curves(self):
+        """
+        Get data export for hourly network gas curves
+        """
+        network_gas_curves = self.session.get(f"/scenarios/{self.scenario_id}/curves/network_gas").content
+        df = pd.read_csv(io.StringIO(network_gas_curves.decode('utf-8')))
+        return df
+
+
+    def get_hourly_hydrogen_curves(self):
+        """
+        Get data export for hourly hydrogen curves
+        """
+        hydrogen_curves = self.session.get(f"/scenarios/{self.scenario_id}/curves/hydrogen").content
+        df = pd.read_csv(io.StringIO(hydrogen_curves.decode('utf-8')))
+        return df
+
+
+    def get_hourly_heat_network_curves(self):
+        """
+        Get data export for hourly heat network curves
+        """
+        heat_network_curves = self.session.get(f"/scenarios/{self.scenario_id}/curves/heat_network").content
+        df = pd.read_csv(io.StringIO(heat_network_curves.decode('utf-8')))
+        return df
+
 
     def get_scenario_templates(self):
         """
@@ -70,6 +134,7 @@ class ETM_API(object):
         r = self.session.get("/scenarios/templates")
         self.df_templates = pd.DataFrame.from_dict(r.json())
         pass
+
 
     def create_new_scenario(self, scenario_title, area_code, end_year):
         """
@@ -91,6 +156,7 @@ class ETM_API(object):
         self.scenario_id = df_scenario.loc["id"].values[0]
         pass
 
+
     def reset_scenario(self):
         """
         Resets scenario with scenario_id
@@ -100,6 +166,7 @@ class ETM_API(object):
                                                 headers={'Connection':'close'})
         self.current_metrics = self.return_gqueries(p)
         pass
+
 
     def get_inputs(self):
         """
@@ -111,6 +178,7 @@ class ETM_API(object):
         self.df_inputs = pd.DataFrame.from_dict(p_json, orient = "index")
 
         pass
+
 
     def get_current_metrics(self, gquery_metrics):
         """
@@ -126,6 +194,7 @@ class ETM_API(object):
                                                 headers={'Connection':'close'})
         self.current_metrics = self.return_gqueries(p)
         return self.current_metrics
+
 
     def change_inputs(self, user_values):
         """
