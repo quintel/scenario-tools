@@ -6,18 +6,34 @@ EXISTING_SCENARIOS = {
 }
 
 NEW_SCENARIOS = {
-    '2030_example': {
-        'title': f"Example scenario for TenneT (2030)",
+    'II3050 Regionaal - Solar PV en Warmtenet fix -': {
+        'title': f"Aanpassingen gedaan op het scenario van Berenschot en Kalavasta",
         'area_code': 'nl',
-        'short_name': 'NL_2030_example_TenneT',
-        'end_year': '2030',
+        'short_name': 'NL_Regionaal_2050_fix',
+        'end_year': '2050',
         'id': None,
         'user_values': {}
     },
-    '2050_example': {
-        'title': f"Example scenario for TenneT (2050)",
+    'II3050 Nationaal - Solar PV en Warmtenet fix -': {
+        'title': f"Aanpassingen gedaan op het scenario van Berenschot en Kalavasta",
         'area_code': 'nl',
-        'short_name': 'NL_2050_example_TenneT',
+        'short_name': 'NL_Nationaal_2050_fix',
+        'end_year': '2050',
+        'id': None,
+        'user_values': {}
+    }
+    'II3050 Europees - Solar PV en Warmtenet fix -': {
+        'title': f"Aanpassingen gedaan op het scenario van Berenschot en Kalavasta",
+        'area_code': 'nl',
+        'short_name': 'NL_Europees_2050_fix',
+        'end_year': '2050',
+        'id': None,
+        'user_values': {}
+    }
+    'II3050 Internationaal - Solar PV en Warmtenet fix -': {
+        'title': f"Aanpassingen gedaan op het scenario van Berenschot en Kalavasta",
+        'area_code': 'nl',
+        'short_name': 'NL_Internationaal_2050_fix',
         'end_year': '2050',
         'id': None,
         'user_values': {}
