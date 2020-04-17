@@ -21,7 +21,7 @@ NEW_SCENARIOS = {
         'end_year': '2050',
         'id': None,
         'user_values': {}
-    }
+    },
     'II3050 Europees - Solar PV en Warmtenet fix -': {
         'title': f"Aanpassingen gedaan op het scenario van Berenschot en Kalavasta",
         'area_code': 'nl',
@@ -29,7 +29,7 @@ NEW_SCENARIOS = {
         'end_year': '2050',
         'id': None,
         'user_values': {}
-    }
+    },
     'II3050 Internationaal - Solar PV en Warmtenet fix -': {
         'title': f"Aanpassingen gedaan op het scenario van Berenschot en Kalavasta",
         'area_code': 'nl',
