@@ -214,3 +214,30 @@ class ETM_API(object):
         if p.status_code != requests.codes.ok:
           print(json.dumps(p.json(), indent=4, sort_keys=True))
           sys.exit(1)
+
+
+    def change_flexibility_order(self, flexibility_order):
+        """
+        Change flexibility order to ETM according to object flexibility_order.
+        """
+        put_data = { "flexibility_order": { "order": flexibility_order } }
+
+        p = self.session.put(f'/scenarios/{self.scenario_id}/flexibility_order', json=put_data, headers={'Connection':'close'})
+
+        if p.status_code != requests.codes.ok:
+            print(p.keys())
+            print(json.dumps(p.json(), indent=4, sort_keys=True))
+            sys.exit(1)
+
+
+    def change_heat_network_order(self, heat_network_order):
+        """
+        Change heat network order to ETM according to object heat_network_order.
+        """
+        put_data = { "heat_network_order": { "order": heat_network_order } }
+
+        p = self.session.put(f'/scenarios/{self.scenario_id}/heat_network_order', json=put_data, headers={'Connection':'close'})
+
+        if p.status_code != requests.codes.ok:
+            print(json.dumps(p.json(), indent=4, sort_keys=True))
+            sys.exit(1)
