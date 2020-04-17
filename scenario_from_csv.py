@@ -21,16 +21,16 @@ def read_user_values():
 
 
 def update_etm_user_values(ETM, scenario_name, scenario_properties):
+    # Update slider user values
     ETM.change_inputs(scenario_properties['user_values'])
 
+    # Update flexibility order
+    ETM.change_flexibility_order(scenario_properties['flexibility_order'])
+
+    # Update heat network order
+    ETM.change_heat_network_order(scenario_properties['heat_network_order'])
+
     print(f"{scenario_name}: {model_url}/scenarios/{ETM.scenario_id}")
-
-
-def export_electricity_curves(ETM, scenario_name, scenario_properties):
-    curves = ETM.get_hourly_electricity_curves()
-
-    path = Path(__file__).parent / 'data' / 'output' / f'merit_order.{ETM.scenario_id}.csv'
-    curves.to_csv(path, index=False)
 
 
 read_user_values()
@@ -48,4 +48,3 @@ for scenario_name, scenario_properties in scenarios.items():
 
     ETM = ETM_API(session, scenario_properties['id'])
     update_etm_user_values(ETM, scenario_name, scenario_properties)
-    export_electricity_curves(ETM, scenario_name, scenario_properties)
