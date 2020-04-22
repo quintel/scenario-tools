@@ -39,10 +39,13 @@ for scenario_name, scenario_properties in scenarios.items():
     if not scenario_properties['id']:
         ETM = ETM_API(session)
 
+        protected = False
+
         ETM.create_new_scenario(
             scenario_properties['title'],
             scenario_properties['area_code'],
-            scenario_properties['end_year'])
+            scenario_properties['end_year'],
+            protected)
 
         scenario_properties['id'] = ETM.scenario_id
 
