@@ -87,7 +87,7 @@ python3 scenario_from_csv.py
 
 The links to the newly created scenarios will be printed in your terminal.
 
-**Note** - By default the scenarios are not protected. This can be changed [here](https://github.com/quintel/scenario-tools/blob/master/scenario_from_csv.py#L42) in the script, by setting `protected` to `True`.
+**Note** - By default the scenarios are protected. This can be changed [here](https://github.com/quintel/scenario-tools/blob/master/scenario_from_csv.py#L42) in the script, by setting `protected` to `False`.
 
 <br>
 

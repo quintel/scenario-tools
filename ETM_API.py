@@ -136,7 +136,7 @@ class ETM_API(object):
         pass
 
 
-    def create_new_scenario(self, scenario_title, area_code, end_year, protected):
+    def create_new_scenario(self, scenario_title, area_code, end_year, description, protected):
         """
         Create a new scenario in the ETM. The scenario_id is saved so we can
         continue from the new scenario later on.
@@ -147,6 +147,7 @@ class ETM_API(object):
                                "title": scenario_title,
                                "area_code": area_code,
                                "end_year": end_year,
+                               "description": description,
                                "protected": protected
                                }
                      }

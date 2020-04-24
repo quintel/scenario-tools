@@ -11,6 +11,7 @@ NEW_SCENARIOS = {
         'area_code': 'nl',
         'short_name': 'NL_2030_example_TenneT',
         'end_year': '2030',
+        'description': 'This is an example 2030 scenario for Tennet.',
         'id': None,
         'user_values': {},
         'flexibility_order': [
@@ -42,6 +43,7 @@ NEW_SCENARIOS = {
         'area_code': 'nl',
         'short_name': 'NL_2050_example_TenneT',
         'end_year': '2050',
+        'description': 'This is an example 2050 scenario for Tennet.',
         'id': None,
         'user_values': {},
         'flexibility_order': [],
