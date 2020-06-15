@@ -13,7 +13,7 @@ NEW_SCENARIOS = {
         'short_name': 'Systeemstudie Zuid-Holland 2030 v1',
         'end_year': '2030',
         'description': 'Systeemstudie Zuid-Holland 2030 v1',
-        'id': None,
+        'id': 764454,
         'user_values': {},
         'flexibility_order': [],
         'heat_network_order': []
@@ -24,7 +24,7 @@ NEW_SCENARIOS = {
         'short_name': '2050_regionale_sturing_v1',
         'end_year': '2050',
         'description': 'Systeemstudie Zuid-Holland 2050 - regionale sturing v1',
-        'id': None,
+        'id': 764455,
         'user_values': {},
         'flexibility_order': [
             "power_to_heat_industry",
@@ -43,7 +43,7 @@ NEW_SCENARIOS = {
         'short_name': '2050_nationale_sturing_v1',
         'end_year': '2050',
         'description': 'Systeemstudie Zuid-Holland 2030 - nationale sturing v1',
-        'id': None,
+        'id': 764457,
         'user_values': {},
         'flexibility_order': [
             "power_to_heat_industry",
@@ -63,7 +63,7 @@ NEW_SCENARIOS = {
         'short_name': '2050_europese_sturing_v1',
         'end_year': '2050',
         'description': 'Systeemstudie Zuid-Holland 2030 - europese sturing v1',
-        'id': None,
+        'id': 764459,
         'user_values': {},
         'flexibility_order': [
             "power_to_heat_industry",
@@ -84,7 +84,7 @@ NEW_SCENARIOS = {
         'short_name': '2050_internationale_sturing_v1',
         'end_year': '2050',
         'description': 'Systeemstudie Zuid-Holland 2030 - internationale sturing v1',
-        'id': None,
+        'id': 764460,
         'user_values': {},
         'flexibility_order': [
             "power_to_heat_industry",
