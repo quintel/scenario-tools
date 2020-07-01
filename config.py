@@ -1,9 +1,9 @@
 EXISTING_SCENARIOS = {
-    '2030_klimaatakkoord': { 'id': '764454' },
-    '2050_regionale_sturing': { 'id': '764455' },
-    '2050_nationale_sturing': { 'id': '764457' },
-    '2050_europese_sturing': { 'id': '764459' },
-    '2050_internationale_sturing': { 'id': '764460' }
+    '2030_klimaatakkoord': { 'id': '766726' },
+    '2050_regionale_sturing': { 'id': '766730' },
+    '2050_nationale_sturing': { 'id': '766732' },
+    '2050_europese_sturing': { 'id': '766734' },
+    '2050_internationale_sturing': { 'id': '766736' }
 }
 
 NEW_SCENARIOS = {
@@ -13,7 +13,7 @@ NEW_SCENARIOS = {
         'short_name': 'Systeemstudie Zuid-Holland 2030 v1',
         'end_year': '2030',
         'description': 'Systeemstudie Zuid-Holland 2030 v1',
-        'id': 764454,
+        'id': 766726,
         'user_values': {},
         'flexibility_order': [],
         'heat_network_order': []
@@ -24,7 +24,7 @@ NEW_SCENARIOS = {
         'short_name': '2050_regionale_sturing_v1',
         'end_year': '2050',
         'description': 'Systeemstudie Zuid-Holland 2050 - regionale sturing v1',
-        'id': 764455,
+        'id': 766730,
         'user_values': {},
         'flexibility_order': [
             "power_to_heat_industry",
@@ -43,7 +43,7 @@ NEW_SCENARIOS = {
         'short_name': '2050_nationale_sturing_v1',
         'end_year': '2050',
         'description': 'Systeemstudie Zuid-Holland 2030 - nationale sturing v1',
-        'id': 764457,
+        'id': 766732,
         'user_values': {},
         'flexibility_order': [
             "power_to_heat_industry",
@@ -63,7 +63,7 @@ NEW_SCENARIOS = {
         'short_name': '2050_europese_sturing_v1',
         'end_year': '2050',
         'description': 'Systeemstudie Zuid-Holland 2030 - europese sturing v1',
-        'id': 764459,
+        'id': 766734,
         'user_values': {},
         'flexibility_order': [
             "power_to_heat_industry",
@@ -84,7 +84,7 @@ NEW_SCENARIOS = {
         'short_name': '2050_internationale_sturing_v1',
         'end_year': '2050',
         'description': 'Systeemstudie Zuid-Holland 2030 - internationale sturing v1',
-        'id': 764460,
+        'id': 766736,
         'user_values': {},
         'flexibility_order': [
             "power_to_heat_industry",
