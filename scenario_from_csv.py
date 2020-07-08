@@ -6,6 +6,8 @@ from pathlib import Path
 from ETM_API import ETM_API, SessionWithUrlBase
 from config import NEW_SCENARIOS as scenarios
 
+from random import randrange
+
 base_url = 'https://engine.energytransitionmodel.com/api/v3'
 model_url = 'https://pro.energytransitionmodel.com'
 session = SessionWithUrlBase(base_url)
@@ -29,6 +31,12 @@ def update_etm_user_values(ETM, scenario_name, scenario_properties):
 
     # Update heat network order
     ETM.change_heat_network_order(scenario_properties['heat_network_order'])
+
+    # Upload custom curve
+    curve_type = 'interconnector_1_price'
+    path = Path(__file__).parent / 'data' / 'input' / 'electricity_price.csv'
+
+    ETM.upload_custom_curve(curve_type, path=path)
 
     print(f"{scenario_name}: {model_url}/scenarios/{ETM.scenario_id}")
 

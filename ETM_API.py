@@ -1,4 +1,5 @@
 # system modules
+import os
 import sys
 
 # external modules
@@ -226,7 +227,6 @@ class ETM_API(object):
         p = self.session.put(f'/scenarios/{self.scenario_id}/flexibility_order', json=put_data, headers={'Connection':'close'})
 
         if p.status_code != requests.codes.ok:
-            print(p.keys())
             print(json.dumps(p.json(), indent=4, sort_keys=True))
             sys.exit(1)
 
@@ -238,6 +238,20 @@ class ETM_API(object):
         put_data = { "heat_network_order": { "order": heat_network_order } }
 
         p = self.session.put(f'/scenarios/{self.scenario_id}/heat_network_order', json=put_data, headers={'Connection':'close'})
+
+        if p.status_code != requests.codes.ok:
+            print(json.dumps(p.json(), indent=4, sort_keys=True))
+            sys.exit(1)
+
+
+    def upload_custom_curve(self, curve_type, path=None, string=None):
+        """
+        Upload custom curve to ETM, e.g. a price curve for interconnector #1.
+        """
+
+        put_data = { 'file': (str(os.path.basename(path)), open(path, 'rb')) }
+
+        p = self.session.put(f'/scenarios/{self.scenario_id}/custom_curves/{curve_type}', files=put_data, headers={'Connection':'close'})
 
         if p.status_code != requests.codes.ok:
             print(json.dumps(p.json(), indent=4, sort_keys=True))
