@@ -14,10 +14,12 @@ pip3 install -r requirements.txt
 
 The scenario tools are based on a [Python wrapper](https://github.com/quintel/third-party) for the [Energy Transition Model API](https://www.energytransitionmodel.com/api).
 
-Currently, two tools are provided:
+Currently, three tools are provided:
 * `scenario_from_csv.py` - for creating a new or updating an existing ETM scenario based on a CSV-based list of input (or user) values.
 
-* `data_export_to_csv.py` - to export outcomes for one or more scenarios to CSV-files.
+* `data_export_to_csv.py` - to export data export outcomes for one or more scenarios to CSV-files.
+
+* `queries_to_csv.py` - to export query outcomes for one or more scenarios to CSV-files.
 
 <br>
 
@@ -135,6 +137,36 @@ Some remarks:
 
 ```
 python3 data_export_to_csv.csv
+```
+
+The scenario outcomes will be exported to `./data/output`.
+
+<br>
+
+#### `queries_to_csv.py`
+
+This script can also be used to export scenario outcomes to CSV files. When you have successfully created an ETM scenario, you might want to query the scenario outcomes. The ETM provides multiple [gqueries](https://github.com/quintel/etsource/tree/master/gqueries).
+
+Instead of copying these manually through the ETM interface this script allows the user to export all desired gqueries at once:
+
+**Step 1** - Update the `config.py` file. Specify the scenarios in the `EXISTING_SCENARIOS` object. Below you can find an example:
+
+```
+EXISTING_SCENARIOS = {
+    'scenario_key': { 'id': '754910' },
+    'another_scenario_key': { 'id': '754911' }
+}
+```
+
+Some remarks:
+* The data exports will be grouped by scenario in a directory named `<id>_<scenario_key>`. These directories can be found in `./data/output`.
+
+**Step 2** - Specify which gqueries should be performed. These can be listed [in this input CSV-file](https://github.com/quintel/scenario-tools/blob/master/data/input/gqueries.csv).
+
+**Step 3** - Run the script from the root of the repository in your terminal:
+
+```
+python3 gqueries_to_csv.csv
 ```
 
 The scenario outcomes will be exported to `./data/output`.
