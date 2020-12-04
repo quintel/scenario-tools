@@ -154,8 +154,14 @@ class ETM_API(object):
                      }
         p = self.session.post("/scenarios", json = post_data,
                                                 headers={'Connection':'close'})
+        
+        if p.status_code != requests.codes.ok:
+          print(json.dumps(p.json(), indent=4, sort_keys=True))
+          sys.exit(1)
+
         df_scenario = pd.DataFrame.from_dict(p.json(), orient = "index")
         self.scenario_id = df_scenario.loc["id"].values[0]
+        
         pass
 
 
@@ -198,7 +204,7 @@ class ETM_API(object):
         return self.current_metrics
 
 
-    def change_inputs(self, user_values):
+    def change_inputs(self, user_values, short_name):
         """
         Change inputs to ETM according to dictionary user_values. Also the
         metrics are updated by passing a gquery via gquery_metrics
@@ -214,6 +220,7 @@ class ETM_API(object):
                                                 headers={'Connection':'close'})
 
         if p.status_code != requests.codes.ok:
+          print(f"Error for scenario {short_name}")
           print(json.dumps(p.json(), indent=4, sort_keys=True))
           sys.exit(1)
 

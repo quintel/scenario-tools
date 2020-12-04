@@ -1,0 +1,4 @@
+short_name,title,area_code,end_year,description,scenario_id,flexibility_order,heat_network_order
+ni_he_hlp,High electrification / High local production,UKNI01_northern_ireland,2050,"Scenario created by DfE and SONI. Explores high electrification on the demand side, combined with high local production of RES on the supply side",791005,opac mv_batteries,
+ni_rg_io,Renewable gases / Import oriented,UKNI01_northern_ireland,2050,"Scenario created by DfE and SONI. Explores high use of renewable gases on the demand side, combined with high imports on the supply side",791006,,energy_heat_burner_waste_mix energy_heat_burner_network_gas
+ni_rg_hlp,Renewable gases / High local production,UKNI01_northern_ireland,2050,"Scenario created by DfE and SONI. Explores high use of renewable gases on the demand side, combined with high local production of RES on the supply side",791007,,
