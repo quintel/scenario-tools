@@ -2,11 +2,12 @@ import pandas as pd
 
 ATTRIBUTES = [
     "short_name",
-    "scenario_id",
+    "id",
     "title",
     "area_code",
     "end_year",
     "description",
+    "protected",
     "flexibility_order",
     "heat_network_order",
 ]
