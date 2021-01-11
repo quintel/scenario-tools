@@ -7,8 +7,17 @@ from pathlib import Path
 from ETM_API import ETM_API, SessionWithUrlBase
 from Scenario import Scenario
 
-base_url = "https://engine.energytransitionmodel.com/api/v3"
-model_url = "https://pro.energytransitionmodel.com"
+if len(sys.argv) > 1:
+    if sys.argv[1].lower() == 'beta':
+        base_url = "https://beta-engine.energytransitionmodel.com/api/v3"
+        model_url = "https://beta-pro.energytransitionmodel.com"
+    elif sys.argv[1].lower() == 'local':
+        base_url = "http://localhost:3000/api/v3"
+        model_url = "http://localhost:4000"
+else:
+    base_url = "https://engine.energytransitionmodel.com/api/v3"
+    model_url = "https://pro.energytransitionmodel.com"
+
 session = SessionWithUrlBase(base_url)
 
 
