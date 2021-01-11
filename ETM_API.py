@@ -96,13 +96,20 @@ class ETM_API(object):
         """
         Update scenario properties such as title and description
         """
+
+        scenario_dict = {}
+
+        if scenario_title:
+            scenario_dict["title"] = scenario_title
+
+        if description:
+            scenario_dict["description"] = description
+
+        if protected:
+            scenario_dict["protected"] = protected
+
         put_data = {
-            "scenario":
-            {
-                "title": scenario_title,
-                "description": description,
-                "protected": protected
-            }
+            "scenario": scenario_dict
         }
         p = self.session.put(f"/scenarios/{self.id}", json=put_data,
                              headers={'Connection': 'close'})

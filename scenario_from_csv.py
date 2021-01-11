@@ -46,6 +46,7 @@ def add_scenario_settings(scenarios):
     try:
         scenario_settings = pd.read_csv(path, index_col=0, dtype=str)
     except FileNotFoundError:
+        print("Cannot find scenario_settings.csv file in the data/input folder")
         scenario_settings  = pd.DataFrame()
 
     for scenario in scenarios:
@@ -53,6 +54,7 @@ def add_scenario_settings(scenarios):
             scenario.user_values = dict(scenario_settings[scenario.short_name])
         except KeyError:
             print(f"No scenario settings found for {scenario.short_name}")
+            scenario.user_values = dict()
 
     return scenarios
 

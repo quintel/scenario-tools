@@ -37,9 +37,6 @@ class Scenario:
                 to_list = current_val.split(" ")
                 setattr(self, order, to_list)
 
-    def add_user_values(self, user_values):
-        self.user_values = user_values
-
     def to_dict(self):
         parameters = {}
         for key in ATTRIBUTES:
