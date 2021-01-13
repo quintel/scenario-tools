@@ -33,6 +33,13 @@ def generate_scenario_objects():
         sys.exit(1)
 
     scenario_list.columns = scenario_list.columns.str.lower()
+    columns = list(scenario_list.columns)
+
+    for elem in columns:
+        if columns.count(elem) > 1:
+            print(f"Warning! {elem} is included twice as a column in scenario_list.csv. "
+                  "Please remove one!")
+            sys.exit(1)
 
     short_names = scenario_list["short_name"]
     duplicates = scenario_list[short_names.duplicated()]["short_name"]
@@ -56,7 +63,7 @@ def add_scenario_settings(scenarios):
         scenario_settings = pd.read_csv(path, index_col=0, dtype=str)
     except FileNotFoundError:
         print("Cannot find scenario_settings.csv file in the data/input folder")
-        scenario_settings  = pd.DataFrame()
+        scenario_settings = pd.DataFrame()
 
     for scenario in scenarios:
         try:
@@ -213,4 +220,4 @@ export_scenario_queries(scenarios)
 
 # Print URLs
 for scenario in scenarios:
-    print(f"{scenario.short_name}: {model_url}/scenarios/{ETM.id}")
+    print(f"{scenario.short_name}: {model_url}/scenarios/{scenario.id}")
