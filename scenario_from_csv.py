@@ -146,6 +146,7 @@ def update_etm_user_values(ETM, scenario):
 
 def export_scenario_queries(scenarios):
     path = Path(__file__).parent / "data" / "output" / "scenario_outcomes.csv"
+    areas = []
 
     merged_df = pd.DataFrame()
     for i, scenario in enumerate(scenarios):
@@ -154,11 +155,20 @@ def export_scenario_queries(scenarios):
         else:
             short_name = scenario.short_name
             df = scenario.query_results.rename(columns={'future': short_name})
+            relevant_columns = []
 
-            if i < len(scenarios)-1:
-                df = df[[short_name]]
-            else:
-                df = df[[short_name, "unit"]]
+            if scenario.area_code not in areas:
+                present = f"{scenario.area_code}_present"
+                df = df.rename(columns={'present': present})
+                relevant_columns.append(present)
+                areas.append(scenario.area_code)
+
+            relevant_columns.append(short_name)
+
+            if i == len(scenarios) -1:
+                relevant_columns.append("unit")
+
+            df = df[relevant_columns]
 
             merged_df = pd.concat([merged_df, df], axis=1)
 
@@ -210,10 +220,10 @@ for scenario in scenarios:
     scenario.query_results = ETM.get_query_results(generate_query_list())
 
     # Download data exports
-    export_scenario_data_downloads(ETM, scenario.short_name, download_dict)
+#     export_scenario_data_downloads(ETM, scenario.short_name, download_dict)
 
-# Write out scenario IDs
-export_scenario_ids(scenarios)
+# # Write out scenario IDs
+# export_scenario_ids(scenarios)
 
 # Write out query results
 export_scenario_queries(scenarios)
