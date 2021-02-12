@@ -8,6 +8,8 @@ ATTRIBUTES = [
     "end_year",
     "description",
     "protected",
+    "curve_file",
+    "custom_curves",
     "flexibility_order",
     "heat_network_order",
 ]

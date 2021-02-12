@@ -57,7 +57,7 @@ def generate_scenario_objects():
     return scenarios
 
 
-def add_scenario_settings(scenarios):
+def read_scenario_settings():
     path = Path(__file__).parent / "data" / "input" / "scenario_settings.csv"
     try:
         scenario_settings = pd.read_csv(path, index_col=0, dtype=str)
@@ -65,18 +65,42 @@ def add_scenario_settings(scenarios):
         print("Cannot find scenario_settings.csv file in the data/input folder")
         scenario_settings = pd.DataFrame()
 
-    for scenario in scenarios:
-        try:
-            scenario.user_values = dict(scenario_settings[scenario.short_name])
-        except KeyError:
-            print(f"No scenario settings found for {scenario.short_name}")
-            scenario.user_values = dict()
+    return scenario_settings
 
-    return scenarios
+
+def add_scenario_settings(scenario, scenario_settings):
+    try:
+        scenario.user_values = dict(scenario_settings[scenario.short_name])
+    except KeyError:
+        print(f"No scenario settings found for {scenario.short_name}")
+        scenario.user_values = dict()
+
+
+def add_curves(scenario):
+    file_name = scenario.curve_file
+    if file_name:
+        path = Path(__file__).parent / f"data/input/curves/{file_name}.csv"
+
+        try:
+            curve_df = pd.read_csv(path)
+            scenario.custom_curves = curve_df.to_dict(orient='list')
+
+        except FileNotFoundError:
+            print(f"Cannot find curve '{file_name}.csv'. Make sure it is in "
+                  "'data/input/price_curves' or specify a different curve in "
+                  "'data/input/scenario_list.csv'.")
+            sys.exit(1)
 
 
 def load_scenarios():
-    return add_scenario_settings(generate_scenario_objects())
+    scenarios = generate_scenario_objects()
+    scenario_settings = read_scenario_settings()
+
+    for scenario in scenarios:
+        add_scenario_settings(scenario, scenario_settings)
+        add_curves(scenario)
+
+    return scenarios
 
 
 def generate_query_list():
@@ -137,11 +161,11 @@ def update_etm_user_values(ETM, scenario):
     # Update heat network order
     ETM.change_heat_network_order(scenario.heat_network_order)
 
-    # Upload custom curve
-    # curve_type = "interconnector_1_price"
-    # path = Path(__file__).parent / "data" / "input" / "electricity_price.csv"
 
-    # ETM.upload_custom_curve(curve_type, path=path)
+def upload_custom_curves(ETM, scenario):
+    if scenario.custom_curves:
+        for curve, data in scenario.custom_curves.items():
+            ETM.upload_custom_curve(curve, data)
 
 
 def export_scenario_queries(scenarios):
@@ -165,7 +189,7 @@ def export_scenario_queries(scenarios):
 
             relevant_columns.append(short_name)
 
-            if i == len(scenarios) -1:
+            if i == len(scenarios) - 1:
                 relevant_columns.append("unit")
 
             df = df[relevant_columns]
@@ -193,6 +217,7 @@ def export_scenario_data_downloads(etm_api, short_name, download_dict):
 download_dict = generate_data_download_dict()
 scenarios = load_scenarios()
 
+
 for scenario in scenarios:
     # Create scenario
     if not scenario.id:
@@ -216,14 +241,17 @@ for scenario in scenarios:
     # Update scenario settings
     update_etm_user_values(ETM, scenario)
 
+    # Add custom curves
+    upload_custom_curves(ETM, scenario)
+
     # Query results
     scenario.query_results = ETM.get_query_results(generate_query_list())
 
     # Download data exports
-#     export_scenario_data_downloads(ETM, scenario.short_name, download_dict)
+    export_scenario_data_downloads(ETM, scenario.short_name, download_dict)
 
-# # Write out scenario IDs
-# export_scenario_ids(scenarios)
+# Write out scenario IDs
+export_scenario_ids(scenarios)
 
 # Write out query results
 export_scenario_queries(scenarios)

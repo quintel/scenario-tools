@@ -7,6 +7,7 @@ import io
 import json
 import pandas as pd
 import requests
+import struct
 
 
 class SessionWithUrlBase(requests.Session):
@@ -185,14 +186,14 @@ class ETM_API(object):
             print(json.dumps(p.json(), indent=4, sort_keys=True))
             sys.exit(1)
 
-    def upload_custom_curve(self, curve_type, path=None, string=None):
+    def upload_custom_curve(self, curve_key, curve_data, curve_name):
         """
-        Upload custom curve to ETM, e.g. a price curve for interconnector #1.
+        Upload custom curve to ETM
         """
+        curve_string = '\n'.join(str(e) for e in curve_data)
+        put_data = {'file': (curve_name, curve_string)}
 
-        put_data = {'file': (str(os.path.basename(path)), open(path, 'rb'))}
-
-        p = self.session.put(f'/scenarios/{self.id}/custom_curves/{curve_type}', files=put_data, headers={'Connection': 'close'})
+        p = self.session.put(f'/scenarios/{self.id}/custom_curves/{curve_key}', files=put_data, headers={'Connection': 'close'})
 
         if p.status_code != requests.codes.ok:
             print(json.dumps(p.json(), indent=4, sort_keys=True))
