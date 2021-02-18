@@ -7,47 +7,45 @@ from pathlib import Path
 from ETM_API import ETM_API, SessionWithUrlBase
 from Scenario import Scenario
 
-if len(sys.argv) > 1:
-    if sys.argv[1].lower() == 'beta':
-        base_url = "https://beta-engine.energytransitionmodel.com/api/v3"
-        model_url = "https://beta-pro.energytransitionmodel.com"
-    elif sys.argv[1].lower() == 'local':
-        base_url = "http://localhost:3000/api/v3"
-        model_url = "http://localhost:4000"
-else:
-    base_url = "https://engine.energytransitionmodel.com/api/v3"
-    model_url = "https://pro.energytransitionmodel.com"
 
-session = SessionWithUrlBase(base_url)
-
-
-def generate_scenario_objects():
-    scenarios = []
-
-    path = Path(__file__).parent / "data" / "input" / "scenario_list.csv"
+def read_csv(folder, file):
+    path = Path(__file__).parent / f"{folder}/{file}.csv"
 
     try:
-        scenario_list = pd.read_csv(path, dtype=str)
+        df = pd.read_csv(path, dtype=str)
     except FileNotFoundError:
-        print("File 'scenario_list.csv' not found in data/input folder. Aborting..")
+        print(f"File '{file}.csv' not found in '{folder}' folder. Aborting..")
         sys.exit(1)
 
-    scenario_list.columns = scenario_list.columns.str.lower()
-    columns = list(scenario_list.columns)
+    return df
 
-    for elem in columns:
-        if columns.count(elem) > 1:
-            print(f"Warning! {elem} is included twice as a column in scenario_list.csv. "
+
+def check_duplicates(arr, file_name, attribute_type):
+    arr_lower = [e.lower() for e in arr]
+    for elem in arr_lower:
+        if arr_lower.count(elem) > 1:
+            print(f"Warning! '{elem}' is included twice as a "
+                  f"{attribute_type} in {file_name}. "
                   "Please remove one!")
             sys.exit(1)
 
-    short_names = scenario_list["short_name"]
-    duplicates = scenario_list[short_names.duplicated()]["short_name"]
 
-    if not duplicates.empty:
-        print("Error: short_name must be unique for all scenarios. "
-              f"Duplicates found: {duplicates.to_string(index=False)}. Aborting..")
-        sys.exit()
+def validate_scenario_list(scenario_file, columns, short_names):
+
+    check_duplicates(columns, scenario_file, "column")
+    check_duplicates(short_names, scenario_file, "short name")
+
+
+def generate_scenario_objects():
+    scenario_file = "scenario_list"
+    scenarios = []
+
+    scenario_list = read_csv("data/input", scenario_file)
+
+    columns = list(scenario_list.columns.str.lower())
+    short_names = [s.lower() for s in scenario_list["short_name"].tolist()]
+
+    validate_scenario_list(scenario_file, columns, short_names)
 
     for idx in scenario_list.index:
         scenario = Scenario(scenario_list.iloc[idx])
@@ -73,23 +71,15 @@ def add_scenario_settings(scenario, scenario_settings):
         scenario.user_values = dict(scenario_settings[scenario.short_name])
     except KeyError:
         print(f"No scenario settings found for {scenario.short_name}")
-        scenario.user_values = dict()
 
 
 def add_curves(scenario):
     file_name = scenario.curve_file
     if file_name:
-        path = Path(__file__).parent / f"data/input/curves/{file_name}.csv"
+        folder = Path(__file__).parent / "data/input/curves"
 
-        try:
-            curve_df = pd.read_csv(path)
-            scenario.custom_curves = curve_df.to_dict(orient='list')
-
-        except FileNotFoundError:
-            print(f"Cannot find curve '{file_name}.csv'. Make sure it is in "
-                  "'data/input/price_curves' or specify a different curve in "
-                  "'data/input/scenario_list.csv'.")
-            sys.exit(1)
+        curve_df = read_csv(folder, file_name)
+        scenario.custom_curves = curve_df.to_dict(orient='list')
 
 
 def load_scenarios():
@@ -151,23 +141,6 @@ def export_scenario_ids(scenarios):
     scenario_list.to_csv(path, index=False, header=True)
 
 
-def update_etm_user_values(ETM, scenario):
-    # Update slider user values
-    ETM.change_inputs(scenario.user_values, scenario.short_name)
-
-    # Update flexibility order
-    ETM.change_flexibility_order(scenario.flexibility_order)
-
-    # Update heat network order
-    ETM.change_heat_network_order(scenario.heat_network_order)
-
-
-def upload_custom_curves(ETM, scenario):
-    if scenario.custom_curves:
-        for curve, data in scenario.custom_curves.items():
-            ETM.upload_custom_curve(curve, data)
-
-
 def export_scenario_queries(scenarios):
     path = Path(__file__).parent / "data" / "output" / "scenario_outcomes.csv"
     areas = []
@@ -214,48 +187,48 @@ def export_scenario_data_downloads(etm_api, short_name, download_dict):
         df.to_csv(f"{output_path}/{download}.csv")
 
 
-download_dict = generate_data_download_dict()
-scenarios = load_scenarios()
+def print_ids(scenarios, model_url):
+    for scenario in scenarios:
+        print(f"{scenario.short_name}: {model_url}/scenarios/{scenario.id}")
 
 
-for scenario in scenarios:
-    # Create scenario
-    if not scenario.id:
-        ETM = ETM_API(session)
+def process_arguments(args):
+    if len(args) > 1:
+        if args[1].lower() == 'beta':
+            base_url = "https://beta-engine.energytransitionmodel.com/api/v3"
+            model_url = "https://beta-pro.energytransitionmodel.com"
+        elif args[1].lower() == 'local':
+            base_url = "http://localhost:3000/api/v3"
+            model_url = "http://localhost:4000"
+    else:
+        base_url = "https://engine.energytransitionmodel.com/api/v3"
+        model_url = "https://pro.energytransitionmodel.com"
 
-        ETM.create_new_scenario(
-            scenario.title,
-            scenario.area_code,
-            scenario.end_year)
+    return base_url, model_url
 
-        scenario.id = ETM.id
 
-    ETM = ETM_API(session, scenario.id)
+if __name__ == "__main__":
 
-    # Update scenario properties
-    ETM.update_scenario_properties(
-        scenario.title,
-        scenario.description,
-        scenario.protected)
+    base_url, model_url = process_arguments(sys.argv)
 
-    # Update scenario settings
-    update_etm_user_values(ETM, scenario)
+    session = SessionWithUrlBase(base_url)
 
-    # Add custom curves
-    upload_custom_curves(ETM, scenario)
+    download_dict = generate_data_download_dict()
+    query_list = generate_query_list()
 
-    # Query results
-    scenario.query_results = ETM.get_query_results(generate_query_list())
+    scenarios = load_scenarios()
 
-    # Download data exports
-    export_scenario_data_downloads(ETM, scenario.short_name, download_dict)
+    for scenario in scenarios:
 
-# Write out scenario IDs
-export_scenario_ids(scenarios)
+        API_scenario = ETM_API(session)
+        API_scenario.initialise_scenario(scenario)
 
-# Write out query results
-export_scenario_queries(scenarios)
+        API_scenario.update_scenario(scenario)
 
-# Print URLs
-for scenario in scenarios:
-    print(f"{scenario.short_name}: {model_url}/scenarios/{scenario.id}")
+        API_scenario.query_scenario(scenario, query_list, download_dict)
+
+    export_scenario_ids(scenarios)
+
+    export_scenario_queries(scenarios)
+
+    print_ids(scenarios, model_url)

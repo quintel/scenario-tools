@@ -1,13 +1,9 @@
-# system modules
-import os
 import sys
-
-# external modules
 import io
 import json
 import pandas as pd
 import requests
-import struct
+from pathlib import Path
 
 
 class SessionWithUrlBase(requests.Session):
@@ -186,15 +182,63 @@ class ETM_API(object):
             print(json.dumps(p.json(), indent=4, sort_keys=True))
             sys.exit(1)
 
-    def upload_custom_curve(self, curve_key, curve_data, curve_name):
+    def upload_custom_curve(self, curve_key, curve_data, curve_file_name):
         """
         Upload custom curve to ETM
         """
         curve_string = '\n'.join(str(e) for e in curve_data)
-        put_data = {'file': (curve_name, curve_string)}
+        put_data = {'file': (curve_file_name, curve_string)}
 
         p = self.session.put(f'/scenarios/{self.id}/custom_curves/{curve_key}', files=put_data, headers={'Connection': 'close'})
 
         if p.status_code != requests.codes.ok:
             print(json.dumps(p.json(), indent=4, sort_keys=True))
             sys.exit(1)
+
+    def export_scenario_data_downloads(self, short_name, download_dict):
+        root = Path(__file__).parent
+        output_path = root / Path(f"data/output/{short_name}")
+        output_path.mkdir(parents=True, exist_ok=True)
+
+        for download in download_dict["annual_data"]:
+            df = self.get_data_download(download)
+            df.to_csv(f"{output_path}/{download}.csv")
+
+        for download in download_dict["hourly_data"]:
+            df = self.get_data_download(download, hourly=True)
+            df.to_csv(f"{output_path}/{download}.csv")
+
+    def initialise_scenario(self, scenario):
+        if not scenario.id:
+            self.create_new_scenario(
+                scenario.title,
+                scenario.area_code,
+                scenario.end_year)
+
+            scenario.id = self.id
+
+        else:
+            self.id = scenario.id
+
+    def update_scenario(self, scenario):
+        self.update_scenario_properties(
+             scenario.title,
+             scenario.description,
+             scenario.protected)
+
+        if scenario.user_values:
+            self.change_inputs(scenario.user_values, scenario.short_name)
+
+        if scenario.flexibility_order:
+            self.change_flexibility_order(scenario.flexibility_order)
+
+        if scenario.heat_network_order:
+            self.change_heat_network_order(scenario.heat_network_order)
+
+        if scenario.custom_curves:
+            for curve, data in scenario.custom_curves.items():
+                self.upload_custom_curve(curve, data, scenario.curve_file)
+
+    def query_scenario(self, scenario, query_list, download_dict):
+        scenario.query_results = self.get_query_results(query_list)
+        self.export_scenario_data_downloads(scenario.short_name, download_dict)
