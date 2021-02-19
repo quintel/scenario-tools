@@ -16,7 +16,7 @@ This repository contains a Python tool to create and update scenarios in the [En
 
 ### Getting started
 
-Make sure you have [Python 3](https://www.python.org/downloads/) installed. Then, install all required libraries by running the following command in your terminal:
+Make sure you have [Python 3](https://www.python.org/downloads/) installed. Then, install all required libraries by opening a terminal window in the `scenario-tools` folder (or navigate to this folder in the terminal using `cd "path/to/scenario-tools folder"`) and running the following command:
 
 ```
 pip install -r requirements.txt
