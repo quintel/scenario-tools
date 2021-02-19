@@ -2,6 +2,18 @@
 
 This repository contains a Python tool to create and update scenarios in the [Energy Transition Model](https://pro.energytransitionmodel.com/) (ETM) and export scenario outcomes using an [API](https://www.energytransitionmodel.com/api). The tool can be operated by altering CSV input files. No coding experience is required.
 
+ * [Getting started](#getting-started)
+ * [Input data](#input-data)
+   * [scenario_list.csv](#scenario_listcsv)
+   * [scenario_settings.csv](#scenario_settingscsv)
+   * [queries.csv](#queriescsv)
+   * [data_downloads.csv](#data_downloadscsv)
+   * [curves](#curves)
+ * [Running the script](#running-the-script)
+ * [Output](#output)
+ * [Contact](#questions-and-remarks
+ )
+
 ### Getting started
 
 Make sure you have [Python 3](https://www.python.org/downloads/) installed. Then, install all required libraries by running the following command in your terminal:
@@ -115,7 +127,7 @@ The script creates/updates the scenarios in the Energy Transition Model and prin
  * Sub folders for each scenario `short_name` containing the data exports
 
 
-### Questions and/or remarks
+### Questions and remarks
 
 If you have any questions and/or remarks, you may reach out to us by:
 * Creating an [issue](https://github.com/quintel/scenario-tools/issues) on this repository and assign one of the Quintel members, e.g.:
