@@ -16,7 +16,10 @@ ATTRIBUTES = [
 
 
 class Scenario:
-
+    """
+    Creates a scenario object, containing all relevant scenario data
+    to be sent to the ETM.
+    """
     def __init__(self, scenario_list):
         for key in ATTRIBUTES:
             try:
@@ -39,9 +42,5 @@ class Scenario:
                 to_list = current_val.split(" ")
                 setattr(self, order, to_list)
 
-    def to_dict(self):
-        parameters = {}
-        for key in ATTRIBUTES:
-            parameters[key] = getattr(self, key)
-
-        return parameters
+    def add_user_values(self, scenario_settings):
+        self.user_values = scenario_settings

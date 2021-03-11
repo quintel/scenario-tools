@@ -11,15 +11,14 @@ This repository contains a Python tool to create and update scenarios in the [En
    * [curves](#curves)
  * [Running the script](#running-the-script)
  * [Output](#output)
- * [Contact](#questions-and-remarks
- )
+ * [Contact](#questions-and-remarks)
 
 ### Getting started
 
 Make sure you have [Python 3](https://www.python.org/downloads/) installed. Then, install all required libraries by opening a terminal window in the `scenario-tools` folder (or navigate to this folder in the terminal using `cd "path/to/scenario-tools folder"`) and running the following command:
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### Input data
@@ -114,11 +113,11 @@ If you are creating new scenarios (i.e. you have left the `id` column in `scenar
 
 Optionally, you can add the arguments `beta` or `local` to create or query scenarios on the ETM [beta server](https://beta-pro.energytransitionmodel.com/) or your local machine. The latter assumes your local engine runs at `localhost:3000` and local model at `localhost:4000`. I.e.:
 ```
-python scenario_from_csv.py beta
+python3 scenario_from_csv.py beta
 ```
 or
 ```
-python scenario_from_csv.py local
+python3 scenario_from_csv.py local
 ```
 
 ### Output
