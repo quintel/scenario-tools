@@ -199,11 +199,11 @@ class ETM_API(object):
 
         for download in download_dict["annual_data"]:
             df = self.get_data_download(download)
-            df.to_csv(f"{output_path}/{download}.csv")
+            df.to_csv(f"{output_path}/{short_name}_{download}.csv", index=False, header=True)
 
         for download in download_dict["hourly_data"]:
             df = self.get_data_download(download, hourly=True)
-            df.to_csv(f"{output_path}/{download}.csv")
+            df.to_csv(f"{output_path}/{short_name}_{download}.csv", index=False, header=True)
 
     def upload_custom_curve(self, curve_key, curve_data, curve_file_name):
         """
