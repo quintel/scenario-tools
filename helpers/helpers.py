@@ -50,6 +50,7 @@ def update_scenarios(scenarios):
             scenario.add_user_values(settings)
         except KeyError:
             print(f"No scenario settings found for {scenario.short_name}")
+            scenario.user_values = None
 
 
 def generate_query_list():
