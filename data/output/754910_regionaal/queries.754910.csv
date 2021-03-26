@@ -1,7 +1,0 @@
-,present,future,unit
-heat_demand_buildings_in_use_of_final_demand_in_buildings,131.97302999999997,55.56862292875289,PJ
-households_final_demand_hot_water,52.38341094521106,46.99670023897755,PJ
-households_final_demand_space_heating,261.0501206352891,160.62992853838392,PJ
-households_number_of_inhabitants,16900726.0,18400000.0,#
-households_number_of_residences,7587964.0,8800000.0,#
-share_of_greengas_in_gas_network,0.0034393535869767177,1.0,factor

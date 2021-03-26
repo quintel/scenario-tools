@@ -1,62 +1,43 @@
 # external modules
-import pandas as pd
-from pathlib import Path
+import sys
 
 # project modules
-from ETM_API import ETM_API, SessionWithUrlBase
-from config import NEW_SCENARIOS as scenarios
+from helpers.ETM_API import ETM_API, SessionWithUrlBase
+from helpers.helpers import (process_arguments,
+                             initialise_scenarios,
+                             load_curve_file_dict,
+                             update_scenarios,
+                             print_ids)
+from helpers.file_helpers import (generate_query_list,
+                                  generate_data_download_dict,
+                                  export_scenario_ids,
+                                  export_scenario_queries)
 
-from random import randrange
+if __name__ == "__main__":
 
-base_url = 'https://engine.energytransitionmodel.com/api/v3'
-model_url = 'https://pro.energytransitionmodel.com'
-session = SessionWithUrlBase(base_url)
+    base_url, model_url = process_arguments(sys.argv)
 
+    session = SessionWithUrlBase(base_url)
 
-def read_user_values():
-    path = Path(__file__).parent / 'data' / 'input' / 'user_values.csv'
-    df = pd.read_csv(f'{path}')
+    print("Opening CSV files:")
+    scenarios = initialise_scenarios()
+    curve_file_dict = load_curve_file_dict(scenarios)
 
-    for scenario_name, scenario_properties in scenarios.items():
-        user_values = dict(zip(df['input'], df[scenario_name]))
-        scenario_properties['user_values'].update(user_values)
+    download_dict = generate_data_download_dict()
+    query_list = generate_query_list()
 
+    update_scenarios(scenarios)
 
-def update_etm_user_values(ETM, scenario_name, scenario_properties):
-    # Update slider user values
-    ETM.change_inputs(scenario_properties['user_values'])
+    for scenario in scenarios:
+        print(f"\nProcessing scenario {scenario.short_name}..")
+        API_scenario = ETM_API(session)
+        API_scenario.initialise_scenario(scenario)
 
-    # Update flexibility order
-    ETM.change_flexibility_order(scenario_properties['flexibility_order'])
+        API_scenario.update_scenario(scenario, curve_file_dict)
 
-    # Update heat network order
-    ETM.change_heat_network_order(scenario_properties['heat_network_order'])
+        API_scenario.query_scenario(scenario, query_list, download_dict)
 
-    # Upload custom curve
-    curve_type = 'interconnector_1_price'
-    path = Path(__file__).parent / 'data' / 'input' / 'electricity_price.csv'
+    export_scenario_queries(scenarios)
+    export_scenario_ids(scenarios)
 
-    ETM.upload_custom_curve(curve_type, path=path)
-
-    print(f"{scenario_name}: {model_url}/scenarios/{ETM.scenario_id}")
-
-
-read_user_values()
-
-for scenario_name, scenario_properties in scenarios.items():
-    if not scenario_properties['id']:
-        ETM = ETM_API(session)
-
-        protected = True
-
-        ETM.create_new_scenario(
-            scenario_properties['title'],
-            scenario_properties['area_code'],
-            scenario_properties['end_year'],
-            scenario_properties['description'],
-            protected)
-
-        scenario_properties['id'] = ETM.scenario_id
-
-    ETM = ETM_API(session, scenario_properties['id'])
-    update_etm_user_values(ETM, scenario_name, scenario_properties)
+    print_ids(scenarios, model_url)
