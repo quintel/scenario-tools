@@ -6,8 +6,8 @@ from pathlib import Path
 from ETM_API import ETM_API, SessionWithUrlBase
 from config import NEW_SCENARIOS as scenarios
 
-base_url = 'https://engine.energytransitionmodel.com/api/v3'
-model_url = 'https://pro.energytransitionmodel.com'
+base_url = 'https://beta-engine.energytransitionmodel.com/api/v3'
+model_url = 'https://energytransitionmodel.com'
 session = SessionWithUrlBase(base_url)
 
 
