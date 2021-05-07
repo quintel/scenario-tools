@@ -45,12 +45,12 @@ capacity_of_energy_heat_burner_wood_pellets,0.0
 capacity_of_energy_heat_heatpump_water_water_electricity,0.0
 capacity_of_energy_heat_solar_thermal,0.0
 capacity_of_energy_heat_well_geothermal,1400.0
-capacity_of_energy_hydrogen_flexibility_p2g_electricity,15000.0
+capacity_of_energy_hydrogen_flexibility_p2g_electricity,10000.0
 capacity_of_energy_hydrogen_steam_methane_reformer,201.8
 capacity_of_energy_hydrogen_wind_turbine_offshore,10000.0
 capacity_of_energy_power_combined_cycle_coal,0.0
-capacity_of_energy_power_combined_cycle_hydrogen,30000.0
-capacity_of_energy_power_combined_cycle_network_gas,0.0
+capacity_of_energy_power_combined_cycle_hydrogen,0.0
+capacity_of_energy_power_combined_cycle_network_gas,40000.0
 capacity_of_energy_power_engine_diesel,0.0
 capacity_of_energy_power_engine_network_gas,0.0
 capacity_of_energy_power_geothermal,336.0
@@ -134,7 +134,7 @@ flh_of_energy_power_wind_turbine_coastal,2750.0
 flh_of_energy_power_wind_turbine_inland,2750.0
 flh_of_energy_power_wind_turbine_offshore,4050.0
 flh_of_solar_pv_solar_radiation,950.0
-green_gas_total_share,100.0
+green_gas_total_share,35.0
 heat_storage_enabled,1.0
 households_apartments_share,35.3
 households_appliances_clothes_dryer_electricity_efficiency,42.4
@@ -284,7 +284,7 @@ max_demand_of_biogenic_waste,14.3
 max_demand_of_dry_biomass,0.0
 max_demand_of_oily_biomass,7.0
 max_demand_of_wet_biomass,56.9
-natural_gas_total_share,0.0
+natural_gas_total_share,65.0
 number_of_buildings,-0.6
 om_costs_combustion_biomass_plant,-2.6
 om_costs_combustion_coal_plant,4.8
