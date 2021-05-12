@@ -1,11 +1,14 @@
 import pandas as pd
 from pathlib import Path
 
-from .Scenario import Scenario
 from .Curves import CurveFile
+from .Scenario import Scenario
+from .Template import Template
 
 from .file_helpers import (read_scenario_list,
                            validate_scenario_list,
+                           read_template_list,
+                           validate_template_list,
                            read_curve_file,
                            read_scenario_settings)
 
@@ -22,6 +25,19 @@ def initialise_scenarios():
         scenarios.append(scenario)
 
     return scenarios
+
+
+def initialise_templates():
+    template_list = read_template_list()
+    validate_template_list(template_list)
+
+    templates = []
+
+    for idx in template_list.index:
+        template = Template(template_list.iloc[idx])
+        templates.append(template)
+
+    return templates
 
 
 def load_curve_file_dict(scenarios):

@@ -35,12 +35,28 @@ def read_scenario_list():
     return scenario_list
 
 
+def read_template_list():
+    print(" Reading template list")
+    path = Path(__file__).parents[1] / "data/input"
+    template_file = "template_list"
+
+    template_list = read_csv(path, template_file)
+
+    return template_list
+
+
 def validate_scenario_list(scenario_list):
     columns = list(scenario_list.columns.str.lower())
     short_names = [s.lower() for s in scenario_list["short_name"].tolist()]
 
     check_duplicates(columns, scenario_list, "column")
     check_duplicates(short_names, scenario_list, "short name")
+
+
+def validate_template_list(template_list):
+    session_ids = [s.lower() for s in template_list["session_id"].tolist()]
+
+    check_duplicates(session_ids, template_list, "session id")
 
 
 def read_curve_file(file_name):
@@ -69,6 +85,7 @@ def read_scenario_settings():
         print(" Reading scenario_settings")
         scenario_settings = pd.read_csv(
             path, index_col=0).astype('str')
+        scenario_settings = scenario_settings.dropna()
         check_duplicate_scenario_settings(scenario_settings)
     except FileNotFoundError:
         print("Cannot find scenario_settings.csv file in the data/input folder")
@@ -153,6 +170,35 @@ def export_scenario_queries(scenarios):
             merged_df = pd.concat([merged_df, df], axis=1)
 
     merged_df.to_csv(path, index=True, header=True)
+
+
+def export_template_settings(templates):
+    root = Path(__file__).parents[1]
+    output_path = root / Path(f"data/output")
+    output_path.mkdir(parents=True, exist_ok=True)
+
+    path = Path(__file__).parents[1] / "data" / "output" / "template_settings.csv"
+
+    session_ids = []
+    titles = []
+    all_keys = []
+    for template in templates:
+        session_ids.append(template.session_id)
+        titles.append(template.title)
+        for input in template.user_values.keys():
+            all_keys.append(input)
+    cols = pd.MultiIndex.from_tuples(zip(titles, session_ids))
+    unique_keys = list(set(all_keys))
+
+    df = pd.DataFrame(columns=session_ids, index=unique_keys)
+
+    for template in templates:
+        session_id = template.session_id
+        for input_key, val in template.user_values.items():
+            df.loc[input_key, session_id] = val
+
+    df.columns = cols
+    df.to_csv(path, index=True, header=True)
 
 
 def print_ids(scenarios, model_url):
