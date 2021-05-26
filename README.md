@@ -10,6 +10,8 @@ This repository contains a Python tool to create and update scenarios in the [En
    * [data_downloads.csv](#data_downloadscsv)
    * [curves](#curves)
  * [Running the script](#running-the-script)
+   * [Query-only mode](#query-only-mode)
+   * [Specifying environments](#specifying-environments)
  * [Output](#output)
  * [Contact](#questions-and-remarks)
 
@@ -110,14 +112,23 @@ The script will create or update the scenarios specified in `scenario_list.csv` 
 
 If you are creating new scenarios (i.e. you have left the `id` column in `scenario_list.csv` empty), the script will automatically add the IDs of the newly created scenarios to the `scenario_list.csv` file. This ensures that the next time you run the script your scenarios will be updated (rather than creating new ones).
 
+#### Query-only mode
+Optionally, you can add the `query_only` argument to run the script in 'query-only mode':
 
-Optionally, you can add the arguments `beta` or `local` to create or query scenarios on the ETM [beta server](https://beta-pro.energytransitionmodel.com/) or your local machine. The latter assumes your local engine runs at `localhost:3000` and local model at `localhost:4000`. I.e.:
 ```
-python3 scenario_from_csv.py beta
+python scenario_from_csv.py query_only
+```
+
+In query-only mode the script will only collect scenario results ([queries](#queriescsv) and [data downloads](#data_downloadscsv)). No changes will be made to existing scenarios, nor will new scenarios be created. The latter means that scenarios in the [`scenario_list.csv`](#scenario_listcsv) without an 'id' will be ignored, as these scenarios have not yet been created.
+
+#### Specifying environments
+In addition, you can add the arguments `beta` or `local` to create or query scenarios on the ETM [beta server](https://beta-pro.energytransitionmodel.com/) or your local machine. The latter assumes your local engine runs at `localhost:3000` and local model at `localhost:4000`. I.e.:
+```
+python scenario_from_csv.py beta
 ```
 or
 ```
-python3 scenario_from_csv.py local
+python scenario_from_csv.py local
 ```
 
 ### Output
