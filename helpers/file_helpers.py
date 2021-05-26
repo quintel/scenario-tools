@@ -52,11 +52,23 @@ def read_curve_file(file_name):
         return curve_df
 
 
+def check_duplicate_scenario_settings(df):
+    inputs = df.index
+    duplicates = inputs[inputs.duplicated()]
+
+    if len(duplicates) > 0:
+        duplicates_output = "\n\t".join([d for d in duplicates])
+        print("Error: The following sliders are included more than once "
+              f"in scenario_settings.csv:\n\t{duplicates_output}")
+        sys.exit()
+
+
 def read_scenario_settings():
     path = Path(__file__).parents[1] / "data" / "input" / "scenario_settings.csv"
     try:
         print(" Reading scenario_settings")
         scenario_settings = pd.read_csv(path, index_col=0, dtype=str)
+        check_duplicate_scenario_settings(scenario_settings)
     except FileNotFoundError:
         print("Cannot find scenario_settings.csv file in the data/input folder")
         scenario_settings = pd.DataFrame()
