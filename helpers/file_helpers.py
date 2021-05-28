@@ -67,7 +67,8 @@ def read_scenario_settings():
     path = Path(__file__).parents[1] / "data" / "input" / "scenario_settings.csv"
     try:
         print(" Reading scenario_settings")
-        scenario_settings = pd.read_csv(path, index_col=0, dtype=str)
+        scenario_settings = pd.read_csv(
+            path, index_col=0).astype('str')
         check_duplicate_scenario_settings(scenario_settings)
     except FileNotFoundError:
         print("Cannot find scenario_settings.csv file in the data/input folder")
