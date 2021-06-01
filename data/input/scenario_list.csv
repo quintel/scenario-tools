@@ -1,2 +1,2 @@
 short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order,curve_file
-R2050,Test scenario Rotterdam 2050,GM0599_rotterdam,2050,Testscenario,,TRUE,,,
+R2050,Test scenario Rotterdam 2050,GM0599_rotterdam,2050,Testscenario,838947,True,,,
