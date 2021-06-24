@@ -1,2 +1,6 @@
 short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order,curve_file
-test_scen,Scenario-Tools Test Scenario,nl,2050,"Scenario created by DfE and SONI. Explores high electrification on the demand side, combined with high local production of RES on the supply side",817253,,opac mv_batteries,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves
+U_2030_KEA,Systeemstudie Utrecht: 2030,PV26_utrecht,2030,,,TRUE,,,
+U_2050_REG,Systeemstudie Utrecht: 2050 (Regionale sturing),PV26_utrecht,2050,,,TRUE,,,
+U_2050_NAT,Systeemstudie Utrecht: 2050 (Nationale sturing),PV26_utrecht,2050,,,TRUE,,,
+U_2050_EUR,Systeemstudie Utrecht: 2050 (Europese sturing),PV26_utrecht,2050,,,TRUE,,,
+U_2050_INT,Systeemstudie Utrecht: 2050 (Internationale sturing),PV26_utrecht,2050,,,TRUE,,,
