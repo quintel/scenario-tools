@@ -10,7 +10,7 @@ from helpers.file_helpers import export_template_settings
 
 if __name__ == "__main__":
 
-    base_url, model_url = process_arguments(sys.argv)
+    base_url, model_url, query_only_mode = process_arguments(sys.argv)
 
     session = SessionWithUrlBase(base_url)
 
