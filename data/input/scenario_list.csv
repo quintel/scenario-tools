@@ -1,2 +1,3 @@
 short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order,curve_file
-test_scen,Scenario-Tools Test Scenario,nl,2050,"Scenario created by DfE and SONI. Explores high electrification on the demand side, combined with high local production of RES on the supply side",817253,,opac mv_batteries,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves
+Routekaart_2025,Routekaart Groningen 2025,GM0014_groningen,2025,Conceptscenario Routekaart Groningen 2025,847263,True,,,
+Routekaart_2035,Routekaart Groningen 2035,GM0014_groningen,2035,Conceptscenario Routekaart Groningen 2035,847264,True,,,
