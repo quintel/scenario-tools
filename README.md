@@ -110,7 +110,7 @@ Each file should look as follows:
 #### template_list.csv
 The `template_list.csv` file contains the following columns:
 
- * **id**. Here you can specify the ETM scenario ID of the scenario template. 
+ * **id**. Here you can specify the ETM scenario ID of the scenario template.
  * **title**. Here you can add a title for the template which is also displayed in the template settings output file.
 
 ### Running the scripts
@@ -149,7 +149,7 @@ It's also possible to adopt the settings of an existing scenario, which we then 
 python get_template_settings.py
 ```
 
-The script will create a `template_settings.csv` file in the `data/output/` folder. This file provides an overview of all slider settings for each scenario template. To adopt the values, open the `data/adopt_template_settings.xlsx` file and copy paste the entire sheet into the `template_settings` sheet. In the `adopter` sheet you can choose which scenario template should be using by specifying the template session ID. Also, you can choose which scenario settings to adopt by specifying TRUE or FALSE for each input key. By default, all settings are adopted except for the ones representing a capacity (in MW). When you're done, replace the `data/input/scenario_settings.csv` by the sheet `scenario_settings` from the Excel file.
+The script will create a `template_settings.csv` file in the `data/output/` folder. This file provides an overview of all slider settings for each scenario template. To adopt the values, open the `data/adopt_template_settings.xlsx` file and copy paste the entire sheet into the `template_settings` sheet. In the `adopter` sheet you can choose which scenario template should be used by specifying the template scenario ID. Also, you can choose which scenario settings to adopt by specifying TRUE or FALSE for each input key. By default, all settings are adopted except for the ones representing a capacity (in MW). When you're done, replace the `data/input/scenario_settings.csv` by the sheet `scenario_settings` from the Excel file.
 
 ### Output
 The script creates/updates the scenarios in the Energy Transition Model and prints the corresponding URLs in the terminal. In addition, it adds the following to the `data/output` folder:
