@@ -45,23 +45,23 @@ class ETM_API(object):
         df = pd.DataFrame.from_dict(p_gqueries, orient="index")
         return df
 
-    def get_scenario_description(self, session_id, detailed=False):
+    def get_scenario_description(self, scenario_id, detailed=False):
         """
         Obtain a basic description of the scenario by providing the API session
         ID. Using the detailed=true option, a more elaborate description is
         obtained, as well as an overview of all the modified inputs.
         """
-        response = self.session.get(f"/scenarios/{session_id}",
+        response = self.session.get(f"/scenarios/{scenario_id}",
                                        params={"detailed": detailed})
 
         return response.json()
 
 
-    def get_scenario_settings(self, session_id):
+    def get_scenario_settings(self, scenario_id):
         """
         Get an overview of all the modified inputs.
         """
-        description = self.get_scenario_description(session_id, True)
+        description = self.get_scenario_description(scenario_id, True)
 
         return description['user_values']
 

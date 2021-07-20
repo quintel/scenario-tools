@@ -54,9 +54,9 @@ def validate_scenario_list(scenario_list):
 
 
 def validate_template_list(template_list):
-    session_ids = [s.lower() for s in template_list["session_id"].tolist()]
+    ids = [s.lower() for s in template_list["id"].tolist()]
 
-    check_duplicates(session_ids, template_list, "session id")
+    check_duplicates(ids, template_list, "id")
 
 
 def read_curve_file(file_name):
@@ -179,23 +179,23 @@ def export_template_settings(templates):
 
     path = Path(__file__).parents[1] / "data" / "output" / "template_settings.csv"
 
-    session_ids = []
+    ids = []
     titles = []
     all_keys = []
     for template in templates:
-        session_ids.append(template.session_id)
+        ids.append(template.id)
         titles.append(template.title)
         for input in template.user_values.keys():
             all_keys.append(input)
-    cols = pd.MultiIndex.from_tuples(zip(titles, session_ids))
+    cols = pd.MultiIndex.from_tuples(zip(titles, ids))
     unique_keys = list(set(all_keys))
 
-    df = pd.DataFrame(columns=session_ids, index=unique_keys)
+    df = pd.DataFrame(columns=ids, index=unique_keys)
 
     for template in templates:
-        session_id = template.session_id
+        template_id = template.id
         for input_key, val in template.user_values.items():
-            df.loc[input_key, session_id] = val
+            df.loc[input_key, template_id] = val
 
     df.columns = cols
     df.to_csv(path, index=True, header=True)

@@ -1,7 +1,7 @@
 import pandas as pd
 
 ATTRIBUTES = [
-    "session_id",
+    "id",
     "title",
     "user_values"
 ]

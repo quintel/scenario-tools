@@ -33,10 +33,10 @@ To create, update and query ETM scenarios you can edit the following CSV files i
  * [`data_downloads.csv`](#data_downloadscsv) - Contains a list of data exports you would like to retrieve for each scenario.
 
  In addition, you may add CSV files containing custom supply, demand and price [curves](#curves) to the `data/input/curves` folder.
- 
+
 To get scenario settings from an existing scenario (from now on called a scenario "template") you can edit the following CSV file in the `data/input` folder:
 
- * [`template_list.csv`](#template_listcsv) -  Contains a list of scenario templates specified by its scenario ID 
+ * [`template_list.csv`](#template_listcsv) -  Contains a list of scenario templates specified by its scenario ID
 
 #### scenario_list.csv
 The `scenario_list.csv` file contains the following columns:
@@ -110,8 +110,8 @@ Each file should look as follows:
 #### template_list.csv
 The `template_list.csv` file contains the following columns:
 
- * **session_id**. Here you can specify the API session ID of the scenario template. 
- * **title**. Here you can add a title for the template which is also displayed in the template settings output file. 
+ * **id**. Here you can specify the ETM scenario ID of the scenario template. 
+ * **title**. Here you can add a title for the template which is also displayed in the template settings output file.
 
 ### Running the scripts
 To run the script, open a terminal window in the `scenario-tools` folder (or navigate to this folder in the terminal using `cd "path/to/scenario-tools folder"`) and run:
