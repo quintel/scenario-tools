@@ -9,6 +9,7 @@ This repository contains a Python tool to create and update scenarios in the [En
    * [queries.csv](#queriescsv)
    * [data_downloads.csv](#data_downloadscsv)
    * [curves](#curves)
+   * [template_list.csv](#template_listcsv)
  * [Running the script](#running-the-script)
    * [Query-only mode](#query-only-mode)
    * [Specifying environments](#specifying-environments)
@@ -32,6 +33,10 @@ To create, update and query ETM scenarios you can edit the following CSV files i
  * [`data_downloads.csv`](#data_downloadscsv) - Contains a list of data exports you would like to retrieve for each scenario.
 
  In addition, you may add CSV files containing custom supply, demand and price [curves](#curves) to the `data/input/curves` folder.
+
+To get scenario settings from an existing scenario (from now on called a scenario "template") you can edit the following CSV file in the `data/input` folder:
+
+ * [`template_list.csv`](#template_listcsv) -  Contains a list of scenario templates specified by its scenario ID
 
 #### scenario_list.csv
 The `scenario_list.csv` file contains the following columns:
@@ -102,7 +107,13 @@ Each file should look as follows:
 | 9.8 | 0.045
 | ... | ...
 
-### Running the script
+#### template_list.csv
+The `template_list.csv` file contains the following columns:
+
+ * **id**. Here you can specify the ETM scenario ID of the scenario template.
+ * **title**. Here you can add a title for the template which is also displayed in the template settings output file.
+
+### Running the scripts
 To run the script, open a terminal window in the `scenario-tools` folder (or navigate to this folder in the terminal using `cd "path/to/scenario-tools folder"`) and run:
 
 ```
@@ -131,8 +142,18 @@ or
 python scenario_from_csv.py local
 ```
 
+#### Using scenario templates
+It's also possible to adopt the settings of an existing scenario, which we then call a scenario template. To do this, run the following script in the terminal:
+
+```
+python get_template_settings.py
+```
+
+The script will create a `template_settings.csv` file in the `data/output/` folder. This file provides an overview of all slider settings for each scenario template. To adopt the values, open the `data/adopt_template_settings.xlsx` file and copy paste the entire sheet into the `template_settings` sheet. In the `adopter` sheet you can choose which scenario template should be used by specifying the template scenario ID. Also, you can choose which scenario settings to adopt by specifying TRUE or FALSE for each input key. By default, all settings are adopted except for the ones representing a capacity (in MW). When you're done, replace the `data/input/scenario_settings.csv` by the sheet `scenario_settings` from the Excel file.
+
 ### Output
 The script creates/updates the scenarios in the Energy Transition Model and prints the corresponding URLs in the terminal. In addition, it adds the following to the `data/output` folder:
+
  * A `scenario_outcomes.csv` file containing the query outcomes for all scenarios, including a column containing the values for the present year and the unit of each query
  * Sub folders for each scenario `short_name` containing the data exports
 
@@ -140,6 +161,7 @@ The script creates/updates the scenarios in the Energy Transition Model and prin
 ### Questions and remarks
 
 If you have any questions and/or remarks, you may reach out to us by:
+
 * Creating an [issue](https://github.com/quintel/scenario-tools/issues) on this repository and assign one of the Quintel members, e.g.:
   * [Roos de Kok](https://www.github.com/redekok)
   * [Michiel den Haan](https://www.github.com/michieldenhaan)
