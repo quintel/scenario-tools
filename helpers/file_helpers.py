@@ -89,7 +89,9 @@ def read_scenario_settings():
         print(" Reading scenario_settings")
         scenario_settings = pd.read_csv(
             path, index_col=0).astype('str')
-        scenario_settings = scenario_settings.dropna()
+        for nan in ["", "nan", "NaN"]:
+            scenario_settings.replace(nan, float("NaN"), inplace=True)
+        scenario_settings.dropna(inplace=True)
         check_duplicate_scenario_settings(scenario_settings)
     except FileNotFoundError:
         print("Cannot find scenario_settings.csv file in the data/input folder")
@@ -174,6 +176,18 @@ def export_scenario_queries(scenarios):
             merged_df = pd.concat([merged_df, df], axis=1)
 
     merged_df.to_csv(path, index=True, header=True)
+
+
+def export_present_settings(area, present_settings):
+    root = Path(__file__).parents[1]
+    output_path = root / Path(f"data/output")
+    output_path.mkdir(parents=True, exist_ok=True)
+
+    path = Path(__file__).parents[1] / "data" / "output" / f"present_settings_{area}.csv"
+
+    df = present_settings[['min', 'max', 'default']]
+
+    df.to_csv(path, index=True, header=True)
 
 
 def export_template_settings(templates):

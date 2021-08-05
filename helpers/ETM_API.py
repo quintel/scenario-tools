@@ -35,6 +35,27 @@ class ETM_API(object):
         self.session = session
         self.id = scenario_id
 
+    def get_inputs(self):
+        """
+        Get an overview of all the inputs available for a scenario, complete
+        with their minimum, maximum and default values and unit
+        """
+        p = self.session.get("/scenarios/" + str(self.id) + "/inputs",
+                             headers={'Connection':'close'})
+        p_json = p.json()
+        df = pd.DataFrame.from_dict(p_json, orient = "index")
+        return df
+
+    def get_input(self, code):
+        """
+        Inspect individual input (represented by the code) and learn about the
+        applicable unit
+        """
+        p = self.session.get("/scenarios/" + self.scenario_id + "/inputs/" +
+                             code, headers={'Connection':'close'})
+        p_json = p.json()
+        df = pd.DataFrame.from_dict(p_json, orient = "index")
+        return df
 
     def return_gqueries(self, p):
         """
@@ -311,4 +332,3 @@ class ETM_API(object):
         if fail_info: print(fail_info)
         print(json.dumps(response.json(), indent=4, sort_keys=True))
         sys.exit(1)
-

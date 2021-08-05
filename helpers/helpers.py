@@ -69,6 +69,18 @@ def add_scenario_settings(scenarios):
             scenario.user_values = None
 
 
+def generate_area_list():
+    path = Path(__file__).parents[1] / "data" / "input" / "areas.csv"
+    try:
+        area_list = pd.read_csv(path)
+
+        return area_list["geo_id"].tolist()
+
+    except FileNotFoundError:
+        area_list = pd.DataFrame()
+        print("File 'areas.csv' is missing. No present settings will be collected.")
+
+
 def generate_query_list():
     path = Path(__file__).parents[1] / "data" / "input" / "queries.csv"
     try:
@@ -78,7 +90,7 @@ def generate_query_list():
 
     except FileNotFoundError:
         query_list = pd.DataFrame()
-        print("File 'queries.csv' is missing. No query data will be collected")
+        print("File 'queries.csv' is missing. No query data will be collected.")
 
 
 def print_ids(scenarios, model_url):
