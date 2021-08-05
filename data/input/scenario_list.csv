@@ -1,2 +1,3 @@
-short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",,,opac mv_batteries,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,dummy_heat_demand
+short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order,curve_file
+heumen2030,Testscenario Heumen 2030,GM0252_heumen,2030,Ihkv ondersteuning scenario-ontwikkeling Over Morgen,855679,,,,
+heumen2050,Testscenario Heumen 2050,GM0252_heumen,2050,Ihkv ondersteuning scenario-ontwikkeling Over Morgen,855680,,,,
