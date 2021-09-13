@@ -1,2 +1,2 @@
 short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"Scenario created by DfE and SONI. Explores high electrification on the demand side, combined with high local production of RES on the supply side",835167,,opac mv_batteries,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,2050_folder
+test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"Scenario created by DfE and SONI. Explores high electrification on the demand side, combined with high local production of RES on the supply side",835167,,opac mv_batteries,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,dummy_heat_demand

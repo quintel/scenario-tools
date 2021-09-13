@@ -1,6 +1,6 @@
 import pandas as pd
 
-from helpers.heat_file_utils import read_heat_demand_input, read_profiles, contains_heating_profiles
+from helpers.heat_file_utils import read_heat_demand_input, read_profiles, contains_heating_profiles, read_thermostat
 from helpers.heat_demand import generate_profiles
 
 ATTRIBUTES = [
@@ -63,10 +63,12 @@ class Scenario:
         '''
         if not self.heat_demand: return
 
-        if contains_heating_profiles(self.heat_demand):
+        elif contains_heating_profiles(self.heat_demand):
             self.heat_demand_curves = read_profiles(self.heat_demand)
 
-        self.heat_demand_curves = generate_profiles(
-            read_heat_demand_input(self.heat_demand, 'temperature'),
-            read_heat_demand_input(self.heat_demand, 'irridiation')
-        )
+        else:
+            self.heat_demand_curves = generate_profiles(
+                read_heat_demand_input(self.heat_demand, 'temperature'),
+                read_heat_demand_input(self.heat_demand, 'irradiation'),
+                read_thermostat(self.heat_demand)
+            )

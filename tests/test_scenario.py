@@ -10,7 +10,7 @@ def test_heat_demand_in_scenario(default_scenario):
     assert default_scenario.heat_demand == 'heat_demand'
     assert not default_scenario.heat_demand_curves
 
-@mock.patch("helpers.file_helpers.CURVE_BASE", 'tests/fixtures/')
+@mock.patch("helpers.heat_file_utils.CURVE_BASE", 'tests/fixtures/')
 def test_set_heat_demand_in_scenario(default_scenario):
     default_scenario.set_heat_demand_curves()
 

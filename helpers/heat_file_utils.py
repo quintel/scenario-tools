@@ -21,10 +21,23 @@ def read_heat_demand_input(folder, file):
     curve = read_csv(CURVE_BASE + folder, file, squeeze=True, header=None).astype(float)
 
     if not curve.size == 8760:
-        raise ValueError(f'Curve input {file} in {folder} should be of length 8760')
+        raise SystemExit(f'Curve input {file} in {folder} should be of length 8760')
 
     return curve
 
+def read_thermostat(folder):
+    '''
+    Reads the thermostat file into a pd.DataFrame, amd performs some checks
+    '''
+    therm = read_csv(CURVE_BASE + folder, 'thermostat').astype(float)
+
+    if not set(list(therm.columns)) == set(['low', 'medium', 'high']):
+        raise SystemExit(f'Thermostat in {folder} should be supplied for low, medium and high.')
+
+    if not therm.shape[0] == 24:
+        raise SystemExit(f'Thermostat in {folder} should be supplied for 24 hours')
+
+    return therm
 
 def contains_heating_profiles(folder):
     '''

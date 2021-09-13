@@ -10,7 +10,7 @@ import helpers.heat_demand.smoothing as smoothing
 HOURS = 8760
 HOURS_PER_DAY = 24
 
-def generate_profiles(temp, irr):
+def generate_profiles(temp, irr, therm):
     '''
     Generates profiles for the heat demand of the five house types for three
     insulation types, resulting in 5 * 3 = 15 profiles. These profiles can be used to upload to
@@ -19,6 +19,7 @@ def generate_profiles(temp, irr):
     Params:
         temp (np.array | pd.Series): Outside temperature curve of length 8760
         irr (np.array | pd.Series): Solar irradiation curve of length 8760
+        therm (pd.DataFrame): Thermostat settings with columns low, medium and high for 24 hours
 
     Returns:
         generator (Curve)
@@ -28,9 +29,9 @@ def generate_profiles(temp, irr):
     for house_type in insulation_config.HOUSE_NAMES:
         for insulation_type in insulation_config.INSULATION_TYPES:
             curve_name = f'insulation_{house_type}_{insulation_type}'
-            yield Curve(curve_name, heat_demand_curve(house_type, insulation_type, temp, irr))
+            yield Curve(curve_name, heat_demand_curve(house_type, insulation_type, temp, irr, therm))
 
-def heat_demand_curve(house_type, insulation_type, temp, irr):
+def heat_demand_curve(house_type, insulation_type, temp, irr, therm):
     '''
     Calculates the heat demand curve for a hous and insulation type
 
@@ -39,11 +40,12 @@ def heat_demand_curve(house_type, insulation_type, temp, irr):
         insulation_type (str): Level of insulation, e.g. low
         temp (np.array | pd.Series): Outside temperature curve of length 8760
         irr (np.array | pd.Series): Solar irradiation curve of length 8760
+        therm (pd.DataFrame): Thermostat settings with columns low, medium and high for 24 hours
 
     Returns:
         np.array of length 8760 containing the heat demand curve
     '''
-    house = House(house_type, insulation_type)
+    house = House(house_type, insulation_type, therm)
     return smoothe_and_aggregate(
         [heat_demand_at_hour(house, hour, temp, irr) for hour in range(HOURS)],
         insulation_type

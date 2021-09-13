@@ -4,7 +4,7 @@ from .config import insulation_config
 class House:
     """Class to describe a house"""
 
-    def __init__(self, house_type, insulation_level):
+    def __init__(self, house_type, insulation_level, thermostat):
         self.house_type = house_type
         self.insulation_level = insulation_level
 
@@ -12,7 +12,7 @@ class House:
         self.set_energy_exchange()
 
         self.window_area = insulation_config.get_window_area(house_type)
-        self.thermostat_temperature = insulation_config.get_thermostat_vectors(insulation_level)
+        self.thermostat_temperature = thermostat[insulation_level]
         self.inside_temperature = self.thermostat_temperature[0]
 
 

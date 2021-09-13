@@ -27,20 +27,6 @@ class InsulationConfig():
         "detached_houses": 405
     }
 
-    # Thermostate settings from ECN
-    THERMOSTAT = {
-        'high': [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20],
-        'medium': [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20],
-        'low': [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
-        # 'high': [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21],
-        # 'medium': [18, 18, 18, 18, 18, 18, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 20.5, 20.5, 20.5, 20.5, 20.5, 20.5, 18],
-        # 'low': [15.8, 15.8, 15.8, 15.8, 15.8, 15.8, 18.5, 18.5, 18.5, 18.5, 18.5, 18.5, 18.5, 18.5, 18.5, 18.5, 18.5, 19.5, 19.5, 19.5, 19.5, 19.5, 19.5, 15.8]
-        # [15, 15, 15, 15, 15, 15, 17, 19, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 15, 15, 15, 15, 15]
-        # [18, 18, 18, 18, 18, 18, 18, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 18, 18, 18, 18]
-        # [19, 19, 19, 19, 19, 19, 19, 19, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 19, 19, 19]
-        # [20, 20, 20, 20, 20, 20, 20, 20, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 20, 20, 20]
-        # [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
-    }
 
     # Magic 'fitting'? numbers from Dorine -> from a fitting done in the etdataset sister of this module?
     # BEHAVIOUR_FITTING_RESULTS = {
@@ -113,11 +99,6 @@ class InsulationConfig():
 
         return {house_type: self.window_area for house_type in self.get_house_types()}
 
-    def get_thermostat_vectors(self, setting=None):
-        if setting:
-            return self.THERMOSTAT[setting]
-
-        return self.THERMOSTAT
 
     def get_behaviour(self, house_type=None, setting=None):
         if house_type and setting:
