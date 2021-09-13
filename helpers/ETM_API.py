@@ -35,6 +35,7 @@ class ETM_API(object):
         self.session = session
         self.id = scenario_id
 
+
     def return_gqueries(self, p):
         """
         Extracts information from object p by first converting to JSON and
@@ -44,6 +45,7 @@ class ETM_API(object):
         p_gqueries = p_json["gqueries"]
         df = pd.DataFrame.from_dict(p_gqueries, orient="index")
         return df
+
 
     def get_scenario_description(self, scenario_id, detailed=False):
         """
@@ -79,17 +81,14 @@ class ETM_API(object):
                 "end_year": end_year
             }
         }
-        p = self.session.post("/scenarios", json=post_data,
+        response = self.session.post("/scenarios", json=post_data,
                               headers={'Connection': 'close'})
 
-        if p.status_code != requests.codes.ok:
-            print(json.dumps(p.json(), indent=4, sort_keys=True))
-            sys.exit(1)
+        self.handle_response(response)
 
-        df_scenario = pd.DataFrame.from_dict(p.json(), orient="index")
+        df_scenario = pd.DataFrame.from_dict(response.json(), orient="index")
         self.id = df_scenario.loc["id"].values[0]
 
-        pass
 
     def update_scenario_properties(self, scenario_title, description, protected):
         """
@@ -113,14 +112,11 @@ class ETM_API(object):
         put_data = {
             "scenario": scenario_dict
         }
-        p = self.session.put(f"/scenarios/{self.id}", json=put_data,
+        response = self.session.put(f"/scenarios/{self.id}", json=put_data,
                              headers={'Connection': 'close'})
 
-        if p.status_code != requests.codes.ok:
-            print(json.dumps(p.json(), indent=4, sort_keys=True))
-            sys.exit(1)
+        self.handle_response(response)
 
-        pass
 
     def change_inputs(self, user_values, short_name):
         """
@@ -133,13 +129,11 @@ class ETM_API(object):
             },
             "detailed": True
         }
-        p = self.session.put(f'/scenarios/{self.id}', json=put_data,
+        response = self.session.put(f'/scenarios/{self.id}', json=put_data,
                              headers={'Connection': 'close'})
 
-        if p.status_code != requests.codes.ok:
-            print(f"Error for scenario {short_name}")
-            print(json.dumps(p.json(), indent=4, sort_keys=True))
-            sys.exit(1)
+        self.handle_response(response, fail_info=f"Error for scenario {short_name}")
+
 
     def change_flexibility_order(self, flexibility_order):
         """
@@ -147,12 +141,11 @@ class ETM_API(object):
         """
         put_data = {"flexibility_order": {"order": flexibility_order}}
 
-        p = self.session.put(f'/scenarios/{self.id}/flexibility_order',
+        response = self.session.put(f'/scenarios/{self.id}/flexibility_order',
                              json=put_data, headers={'Connection': 'close'})
 
-        if p.status_code != requests.codes.ok:
-            print(json.dumps(p.json(), indent=4, sort_keys=True))
-            sys.exit(1)
+        self.handle_response(response)
+
 
     def change_heat_network_order(self, heat_network_order):
         """
@@ -160,12 +153,11 @@ class ETM_API(object):
         """
         put_data = {"heat_network_order": {"order": heat_network_order}}
 
-        p = self.session.put(f'/scenarios/{self.id}/heat_network_order',
+        response = self.session.put(f'/scenarios/{self.id}/heat_network_order',
                              json=put_data, headers={'Connection': 'close'})
 
-        if p.status_code != requests.codes.ok:
-            print(json.dumps(p.json(), indent=4, sort_keys=True))
-            sys.exit(1)
+        self.handle_response(response)
+
 
     def get_query_results(self, query_list):
         """
@@ -176,16 +168,17 @@ class ETM_API(object):
             "gqueries": query_list
         }
 
-        p = self.session.put(f'/scenarios/{self.id}', json=put_data,
+        response = self.session.put(f'/scenarios/{self.id}', json=put_data,
                              headers={'Connection': 'close'})
 
-        if p.status_code != requests.codes.ok:
-            print("Error retrieving queries. Please check your queries.csv.\n")
-            print(json.dumps(p.json(), indent=4, sort_keys=True))
-            sys.exit(1)
-        else:
-            self.query_results = self.return_gqueries(p)
-            return self.query_results
+        self.handle_response(
+            response,
+            fail_info="Error retrieving queries. Please check your queries.csv.\n"
+        )
+
+        self.query_results = self.return_gqueries(response)
+        return self.query_results
+
 
     def get_data_download(self, download_name, hourly=False):
         """
@@ -210,6 +203,7 @@ class ETM_API(object):
 
         return df
 
+
     def export_scenario_data_downloads(self, short_name, download_dict):
         """
         Export data downloads to CSV files.
@@ -226,6 +220,7 @@ class ETM_API(object):
             df = self.get_data_download(download, hourly=True)
             df.to_csv(f"{output_path}/{short_name}_{download}.csv", index=False, header=True)
 
+
     def upload_custom_curve(self, curve_key, curve_data, curve_file_name):
         """
         Upload custom curve to ETM
@@ -233,12 +228,11 @@ class ETM_API(object):
         curve_string = '\n'.join(str(e) for e in curve_data)
         put_data = {'file': (curve_file_name, curve_string)}
 
-        p = self.session.put(f'/scenarios/{self.id}/custom_curves/{curve_key}',
+        response = self.session.put(f'/scenarios/{self.id}/custom_curves/{curve_key}',
                              files=put_data, headers={'Connection': 'close'})
 
-        if p.status_code != requests.codes.ok:
-            print(json.dumps(p.json(), indent=4, sort_keys=True))
-            sys.exit(1)
+        self.handle_response(response)
+
 
     def initialise_scenario(self, scenario):
         if not scenario.id:
@@ -251,6 +245,7 @@ class ETM_API(object):
 
         else:
             self.id = scenario.id
+
 
     def update_scenario(self, scenario, curve_file_dict):
         self.update_scenario_properties(
@@ -277,6 +272,15 @@ class ETM_API(object):
                 self.upload_custom_curve(curve.key, curve.data,
                                          scenario.curve_file)
 
+        if scenario.heat_demand and scenario.heat_demand_curves:
+            print(' Generating and uploading 15 heat demand curves, this may take a while:')
+            for curve in scenario.heat_demand_curves:
+                splitted = curve.key.split('_')
+                print(f"  - Generated {' '.join(splitted[1:-1])} {splitted[-1]}")
+                self.upload_custom_curve(curve.key, curve.data, curve.key)
+                print(f"  - Uploaded curve")
+
+
     def query_scenario(self, scenario, query_list, download_dict):
         """
         Collect queries and data downloads
@@ -289,3 +293,16 @@ class ETM_API(object):
             print(" Collecting data downloads")
             self.export_scenario_data_downloads(scenario.short_name,
                                                 download_dict)
+
+
+    def handle_response(self, response, fail_info=''):
+        '''
+        Lets sucessful responses through, prints errors and exits when response is bad
+        '''
+        if response.ok:
+            return
+
+        if fail_info: print(fail_info)
+        print(json.dumps(response.json(), indent=4, sort_keys=True))
+        sys.exit(1)
+
