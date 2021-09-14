@@ -68,6 +68,9 @@ def read_curve_file(file_name):
 
         return curve_df
 
+def curve_path(folder, file):
+    return Path(__file__).parents[1] / CURVE_BASE / folder / f'{file}.csv'
+
 
 def check_duplicate_scenario_settings(df):
     inputs = df.index
