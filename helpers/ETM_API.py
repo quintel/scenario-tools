@@ -190,16 +190,21 @@ class ETM_API(object):
         else:
             suffix = download_name
 
-        file = self.session.get(f"/scenarios/{self.id}/{suffix}")
+        response = self.session.get(f"/scenarios/{self.id}/{suffix}")
 
         try:
-            file.raise_for_status()
+            response.raise_for_status()
         except requests.exceptions.HTTPError as err:
             print("Something went wrong retrieving a data download. "
                   "Check your data_downloads.csv!\n")
             raise SystemExit(err)
 
-        df = pd.read_csv(io.StringIO(file.content.decode('utf-8')))
+        if response.text.startswith('<!DOCTYPE html>'):
+            print(f'Download "{download_name}" is not available for scenarios '
+                    'with Merit turned off. Aborting...\n')
+            raise SystemExit()
+
+        df = pd.read_csv(io.StringIO(response.content.decode('utf-8')))
 
         return df
 
