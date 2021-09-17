@@ -2,12 +2,13 @@ import sys
 import pandas as pd
 from pathlib import Path
 
+CURVE_BASE = 'data/input/curves/'
 
-def read_csv(folder, file):
+def read_csv(folder, file, **options):
     path = Path(__file__).parents[1] / f"{folder}/{file}.csv"
 
     try:
-        df = pd.read_csv(path, dtype=str)
+        df = pd.read_csv(path, dtype=str, **options)
     except FileNotFoundError:
         print(f"File '{file}.csv' not found in '{folder}' folder. Aborting..")
         sys.exit(1)
@@ -66,6 +67,9 @@ def read_curve_file(file_name):
         curve_df = read_csv(folder, file_name)
 
         return curve_df
+
+def curve_path(folder, file):
+    return Path(__file__).parents[1] / CURVE_BASE / folder / f'{file}.csv'
 
 
 def check_duplicate_scenario_settings(df):

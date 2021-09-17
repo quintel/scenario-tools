@@ -50,6 +50,7 @@ The `scenario_list.csv` file contains the following columns:
  * **curve_file**. The name of a CSV file containing custom hourly profiles. For example interconnector price curves, solar production curves or industry heat demand curves. The CSV file should be placed in the `data/input/curves` folder.
  * **flexibility_order**. To specify the order in which flexibility options are utilised. Can be left empty to use the default order. Options should be separated by a space. E.g.: `“household_batteries mv_batteries power_to_gas”`. The full list of options can be found on [Github](https://github.com/quintel/etsource/blob/production/config/flexibility_order.yml).
  * **heat_network_order**. To specify the order in which dispatchable district heating technologies are utilised if there is a shortage of supply. Can be left empty to use the default order. Options should be separated by a space. E.g.: `"energy_heat_network_storage energy_heat_burner_hydrogen”`. The full list of technologies can be found on [Github](https://github.com/quintel/etsource/blob/production/config/heat_network_order.yml).
+ * **heat_demand**. *Optional - expert feature.* The name of the folder inside `data/input/curves` that contains either 15 heat demand profiles, or the three input files neccesary to generate new profiles.
 
 
 #### scenario_settings.csv
@@ -107,6 +108,19 @@ Each file should look as follows:
 | 9.8 | 0.045
 | ... | ...
 
+#### curves - heat demand
+You can also supply a custom subfolder in the curves folder which contains either heat demand curves, or ways to generate these heat demand curves:
+
+  1. **Supply your own heat demand curves** In this subfolder, supply csv profiles (summing to 1/3600) for all combinations of the following house types and insulation levels: *"terraced_houses", "corner_houses", "semi_detached_houses", "apartments", "detached_houses"* and *"low", "medium", "high"*. The names of the csv files should look like *insulation_apartments_low*. All 15 files should be present. Or;
+  2. **Generate heat demand curves** To generate your own heat demand profiles and upload them, three input csv files should be present in the subfolder:
+     - temperature: The outside temperature in degrees C for all 8760 hours of the year;
+     - irradiation: The irradiation in J/cm2 for all 8760 hours of the year;
+     - thermostat: A csv with three columns (*low, medium, high*), with thermostat settings for  24 hours.
+
+  The generated curves will be written to the subfolder, and can be inspected and reused.
+
+The tool will checkout your subfolder and decide for itself which of the two paths to follow. If the 15 profiles are there, these will be used. If the three input files are present, new curves will be generated.
+
 #### template_list.csv
 The `template_list.csv` file contains the following columns:
 
@@ -119,7 +133,7 @@ To run the script, open a terminal window in the `scenario-tools` folder (or nav
 ```
 python scenario_from_csv.py
 ```
-The script will create or update the scenarios specified in `scenario_list.csv` using the slider settings specified in `scenario_settings.csv` and (optionally) a curve file in the `data/input/curves` folder. For each scenario it will collect query data for all queries in `queries.csv` and download all the data export CSVs specified in `data_downloads.csv`. Once completed, it will print links to your scenarios in the terminal.
+The script will create or update the scenarios specified in `scenario_list.csv` using the slider settings specified in `scenario_settings.csv`, (optionally) a curve file in the `data/input/curves` folder, and (optionally) use the heat demand subfolder of the `curves` folder. For each scenario it will collect query data for all queries in `queries.csv` and download all the data export CSVs specified in `data_downloads.csv`. Once completed, it will print links to your scenarios in the terminal.
 
 If you are creating new scenarios (i.e. you have left the `id` column in `scenario_list.csv` empty), the script will automatically add the IDs of the newly created scenarios to the `scenario_list.csv` file. This ensures that the next time you run the script your scenarios will be updated (rather than creating new ones).
 

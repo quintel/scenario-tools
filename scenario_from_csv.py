@@ -43,6 +43,9 @@ if __name__ == "__main__":
         API_scenario = ETM_API(session)
         API_scenario.initialise_scenario(scenario)
 
+        # Do this in the loop to save memory
+        if scenario.heat_demand: scenario.set_heat_demand_curves()
+
         if not query_only_mode:
             API_scenario.update_scenario(scenario, curve_file_dict)
 

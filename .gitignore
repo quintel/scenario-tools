@@ -3,3 +3,4 @@
 *.pyc
 Scenariodocumentatie.xlsx
 data/input/*.xlsx
+__pycache__

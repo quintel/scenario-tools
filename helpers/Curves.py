@@ -1,6 +1,6 @@
 import sys
 import pandas as pd
-from helpers.file_helpers import check_duplicates
+from helpers.file_helpers import curve_path, check_duplicates
 
 
 class CurveFile:
@@ -51,3 +51,20 @@ class Curve():
     def __init__(self, key, data):
         self.key = key
         self.data = data
+
+    def to_csv(self, folder=''):
+        '''
+        Export the Curve to a csv file, if that file does not yet exist
+
+        Params:
+            folder (str): The folder in the curves folder where the curve should be written to.
+                          Default '' writes straight to the curves folder (no subfolder).
+        '''
+        path = curve_path(folder, self.key)
+
+        if path.exists():
+            return
+
+        pd.Series(self.data).to_csv(path, index=False, header=False)
+
+
