@@ -4,7 +4,7 @@ from .house import House
 from .config import insulation_config
 from helpers.Curves import Curve
 
-import helpers.heat_demand.smoothing as smoothing
+from .smoothing import calculate_smoothed_demand
 
 # General constants
 HOURS = 8760
@@ -75,7 +75,7 @@ def smoothe_and_aggregate(curve, insulation_type):
     Smooth demand curve to turn individual household curves into average/aggregate
     curves of a whole neighbourhood
     '''
-    return normalise(smoothing.calculate_smoothed_demand(curve, insulation_type))
+    return normalise(calculate_smoothed_demand(curve, insulation_type))
 
 def normalise(curve):
     '''Normalises a curve to 1/3600'''
