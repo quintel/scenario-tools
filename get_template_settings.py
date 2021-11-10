@@ -8,8 +8,7 @@ from helpers.helpers import (process_arguments,
 
 from helpers.file_helpers import export_template_settings
 
-if __name__ == "__main__":
-
+def call():
     base_url, model_url, query_only_mode = process_arguments(sys.argv)
 
     session = SessionWithUrlBase(base_url)
@@ -24,3 +23,7 @@ if __name__ == "__main__":
         template.add_user_values(user_values)
 
     export_template_settings(templates)
+
+
+if __name__ == "__main__":
+    call()

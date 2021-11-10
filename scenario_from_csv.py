@@ -13,8 +13,7 @@ from helpers.file_helpers import (generate_query_list,
                                   export_scenario_ids,
                                   export_scenario_queries)
 
-if __name__ == "__main__":
-
+def call():
     base_url, model_url, query_only_mode = process_arguments(sys.argv)
 
     session = SessionWithUrlBase(base_url)
@@ -55,3 +54,7 @@ if __name__ == "__main__":
     export_scenario_ids(scenarios)
 
     print_ids(scenarios, model_url)
+
+
+if __name__ == "__main__":
+    call()
