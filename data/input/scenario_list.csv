@@ -1,2 +1,6 @@
-short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",,,opac mv_batteries,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,dummy_heat_demand
+short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order
+a,a,nl2019,2050,a,876383,True,,
+b,b,nl2019,2050,b,876375,True,,
+c,c,nl2019,2050,c,876381,True,,
+d,d,nl2019,2050,d,876382,True,,
+e,e,nl2019,2050,e,876378,True,,
