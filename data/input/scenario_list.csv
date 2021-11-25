@@ -1,3 +1,5 @@
 short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order,curve_file
+Groningen_leeg,Groningen leeg,GM0014_groningen,2035,Concept Update Routekaart Groningen,880241,True,,,
+Oude_routekaart,Oude routekaart,GM0014_groningen,2035,Oude routekaart,355118,True,,,
 Routekaart_2035,Concept update Routekaart Groningen,GM0014_groningen,2035,Concept Update Routekaart Groningen,845716,True,,,
 Routekaart_2025,Concept update Routekaart Groningen,GM0014_groningen,2025,Concept Update Routekaart Groningen,845717,True,,,
