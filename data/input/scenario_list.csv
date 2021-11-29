@@ -1,2 +1,3 @@
 short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order,curve_file
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"Scenario created by DfE and SONI. Explores high electrification on the demand side, combined with high local production of RES on the supply side",835167,,opac mv_batteries,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves
+roadmap_beleid_2030,"Scenario Dijk & Waard op basis van gemeentelijk, provinciaal en landelijk beleid",RGHLD01_heerhugowaard_langedijk,2030,Scenario gemaakt door Quintel voor de gemeente Dijk & Waard.,867682,,,,
+roadmap_potentie_2050,Scenario Dijk & Waard CO2 neutraal,RGHLD01_heerhugowaard_langedijk,2050,Scenario gemaakt door Quintel voor de gemeente Dijk & Waard.,867683,,,,
