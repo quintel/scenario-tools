@@ -57,7 +57,7 @@ def check_duplicate_scenario_settings(df):
     duplicates = inputs[inputs.duplicated()]
 
     if len(duplicates) > 0:
-        duplicates_output = "\n\t".join([d for d in set(duplicates)])
+        duplicates_output = "\n\t".join([str(d) for d in set(duplicates)])
         print("\nError: The following sliders are included more than once "
               f"in scenario_settings.csv:\n\t{duplicates_output}")
         sys.exit()
