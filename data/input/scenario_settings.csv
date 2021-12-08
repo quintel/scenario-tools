@@ -1,4 +1,4 @@
-input,roadmap_beleid_2030,roadmap_potentie_2050
+input,roadmap_beleid_2030,roadmap_potentie_2030
 agriculture_burner_crude_oil_share,0,0
 agriculture_burner_hydrogen_share,0,0
 agriculture_burner_network_gas_share,11.32635452,0
@@ -70,7 +70,7 @@ capacity_of_energy_power_geothermal,0,0
 capacity_of_energy_power_hydro_river,0,0
 capacity_of_energy_power_nuclear_gen2_uranium_oxide,0,0
 capacity_of_energy_power_nuclear_gen3_uranium_oxide,0,0
-capacity_of_energy_power_solar_pv_solar_radiation,17.93361528,62.13361528
+capacity_of_energy_power_solar_pv_solar_radiation,17.93361528,100
 capacity_of_energy_power_supercritical_coal,0,0
 capacity_of_energy_power_supercritical_waste_mix,0,0
 capacity_of_energy_power_turbine_hydrogen,0,0
@@ -79,7 +79,7 @@ capacity_of_energy_power_ultra_supercritical_coal,0,0
 capacity_of_energy_power_ultra_supercritical_cofiring_coal,0,0
 capacity_of_energy_power_ultra_supercritical_crude_oil,0,0
 capacity_of_energy_power_ultra_supercritical_network_gas,0,0
-capacity_of_energy_power_wind_turbine_inland,20.96458333,33.46458333
+capacity_of_energy_power_wind_turbine_inland,20.96458333,200
 capacity_of_energy_power_wind_turbine_offshore,0,0
 capacity_of_industry_chemicals_other_flexibility_p2h_electricity,0,0
 capacity_of_industry_chemicals_refineries_flexibility_p2h_electricity,0,0
@@ -176,7 +176,7 @@ energy_biogas_fermentation_share,100,50
 energy_greengas_gasification_dry_biomass_share,0,0
 energy_greengas_gasification_wet_biomass_share,0,50
 energy_heat_distribution_loss_share,0,0
-energy_heat_network_storage_loss_share,30.0000068,15
+energy_heat_network_storage_loss_share,0,15
 energy_heat_network_storage_output_capacity_share,300,50
 energy_mix_capacity_per_unit_wind_turbine_inland,3,3
 energy_mixer_for_gas_power_fuel_bio_oil_share,0,0
@@ -193,7 +193,7 @@ flh_of_energy_power_wind_turbine_inland,1920,1920
 flh_of_energy_power_wind_turbine_offshore,3500,3500
 flh_of_solar_pv_solar_radiation,867,867
 green_gas_total_share,0.399670849,100
-heat_storage_enabled,0,0
+heat_storage_enabled,1,1
 households_apartments_share,19.4296,19.4296
 households_appliances_clothes_dryer_electricity_efficiency,20,20
 households_appliances_computer_media_electricity_efficiency,10,10
@@ -238,8 +238,8 @@ households_insulation_level_terraced_houses,24.9,32
 households_lighting_efficient_fluorescent_electricity_share,48.5,1
 households_lighting_incandescent_electricity_share,23.9614352,0
 households_lighting_led_electricity_share,27.5385648,99
-households_number_of_inhabitants,0.09336,0.09961
-households_number_of_residences,40100,43150
+households_number_of_inhabitants,0.09336,0.09336
+households_number_of_residences,40100,40100
 households_semi_detached_houses_share,7.3781,7.3781
 households_solar_pv_solar_radiation_market_penetration,23,66.7
 households_terraced_houses_share,41.9356,41.9356
@@ -458,4 +458,4 @@ transport_useful_demand_passenger_kms,0.992063492,0.992063492
 transport_vehicle_combustion_engine_efficiency,0.6,0.6
 transport_vehicle_using_electricity_efficiency,1,1
 transport_vehicle_using_hydrogen_efficiency,1.7,1.7
-volume_of_imported_heat,1.189216,1.205
+volume_of_imported_heat,1.099216,1.205
