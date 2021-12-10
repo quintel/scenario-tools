@@ -38,7 +38,7 @@ capacity_of_energy_chp_ultra_supercritical_coal,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 capacity_of_energy_chp_ultra_supercritical_cofiring_coal,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 capacity_of_energy_heat_heatpump_water_water_electricity,0,7.5,15,15,15,15,15,15,15,15,15,15,15,15
 capacity_of_energy_heat_solar_thermal,0,37,37,37,37,37,37,37,37,37,37,37,37,37
-capacity_of_energy_hydrogen_solar_pv_solar_radiation,0,102,218,218,218,218,218,218,218,218,218,218,218,218
+capacity_of_energy_hydrogen_solar_pv_solar_radiation,0,5,10,10,10,10,10,10,10,10,10,10,10,10
 capacity_of_energy_power_combined_cycle_coal,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 capacity_of_energy_power_combined_cycle_hydrogen,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 capacity_of_energy_power_combined_cycle_network_gas,0,0,0,0,0,0,0,0,0,0,0,0,0,0
