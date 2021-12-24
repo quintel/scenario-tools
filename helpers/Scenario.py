@@ -30,6 +30,8 @@ class Scenario:
             try:
                 if pd.notna(scenario_list[key]):
                     setattr(self, key, scenario_list[key])
+                elif key == 'protected':
+                    setattr(self, key, False)
                 else:
                     setattr(self, key, None)
             except KeyError:
@@ -47,9 +49,28 @@ class Scenario:
                 to_list = current_val.split(" ")
                 setattr(self, order, to_list)
 
+
     def add_user_values(self, scenario_settings):
         self.user_values = scenario_settings
 
+
+    def create_params_as_json(self):
+        '''Returns the basic scenario parameters as json'''
+        return {
+                "title": self.title,
+                "area_code": self.area_code,
+                "end_year": self.end_year
+            }
+
+    def properties_as_json(self):
+        '''
+        Returns the scenario properties settings, like description, title, and protection status
+        '''
+        return {
+            'title': self.title if self.title else '',
+            'description': self.description if self.description else '',
+            'protected': self.protected
+        }
 
     def set_heat_demand_curves(self):
         '''
