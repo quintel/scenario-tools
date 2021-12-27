@@ -54,9 +54,13 @@ class ETM_API(object):
         obtained, as well as an overview of all the modified inputs.
         """
         response = self.session.get(f"/scenarios/{scenario_id}",
-                                       params={"detailed": detailed})
+                                       params={"detailed": detailed},
+                                       headers={'Content-Type': 'application/json'})
 
-        return response.json()
+        if response.ok:
+            return response.json()
+
+        raise SystemExit(response.content)
 
 
     def get_scenario_settings(self, scenario_id):
