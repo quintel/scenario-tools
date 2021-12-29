@@ -3,17 +3,20 @@ from unittest import mock
 from helpers.heat_demand import generate_profiles
 from helpers.file_helpers import read_csv
 from helpers.heat_file_utils import read_heat_demand_input
+from helpers.settings import Settings
 
 HOUSE_NAMES = [
     "terraced_houses", "corner_houses",
     "semi_detached_houses", "apartments", "detached_houses"
 ]
 
-@mock.patch("helpers.heat_file_utils.CURVE_BASE", 'tests/fixtures/')
 def test_generate_profiles():
+    # Patch settings
+    Settings.add('input_curves_folder', 'tests/fixtures/')
+
     temperature = read_heat_demand_input('heat_demand', 'temperature')
     irradiation = read_heat_demand_input('heat_demand',  'irradiation') # J/cm^2
-    thermostat = read_csv('tests/fixtures/heat_demand', 'thermostat').astype(float)
+    thermostat = read_csv('heat_demand/thermostat', curve=True).astype(float)
 
     counter = 0
     for curve in generate_profiles(temperature, irradiation, thermostat):

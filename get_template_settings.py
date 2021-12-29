@@ -3,10 +3,8 @@ import sys
 
 # project modules
 from helpers.ETM_API import ETM_API, SessionWithUrlBase
-from helpers.helpers import (process_arguments,
-                             initialise_templates)
-
-from helpers.file_helpers import export_template_settings
+from helpers.helpers import process_arguments
+from helpers.Template import TemplateCollection
 
 if __name__ == "__main__":
 
@@ -15,7 +13,7 @@ if __name__ == "__main__":
     session = SessionWithUrlBase(base_url)
 
     print("Opening CSV file(s):")
-    templates = initialise_templates()
+    templates = TemplateCollection.from_csv()
 
     for template in templates:
         print(f"\nProcessing scenario template \"{template.title}\"..")
@@ -23,4 +21,4 @@ if __name__ == "__main__":
         user_values = API_template.get_scenario_settings(template.id)
         template.add_user_values(user_values)
 
-    export_template_settings(templates)
+    templates.to_csv()

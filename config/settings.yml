@@ -1,0 +1,11 @@
+# Specify personal settings here that will be used throughout the tool
+
+# Location of the input files, you can change this to be any folder on your computer
+input_file_folder: data/input
+input_curves_folder: data/input/curves
+
+output_file_folder: data/output
+
+# Where your local model is run
+local_engine_url: http://localhost:3000/api/v3
+local_model_url: http://localhost:4000

@@ -1,19 +1,34 @@
 import sys
 import pandas as pd
 from pathlib import Path
+from .settings import Settings
 
-CURVE_BASE = 'data/input/curves/'
+def get_folder(kind):
+    '''kind can be input_file_folder, output_file_folder or input_curves_folder'''
+    if Settings.get(kind).startswith('data'):
+        return Path(__file__).parents[1] / Settings.get(kind)
 
-def read_csv(folder, file, **options):
-    path = Path(__file__).parents[1] / f"{folder}/{file}.csv"
+    return verify_path(Path(Settings.get(kind)).resolve())
 
-    try:
-        df = pd.read_csv(path, dtype=str, **options)
-    except FileNotFoundError:
-        print(f"File '{file}.csv' not found in '{folder}' folder. Aborting..")
-        sys.exit(1)
 
-    return df
+def verify_path(path):
+    if path.exists():
+        return path
+
+    print(f'Could not find {path}, please create the folder if it does not exist.')
+    sys.exit()
+
+
+def read_csv(file, curve=False, **options):
+    '''Returns a pd.DataFrame with datatype string'''
+    path = get_folder('input_file_folder') if not curve else get_folder('input_curves_folder')
+    path = path / f'{file}.csv'
+
+    if path.exists():
+        return pd.read_csv(path, dtype=str, **options)
+
+    print(f"File '{file}.csv' not found in '{get_folder('input_file_folder')}' folder. Aborting..")
+    sys.exit(1)
 
 
 def check_duplicates(arr, file_name, attribute_type):
@@ -26,110 +41,60 @@ def check_duplicates(arr, file_name, attribute_type):
             sys.exit(1)
 
 
-def read_scenario_list():
-    print(" Reading scenario list")
-    path = Path(__file__).parents[1] / "data/input"
-    scenario_file = "scenario_list"
-
-    scenario_list = read_csv(path, scenario_file)
-
-    return scenario_list
-
-
-def read_template_list():
-    print(" Reading template list")
-    path = Path(__file__).parents[1] / "data/input"
-    template_file = "template_list"
-
-    template_list = read_csv(path, template_file)
-
-    return template_list
-
-
-def validate_scenario_list(scenario_list):
-    columns = list(scenario_list.columns.str.lower())
-    short_names = [s.lower() for s in scenario_list["short_name"].tolist()]
-
-    check_duplicates(columns, scenario_list, "column")
-    check_duplicates(short_names, scenario_list, "short name")
-
-
-def validate_template_list(template_list):
-    ids = [s.lower() for s in template_list["id"].tolist()]
-
-    check_duplicates(ids, template_list, "id")
-
-
-def read_curve_file(file_name):
-    if file_name:
-        folder = Path(__file__).parents[1] / "data/input/curves"
-
-        curve_df = read_csv(folder, file_name)
-
-        return curve_df
-
-def curve_path(folder, file):
-    return Path(__file__).parents[1] / CURVE_BASE / folder / f'{file}.csv'
-
-
-def check_duplicate_scenario_settings(df):
-    inputs = df.index
-    duplicates = inputs[inputs.duplicated()]
-
-    if len(duplicates) > 0:
-        duplicates_output = "\n\t".join([d for d in set(duplicates)])
+def validate_scenario_settings(df):
+    '''Exits when sliders occur than once in the settings'''
+    if df.index.duplicated().any():
+        dups = '\n\t'.join(set(df.index[df.index.duplicated()]))
         print("\nError: The following sliders are included more than once "
-              f"in scenario_settings.csv:\n\t{duplicates_output}")
+              f"in scenario_settings.csv:\n\t{dups}")
         sys.exit()
 
 
 def read_scenario_settings():
-    path = Path(__file__).parents[1] / "data" / "input" / "scenario_settings.csv"
-    try:
+    '''Returns a prepped pd.Dataframe containing the scenario setings from the csv'''
+    file = get_folder('input_file_folder') / "scenario_settings.csv"
+
+    if file.exists():
         print(" Reading scenario_settings")
-        scenario_settings = pd.read_csv(
-            path, index_col=0).astype('str')
-        scenario_settings = scenario_settings.dropna()
-        check_duplicate_scenario_settings(scenario_settings)
-    except FileNotFoundError:
-        print("Cannot find scenario_settings.csv file in the data/input folder")
+        scenario_settings = pd.read_csv(file, index_col=0).astype('str').dropna()
+        validate_scenario_settings(scenario_settings)
+    else:
+        print("Cannot find scenario_settings.csv file in the input folder")
         scenario_settings = pd.DataFrame()
 
     return scenario_settings
 
 
 def generate_query_list():
-    path = Path(__file__).parents[1] / "data" / "input" / "queries.csv"
-    try:
-        print(" Reading query_list")
-        query_list = pd.read_csv(path)
+    '''Reads the list of requested queries from the csv'''
+    file = get_folder('input_file_folder') / "queries.csv"
 
-        return query_list["query"].tolist()
-
-    except FileNotFoundError:
-        query_list = None
+    if file.exists():
+        return pd.read_csv(file)["query"].tolist()
+    else:
         print("File 'queries.csv' is missing. No query data will be collected")
+        return []
 
 
 def generate_data_download_dict():
-    path = Path(__file__).parents[1] / "data" / "input" / "data_downloads.csv"
-    try:
-        print(" Reading data_downloads")
-        df = pd.read_csv(path)
+    file = get_folder('input_file_folder') / "data_downloads.csv"
 
-        download_dict = {
-            "annual_data": df["annual_data"].dropna().tolist(),
-            "hourly_data": df["hourly_data"].dropna().tolist()
-        }
+    if not file.exists():
+        return {}
 
-    except FileNotFoundError:
-        download_dict = None
+    print(" Reading data_downloads")
+    df = pd.read_csv(file)
+    download_dict = {
+        "annual_data": df["annual_data"].dropna().tolist(),
+        "hourly_data": df["hourly_data"].dropna().tolist()
+    }
 
     return download_dict
 
 
 def export_scenario_ids(scenarios):
-    path = Path(__file__).parents[1] / "data" / "input" / "scenario_list.csv"
+    # TODO: check issue on this + move to Scenarios
+    path = get_folder('input_file_folder') / "scenario_list.csv"
     scenario_list = pd.read_csv(path)
 
     for scenario in scenarios:
@@ -139,87 +104,6 @@ def export_scenario_ids(scenarios):
         except ValueError:
             id = ''
 
-        scenario_list.loc[scenario_list["short_name"] ==
-                          scenario.short_name, "id"] = id
+        scenario_list.loc[scenario_list["short_name"] == scenario.short_name, "id"] = id
 
     scenario_list.to_csv(path, index=False, header=True)
-
-
-def export_scenario_queries(scenarios):
-    path = Path(__file__).parents[1] / "data" / "output" / "scenario_outcomes.csv"
-    areas = []
-
-    merged_df = pd.DataFrame()
-    for i, scenario in enumerate(scenarios):
-        if scenario.query_results.empty:
-            pass
-        else:
-            short_name = scenario.short_name
-            df = scenario.query_results.rename(columns={'future': short_name})
-            relevant_columns = []
-
-            if scenario.area_code not in areas:
-                present = f"{scenario.area_code}_present"
-                df = df.rename(columns={'present': present})
-                relevant_columns.append(present)
-                areas.append(scenario.area_code)
-
-            relevant_columns.append(short_name)
-
-            if i == len(scenarios) - 1:
-                relevant_columns.append("unit")
-
-            df = df[relevant_columns]
-
-            merged_df = pd.concat([merged_df, df], axis=1)
-
-    merged_df.to_csv(path, index=True, header=True)
-
-
-def export_template_settings(templates):
-    root = Path(__file__).parents[1]
-    output_path = root / Path(f"data/output")
-    output_path.mkdir(parents=True, exist_ok=True)
-
-    path = Path(__file__).parents[1] / "data" / "output" / "template_settings.csv"
-
-    ids = []
-    titles = []
-    all_keys = []
-    for template in templates:
-        ids.append(template.id)
-        titles.append(template.title)
-        for input in template.user_values.keys():
-            all_keys.append(input)
-    cols = pd.MultiIndex.from_tuples(zip(titles, ids))
-    unique_keys = list(set(all_keys))
-
-    df = pd.DataFrame(columns=ids, index=unique_keys)
-
-    for template in templates:
-        template_id = template.id
-        for input_key, val in template.user_values.items():
-            df.loc[input_key, template_id] = val
-
-    df.columns = cols
-    df.to_csv(path, index=True, header=True)
-
-
-def print_ids(scenarios, model_url):
-    for scenario in scenarios:
-        print(f"{scenario.short_name}: {model_url}/scenarios/{scenario.id}")
-
-
-def process_arguments(args):
-    if len(args) > 1:
-        if args[1].lower() in ['beta', 'staging']:
-            base_url = "https://beta-engine.energytransitionmodel.com/api/v3"
-            model_url = "https://beta-pro.energytransitionmodel.com"
-        elif args[1].lower() in ['local', 'localhost']:
-            base_url = "http://localhost:3000/api/v3"
-            model_url = "http://localhost:4000"
-    else:
-        base_url = "https://engine.energytransitionmodel.com/api/v3"
-        model_url = "https://pro.energytransitionmodel.com"
-
-    return base_url, model_url

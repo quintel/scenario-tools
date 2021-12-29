@@ -3,15 +3,12 @@ import sys
 
 # project modules
 from helpers.ETM_API import ETM_API, SessionWithUrlBase
-from helpers.helpers import (process_arguments,
-                             initialise_scenarios,
-                             load_curve_file_dict,
-                             add_scenario_settings,
-                             print_ids)
+from helpers.Scenario import ScenarioCollection
+from helpers.helpers import process_arguments, load_curve_file_dict
 from helpers.file_helpers import (generate_query_list,
                                   generate_data_download_dict,
                                   export_scenario_ids,
-                                  export_scenario_queries)
+                                  read_scenario_settings)
 
 if __name__ == "__main__":
 
@@ -20,15 +17,17 @@ if __name__ == "__main__":
     session = SessionWithUrlBase(base_url)
 
     print("Opening CSV files:")
-    scenarios = initialise_scenarios()
+
+    print(" Reading scenario list")
+    scenarios = ScenarioCollection.from_csv()
 
     if query_only_mode:
-        # only process scenarios with existing scenario id
-        scenarios = [scen for scen in scenarios if scen.id]
-
+        scenarios.filter_query_only()
     else:
+        # TODO: This can be written on scenario too
         curve_file_dict = load_curve_file_dict(scenarios)
-        add_scenario_settings(scenarios)
+        print(" Reading scenario_settings")
+        scenarios.add_settings(read_scenario_settings())
 
     download_dict = generate_data_download_dict()
     query_list = generate_query_list()
@@ -51,7 +50,8 @@ if __name__ == "__main__":
 
         API_scenario.query_scenario(scenario, query_list, download_dict)
 
-    export_scenario_queries(scenarios)
+    scenarios.export_scenario_outcomes()
     export_scenario_ids(scenarios)
 
-    print_ids(scenarios, model_url)
+    print("\n\nAll done! Open the scenarios in the Energy Transition Model:")
+    scenarios.print_urls(model_url)

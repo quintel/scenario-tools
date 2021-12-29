@@ -1,0 +1,2 @@
+short_name,title,area_code,end_year,description,id,protected,heat_network_order,curve_file,heat_demand
+test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",,,energy_heat_burner_waste_mix energy_heat_burner_network_gas,,

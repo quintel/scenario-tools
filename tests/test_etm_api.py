@@ -4,6 +4,7 @@ import pytest
 from unittest import mock
 
 from helpers.ETM_API import SessionWithUrlBase, ETM_API
+from helpers.settings import Settings
 from helpers.heat_demand.config import insulation_config
 
 ### FIXTURES & HELPERS & CONSTANTS ###
@@ -38,9 +39,10 @@ def mock_etm_response(requests_mock, endpoint='/scenarios/', resp=[], status_cod
 
 ### TESTS ###
 
-@mock.patch("helpers.heat_file_utils.CURVE_BASE", 'tests/fixtures/')
 def test_update_scenario_with_heat_demand(default_api, default_scenario, requests_mock,
     heat_curve_keys):
+    Settings.add('input_curves_folder', 'tests/fixtures/')
+
     default_scenario.id = 12345
     default_api.initialise_scenario(default_scenario)
     default_scenario.set_heat_demand_curves()
@@ -54,7 +56,7 @@ def test_update_scenario_with_heat_demand(default_api, default_scenario, request
     for curve_key in heat_curve_keys:
         mock_etm_response(
             requests_mock,
-            endpoint=f'/scenarios/{default_scenario.id}/custom_curves/{curve_key}'
+            endpoint=f'/scenarios/{default_scenario.id}/custom_curves/weather/{curve_key}'
         )
 
     # No errors thrown
@@ -62,6 +64,8 @@ def test_update_scenario_with_heat_demand(default_api, default_scenario, request
 
 
 def test_update_scenario_with_missing_heat_demand_curves(default_api, default_scenario, requests_mock):
+    Settings.add('input_curves_folder', 'tests/fixtures/')
+
     default_scenario.id = 12345
     default_api.initialise_scenario(default_scenario)
 
@@ -79,9 +83,10 @@ def test_update_scenario_with_missing_heat_demand_curves(default_api, default_sc
     default_api.update_scenario(default_scenario, {})
 
 
-@mock.patch("helpers.heat_file_utils.CURVE_BASE", 'tests/fixtures/')
 def test_update_scenario_with_heat_demand_curves_with_angry_engine(default_api, default_scenario, requests_mock,
     heat_curve_keys):
+    Settings.add('input_curves_folder', 'tests/fixtures/')
+
     default_scenario.id = 12345
     default_api.initialise_scenario(default_scenario)
     default_scenario.set_heat_demand_curves()
@@ -95,7 +100,7 @@ def test_update_scenario_with_heat_demand_curves_with_angry_engine(default_api, 
     for curve_key in heat_curve_keys:
         mock_etm_response(
             requests_mock,
-            endpoint=f'/scenarios/{default_scenario.id}/custom_curves/{curve_key}',
+            endpoint=f'/scenarios/{default_scenario.id}/custom_curves/weather/{curve_key}',
             resp={'errors': [f'No such custom curve: {curve_key}']},
             status_code=422
         )

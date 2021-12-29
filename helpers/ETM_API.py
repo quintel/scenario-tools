@@ -3,8 +3,11 @@ import io
 import json
 import pandas as pd
 import requests
-from pathlib import Path
 
+from contextlib import suppress
+from json.decoder import JSONDecodeError
+
+from helpers.file_helpers import get_folder
 
 class SessionWithUrlBase(requests.Session):
     """
@@ -147,7 +150,7 @@ class ETM_API(object):
         """
         Export data downloads to CSV files.
         """
-        path = Path(__file__).parents[1] / 'data' /' output' / short_name
+        path = get_folder('output_file_folder') / short_name
         path.mkdir(parents=True, exist_ok=True)
 
         self._get_and_write_downloads(download_dict['annual_data'], short_name, path)
@@ -180,7 +183,7 @@ class ETM_API(object):
 
         self._check_and_update_user_values(scenario)
         self._check_and_update_heat_network(scenario)
-        self._check_and_update_curves(self, scenario, curve_file_dict)
+        self._check_and_update_curves(scenario, curve_file_dict)
         self._check_and_update_heat_demand(scenario)
 
         if scenario.flexibility_order:
@@ -212,7 +215,10 @@ class ETM_API(object):
             fail_info += 'Scenario was not found.'
 
         if fail_info: print(fail_info)
-        print(json.dumps(response.json(), indent=4, sort_keys=True))
+
+        with suppress(JSONDecodeError):
+            print(json.dumps(response.json(), indent=4, sort_keys=True))
+
         sys.exit(1)
 
 
