@@ -7,7 +7,6 @@ from helpers.Scenario import ScenarioCollection
 from helpers.helpers import process_arguments, load_curve_file_dict
 from helpers.file_helpers import (generate_query_list,
                                   generate_data_download_dict,
-                                  export_scenario_ids,
                                   read_scenario_settings)
 
 if __name__ == "__main__":
@@ -51,7 +50,7 @@ if __name__ == "__main__":
         API_scenario.query_scenario(scenario, query_list, download_dict)
 
     scenarios.export_scenario_outcomes()
-    export_scenario_ids(scenarios)
+    scenarios.export_ids()
 
     print("\n\nAll done! Open the scenarios in the Energy Transition Model:")
     scenarios.print_urls(model_url)

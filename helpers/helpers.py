@@ -1,3 +1,5 @@
+'''Helpers for parsing commandline arguments'''
+
 from .Curves import CurveFile
 from .settings import Settings
 

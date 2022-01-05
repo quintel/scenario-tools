@@ -90,20 +90,3 @@ def generate_data_download_dict():
     }
 
     return download_dict
-
-
-def export_scenario_ids(scenarios):
-    # TODO: check issue on this + move to Scenarios
-    path = get_folder('input_file_folder') / "scenario_list.csv"
-    scenario_list = pd.read_csv(path)
-
-    for scenario in scenarios:
-        try:
-            int(scenario.id)
-            id = str(scenario.id)
-        except ValueError:
-            id = ''
-
-        scenario_list.loc[scenario_list["short_name"] == scenario.short_name, "id"] = id
-
-    scenario_list.to_csv(path, index=False, header=True)

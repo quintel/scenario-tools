@@ -1,7 +1,8 @@
 import pandas as pd
 
 from helpers.file_helpers import read_csv, check_duplicates, get_folder
-from helpers.heat_file_utils import read_heat_demand_input, read_profiles, contains_heating_profiles, read_thermostat
+from helpers.heat_file_utils import (read_heat_demand_input, read_profiles,
+    contains_heating_profiles, read_thermostat)
 from helpers.heat_demand import generate_profiles
 
 class Scenario:
@@ -152,6 +153,23 @@ class ScenarioCollection:
 
         df.to_csv(get_folder('output_file_folder') / 'scenario_outcomes.csv', index=True,
             header=True)
+
+
+    def export_ids(self):
+        '''Write the newly generated scenario ID's to the scenario_list csv'''
+        path = get_folder('input_file_folder') / "scenario_list.csv"
+        scenario_list = pd.read_csv(path)
+        changed = False
+
+        for scenario in self.collection:
+            if not scenario.id:
+                continue
+            index = scenario_list['short_name'] == scenario.short_name
+            scenario_list.loc[index, 'id'] = str(scenario.id)
+            changed = True
+
+        if changed:
+            scenario_list.to_csv(path, index=False, header=True)
 
 
     @classmethod
