@@ -1,6 +1,6 @@
 import pandas as pd
 
-from helpers.file_helpers import read_csv, check_duplicates, get_folder
+from helpers.file_helpers import check_duplicate_index, read_csv, check_duplicates, get_folder
 from helpers.heat_file_utils import (read_heat_demand_input, read_profiles,
     contains_heating_profiles, read_thermostat)
 from helpers.heat_demand import generate_profiles
@@ -123,8 +123,10 @@ class ScenarioCollection:
             print(f"{scenario.short_name}: {model_url}/scenarios/{scenario.id}")
 
 
-    def add_settings(self, scenario_settings):
+    def add_settings(self):
         '''Adds the user values as stated in the scenario_settings to each scenario'''
+        scenario_settings = ScenarioCollection.read_settings()
+
         for scenario in self.collection:
             if scenario.short_name in scenario_settings:
                 scenario.user_values = scenario_settings[scenario.short_name].to_dict()
@@ -157,7 +159,7 @@ class ScenarioCollection:
 
     def export_ids(self):
         '''Write the newly generated scenario ID's to the scenario_list csv'''
-        scenario_list = read_csv('scenario_list')
+        scenario_list = read_csv('scenario_list', silent=True)
         changed = False
 
         for scenario in self.collection:
@@ -182,3 +184,12 @@ class ScenarioCollection:
         check_duplicates(scenarios_df['short_name'].tolist(), 'scenario_list', "short name")
 
         return cls([Scenario(scenario_data) for _, scenario_data in scenarios_df.iterrows()])
+
+
+    @staticmethod
+    def read_settings():
+        '''Returns a DataFrame of the scenario settings csv'''
+        settings = read_csv('scenario_settings', raises=False, index_col=0).astype('str').dropna()
+        check_duplicate_index(settings)
+
+        return settings

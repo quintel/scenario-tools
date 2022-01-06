@@ -17,7 +17,8 @@ def read_heat_demand_input(folder, file):
     Returns:
         pd.Series containing the curve in the file
     '''
-    curve = read_csv(f'{folder}/{file}', curve=True, squeeze=True, header=None).astype(float)
+    curve = read_csv(f'{folder}/{file}', curve=True, silent=True, squeeze=True,
+        header=None).astype(float)
 
     if not curve.size == 8760:
         exit(f'Curve input {file} in {folder} should be of length 8760')
@@ -28,7 +29,7 @@ def read_thermostat(folder):
     '''
     Reads the thermostat file into a pd.DataFrame, amd performs some checks
     '''
-    therm = read_csv(f'{folder}/thermostat', curve=True).astype(float)
+    therm = read_csv(f'{folder}/thermostat', curve=True, silent=True).astype(float)
 
     if not set(list(therm.columns)) == set(['low', 'medium', 'high']):
         exit(f'Thermostat in {folder} should be supplied for low, medium and high.')

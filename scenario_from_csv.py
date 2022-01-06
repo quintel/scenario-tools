@@ -5,10 +5,8 @@ import sys
 from helpers.ETM_API import ETM_API, SessionWithUrlBase
 from helpers.Scenario import ScenarioCollection
 from helpers.Curves import load_curve_file_dict
-from helpers.helpers import process_arguments
-from helpers.file_helpers import (generate_query_list,
-                                  generate_data_download_dict,
-                                  read_scenario_settings)
+from helpers.helpers import process_arguments, print_bold
+from helpers.file_helpers import query_list, data_download_dict
 
 if __name__ == "__main__":
 
@@ -23,18 +21,19 @@ if __name__ == "__main__":
     if query_only_mode:
         scenarios.filter_query_only()
     else:
-        # TODO: This can be written on scenario too
         curve_file_dict = load_curve_file_dict(scenarios)
-        scenarios.add_settings(read_scenario_settings())
+        scenarios.add_settings()
 
-    download_dict = generate_data_download_dict()
-    query_list = generate_query_list()
+    query_list = query_list()
+    data_download_dict = data_download_dict()
+
 
     print(f"\nProcessing {len(scenarios)} scenarios..")
     if query_only_mode:
-        print("\n\033[1m'Query-only' mode is enabled. Only scenario "
-              "outcomes will be collected, no changes to scenarios will "
-              "be made.\033[0m")
+        print_bold("\n'Query-only' mode is enabled. Only scenario "
+                   "outcomes will be collected, no changes to scenarios will "
+                   "be made.")
+
     for scenario in scenarios:
         print(f"\nProcessing scenario {scenario.short_name}..")
         API_scenario = ETM_API(session)
@@ -46,7 +45,7 @@ if __name__ == "__main__":
         if not query_only_mode:
             API_scenario.update_scenario(scenario, curve_file_dict)
 
-        API_scenario.query_scenario(scenario, query_list, download_dict)
+        API_scenario.query_scenario(scenario, query_list, data_download_dict)
 
     scenarios.export_scenario_outcomes()
     scenarios.export_ids()

@@ -25,6 +25,11 @@ def exit(*text, err=None, **options):
         raise SystemExit()
 
 
+def print_bold(*text, **options):
+    '''Prints text in bold'''
+    print(f'\033[1m{" ".join(text)}\033[0m', **options)
+
+
 # COMMANDLINE ARGUMENTS PARSING -----------------------------------------------
 
 def convert_to_lower(arr):

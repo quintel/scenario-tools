@@ -19,13 +19,13 @@ def verify_path(path):
     exit(f'Could not find {path}, please create the folder if it does not exist.')
 
 
-def read_csv(file, curve=False, raises=True, **options):
+def read_csv(file, curve=False, raises=True, silent=False, **options):
     '''Returns a pd.DataFrame'''
     path = get_folder('input_file_folder') if not curve else get_folder('input_curves_folder')
     path = path / f'{file}.csv'
 
     if path.exists():
-        print(f' Reading {file}')
+        if not silent: print(f' Reading {file}')
         return pd.read_csv(path, sep=Settings.get('csv_separator'), **options)
 
     text = f"File '{file}.csv' not found in '{path.parent}' folder."
@@ -46,7 +46,7 @@ def check_duplicates(arr, file_name, attribute_type):
                   "Please remove one!")
 
 
-def validate_scenario_settings(df):
+def check_duplicate_index(df):
     '''Exits when sliders occur than once in the settings'''
     if df.index.duplicated().any():
         dups = '\n\t'.join(set(df.index[df.index.duplicated()]))
@@ -54,15 +54,7 @@ def validate_scenario_settings(df):
               f"in scenario_settings.csv:\n\t{dups}")
 
 
-def read_scenario_settings():
-    '''Returns a prepped pd.Dataframe containing the scenario setings from the csv'''
-    df = read_csv('scenario_settings', raises=False, index_col=0).astype('str').dropna()
-    validate_scenario_settings(df)
-
-    return df
-
-
-def generate_query_list():
+def query_list():
     '''Reads the list of requested queries from the csv'''
     df = read_csv('queries', raises=False)
     if df.empty:
@@ -71,7 +63,7 @@ def generate_query_list():
         return df["query"].tolist()
 
 
-def generate_data_download_dict():
+def data_download_dict():
     df = read_csv('data_downloads', raises=False)
     if df.empty:
         return {}
