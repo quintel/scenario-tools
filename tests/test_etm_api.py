@@ -41,12 +41,12 @@ def mock_etm_response(requests_mock, endpoint='/scenarios/', resp=[], status_cod
 
 ### TESTS ###
 
-def test_update_scenario_with_heat_demand(default_api, default_scenario, requests_mock,
+def test_update_with_heat_demand(default_api, default_scenario, requests_mock,
     heat_curve_keys):
     Settings.add('input_curves_folder', 'tests/fixtures/')
 
     default_scenario.id = 12345
-    default_api.initialise_scenario(default_scenario)
+    default_api.scenario = default_scenario
     default_scenario.heat_demand_curves = (Curve(key, 8760*[0]) for key in heat_curve_keys)
 
     # Discard all things to be updated but heat_demand
@@ -62,18 +62,18 @@ def test_update_scenario_with_heat_demand(default_api, default_scenario, request
         )
 
     # No errors thrown
-    default_api.update_scenario(default_scenario, {})
+    default_api.update({})
 
     # Cleanup curves that were written
     for file in Path('tests/fixtures/heat_demand').glob('insulation_*.csv'):
         file.unlink()
 
 
-def test_update_scenario_with_missing_heat_demand_curves(default_api, default_scenario, requests_mock):
+def test_update_with_missing_heat_demand_curves(default_api, default_scenario, requests_mock):
     Settings.add('input_curves_folder', 'tests/fixtures/')
 
     default_scenario.id = 12345
-    default_api.initialise_scenario(default_scenario)
+    default_api.scenario = default_scenario
 
     # No heat demand curves were set
     default_scenario.heat_demand_curves = None
@@ -86,15 +86,15 @@ def test_update_scenario_with_missing_heat_demand_curves(default_api, default_sc
     mock_etm_response(requests_mock, endpoint=f'/scenarios/{default_scenario.id}')
 
     # No errors thrown
-    default_api.update_scenario(default_scenario, {})
+    default_api.update({})
 
 
-def test_update_scenario_with_heat_demand_curves_with_angry_engine(default_api, default_scenario, requests_mock,
+def test_update_with_heat_demand_curves_with_angry_engine(default_api, default_scenario, requests_mock,
     heat_curve_keys):
     Settings.add('input_curves_folder', 'tests/fixtures/')
 
     default_scenario.id = 12345
-    default_api.initialise_scenario(default_scenario)
+    default_api.scenario = default_scenario
     default_scenario.heat_demand_curves = (Curve(key, 8760*[0]) for key in heat_curve_keys)
 
     # Discard all things to be updated but heat_demand
@@ -113,7 +113,7 @@ def test_update_scenario_with_heat_demand_curves_with_angry_engine(default_api, 
 
     # Should fail
     with pytest.raises(SystemExit):
-        default_api.update_scenario(default_scenario, {})
+        default_api.update({})
 
     # Cleanup curves that were written
     for file in Path('tests/fixtures/heat_demand').glob('insulation_*.csv'):

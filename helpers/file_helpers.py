@@ -26,7 +26,7 @@ def read_csv(file, curve=False, raises=True, silent=False, **options):
 
     if path.exists():
         if not silent: print(f' Reading {file}')
-        return pd.read_csv(path, sep=Settings.get('csv_separator'), **options)
+        return pd.read_csv(path, sep=Settings.get('csv_separator'), **options).dropna(how='all')
 
     text = f"File '{file}.csv' not found in '{path.parent}' folder."
 
@@ -35,6 +35,13 @@ def read_csv(file, curve=False, raises=True, silent=False, **options):
     else:
         warn(f'{text} Skipping...')
         return pd.DataFrame()
+
+
+def write_csv(df, name, folder='', **options):
+    path = get_folder('output_file_folder') / folder / f'{name}.csv'
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    df.to_csv(path, **options)
 
 
 def check_duplicates(arr, file_name, attribute_type):

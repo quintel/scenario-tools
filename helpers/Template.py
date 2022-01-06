@@ -23,6 +23,8 @@ class Template:
             except KeyError:
                 setattr(self, key, None)
 
+        self.id = int(self.id)
+
 
     def add_user_values(self, scenario_settings):
         self.user_values = scenario_settings
@@ -71,6 +73,6 @@ class TemplateCollection:
         Returns a new TemplateCollection containing the Templates
         '''
         template_df = read_csv('template_list')
-        check_duplicates(template_df['id'].tolist(), 'template', 'id')
+        check_duplicates(template_df['id'].astype('str').tolist(), 'template', 'id')
 
         return cls([Template(template_data) for _, template_data in template_df.iterrows()])

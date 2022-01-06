@@ -42,6 +42,7 @@ class Scenario:
 
         self._structure_orders()
         self.query_results = None
+        if self.id: self.id = int(self.id)
 
 
     def _structure_orders(self):
