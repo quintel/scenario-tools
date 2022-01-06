@@ -4,7 +4,8 @@ import sys
 # project modules
 from helpers.ETM_API import ETM_API, SessionWithUrlBase
 from helpers.Scenario import ScenarioCollection
-from helpers.helpers import process_arguments, load_curve_file_dict
+from helpers.Curves import load_curve_file_dict
+from helpers.helpers import process_arguments
 from helpers.file_helpers import (generate_query_list,
                                   generate_data_download_dict,
                                   read_scenario_settings)
@@ -17,7 +18,6 @@ if __name__ == "__main__":
 
     print("Opening CSV files:")
 
-    print(" Reading scenario list")
     scenarios = ScenarioCollection.from_csv()
 
     if query_only_mode:
@@ -25,7 +25,6 @@ if __name__ == "__main__":
     else:
         # TODO: This can be written on scenario too
         curve_file_dict = load_curve_file_dict(scenarios)
-        print(" Reading scenario_settings")
         scenarios.add_settings(read_scenario_settings())
 
     download_dict = generate_data_download_dict()

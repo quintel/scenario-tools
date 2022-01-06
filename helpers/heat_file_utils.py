@@ -1,8 +1,7 @@
 '''Utils for file reading/writing for heat demend'''
 
-from pathlib import Path
-
 from helpers.file_helpers import read_csv, get_folder
+from helpers.helpers import exit
 from helpers.heat_demand.config import insulation_config
 from helpers.Curves import Curve
 
@@ -21,7 +20,7 @@ def read_heat_demand_input(folder, file):
     curve = read_csv(f'{folder}/{file}', curve=True, squeeze=True, header=None).astype(float)
 
     if not curve.size == 8760:
-        raise SystemExit(f'Curve input {file} in {folder} should be of length 8760')
+        exit(f'Curve input {file} in {folder} should be of length 8760')
 
     return curve
 
@@ -32,10 +31,10 @@ def read_thermostat(folder):
     therm = read_csv(f'{folder}/thermostat', curve=True).astype(float)
 
     if not set(list(therm.columns)) == set(['low', 'medium', 'high']):
-        raise SystemExit(f'Thermostat in {folder} should be supplied for low, medium and high.')
+        exit(f'Thermostat in {folder} should be supplied for low, medium and high.')
 
     if not therm.shape[0] == 24:
-        raise SystemExit(f'Thermostat in {folder} should be supplied for 24 hours')
+        exit(f'Thermostat in {folder} should be supplied for 24 hours')
 
     return therm
 

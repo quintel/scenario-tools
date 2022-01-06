@@ -2,8 +2,10 @@
 
 import pytest
 from unittest import mock
+from pathlib import Path
 
 from helpers.ETM_API import SessionWithUrlBase, ETM_API
+from helpers.Curves import Curve
 from helpers.settings import Settings
 from helpers.heat_demand.config import insulation_config
 
@@ -45,7 +47,7 @@ def test_update_scenario_with_heat_demand(default_api, default_scenario, request
 
     default_scenario.id = 12345
     default_api.initialise_scenario(default_scenario)
-    default_scenario.set_heat_demand_curves()
+    default_scenario.heat_demand_curves = (Curve(key, 8760*[0]) for key in heat_curve_keys)
 
     # Discard all things to be updated but heat_demand
     for setting in ['user_values', 'flexibility_order', 'heat_network_order', 'curve_file']:
@@ -61,6 +63,10 @@ def test_update_scenario_with_heat_demand(default_api, default_scenario, request
 
     # No errors thrown
     default_api.update_scenario(default_scenario, {})
+
+    # Cleanup curves that were written
+    for file in Path('tests/fixtures/heat_demand').glob('insulation_*.csv'):
+        file.unlink()
 
 
 def test_update_scenario_with_missing_heat_demand_curves(default_api, default_scenario, requests_mock):
@@ -89,7 +95,7 @@ def test_update_scenario_with_heat_demand_curves_with_angry_engine(default_api, 
 
     default_scenario.id = 12345
     default_api.initialise_scenario(default_scenario)
-    default_scenario.set_heat_demand_curves()
+    default_scenario.heat_demand_curves = (Curve(key, 8760*[0]) for key in heat_curve_keys)
 
     # Discard all things to be updated but heat_demand
     for setting in ['user_values', 'flexibility_order', 'heat_network_order', 'curve_file']:
@@ -109,3 +115,6 @@ def test_update_scenario_with_heat_demand_curves_with_angry_engine(default_api, 
     with pytest.raises(SystemExit):
         default_api.update_scenario(default_scenario, {})
 
+    # Cleanup curves that were written
+    for file in Path('tests/fixtures/heat_demand').glob('insulation_*.csv'):
+        file.unlink()

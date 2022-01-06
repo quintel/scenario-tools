@@ -8,6 +8,7 @@ from contextlib import suppress
 from json.decoder import JSONDecodeError
 
 from helpers.file_helpers import get_folder
+from helpers.helpers import exit, warn
 
 class SessionWithUrlBase(requests.Session):
     """
@@ -187,7 +188,7 @@ class ETM_API(object):
         self._check_and_update_heat_demand(scenario)
 
         if scenario.flexibility_order:
-            print(" \033[93m Flexibility order is no longer supported \033[0m")
+            warn(" Flexibility order is no longer supported")
 
 
     def query_scenario(self, scenario, query_list, download_dict):
@@ -226,14 +227,12 @@ class ETM_API(object):
         try:
             response.raise_for_status()
         except requests.exceptions.HTTPError as err:
-            print("Something went wrong retrieving a data download. "
-                  "Check your data_downloads.csv!\n")
-            raise SystemExit(err)
+            exit("Something went wrong retrieving a data download. "
+                  "Check your data_downloads.csv!\n", err=err)
 
         if response.text.startswith('<!DOCTYPE html>'):
-            print(f'Download "{download_name}" is not available for scenarios '
+            exit(f'Download "{download_name}" is not available for scenarios '
                     'with Merit turned off. Aborting...\n')
-            raise SystemExit()
 
 
     def _get_and_write_downloads(self, download_names, short_name, path, hourly=False):

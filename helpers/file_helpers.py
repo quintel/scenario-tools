@@ -1,7 +1,8 @@
-import sys
 import pandas as pd
 from pathlib import Path
+
 from .settings import Settings
+from helpers.helpers import warn, exit
 
 def get_folder(kind):
     '''kind can be input_file_folder, output_file_folder or input_curves_folder'''
@@ -15,78 +16,69 @@ def verify_path(path):
     if path.exists():
         return path
 
-    print(f'Could not find {path}, please create the folder if it does not exist.')
-    sys.exit()
+    exit(f'Could not find {path}, please create the folder if it does not exist.')
 
 
-def read_csv(file, curve=False, **options):
-    '''Returns a pd.DataFrame with datatype string'''
+def read_csv(file, curve=False, raises=True, **options):
+    '''Returns a pd.DataFrame'''
     path = get_folder('input_file_folder') if not curve else get_folder('input_curves_folder')
     path = path / f'{file}.csv'
 
     if path.exists():
-        return pd.read_csv(path, dtype=str, **options)
+        print(f' Reading {file}')
+        return pd.read_csv(path, sep=Settings.get('csv_separator'), **options)
 
-    print(f"File '{file}.csv' not found in '{get_folder('input_file_folder')}' folder. Aborting..")
-    sys.exit(1)
+    text = f"File '{file}.csv' not found in '{path.parent}' folder."
+
+    if raises:
+        exit(f'{text} Aborting...')
+    else:
+        warn(f'{text} Skipping...')
+        return pd.DataFrame()
 
 
 def check_duplicates(arr, file_name, attribute_type):
     arr_lower = [e.lower() for e in arr]
     for elem in arr_lower:
         if arr_lower.count(elem) > 1:
-            print(f"Warning! '{elem}' is included twice as a "
+            exit(f"Warning! '{elem}' is included twice as a "
                   f"{attribute_type} in {file_name}. "
                   "Please remove one!")
-            sys.exit(1)
 
 
 def validate_scenario_settings(df):
     '''Exits when sliders occur than once in the settings'''
     if df.index.duplicated().any():
         dups = '\n\t'.join(set(df.index[df.index.duplicated()]))
-        print("\nError: The following sliders are included more than once "
+        exit("\nError: The following sliders are included more than once "
               f"in scenario_settings.csv:\n\t{dups}")
-        sys.exit()
 
 
 def read_scenario_settings():
     '''Returns a prepped pd.Dataframe containing the scenario setings from the csv'''
-    file = get_folder('input_file_folder') / "scenario_settings.csv"
+    df = read_csv('scenario_settings', raises=False, index_col=0).astype('str').dropna()
+    validate_scenario_settings(df)
 
-    if file.exists():
-        print(" Reading scenario_settings")
-        scenario_settings = pd.read_csv(file, index_col=0).astype('str').dropna()
-        validate_scenario_settings(scenario_settings)
-    else:
-        print("Cannot find scenario_settings.csv file in the input folder")
-        scenario_settings = pd.DataFrame()
-
-    return scenario_settings
+    return df
 
 
 def generate_query_list():
     '''Reads the list of requested queries from the csv'''
-    file = get_folder('input_file_folder') / "queries.csv"
-
-    if file.exists():
-        return pd.read_csv(file)["query"].tolist()
-    else:
-        print("File 'queries.csv' is missing. No query data will be collected")
+    df = read_csv('queries', raises=False)
+    if df.empty:
         return []
+    else:
+        return df["query"].tolist()
 
 
 def generate_data_download_dict():
-    file = get_folder('input_file_folder') / "data_downloads.csv"
-
-    if not file.exists():
+    df = read_csv('data_downloads', raises=False)
+    if df.empty:
         return {}
 
-    print(" Reading data_downloads")
-    df = pd.read_csv(file)
-    download_dict = {
+    return {
         "annual_data": df["annual_data"].dropna().tolist(),
         "hourly_data": df["hourly_data"].dropna().tolist()
     }
 
-    return download_dict
+

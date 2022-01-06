@@ -81,7 +81,7 @@ class Scenario:
         Checks if a heat_demand folder was supplied, and sets self.heat_demand_curves
         accordingly.
 
-        self.heat_demand is a folder inside the input curves folder (defaulting to data/input/curves)
+        self.heat_demand is a folder inside the input curves folder
 
         self.heat_demand_curves links to a generator method, and can thus generate all 15
         heat demand curves (Curve) iteratively
@@ -157,8 +157,7 @@ class ScenarioCollection:
 
     def export_ids(self):
         '''Write the newly generated scenario ID's to the scenario_list csv'''
-        path = get_folder('input_file_folder') / "scenario_list.csv"
-        scenario_list = pd.read_csv(path)
+        scenario_list = read_csv('scenario_list')
         changed = False
 
         for scenario in self.collection:
@@ -169,6 +168,7 @@ class ScenarioCollection:
             changed = True
 
         if changed:
+            path = get_folder('input_file_folder') / "scenario_list.csv"
             scenario_list.to_csv(path, index=False, header=True)
 
 

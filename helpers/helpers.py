@@ -1,6 +1,5 @@
-'''Helpers for parsing commandline arguments'''
+'''Helpers for parsing commandline arguments and communicating with user'''
 
-from .Curves import CurveFile
 from .settings import Settings
 
 BETA = ['beta', 'staging']
@@ -10,15 +9,20 @@ PRO = ['pro', 'production']
 QUERY_ONLY = ['query_only', 'query-only', 'query', 'read_only', 'read-only',
     'read', 'results_only', 'results-only', 'results']
 
+# PRINTING --------------------------------------------------------------------
 
-def load_curve_file_dict(scenarios):
-    # TODO: move to Scenarios
-    curve_csvs = set([s.curve_file for s in scenarios if s.curve_file])
+def warn(*text, **options):
+    '''Prints text in a warning color'''
+    print(f'\033[93m{" ".join(text)}\033[0m', **options)
 
-    if curve_csvs:
-        print(" Reading curve files")
 
-    return {file: CurveFile.from_csv(file) for file in curve_csvs}
+def exit(*text, err=None, **options):
+    '''Prints text in a failing color and exits'''
+    print(f'\033[91m{" ".join(text)}\033[0m', **options)
+    if err:
+        raise SystemExit() from err
+    else:
+        raise SystemExit()
 
 
 # COMMANDLINE ARGUMENTS PARSING -----------------------------------------------

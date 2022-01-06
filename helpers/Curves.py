@@ -1,7 +1,7 @@
-import sys
 import pandas as pd
-from pathlib import Path
-from helpers.file_helpers import get_folder, check_duplicates
+
+from helpers.file_helpers import read_csv, get_folder, check_duplicates
+from helpers.helpers import exit
 
 
 class CurveFile:
@@ -19,8 +19,7 @@ class CurveFile:
 
     def _validate_length(self, data_df):
         if len(data_df.index) != 8760:
-            print(f'Curves should have 8760 values. Please check {self.file_name}')
-            sys.exit(1)
+            exit(f'Curves should have 8760 values. Please check {self.file_name}')
 
 
     def _validate_types(self, data_df):
@@ -30,9 +29,8 @@ class CurveFile:
                         .notnull().all())
         # Exit if one column contains non-numeric values
         if not type_series.all():
-            print("All curves should only consist of numeric values "
+            exit("All curves should only consist of numeric values "
                   f"Please check {self.file_name}")
-            sys.exit(1)
 
 
     def _validate_columns(self, data_df):
@@ -54,12 +52,7 @@ class CurveFile:
 
     @classmethod
     def from_csv(cls, file_name):
-        file = get_folder('input_curves_folder') / f'{file_name}.csv'
-        if not file.exists():
-            print(f'Curve {file} was not found. Exiting...')
-            sys.exit()
-
-        return cls(file_name, pd.read_csv(file, dtype=str))
+        return cls(file_name, read_csv(file_name, curve=True, dtype=str))
 
 
 class Curve():
@@ -87,3 +80,8 @@ class Curve():
         pd.Series(self.data).to_csv(path, index=False, header=False)
 
 
+def load_curve_file_dict(scenarios):
+    # TODO: move to Scenarios
+    curve_csvs = set([s.curve_file for s in scenarios if s.curve_file])
+
+    return {file: CurveFile.from_csv(file) for file in curve_csvs}
