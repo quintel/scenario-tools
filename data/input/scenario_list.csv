@@ -1,6 +1,6 @@
 short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order
-a,a,nl2019,2050,a,876383,True,,
-b,b,nl2019,2050,b,876375,True,,
-c,c,nl2019,2050,c,876381,True,,
-d,d,nl2019,2050,d,876382,True,,
-e,e,nl2019,2050,e,876378,True,,
+a,a,nl2019,2050,huidig,887264,True,,
+b,b,nl2019,2050,regionaal,887260,True,,
+c,c,nl2019,2050,nationaal,887261,True,,
+d,d,nl2019,2050,EU,887263,True,,
+e,e,nl2019,2050,internationaal,887262,True,,
