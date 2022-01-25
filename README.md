@@ -21,10 +21,12 @@ This repository contains a Python tool to create and update scenarios in the [En
 
 Make sure you have [Python 3](https://www.python.org/downloads/) installed. Then, install all required libraries by opening a terminal window in the `scenario-tools` folder (or navigate to this folder in the terminal using `cd "path/to/scenario-tools folder"`).
 
-You can opt for using [`pipenv`](https://pipenv.pypa.io/en/latest/), which will create a virtual environment for you. This helps
-with keeping the libaries you install here seperate of your global libraries, and comes with some nice shortcuts for running the tools.
+It is recommended (but not required) that you use [`pipenv`](https://pipenv.pypa.io/en/latest/) for running these tools. When using `pipenv`
+it will create a virtual environment for you. A virtual environment helps with keeping the libaries you install here separate of your global libraries (in 
+other words your `scenario-tools` will be in a stable and isolated environment and are thus less likely to break when updating things elswhere on your computer)
+and this one comes with some nice shortcuts for running the tools.
 
-You can instal `pipenv` with `pip` if you don't have it installed yet.
+You can instal `pipenv` with `pip` or `pip3` if you don't have it installed yet.
 ```
 pip3 install pipenv
 ```
@@ -35,7 +37,7 @@ pipenv install
 ```
 
 
-Alteratively, if you do **not** want to use `pipenv` you can also install the requirements globally by running:
+Alternatively, if you do **not** want to use `pipenv` you can also install the requirements globally by running:
 ```
 pip3 install -r requirements.txt
 ```
