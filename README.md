@@ -14,15 +14,32 @@ This repository contains a Python tool to create and update scenarios in the [En
    * [Query-only mode](#query-only-mode)
    * [Specifying environments](#specifying-environments)
  * [Output](#output)
+ * [Extra configuration](#configuration)
  * [Contact](#questions-and-remarks)
 
 ### Getting started
 
-Make sure you have [Python 3](https://www.python.org/downloads/) installed. Then, install all required libraries by opening a terminal window in the `scenario-tools` folder (or navigate to this folder in the terminal using `cd "path/to/scenario-tools folder"`) and running the following command:
+Make sure you have [Python 3](https://www.python.org/downloads/) installed. Then, install all required libraries by opening a terminal window in the `scenario-tools` folder (or navigate to this folder in the terminal using `cd "path/to/scenario-tools folder"`).
 
+You can opt for using [`pipenv`](https://pipenv.pypa.io/en/latest/), which will create a virtual environment for you. This helps
+with keeping the libaries you install here seperate of your global libraries, and comes with some nice shortcuts for running the tools.
+
+You can instal `pipenv` with `pip` if you don't have it installed yet.
+```
+pip3 install pipenv
+```
+
+Then you can create a new environment and install all the libraries in one go by running:
+```
+pipenv install
+```
+
+
+Alteratively, if you do **not** want to use `pipenv` you can also install the requirements globally by running:
 ```
 pip3 install -r requirements.txt
 ```
+
 
 ### Input data
 To create, update and query ETM scenarios you can edit the following CSV files in the `data/input` folder:
@@ -129,7 +146,10 @@ The `template_list.csv` file contains the following columns:
 
 ### Running the scripts
 To run the script, open a terminal window in the `scenario-tools` folder (or navigate to this folder in the terminal using `cd "path/to/scenario-tools folder"`) and run:
-
+```
+pipenv run scenario_from_csv
+```
+Or, if you opted out of `pipenv`:
 ```
 python scenario_from_csv.py
 ```
@@ -141,24 +161,27 @@ If you are creating new scenarios (i.e. you have left the `id` column in `scenar
 Optionally, you can add the `query_only` argument to run the script in 'query-only mode':
 
 ```
-python scenario_from_csv.py query_only
+pipenv run scenario_from_csv query_only
 ```
 
 In query-only mode the script will only collect scenario results ([queries](#queriescsv) and [data downloads](#data_downloadscsv)). No changes will be made to existing scenarios, nor will new scenarios be created. The latter means that scenarios in the [`scenario_list.csv`](#scenario_listcsv) without an 'id' will be ignored, as these scenarios have not yet been created.
 
 #### Specifying environments
-In addition, you can add the arguments `beta` or `local` to create or query scenarios on the ETM [beta server](https://beta-pro.energytransitionmodel.com/) or your local machine. The latter assumes your local engine runs at `localhost:3000` and local model at `localhost:4000`. I.e.:
+In addition, you can add the arguments `beta` or `local` to create or query scenarios on the ETM [beta server](https://beta-pro.energytransitionmodel.com/) or your local machine. The latter assumes your local engine runs at `localhost:3000` and local model at `localhost:4000`, but you can change this in `config/settings.yml` at any time. I.e.:
 ```
-python scenario_from_csv.py beta
+pipenv run scenario_from_csv beta
 ```
 or
 ```
-python scenario_from_csv.py local
+pipenv run scenario_from_csv local
 ```
 
 #### Using scenario templates
-It's also possible to adopt the settings of an existing scenario, which we then call a scenario template. To do this, run the following script in the terminal:
-
+It's also possible to adopt the settings of an existing scenario, which we then call a scenario template. To do this, run the following in the terminal:
+```
+pipenv run get_template_settings
+```
+Or, if you opted out of using `pipenv`:
 ```
 python get_template_settings.py
 ```
@@ -171,6 +194,17 @@ The script creates/updates the scenarios in the Energy Transition Model and prin
  * A `scenario_outcomes.csv` file containing the query outcomes for all scenarios, including a column containing the values for the present year and the unit of each query
  * Sub folders for each scenario `short_name` containing the data exports
 
+### Configuration
+You can change three different kinds of settings in the configuration file `config/settings.yml`: input/output folder settings, settings for [when you run the model locally](#specifying-environments), and CSV settings. Here is a quick overview:
+
+| Setting | What does it do? | Default value |
+| --- | --- | --- |
+| `input_file_folder` | Location of the main input files, this can be a full path to anywhere on your computer. | `data/input`|
+| `input_curves_folder` | Location of where the curve files you wish to use are stored, this can be a full path to anywhere on your computer. | `data/input/curves`|
+| `output_file_folder` | Location of where all output files should be written to by the tools. Again, this can be a full path to any folder on your computer. | `data/output` |
+|`local_engine_url`| The url to ETEngine that should be used when you use the `local` option in the tools. | `http://localhost:3000/api/v3` |
+|`local_model_url`| The url to ETModel that should be used when you use the `local` option in the tools. | `http://localhost:4000` |
+| `csv_separator` | The separator your CSV files are using. Some European computers use ';' instead of ','. | , |
 
 ### Questions and remarks
 
