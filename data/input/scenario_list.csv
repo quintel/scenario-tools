@@ -1,6 +1,7 @@
 short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order,curve_file,heat_demand
-leeg,Amersfoort huidig,GM0307_amersfoort,2050,,14488,,,,,
-minimaal_2030,Amersfoort Energiemix Minimaal,GM0307_amersfoort,2030,,11669,,,,,
-maximaal_2030,Amersfoort Energiemix Maximaal,GM0307_amersfoort,2030,,11668,,,,,
-minimaal_2050,Amersfoort Energiemix Minimaal,GM0307_amersfoort,2050,,11667,,,,,
-maximaal_2050,Amersfoort Energiemix Maximaal,GM0307_amersfoort,2050,,11666,,,,,
+leeg,Amersfoort huidig,GM0307_amersfoort,2050,,886151,,,,,
+minimaal_2030,Amersfoort Energiemix Minimaal,GM0307_amersfoort,2030,,886149,,,,,
+maximaal_2030,Amersfoort Energiemix Maximaal,GM0307_amersfoort,2030,,886148,,,,,
+minimaal_2050,Amersfoort Energiemix Minimaal,GM0307_amersfoort,2050,,885443,,,,,
+maximaal_2050,Amersfoort Energiemix Maximaal,GM0307_amersfoort,2050,,885441,,,,,
+kev,Amersfoort Energiemix Maximaal,NL_2019,2030,,797952,,,,,
