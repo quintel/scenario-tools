@@ -15,7 +15,7 @@ pytest = '*'
 requests-mock = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.8"
 
 [scripts]
 tests = 'python -m pytest'
