@@ -17,8 +17,8 @@ def read_heat_demand_input(folder, file):
     Returns:
         pd.Series containing the curve in the file
     '''
-    curve = read_csv(f'{folder}/{file}', curve=True, silent=True, squeeze=True,
-        header=None).astype(float)
+    curve = read_csv(f'{folder}/{file}', curve=True, silent=True,
+        header=None).squeeze('columns').astype(float)
 
     if not curve.size == 8760:
         exit(f'Curve input {file} in {folder} should be of length 8760')
