@@ -1,2 +1,2 @@
 short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",,,opac mv_batteries,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,dummy_heat_demand
+KEV,Heerenveen - KEV2030,GM0074_heerenveen,2030,Kev geprojecteerd op Heerenveen.,892787,True,,,,
