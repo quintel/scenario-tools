@@ -1,5 +1,6 @@
 '''Tests for the ETM_API class'''
 
+from email.policy import default
 import pytest
 from unittest import mock
 from pathlib import Path
@@ -30,14 +31,20 @@ def heat_curve_keys():
     return insulation_config.curve_keys
 
 
-def mock_etm_response(requests_mock, endpoint='/scenarios/', resp=[], status_code=200):
+def mock_etm_response(requests_mock, endpoint='/scenarios', resp=[], status_code=200, method='put'):
     '''Mocks an etm request'''
-    requests_mock.put(
-        BASE_URL + endpoint,
-        json=resp,
-        status_code=status_code
-    )
-
+    if method == 'put':
+        requests_mock.put(
+            BASE_URL + endpoint,
+            json=resp,
+            status_code=status_code
+        )
+    elif method == 'post':
+        requests_mock.post(
+            BASE_URL + endpoint,
+            json=resp,
+            status_code=status_code
+        )
 
 ### TESTS ###
 
@@ -118,3 +125,16 @@ def test_update_with_heat_demand_curves_with_angry_engine(default_api, default_s
     # Cleanup curves that were written
     for file in Path('tests/fixtures/heat_demand').glob('insulation_*.csv'):
         file.unlink()
+
+
+def test_create_etm_scenario_with_falsey_end_year(default_api, default_scenario, requests_mock):
+    default_api.scenario = default_scenario
+
+    default_scenario.id = None
+    default_scenario.end_year = 1900
+
+    mock_etm_response(requests_mock, method='post', resp={'id': 4093, 'end_year': 2050})
+
+    default_api.create_etm_scenario()
+
+    assert default_scenario.end_year == 2050

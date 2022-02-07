@@ -1,5 +1,4 @@
 import io
-import json
 import pandas as pd
 import requests
 
@@ -53,6 +52,12 @@ class ETM_API(object):
         response = self.session.post("/scenarios", json=post_data, headers={'Connection': 'close'})
         self.handle_response(response)
         self.scenario.id = response.json()['id']
+
+        # Note: This behaviour is not yet part of ETE
+        if not self.scenario.end_year == response.json()['end_year']:
+            warn(f'Invalid end year {self.scenario.end_year} for scenario',
+                f'{self.scenario.short_name} was changed to {response.json()["end_year"]}')
+            self.scenario.end_year = response.json()['end_year']
 
 
     # GETTING -----------------------------------------------------------------

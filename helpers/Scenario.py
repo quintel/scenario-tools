@@ -4,6 +4,7 @@ from helpers.file_helpers import check_duplicate_index, read_csv, check_duplicat
 from helpers.heat_file_utils import (read_heat_demand_input, read_profiles,
     contains_heating_profiles, read_thermostat)
 from helpers.heat_demand import generate_profiles
+from helpers.helpers import warn
 
 class Scenario:
     """
@@ -42,6 +43,7 @@ class Scenario:
 
         self._structure_orders()
         self.query_results = None
+        self.user_values = {}
         if self.id: self.id = int(self.id)
 
 
@@ -130,9 +132,9 @@ class ScenarioCollection:
 
         for scenario in self.collection:
             if scenario.short_name in scenario_settings:
-                scenario.user_values = scenario_settings[scenario.short_name].to_dict()
+                scenario.user_values = scenario_settings[scenario.short_name].dropna().to_dict()
             else:
-                print(f'No scenario settings found for {scenario.short_name}')
+                warn(f'    No scenario settings found for {scenario.short_name}')
 
 
     def export_scenario_outcomes(self):
@@ -182,7 +184,7 @@ class ScenarioCollection:
 
         # Validate
         check_duplicates(scenarios_df.columns.tolist(), 'scenario_list', "column")
-        check_duplicates(scenarios_df['short_name'].tolist(), 'scenario_list', "short name")
+        check_duplicates(scenarios_df['short_name'].astype('str').tolist(), 'scenario_list', "short name")
 
         return cls([Scenario(scenario_data) for _, scenario_data in scenarios_df.iterrows()])
 
@@ -190,7 +192,7 @@ class ScenarioCollection:
     @staticmethod
     def read_settings():
         '''Returns a DataFrame of the scenario settings csv'''
-        settings = read_csv('scenario_settings', raises=False, index_col=0).astype('str').dropna()
+        settings = read_csv('scenario_settings', raises=False, index_col=0)
         check_duplicate_index(settings)
 
         return settings
