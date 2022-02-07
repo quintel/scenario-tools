@@ -1,3 +1,4 @@
 pandas==1.1.4
 numpy==1.21.5
 requests==2.22.0
+pyyaml==6.0

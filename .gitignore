@@ -4,3 +4,4 @@
 Scenariodocumentatie.xlsx
 data/input/*.xlsx
 __pycache__
+.pytest_cache
