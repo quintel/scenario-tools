@@ -22,7 +22,7 @@ This repository contains a Python tool to create and update scenarios in the [En
 Make sure you have [Python 3](https://www.python.org/downloads/) installed. Then, install all required libraries by opening a terminal window in the `scenario-tools` folder (or navigate to this folder in the terminal using `cd "path/to/scenario-tools folder"`).
 
 It is recommended (but not required) that you use [`pipenv`](https://pipenv.pypa.io/en/latest/) for running these tools. When using `pipenv`
-it will create a virtual environment for you. A virtual environment helps with keeping the libaries you install here separate of your global libraries (in 
+it will create a virtual environment for you. A virtual environment helps with keeping the libaries you install here separate of your global libraries (in
 other words your `scenario-tools` will be in a stable and isolated environment and are thus less likely to break when updating things elswhere on your computer)
 and this one comes with some nice shortcuts for running the tools.
 
@@ -65,7 +65,9 @@ The `scenario_list.csv` file contains the following columns:
  * **end_year**. The target year / year of interest of each scenario.
  * **description**. Scenario description. This is displayed in the model’s front-end.
  * **id**. Can be left empty if you want to create a new scenario. If you want to update an existing scenario, enter its ETM scenario ID here.
- * **protected**. Either `TRUE` or `FALSE`. If set to `TRUE`, Quintel will keep the scenario compatible with future updates of the ETM. Use this if the scenario should remain accessible for a longer period of time, for example because it is updated periodically or is published in a report. If left empty, it defaults to `FALSE`.
+ * **protected**. *Optional.* Either `TRUE` or `FALSE`. If set to `TRUE`, the scenario will be frozen.
+  This means that no one will be able to change or update any of the settings, including yourself.
+  The scenario will still be queryable. If left empty, it defaults to `FALSE`.
  * **curve_file**. The name of a CSV file containing custom hourly profiles. For example interconnector price curves, solar production curves or industry heat demand curves. The CSV file should be placed in the `data/input/curves` folder.
  * **flexibility_order**. To specify the order in which flexibility options are utilised. Can be left empty to use the default order. Options should be separated by a space. E.g.: `“household_batteries mv_batteries power_to_gas”`. The full list of options can be found on [Github](https://github.com/quintel/etsource/blob/production/config/flexibility_order.yml).
  * **heat_network_order**. To specify the order in which dispatchable district heating technologies are utilised if there is a shortage of supply. Can be left empty to use the default order. Options should be separated by a space. E.g.: `"energy_heat_network_storage energy_heat_burner_hydrogen”`. The full list of technologies can be found on [Github](https://github.com/quintel/etsource/blob/production/config/heat_network_order.yml).
