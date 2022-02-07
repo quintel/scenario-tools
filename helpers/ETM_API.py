@@ -201,7 +201,7 @@ class ETM_API(object):
             return
 
         if response.status_code == 404:
-            fail_info += 'Scenario was not found.'
+            fail_info += f'Scenario {self.scenario.short_name} was not found.'
 
         with suppress(JSONDecodeError):
             fail_info += '\n ' + ',\n '.join(response.json()['errors'])
