@@ -12,11 +12,10 @@ if __name__ == "__main__":
 
     base_url, model_url, query_only_mode = process_arguments(sys.argv)
 
-    session = SessionWithUrlBase(base_url)
-
     print("Opening CSV files:")
 
     scenarios = ScenarioCollection.from_csv()
+    scenarios.setup_connections(SessionWithUrlBase(base_url))
 
     if query_only_mode:
         scenarios.filter_query_only()
@@ -35,23 +34,22 @@ if __name__ == "__main__":
 
     for scenario in scenarios:
         print(f"\nProcessing scenario {scenario.short_name}..")
-        API_scenario = ETM_API(session, scenario)
-
-        # Do this in the loop to save memory
-        if scenario.heat_demand: scenario.set_heat_demand_curves()
 
         if not query_only_mode:
-            API_scenario.update(curve_file_dict)
+            if scenario.heat_demand:
+                scenario.set_heat_demand_curves()
+
+            scenario.update(curve_file_dict)
 
         if query_list:
             print(' Getting queries')
-            API_scenario.query(query_list)
+            scenario.query(query_list)
 
         if data_download_dict:
             print(' Getting downloads')
-            for name, download in API_scenario.get_data_downloads(data_download_dict):
-                write_csv(download, f'{scenario.short_name}_{name}', folder=scenario.short_name,
-                    index=False, header=True)
+            for name, download in scenario.get_data_downloads(data_download_dict):
+                write_csv(download, f'{scenario.short_name}_{name}',
+                    folder=scenario.short_name, index=False, header=True)
 
     scenarios.export_scenario_outcomes()
     scenarios.export_ids()

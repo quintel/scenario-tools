@@ -1,0 +1,21 @@
+# Queries and translations for the regional overview
+
+final_demand_from_industry_energetic: Industry - final demand
+final_demand_from_transport_energetic: Transport - final demand
+final_demand_from_households_energetic: Households - final demand
+final_demand_from_buildings_energetic: Buildings - final demand
+final_demand_from_agriculture_energetic: Agriculture - final demand
+final_demand_from_other_sector_energetic: Other sector - final demand
+final_demand_from_energy_sector_energetic: Energy sector - final demand
+# Distribution losses: geen idee
+primary_co2_of_industry: Industry - primary CO2
+primary_co2_of_transport: Transport - primary CO2
+primary_co2_of_households: Households - primary CO2
+primary_co2_of_buildings: Buildings - primary CO2
+primary_co2_of_agriculture: Agriculture - primary CO2
+primary_co2_of_non_energetic_and_delayed_emissions: Non energetic and delayed emissions - primary CO2
+primary_co2_of_bunkers: Bunkers - primary CO2
+present_total_net_co2_emissions: Present total net CO2 emission
+final_demand_of_electricity_in_ict_industry: Industry ICT - final demand of electricity
+ambient_used_for_heating_in_households: Households - ambient heat used for heating
+ambient_used_for_heat_in_buildings: Buildings - ambient heat used for heating

@@ -6,7 +6,7 @@ from pathlib import Path
 
 from helpers.settings import Settings
 from helpers.Curves import Curve
-from helpers.Scenario import ScenarioCollection
+from helpers.Scenario import Scenario, ScenarioCollection
 
 def test_heat_demand_in_scenario(default_scenario):
     assert default_scenario.heat_demand == 'heat_demand'
@@ -62,4 +62,48 @@ def test_collection_export():
     assert 'unit' in outcome.columns
     assert outcome['test_scen'].loc['query_1'] == 1
 
+    outcome_path.unlink()
+
+
+def test_query_and_export(monkeypatch):
+    Settings.add('input_file_folder', 'tests/fixtures/')
+    Settings.add('output_file_folder', 'tests/fixtures/')
+    collection = ScenarioCollection.from_csv('regional_overview_scenarios')
+
+    outcome_path = Path('tests/fixtures/regional_overview.csv')
+
+    # Patch the query results up!!
+    def mockquery(scenario, something):
+        if not isinstance(something, list): raise ValueError(something)
+
+        scenario.query_results = pd.DataFrame({'future': 0.3, 'unit': 'PJ', 'present': 0.5},
+                                              index=['final_demand_from_industry_energetic'])
+
+    monkeypatch.setattr(Scenario, "query", mockquery)
+
+    for scenario in collection:
+        scenario.area_code = scenario.short_name
+
+    # Test starts --
+
+    # With dict
+    queries = {'final_demand_from_industry_energetic': 'Industry - final demand'}
+    collection.query_all_and_export_outcomes(queries, 'regional_overview.csv')
+
+    outcome = pd.read_csv(outcome_path, index_col=0)
+    assert 'Industry - final demand' in outcome.index
+    assert len(outcome.index) == 1
+    assert 'DE_Germany' in outcome.columns
+    assert len(outcome.columns) == 5
+    outcome_path.unlink()
+
+    # With list
+    queries_list = ['final_demand_from_industry_energetic']
+    collection.query_all_and_export_outcomes(queries_list, 'regional_overview.csv')
+
+    outcome = pd.read_csv(outcome_path, index_col=0)
+    assert 'final_demand_from_industry_energetic' in outcome.index
+    assert len(outcome.index) == 1
+    assert 'DE_Germany' in outcome.columns
+    assert len(outcome.columns) == 5
     outcome_path.unlink()

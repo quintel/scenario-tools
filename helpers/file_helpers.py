@@ -1,5 +1,6 @@
 import pandas as pd
 from pathlib import Path
+import yaml
 
 from .settings import Settings
 from helpers.helpers import warn, exit
@@ -42,6 +43,12 @@ def write_csv(df, name, folder='', **options):
     path.parent.mkdir(parents=True, exist_ok=True)
 
     df.to_csv(path, **options)
+
+
+def read_yml(file):
+    with open('config/' + file, 'r') as f:
+        doc = yaml.load(f, Loader=yaml.FullLoader)
+    return doc
 
 
 def check_duplicates(arr, file_name, attribute_type):
