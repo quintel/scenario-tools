@@ -104,7 +104,7 @@ class Scenario:
             )
 
 
-    def add_results_to_df(self, df):
+    def add_results_to_df(self, df, add_present=True):
         if self.query_results is None or self.query_results.empty:
             return df
 
@@ -114,7 +114,7 @@ class Scenario:
         else:
             df.loc[:, self.short_name] = self.query_results['future']
 
-        if f'{self.area_code}_present' not in df:
+        if add_present and f'{self.area_code}_present' not in df:
             df.loc[:, f'{self.area_code}_present'] = self.query_results['present']
 
         return df
@@ -188,7 +188,7 @@ class ScenarioCollection:
 
         for scenario in self.collection:
             scenario.query(query_list)
-            df = scenario.add_results_to_df(df)
+            df = scenario.add_results_to_df(df, add_present=False)
 
         if isinstance(queries, dict):
             df.rename(queries, axis='index', inplace=True)
@@ -208,7 +208,7 @@ class ScenarioCollection:
         for scenario in self.collection:
             df = scenario.add_results_to_df(df)
 
-        df = df.join(df.pop('unit'))
+        if not df.empty: df = df.join(df.pop('unit'))
         df.to_csv(get_folder('output_file_folder') / target, index=True, header=True)
 
 

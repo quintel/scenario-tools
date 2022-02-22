@@ -94,7 +94,7 @@ def test_query_and_export(monkeypatch):
     assert 'Industry - final demand' in outcome.index
     assert len(outcome.index) == 1
     assert 'DE_Germany' in outcome.columns
-    assert len(outcome.columns) == 5
+    assert len(outcome.columns) == 4
     outcome_path.unlink()
 
     # With list
@@ -105,5 +105,5 @@ def test_query_and_export(monkeypatch):
     assert 'final_demand_from_industry_energetic' in outcome.index
     assert len(outcome.index) == 1
     assert 'DE_Germany' in outcome.columns
-    assert len(outcome.columns) == 5
+    assert len(outcome.columns) == 4
     outcome_path.unlink()
