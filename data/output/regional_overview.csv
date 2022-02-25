@@ -1,0 +1,94 @@
+,DE_germany,BE_belgium,Total,unit
+Total CO2 emissions (energetic use),642478018.7001235,114902150.6404438,757380169.3405674,T
+Total CO2 emissions (non-energetic use),49144392.89525386,15906435.30302287,65050828.19827673,T
+Other GHG emissions (energetic use),14678479.54,1706318.1500000001,16384797.69,T
+Other GHG emission (non-energetic use),83692247.95,15199388.360000001,98891636.31,T
+Indirect and delayed CO2 emissions,0.0,0.0,0.0,T
+Industry - primary CO2 (energetic use),237.1091721088291,53.433280760962134,290.54245286979125,mt
+Transport - primary CO2 (energetic use),187.5896282552796,29.645722058341832,217.23535031362144,mt
+Households - primary CO2 (energetic use),134.72156897140644,19.965103924018788,154.68667289542523,mt
+Buildings - primary CO2 (energetic use),62.556472971942426,12.150225238853274,74.70669821079571,mt
+Agriculture - primary CO2 (energetic use),8.620811481153366,2.3506190651326433,10.971430546286008,mt
+Other sector - primary CO2 (energetic use),2.3172691424006673,0.2366285333742547,2.553897675774922,mt
+Energy sector - primary CO2 (energetic use),10.018527632110604,1.807711401743505,11.82623903385411,mt
+Non energetic and delayed emissions - primary CO2,4.476275815253854,1.1067799030228687,5.583055718276722,mt
+International transport - primary CO2 (energetic use),0.0,0.0,0.0,mt
+Industry - total final demand,2748.53664,593.781418033345,3342.3180580333446,PJ
+Transport - total final demand,2322.262827,368.66949,2690.932317,PJ
+Households - total final demand,2390.2844056933,336.7387339565966,2727.0231396498966,PJ
+Buildings - total final demand,1084.0039379329473,182.7498128438733,1266.7537507768207,PJ
+Agriculture - total final demand,149.563417,37.213118,186.776535,PJ
+Other sector - total final demand,34.801738,3.10203,37.903768,PJ
+Energy sector - total final demand,151.8527885026186,21.017427681627968,172.87021618424657,PJ
+Agriculture - biomass,4.242,0.3487,4.5907,PJ
+Buildings - biomass,63.983000000000864,0.9890000000000091,64.97200000000088,PJ
+International transport - biomass,0.0,0.0,0.0,PJ
+Energy sector - biomass,0.0,0.0,0.0,PJ
+Households - biomass,250.03400000000178,23.690600000000156,273.72460000000194,PJ
+Industry - biomass,86.315,25.7993,112.1143,PJ
+Other sector - biomass,0.0,0.0,0.0,PJ
+Transport - biomass,109.78511399999998,20.317293,130.10240699999997,PJ
+Agriculture - coal,0.0,0.0,0.0,PJ
+Buildings - coal,0.07698800000000103,0.0,0.07698800000000103,PJ
+International transport - coal,0.0,0.0,0.0,PJ
+Energy sector - coal,0.0,0.0,0.0,PJ
+Households - coal,14.460716000000136,1.9248019999999995,16.385518000000136,PJ
+Industry - coal,254.0529910000001,35.385645,289.4386360000001,PJ
+Other sector - coal,0.0,0.0,0.0,PJ
+Transport - coal,0.0,0.002629,0.002629,PJ
+Agriculture - electricity,18.2124,6.42096,24.63336,PJ
+Buildings - electricity,403.77128616117017,71.71882584387245,475.49011200504265,PJ
+International transport - electricity,0.0,0.0,0.0,PJ
+Energy sector - electricity,111.7908,13.87944,125.67024,PJ
+Households - electricity,463.31809315223114,64.88534301087195,528.2034361631031,PJ
+Industry - electricity,975.5019999999998,157.40656,1132.9085599999999,PJ
+Other sector - electricity,0.0,0.0,0.0,PJ
+Transport - electricity,41.778,6.129,47.907,PJ
+Agriculture - geothermal,0.0,0.0,0.0,PJ
+Buildings - geothermal,0.0,0.0,0.0,PJ
+International transport - geothermal,0.0,0.0,0.0,PJ
+Energy sector - geothermal,0.0,0.0,0.0,PJ
+Households - geothermal,0.0,0.0,0.0,PJ
+Industry - geothermal,0.0,0.0,0.0,PJ
+Other sector - geothermal,0.0,0.0,0.0,PJ
+Transport - geothermal,0.0,0.0,0.0,PJ
+Agriculture - heat,0.0,0.2445,0.2445,PJ
+Buildings - heat,60.52400000000081,1.9762000000000186,62.50020000000083,PJ
+International transport - heat,0.0,0.0,0.0,PJ
+Energy sector - heat,40.06198850261861,7.137987681627969,47.19997618424658,PJ
+Households - heat,167.15800000000146,0.6839000000000061,167.84190000000146,PJ
+Industry - heat,192.864,74.03743203334491,266.9014320333449,PJ
+Other sector - heat,0.0,0.0,0.0,PJ
+Transport - heat,0.0,0.0,0.0,PJ
+Agriculture - hydrogen,0.0,0.0,0.0,PJ
+Buildings - hydrogen,0.0,0.0,0.0,PJ
+International transport - hydrogen,0.0,0.0,0.0,PJ
+Energy sector - hydrogen,0.0,0.0,0.0,PJ
+Households - hydrogen,0.0,0.0,0.0,PJ
+Industry - hydrogen,0.0,0.0,0.0,PJ
+Other sector - hydrogen,0.0,0.0,0.0,PJ
+Transport - hydrogen,0.0,0.0,0.0,PJ
+Agriculture - natural gas,34.2623,13.910000000000002,48.17230000000001,PJ
+Buildings - natural gas,413.14987577177385,78.4631100000006,491.61298577177445,PJ
+International transport - natural gas,0.0,0.0,0.0,PJ
+Energy sector - natural gas,0.0,0.0,0.0,PJ
+Households - natural gas,968.9833765410606,148.59072994572355,1117.574106486784,PJ
+Industry - natural gas,899.238228,202.25545,1101.493678,PJ
+Other sector - natural gas,26.83497,1.4611500000000002,28.29612,PJ
+Transport - natural gas,8.336547999999999,1.16793,9.504477999999999,PJ
+Agriculture - oil,92.84671700000001,16.288958,109.13567500000002,PJ
+Buildings - oil,141.2347880000016,29.551977000000228,170.78676500000182,PJ
+International transport - oil,0.0,0.0,0.0,PJ
+Energy sector - oil,0.0,0.0,0.0,PJ
+Households - oil,497.1192200000049,95.86895900000097,592.9881790000059,PJ
+Industry - oil,340.564421,98.89703100000001,439.461452,PJ
+Other sector - oil,7.966768,1.64088,9.607648,PJ
+Transport - oil,2162.363165,341.052638,2503.4158030000003,PJ
+Agriculture - solar thermal,0.0,0.0,0.0,PJ
+Buildings - solar thermal,1.264,0.0507,1.3147,PJ
+International transport - solar thermal,0.0,0.0,0.0,PJ
+Energy sector - solar thermal,0.0,0.0,0.0,PJ
+Households - solar thermal,29.211,1.0944,30.3054,PJ
+Industry - solar thermal,0.0,0.0,0.0,PJ
+Other sector - solar thermal,0.0,0.0,0.0,PJ
+Transport - solar thermal,0.0,0.0,0.0,PJ

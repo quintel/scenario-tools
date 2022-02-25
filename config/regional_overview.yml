@@ -11,7 +11,7 @@ primary_co2_of_households: Households - primary CO2 (energetic use)
 primary_co2_of_buildings: Buildings - primary CO2 (energetic use)
 primary_co2_of_agriculture: Agriculture - primary CO2 (energetic use)
 primary_co2_of_other: Other sector - primary CO2 (energetic use)
-primary_co2_of_energy_sector: Energy sector - primary CO2 (energetic use)
+primary_co2_of_energy: Energy sector - primary CO2 (energetic use)
 primary_co2_of_non_energetic_and_delayed_emissions: Non energetic and delayed emissions - primary CO2 
 primary_co2_of_bunkers: International transport - primary CO2 (energetic use)
 final_demand_from_industry_energetic: Industry - total final demand
