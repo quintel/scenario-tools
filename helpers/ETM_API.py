@@ -180,7 +180,7 @@ class ETM_API(object):
 
         self._check_and_update_user_values(scenario)
         self._check_and_update_heat_network(scenario)
-        self._check_and_update_curves(self, scenario, curve_file_dict)
+        self._check_and_update_curves(scenario, curve_file_dict)
         self._check_and_update_heat_demand(scenario)
 
         if scenario.flexibility_order:
