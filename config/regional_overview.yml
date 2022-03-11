@@ -1,95 +1,127 @@
 # Queries and translations for the regional overview
 
-emissions_energetic_all_co2: Total CO2 emissions (energetic use)
-emissions_non_energetic_all_co2: Total CO2 emissions (non-energetic use)
-emissions_energetic_all_other_ghg: Other GHG emissions (energetic use)
-emissions_non_energetic_all_other_ghg: Other GHG emission (non-energetic use)
-co2_sheet_indirect_delayed_emissions: Indirect and delayed CO2 emissions
-primary_co2_of_industry: Industry - primary CO2 (energetic use)
-primary_co2_of_transport: Transport - primary CO2 (energetic use)
-primary_co2_of_households: Households - primary CO2 (energetic use)
-primary_co2_of_buildings: Buildings - primary CO2 (energetic use)
-primary_co2_of_agriculture: Agriculture - primary CO2 (energetic use)
-primary_co2_of_other: Other sector - primary CO2 (energetic use)
-primary_co2_of_energy: Energy sector - primary CO2 (energetic use)
-primary_co2_of_non_energetic_and_delayed_emissions: Non energetic and delayed emissions - primary CO2 
-primary_co2_of_bunkers: International transport - primary CO2 (energetic use)
-final_demand_from_industry_energetic: Industry - total final demand
-final_demand_from_transport_energetic: Transport - total final demand
-final_demand_from_households_energetic: Households - total final demand
-final_demand_from_buildings_energetic: Buildings - total final demand
-final_demand_from_agriculture_energetic: Agriculture - total final demand
-final_demand_from_other_sector_energetic: Other sector - total final demand
-final_demand_from_energy_sector_energetic: Energy sector - total final demand
-final_demand_of_biomass_products_in_agriculture_energetic: Agriculture - biomass
-final_demand_of_biomass_products_in_buildings_energetic: Buildings - biomass
-final_demand_of_biomass_products_in_bunkers_energetic: International transport - biomass
-final_demand_of_biomass_products_in_energy_energetic: Energy sector - biomass
-final_demand_of_biomass_products_in_households_energetic: Households - biomass
-final_demand_of_biomass_products_in_industry_energetic: Industry - biomass
-final_demand_of_biomass_products_in_other_energetic: Other sector - biomass
-final_demand_of_biomass_products_in_transport_energetic: Transport - biomass
-final_demand_of_coal_and_derivatives_in_agriculture_energetic: Agriculture - coal
-final_demand_of_coal_and_derivatives_in_buildings_energetic: Buildings - coal
-final_demand_of_coal_and_derivatives_in_bunkers_energetic: International transport - coal
-final_demand_of_coal_and_derivatives_in_energy_energetic: Energy sector - coal
-final_demand_of_coal_and_derivatives_in_households_energetic: Households - coal
-final_demand_of_coal_and_derivatives_in_industry_energetic: Industry - coal
-final_demand_of_coal_and_derivatives_in_other_energetic: Other sector - coal
-final_demand_of_coal_and_derivatives_in_transport_energetic: Transport - coal
-final_demand_of_electricity_in_agriculture_energetic: Agriculture - electricity
-final_demand_of_electricity_in_buildings_energetic: Buildings - electricity
-final_demand_of_electricity_in_bunkers_energetic: International transport - electricity
-final_demand_of_electricity_in_energy_energetic: Energy sector - electricity
-final_demand_of_electricity_in_households_energetic: Households - electricity
-final_demand_of_electricity_in_industry_energetic: Industry - electricity
-final_demand_of_electricity_in_other_energetic: Other sector - electricity
-final_demand_of_electricity_in_transport_energetic: Transport - electricity
-final_demand_of_geothermal_in_agriculture_energetic: Agriculture - geothermal
-final_demand_of_geothermal_in_buildings_energetic: Buildings - geothermal
-final_demand_of_geothermal_in_bunkers_energetic: International transport - geothermal
-final_demand_of_geothermal_in_energy_energetic: Energy sector - geothermal
-final_demand_of_geothermal_in_households_energetic: Households - geothermal
-final_demand_of_geothermal_in_industry_energetic: Industry - geothermal
-final_demand_of_geothermal_in_other_energetic: Other sector - geothermal
-final_demand_of_geothermal_in_transport_energetic: Transport - geothermal
-final_demand_of_heat_in_agriculture_energetic: Agriculture - heat
-final_demand_of_heat_in_buildings_energetic: Buildings - heat
-final_demand_of_heat_in_bunkers_energetic: International transport - heat
-final_demand_of_heat_in_energy_energetic: Energy sector - heat
-final_demand_of_heat_in_households_energetic: Households - heat
-final_demand_of_heat_in_industry_energetic: Industry - heat
-final_demand_of_heat_in_other_energetic: Other sector - heat
-final_demand_of_heat_in_transport_energetic: Transport - heat
-final_demand_of_hydrogen_in_agriculture_energetic: Agriculture - hydrogen
-final_demand_of_hydrogen_in_buildings_energetic: Buildings - hydrogen
-final_demand_of_hydrogen_in_bunkers_energetic: International transport - hydrogen
-final_demand_of_hydrogen_in_energy_energetic: Energy sector - hydrogen
-final_demand_of_hydrogen_in_households_energetic: Households - hydrogen
-final_demand_of_hydrogen_in_industry_energetic: Industry - hydrogen
-final_demand_of_hydrogen_in_other_energetic: Other sector - hydrogen
-final_demand_of_hydrogen_in_transport_energetic: Transport - hydrogen
-final_demand_of_natural_gas_and_derivatives_in_agriculture_energetic: Agriculture - natural gas
-final_demand_of_natural_gas_and_derivatives_in_buildings_energetic: Buildings - natural gas
-final_demand_of_natural_gas_and_derivatives_in_bunkers_energetic: International transport - natural gas
-final_demand_of_natural_gas_and_derivatives_in_energy_energetic: Energy sector - natural gas
-final_demand_of_natural_gas_and_derivatives_in_households_energetic: Households - natural gas
-final_demand_of_natural_gas_and_derivatives_in_industry_energetic: Industry - natural gas
-final_demand_of_natural_gas_and_derivatives_in_other_energetic: Other sector - natural gas
-final_demand_of_natural_gas_and_derivatives_in_transport_energetic: Transport - natural gas
-final_demand_of_oil_and_derivatives_in_agriculture_energetic: Agriculture - oil
-final_demand_of_oil_and_derivatives_in_buildings_energetic: Buildings - oil
-final_demand_of_oil_and_derivatives_in_bunkers_energetic: International transport - oil
-final_demand_of_oil_and_derivatives_in_energy_energetic: Energy sector - oil
-final_demand_of_oil_and_derivatives_in_households_energetic: Households - oil
-final_demand_of_oil_and_derivatives_in_industry_energetic: Industry - oil
-final_demand_of_oil_and_derivatives_in_other_energetic: Other sector - oil
-final_demand_of_oil_and_derivatives_in_transport_energetic: Transport - oil
-final_demand_of_solar_in_agriculture_energetic: Agriculture - solar thermal
-final_demand_of_solar_in_buildings_energetic: Buildings - solar thermal
-final_demand_of_solar_in_bunkers_energetic: International transport - solar thermal
-final_demand_of_solar_in_energy_energetic: Energy sector - solar thermal
-final_demand_of_solar_in_households_energetic: Households - solar thermal
-final_demand_of_solar_in_industry_energetic: Industry - solar thermal
-final_demand_of_solar_in_other_energetic: Other sector - solar thermal
-final_demand_of_solar_in_transport_energetic: Transport - solar thermal
+- section: CO2 emissions
+  queries:
+    emissions_energetic_all_co2: Total CO2 emissions (energetic use)
+    emissions_non_energetic_all_co2: Total CO2 emissions (non-energetic use)
+    emissions_energetic_all_other_ghg: Other GHG emissions (energetic use)
+    emissions_non_energetic_all_other_ghg: Other GHG emission (non-energetic use)
+    co2_sheet_indirect_delayed_emissions: Indirect and delayed CO2 emissions
+    primary_co2_of_industry: Industry - primary CO2 (energetic use)
+    primary_co2_of_transport: Transport - primary CO2 (energetic use)
+    primary_co2_of_households: Households - primary CO2 (energetic use)
+    primary_co2_of_buildings: Buildings - primary CO2 (energetic use)
+    primary_co2_of_agriculture: Agriculture - primary CO2 (energetic use)
+    primary_co2_of_other: Other sector - primary CO2 (energetic use)
+    primary_co2_of_energy: Energy sector - primary CO2 (energetic use)
+    primary_co2_of_non_energetic_and_delayed_emissions: Non energetic and delayed emissions - primary CO2
+    primary_co2_of_bunkers: International transport - primary CO2 (energetic use)
+
+- section: Total Final Demand
+  queries:
+    final_demand_from_industry_energetic: Industry - total final demand
+    final_demand_from_transport_energetic: Transport - total final demand
+    final_demand_from_households_energetic: Households - total final demand
+    final_demand_from_buildings_energetic: Buildings - total final demand
+    final_demand_from_agriculture_energetic: Agriculture - total final demand
+    final_demand_from_other_sector_energetic: Other sector - total final demand
+    final_demand_from_energy_sector_energetic: Energy sector - total final demand
+
+- section: Biomass Final Demand
+  queries:
+    final_demand_of_biomass_products_in_agriculture_energetic: Agriculture - biomass
+    final_demand_of_biomass_products_in_buildings_energetic: Buildings - biomass
+    final_demand_of_biomass_products_in_bunkers_energetic: International transport - biomass
+    final_demand_of_biomass_products_in_energy_energetic: Energy sector - biomass
+    final_demand_of_biomass_products_in_households_energetic: Households - biomass
+    final_demand_of_biomass_products_in_industry_energetic: Industry - biomass
+    final_demand_of_biomass_products_in_other_energetic: Other sector - biomass
+    final_demand_of_biomass_products_in_transport_energetic: Transport - biomass
+
+- section: Coal Final Demand
+  queries:
+    final_demand_of_coal_and_derivatives_in_agriculture_energetic: Agriculture - coal
+    final_demand_of_coal_and_derivatives_in_buildings_energetic: Buildings - coal
+    final_demand_of_coal_and_derivatives_in_bunkers_energetic: International transport - coal
+    final_demand_of_coal_and_derivatives_in_energy_energetic: Energy sector - coal
+    final_demand_of_coal_and_derivatives_in_households_energetic: Households - coal
+    final_demand_of_coal_and_derivatives_in_industry_energetic: Industry - coal
+    final_demand_of_coal_and_derivatives_in_other_energetic: Other sector - coal
+    final_demand_of_coal_and_derivatives_in_transport_energetic: Transport - coal
+
+- section: Electricity Final Demand
+  queries:
+    final_demand_of_electricity_in_agriculture_energetic: Agriculture - electricity
+    final_demand_of_electricity_in_buildings_energetic: Buildings - electricity
+    final_demand_of_electricity_in_bunkers_energetic: International transport - electricity
+    final_demand_of_electricity_in_energy_energetic: Energy sector - electricity
+    final_demand_of_electricity_in_households_energetic: Households - electricity
+    final_demand_of_electricity_in_industry_energetic: Industry - electricity
+    final_demand_of_electricity_in_other_energetic: Other sector - electricity
+    final_demand_of_electricity_in_transport_energetic: Transport - electricity
+
+- section: Geothermal Final Demand
+  queries:
+    final_demand_of_geothermal_in_agriculture_energetic: Agriculture - geothermal
+    final_demand_of_geothermal_in_buildings_energetic: Buildings - geothermal
+    final_demand_of_geothermal_in_bunkers_energetic: International transport - geothermal
+    final_demand_of_geothermal_in_energy_energetic: Energy sector - geothermal
+    final_demand_of_geothermal_in_households_energetic: Households - geothermal
+    final_demand_of_geothermal_in_industry_energetic: Industry - geothermal
+    final_demand_of_geothermal_in_other_energetic: Other sector - geothermal
+    final_demand_of_geothermal_in_transport_energetic: Transport - geothermal
+
+- section: Heat Final Demand
+  queries:
+    final_demand_of_heat_in_agriculture_energetic: Agriculture - heat
+    final_demand_of_heat_in_buildings_energetic: Buildings - heat
+    final_demand_of_heat_in_bunkers_energetic: International transport - heat
+    final_demand_of_heat_in_energy_energetic: Energy sector - heat
+    final_demand_of_heat_in_households_energetic: Households - heat
+    final_demand_of_heat_in_industry_energetic: Industry - heat
+    final_demand_of_heat_in_other_energetic: Other sector - heat
+    final_demand_of_heat_in_transport_energetic: Transport - heat
+
+- section: Hydrogen Final Demand
+  queries:
+    final_demand_of_hydrogen_in_agriculture_energetic: Agriculture - hydrogen
+    final_demand_of_hydrogen_in_buildings_energetic: Buildings - hydrogen
+    final_demand_of_hydrogen_in_bunkers_energetic: International transport - hydrogen
+    final_demand_of_hydrogen_in_energy_energetic: Energy sector - hydrogen
+    final_demand_of_hydrogen_in_households_energetic: Households - hydrogen
+    final_demand_of_hydrogen_in_industry_energetic: Industry - hydrogen
+    final_demand_of_hydrogen_in_other_energetic: Other sector - hydrogen
+    final_demand_of_hydrogen_in_transport_energetic: Transport - hydrogen
+
+- section: Natural Gas Final Demand
+  queries:
+    final_demand_of_natural_gas_and_derivatives_in_agriculture_energetic: Agriculture - natural gas
+    final_demand_of_natural_gas_and_derivatives_in_buildings_energetic: Buildings - natural gas
+    final_demand_of_natural_gas_and_derivatives_in_bunkers_energetic: International transport - natural gas
+    final_demand_of_natural_gas_and_derivatives_in_energy_energetic: Energy sector - natural gas
+    final_demand_of_natural_gas_and_derivatives_in_households_energetic: Households - natural gas
+    final_demand_of_natural_gas_and_derivatives_in_industry_energetic: Industry - natural gas
+    final_demand_of_natural_gas_and_derivatives_in_other_energetic: Other sector - natural gas
+    final_demand_of_natural_gas_and_derivatives_in_transport_energetic: Transport - natural gas
+
+- section: Oil Final Demand
+  queries:
+    final_demand_of_oil_and_derivatives_in_agriculture_energetic: Agriculture - oil
+    final_demand_of_oil_and_derivatives_in_buildings_energetic: Buildings - oil
+    final_demand_of_oil_and_derivatives_in_bunkers_energetic: International transport - oil
+    final_demand_of_oil_and_derivatives_in_energy_energetic: Energy sector - oil
+    final_demand_of_oil_and_derivatives_in_households_energetic: Households - oil
+    final_demand_of_oil_and_derivatives_in_industry_energetic: Industry - oil
+    final_demand_of_oil_and_derivatives_in_other_energetic: Other sector - oil
+    final_demand_of_oil_and_derivatives_in_transport_energetic: Transport - oil
+
+- section: Solar Thermal Final Demand
+  queries:
+    final_demand_of_solar_in_agriculture_energetic: Agriculture - solar thermal
+    final_demand_of_solar_in_buildings_energetic: Buildings - solar thermal
+    final_demand_of_solar_in_bunkers_energetic: International transport - solar thermal
+    final_demand_of_solar_in_energy_energetic: Energy sector - solar thermal
+    final_demand_of_solar_in_households_energetic: Households - solar thermal
+    final_demand_of_solar_in_industry_energetic: Industry - solar thermal
+    final_demand_of_solar_in_other_energetic: Other sector - solar thermal
+    final_demand_of_solar_in_transport_energetic: Transport - solar thermal

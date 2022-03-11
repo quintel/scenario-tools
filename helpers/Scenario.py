@@ -180,7 +180,7 @@ class ScenarioCollection:
             scenario.setup_connection(session)
 
 
-    def query_all_and_export_outcomes(self, queries, target='scenario_outcomes.csv'):
+    def query_all_and_export_outcomes(self, queries, target='scenario_outcomes.csv', sections={}):
         '''Queries can be list or dict shortcut to query all and export immedeately'''
         query_list = list(queries.keys()) if isinstance(queries, dict) else queries
 
@@ -196,6 +196,13 @@ class ScenarioCollection:
         unit = df.pop('unit')
         df.loc[:,'Total'] = df.sum(axis=1)
         df = df.join(unit)
+
+        if sections:
+            df.rename_axis('Subsection', inplace=True)
+            df['Section'] = pd.Series(sections)
+            df.set_index('Section', append=True, inplace=True)
+            df = df.reorder_levels(['Section', 'Subsection'])
+
         df.to_csv(get_folder('output_file_folder') / target, index=True, header=True)
 
 

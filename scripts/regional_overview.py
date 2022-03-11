@@ -21,9 +21,12 @@ if __name__ == "__main__":
     print('Connecting to ETM')
     queries = read_yml('regional_overview.yml')
 
+    unpack_queries = {k: v for section in queries for k,v in section['queries'].items()}
+    sections = {v: section['section'] for section in queries for v in section['queries'].values()}
+
     for scenario in scenarios:
         scenario.area_code = scenario.short_name
 
-    scenarios.query_all_and_export_outcomes(queries, 'regional_overview.csv')
+    scenarios.query_all_and_export_outcomes(unpack_queries, 'regional_overview.csv', sections)
 
     print('\nAll done!')
