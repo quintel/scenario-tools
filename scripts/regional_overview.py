@@ -22,7 +22,7 @@ if __name__ == "__main__":
     queries = read_yml('regional_overview.yml')
 
     unpack_queries = {k: v for section in queries for k,v in section['queries'].items()}
-    sections = {v: section['section'] for section in queries for v in section['queries'].values()}
+    sections = {v: section['section'] for section in queries for v in section['queries'].keys()}
 
     for scenario in scenarios:
         scenario.area_code = scenario.short_name

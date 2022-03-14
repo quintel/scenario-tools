@@ -190,9 +190,6 @@ class ScenarioCollection:
             scenario.query(query_list)
             df = scenario.add_results_to_df(df, add_present=False)
 
-        if isinstance(queries, dict):
-            df.rename(queries, axis='index', inplace=True)
-
         unit = df.pop('unit')
         df.loc[:,'Total'] = df.sum(axis=1)
         df = df.join(unit)
@@ -200,6 +197,11 @@ class ScenarioCollection:
         if sections:
             df.rename_axis('Subsection', inplace=True)
             df['Section'] = pd.Series(sections)
+
+        if isinstance(queries, dict):
+            df.rename(queries, axis='index', inplace=True)
+
+        if sections:
             df.set_index('Section', append=True, inplace=True)
             df = df.reorder_levels(['Section', 'Subsection'])
 
