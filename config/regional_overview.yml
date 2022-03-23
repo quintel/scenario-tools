@@ -160,6 +160,16 @@
     import_for_electricity_conversion: Import
     hydrogen_for_electricity_conversion: Hydrogen
 
+- section: Conversion - synthetic kerosene
+  queries:
+    electricity_for_synthetic_kerosene_conversion: Electricity
+    hydrogen_for_synthetic_kerosene_conversion: Hydrogen
+
+- section: Conversion - synthetic methanol
+  queries:
+    electricity_for_synthetic_methanol_conversion: Electricity
+    hydrogen_for_synthetic_methanol_conversion: Hydrogen
+
 - section: Supply mix - electricity
   queries:
     coal_in_source_of_electricity_production: Coal
