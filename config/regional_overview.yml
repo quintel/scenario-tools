@@ -1,0 +1,277 @@
+# Queries and translations for the regional overview
+# Note that queries must be unique within this config file
+
+- section: CO2 emissions
+  queries:
+    emissions_energetic_all_co2: Total CO2 emissions (energetic use)
+    emissions_non_energetic_all_co2: Total CO2 emissions (non-energetic use)
+    emissions_energetic_all_other_ghg: Other GHG emissions (energetic use)
+    emissions_non_energetic_all_other_ghg: Other GHG emission (non-energetic use)
+    co2_sheet_indirect_delayed_emissions: Indirect and delayed CO2 emissions
+    primary_co2_of_industry: Industry - primary CO2 (energetic use)
+    primary_co2_of_transport: Transport - primary CO2 (energetic use)
+    primary_co2_of_households: Households - primary CO2 (energetic use)
+    primary_co2_of_buildings: Buildings - primary CO2 (energetic use)
+    primary_co2_of_agriculture: Agriculture - primary CO2 (energetic use)
+    primary_co2_of_other: Other sector - primary CO2 (energetic use)
+    primary_co2_of_energy: Energy sector - primary CO2 (energetic use)
+    primary_co2_of_non_energetic_and_delayed_emissions: Non energetic and delayed emissions - primary CO2
+    primary_co2_of_bunkers: International transport - primary CO2 (energetic use)
+
+- section: Final demand - total
+  queries:
+    final_demand_from_industry_energetic: Industry
+    final_demand_from_transport_energetic: Transport
+    final_demand_from_households_energetic: Households
+    final_demand_from_buildings_energetic: Buildings
+    final_demand_from_agriculture_energetic: Agriculture
+    final_demand_from_other_sector_energetic: Other sector
+    final_demand_from_energy_sector_energetic: Energy sector
+
+- section: Final demand - biomass
+  queries:
+    final_demand_of_biomass_products_in_agriculture_energetic: Agriculture
+    final_demand_of_biomass_products_in_buildings_energetic: Buildings
+    final_demand_of_biomass_products_in_bunkers_energetic: International
+    final_demand_of_biomass_products_in_energy_energetic: Energy sector
+    final_demand_of_biomass_products_in_households_energetic: Households
+    final_demand_of_biomass_products_in_industry_energetic: Industry
+    final_demand_of_biomass_products_in_other_energetic: Other sector
+    final_demand_of_biomass_products_in_transport_energetic: Transport
+
+- section: Final demand - coal
+  queries:
+    final_demand_of_coal_and_derivatives_in_agriculture_energetic: Agriculture
+    final_demand_of_coal_and_derivatives_in_buildings_energetic: Buildings
+    final_demand_of_coal_and_derivatives_in_bunkers_energetic: International transport
+    final_demand_of_coal_and_derivatives_in_energy_energetic: Energy sector
+    final_demand_of_coal_and_derivatives_in_households_energetic: Households
+    final_demand_of_coal_and_derivatives_in_industry_energetic: Industry
+    final_demand_of_coal_and_derivatives_in_other_energetic: Other sector
+    final_demand_of_coal_and_derivatives_in_transport_energetic: Transport
+
+- section: Final demand - electricity
+  queries:
+    final_demand_of_electricity_in_agriculture_energetic: Agriculture
+    final_demand_of_electricity_in_buildings_energetic: Buildings
+    final_demand_of_electricity_in_bunkers_energetic: International transport
+    final_demand_of_electricity_in_energy_energetic: Energy sector
+    final_demand_of_electricity_in_households_energetic: Households
+    final_demand_of_electricity_in_industry_energetic: Industry
+    final_demand_of_electricity_in_other_energetic: Other sector
+    final_demand_of_electricity_in_transport_energetic: Transport
+
+- section: Final demand - geothermal
+  queries:
+    final_demand_of_geothermal_in_agriculture_energetic: Agriculture
+    final_demand_of_geothermal_in_buildings_energetic: Buildings
+    final_demand_of_geothermal_in_bunkers_energetic: International transport
+    final_demand_of_geothermal_in_energy_energetic: Energy sector
+    final_demand_of_geothermal_in_households_energetic: Households
+    final_demand_of_geothermal_in_industry_energetic: Industry
+    final_demand_of_geothermal_in_other_energetic: Other sector
+    final_demand_of_geothermal_in_transport_energetic: Transport
+
+- section: Final demand - heat
+  queries:
+    final_demand_of_heat_in_agriculture_energetic: Agriculture
+    final_demand_of_heat_in_buildings_energetic: Buildings
+    final_demand_of_heat_in_bunkers_energetic: International transport
+    final_demand_of_heat_in_energy_energetic: Energy sector
+    final_demand_of_heat_in_households_energetic: Households
+    final_demand_of_heat_in_industry_energetic: Industry
+    final_demand_of_heat_in_other_energetic: Other sector
+    final_demand_of_heat_in_transport_energetic: Transport
+
+- section: Final demand - hydrogen
+  queries:
+    final_demand_of_hydrogen_in_agriculture_energetic: Agriculture
+    final_demand_of_hydrogen_in_buildings_energetic: Buildings
+    final_demand_of_hydrogen_in_bunkers_energetic: International transport
+    final_demand_of_hydrogen_in_energy_energetic: Energy sector
+    final_demand_of_hydrogen_in_households_energetic: Households
+    final_demand_of_hydrogen_in_industry_energetic: Industry
+    final_demand_of_hydrogen_in_other_energetic: Other sector
+    final_demand_of_hydrogen_in_transport_energetic: Transport
+
+- section: Final demand - natural gas
+  queries:
+    final_demand_of_natural_gas_and_derivatives_in_agriculture_energetic: Agriculture
+    final_demand_of_natural_gas_and_derivatives_in_buildings_energetic: Buildings
+    final_demand_of_natural_gas_and_derivatives_in_bunkers_energetic: International transport
+    final_demand_of_natural_gas_and_derivatives_in_energy_energetic: Energy sector
+    final_demand_of_natural_gas_and_derivatives_in_households_energetic: Households
+    final_demand_of_natural_gas_and_derivatives_in_industry_energetic: Industry
+    final_demand_of_natural_gas_and_derivatives_in_other_energetic: Other sector
+    final_demand_of_natural_gas_and_derivatives_in_transport_energetic: Transport
+
+- section: Final demand - oil
+  queries:
+    final_demand_of_oil_and_derivatives_in_agriculture_energetic: Agriculture
+    final_demand_of_oil_and_derivatives_in_buildings_energetic: Buildings
+    final_demand_of_oil_and_derivatives_in_bunkers_energetic: International transport
+    final_demand_of_oil_and_derivatives_in_energy_energetic: Energy sector
+    final_demand_of_oil_and_derivatives_in_households_energetic: Households
+    final_demand_of_oil_and_derivatives_in_industry_energetic: Industry
+    final_demand_of_oil_and_derivatives_in_other_energetic: Other sector
+    final_demand_of_oil_and_derivatives_in_transport_energetic: Transport
+
+- section: Final demand - solar thermal
+  queries:
+    final_demand_of_solar_in_agriculture_energetic: Agriculture
+    final_demand_of_solar_in_buildings_energetic: Buildings
+    final_demand_of_solar_in_bunkers_energetic: International transport
+    final_demand_of_solar_in_energy_energetic: Energy sector
+    final_demand_of_solar_in_households_energetic: Households
+    final_demand_of_solar_in_industry_energetic: Industry
+    final_demand_of_solar_in_other_energetic: Other sector
+    final_demand_of_solar_in_transport_energetic: Transport
+
+- section: Primary demand - total
+  queries:
+    primary_demand_of_coal_and_derivatives: Coal
+    primary_demand_of_solid_biomass: Solid biomass
+    primary_demand_of_natural_gas_and_derivatives: Natural gas
+    primary_demand_of_biogas: Biogas
+    primary_demand_of_greengas: Green gas
+    primary_demand_of_oil_and_derivatives: Oil
+    primary_demand_of_biofuels: Liquid biofuels
+    primary_demand_of_uranium_oxide: Uranium oxide
+    primary_demand_of_waste: Waste
+    primary_demand_of_renewable_heat: Renewable heat
+    primary_demand_of_renewable_electricity: Renewable electricity
+    primary_demand_of_imported_heat: Imported heat
+    primary_demand_of_imported_electricity: Imported electricity
+    primary_demand_of_imported_hydrogen: Imported hydrogen
+
+- section: Conversion - electricity
+  queries:
+    coal_for_electricity_conversion: Coal
+    gas_for_electricity_conversion: Natural gas
+    oil_for_electricity_conversion: Oil
+    uranium_for_electricity_conversion: Nuclear
+    biomass_for_electricity_conversion: Biomass
+    wind_for_electricity_conversion: Wind
+    hydro_for_electricity_conversion: Hydro
+    green_gas_for_electricity_conversion: Green gas
+    geothermal_for_electricity_conversion: Geothermal
+    waste_for_electricity_conversion: Waste
+    solar_for_electricity_conversion: Solar
+    import_for_electricity_conversion: Import
+    hydrogen_for_electricity_conversion: Hydrogen
+
+- section: Conversion - synthetic kerosene
+  queries:
+    electricity_for_synthetic_kerosene_conversion: Electricity
+    hydrogen_for_synthetic_kerosene_conversion: Hydrogen
+
+- section: Conversion - synthetic methanol
+  queries:
+    electricity_for_synthetic_methanol_conversion: Electricity
+    hydrogen_for_synthetic_methanol_conversion: Hydrogen
+
+- section: Supply mix - electricity
+  queries:
+    coal_in_source_of_electricity_production: Coal
+    gas_in_source_of_electricity_production: Natural gas
+    oil_in_source_of_electricity_production: Oil
+    nuclear_in_source_of_electricity_production: Nuclear
+    biomass_in_source_of_electricity_production: Biomass
+    wind_in_source_of_electricity_production: Wind
+    hydro_in_source_of_electricity_production: Hydro
+    greengas_in_source_of_electricity_production: Green gas
+    geothermal_in_source_of_electricity_production: Geothermal
+    waste_in_source_of_electricity_production: Waste
+    solar_in_source_of_electricity_production: Solar
+    import_in_source_of_electricity_production: Import
+    hydrogen_in_source_of_electricity_production: Hydrogen
+    coal_gas_in_source_of_electricity_production: Coal gas
+
+- section: Supply mix - district heating (residential)
+  queries:
+    energy_heat_well_geothermal_in_collective_heat_network_mekko: Geothermal
+    energy_heat_burner_wood_pellets_in_collective_heat_network_mekko: Wood pellets (burner)
+    energy_heat_heatpump_water_water_electricity_in_collective_heat_network_mekko: Heat pump
+    energy_heat_import_steam_hot_water_in_collective_heat_network_mekko: Import
+    energy_heat_solar_thermal_in_collective_heat_network_mekko: Solar thermal
+    energy_heat_backup_burner_network_gas_in_collective_heat_network_mekko: Network gas (backup burner)
+    energy_heat_burner_hydrogen_in_collective_heat_network_mekko: Hydrogen
+    energy_heat_burner_network_gas_in_collective_heat_network_mekko: Network gas (burner)
+    energy_heat_burner_waste_mix_in_collective_heat_network_mekko: Waste (burner)
+    energy_chp_supercritical_waste_mix_in_collective_heat_network_mekko: Waste (CHP)
+    energy_chp_ultra_supercritical_lignite_in_collective_heat_network_mekko: Lignite (CHP)
+    energy_chps_coal_in_collective_heat_network_mekko: Coal (CHP)
+    energy_chp_local_engine_network_gas_in_collective_heat_network_mekko: Network gas (CHP engine)
+    energy_chp_local_wood_pellets_in_collective_heat_network_mekko: Wood pellets (CHP)
+    energy_chp_combined_cycle_network_gas_in_collective_heat_network_mekko: Network gas (CHP CCGT)
+    energy_chp_local_engine_biogas_in_collective_heat_network_mekko: Biogas (CHP)
+    energy_heat_burner_coal_in_collective_heat_network_mekko: Coal (burner)
+    energy_heat_industry_residual_heat_in_collective_heat_network_mekko: Residual heat (industry)
+    energy_heat_flexibility_p2h_boiler_electricity_in_collective_heat_network_mekko: Power-to-heat (boiler)
+    energy_heat_flexibility_p2h_heatpump_electricity_in_collective_heat_network_mekko: Power-to-heat (heat pump)
+    energy_chp_supercritical_ccs_waste_mix_in_collective_heat_network_mekko: Waste (CHP CCS)
+
+- section: Supply mix - hydrogen
+  queries:
+    energy_import_hydrogen_for_mekko: Import
+    energy_hydrogen_steam_methane_reformer_for_mekko: Steam methane reformer
+    energy_hydrogen_steam_methane_reformer_ccs_for_mekko: Steam methane reformer (CCS)
+    energy_hydrogen_flexibility_p2g_electricity_for_mekko: Electrolysis (grid)
+    energy_hydrogen_electrolysis_solar_electricity_for_mekko: Electrolysis (solar park)
+    energy_hydrogen_electrolysis_wind_electricity_for_mekko: Electrolysis (wind park)
+    energy_hydrogen_biomass_gasification_ccs_for_mekko: Biomass gasification
+    energy_hydrogen_biomass_gasification_ccs_for_mekko: Biomass gasification (CCS)
+
+- section: Supply mix - gas
+  queries:
+    greengas_network_gas_output: Green gas
+    lng_network_gas_output: LNG
+    natural_gas_extraction_network_gas_output: Natural gas (production)
+    natural_gas_import_network_gas_output: Natural gas (import)
+
+- section: Household heating - number of units
+  queries:
+    turk_number_of_units_of_households_space_heater_coal: Coal heater
+    turk_number_of_units_of_households_space_heater_combined_hydrogen: Combi boiler hydorgen
+    turk_number_of_units_of_households_space_heater_combined_network_gas: Combi boiler network gas
+    turk_number_of_units_of_households_space_heater_crude_oil: Oil heater
+    turk_number_of_units_of_households_space_heater_district_heating_steam_hot_water: District heating
+    turk_number_of_units_of_households_space_heater_electricity: Electric heater
+    turk_number_of_units_of_households_space_heater_heatpump_air_water_electricity: Heat pump (air)
+    turk_number_of_units_of_households_space_heater_heatpump_ground_water_electricity: Heat pump (ground)
+    turk_number_of_units_of_households_space_heater_hybrid_heatpump_air_water_electricity: Hybrid heat pump (gas)
+    turk_number_of_units_of_households_space_heater_hybrid_hydrogen_heatpump_air_water_electricity: Heat pump (hydrogen)
+    turk_number_of_units_of_households_water_heater_heatpump_pvt_electricity: Heat pump (PVT)
+    turk_number_of_units_of_households_space_heater_network_gas: Network gas heater
+    turk_number_of_units_of_households_space_heater_wood_pellets: Wood pellet boiler
+
+- section: Services heating - number of units
+  queries:
+    turk_number_of_units_of_buildings_space_heater_coal: Coal heater
+    turk_number_of_units_of_buildings_space_heater_combined_hydrogen: Combi boiler hydrogen
+    turk_number_of_units_of_buildings_space_heater_network_gas: Combi boiler gas
+    turk_number_of_units_of_buildings_space_heater_crude_oil: Oil heater
+    turk_number_of_units_of_buildings_space_heater_district_heating_steam_hot_water: District heating
+    turk_number_of_units_of_buildings_space_heater_electricity: Electric heater
+    turk_number_of_units_of_buildings_space_heater_heatpump_air_water_electricity: Heat pump (air)
+    turk_number_of_units_of_buildings_space_heater_heatpump_air_water_network_gas: Heat pump (gas)
+    turk_number_of_units_of_buildings_space_heater_collective_heatpump_water_water_ts_electricity: Heat pump (thermal storage)
+    turk_number_of_units_of_buildings_space_heater_wood_pellets: Wood pellet boiler
+
+- section: Transport passenger split - cars
+  queries:
+    transport_car_using_compressed_natural_gas_pkm: CNG
+    transport_car_using_diesel_mix_pkm: Diesel
+    transport_car_using_electricity_pkm: Electricity
+    transport_car_using_gasoline_mix_pkm: Gasoline
+    transport_car_using_hydrogen_pkm: Hydrogen
+    transport_car_using_lpg_pkm: LPG
+
+- section: Transport freight split - trucks
+  queries:
+    transport_truck_using_compressed_natural_gas_tkm: CNG
+    transport_truck_using_diesel_mix_tkm: Diesel
+    transport_truck_using_electricity_tkm: Electricity
+    transport_truck_using_gasoline_mix_tkm: Gasoline
+    transport_truck_using_hydrogen_tkm: Hydrogen
+    transport_truck_using_lng_mix_tkm: LNG

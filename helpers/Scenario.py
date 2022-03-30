@@ -5,6 +5,7 @@ from helpers.heat_file_utils import (read_heat_demand_input, read_profiles,
     contains_heating_profiles, read_thermostat)
 from helpers.heat_demand import generate_profiles
 from helpers.helpers import warn
+from helpers.ETM_API import ETM_API
 
 class Scenario:
     """
@@ -44,6 +45,7 @@ class Scenario:
         self._structure_orders()
         self.query_results = None
         self.user_values = {}
+        self.api = None
         if self.id: self.id = int(self.id)
 
 
@@ -102,6 +104,41 @@ class Scenario:
             )
 
 
+    def add_results_to_df(self, df, add_present=True):
+        if self.query_results is None or self.query_results.empty:
+            return df
+
+        if df.empty:
+            df = self.query_results[['future', 'unit']].rename(
+                columns={'future': self.short_name})
+        else:
+            df.loc[:, self.short_name] = self.query_results['future']
+
+        if add_present and f'{self.area_code}_present' not in df:
+            df.loc[:, f'{self.area_code}_present'] = self.query_results['present']
+
+        return df
+
+
+    def setup_connection(self, session):
+        self.api = ETM_API(session, self)
+
+
+    def update(self, curve_file_dict):
+        '''Updates the scenario in ETM'''
+        self.api.update(curve_file_dict)
+
+
+    def query(self, queries):
+        '''Updates the query_results'''
+        self.api.query(queries)
+
+
+    def get_data_downloads(self, downloads):
+        yield from self.api.get_data_downloads(downloads)
+
+
+
 class ScenarioCollection:
     def __init__(self, collection):
         self.collection = collection
@@ -137,27 +174,51 @@ class ScenarioCollection:
                 warn(f'    No scenario settings found for {scenario.short_name}')
 
 
-    def export_scenario_outcomes(self):
+    def setup_connections(self, session):
+        '''Sets up a connection to the ETM for each scenario'''
+        for scenario in self.collection:
+            scenario.setup_connection(session)
+
+
+    def query_all_and_export_outcomes(self, queries, target='scenario_outcomes.csv', sections={}):
+        '''Queries can be list or dict shortcut to query all and export immedeately'''
+        query_list = list(queries.keys()) if isinstance(queries, dict) else queries
+
+        df = pd.DataFrame()
+
+        for scenario in self.collection:
+            scenario.query(query_list)
+            df = scenario.add_results_to_df(df, add_present=False)
+
+        unit = df.pop('unit')
+        df.loc[:,'Total'] = df.sum(axis=1)
+        df = df.join(unit)
+
+        if sections:
+            df.rename_axis('Subsection', inplace=True)
+            df['Section'] = pd.Series(sections)
+
+        if isinstance(queries, dict):
+            df.rename(queries, axis='index', inplace=True)
+
+        if sections:
+            df.set_index('Section', append=True, inplace=True)
+            df = df.reorder_levels(['Section', 'Subsection'])
+
+        df.to_csv(get_folder('output_file_folder') / target, index=True, header=True)
+
+
+    def export_scenario_outcomes(self, target='scenario_outcomes.csv'):
         '''
         Export the query results of each scenario together in one csv called 'scenario outcomes'
         '''
         df = pd.DataFrame()
 
         for scenario in self.collection:
-            if scenario.query_results is None or scenario.query_results.empty:
-                continue
+            df = scenario.add_results_to_df(df)
 
-            if df.empty:
-                df = scenario.query_results[['future', 'unit']].rename(
-                    columns={'future': scenario.short_name})
-            else:
-                df.loc[:, scenario.short_name] = scenario.query_results['future']
-
-            if f'{scenario.area_code}_present' not in df:
-                df.loc[:, f'{scenario.area_code}_present'] = scenario.query_results['present']
-
-        df.to_csv(get_folder('output_file_folder') / 'scenario_outcomes.csv', index=True,
-            header=True)
+        if not df.empty: df = df.join(df.pop('unit'))
+        df.to_csv(get_folder('output_file_folder') / target, index=True, header=True)
 
 
     def export_ids(self):
@@ -178,9 +239,9 @@ class ScenarioCollection:
 
 
     @classmethod
-    def from_csv(cls):
+    def from_csv(cls, target="scenario_list"):
         '''Create a ScenarioCollection from the scenario_list csv'''
-        scenarios_df = read_csv("scenario_list")
+        scenarios_df = read_csv(target)
 
         # Validate
         check_duplicates(scenarios_df.columns.tolist(), 'scenario_list', "column")

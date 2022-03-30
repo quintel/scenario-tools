@@ -18,7 +18,6 @@ if __name__ == "__main__":
     for template in templates:
         print(f"\nProcessing scenario template \"{template.title}\"..")
         API_template = ETM_API(session, template)
-        user_values = API_template.get_scenario_settings()
-        template.add_user_values(user_values)
+        template.add_user_values(API_template.get_scenario_settings())
 
     templates.to_csv()

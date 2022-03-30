@@ -104,7 +104,7 @@ class ETM_API(object):
 
         self.handle_response(
             response,
-            fail_info="Error retrieving queries. Please check your queries.csv.\n"
+            fail_info="Error retrieving queries. Please check your queries file.\n"
         )
 
         self.scenario.query_results = pd.DataFrame.from_dict(response.json()["gqueries"],
