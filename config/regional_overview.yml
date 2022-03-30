@@ -194,16 +194,16 @@
     energy_heat_heatpump_water_water_electricity_in_collective_heat_network_mekko: Heat pump
     energy_heat_import_steam_hot_water_in_collective_heat_network_mekko: Import
     energy_heat_solar_thermal_in_collective_heat_network_mekko: Solar thermal
-    energy_heat_backup_burner_network_gas_in_collective_heat_network_mekko: Natural gas (backup burner)
+    energy_heat_backup_burner_network_gas_in_collective_heat_network_mekko: Network gas (backup burner)
     energy_heat_burner_hydrogen_in_collective_heat_network_mekko: Hydrogen
-    energy_heat_burner_network_gas_in_collective_heat_network_mekko: Natural gas (burner)
+    energy_heat_burner_network_gas_in_collective_heat_network_mekko: Network gas (burner)
     energy_heat_burner_waste_mix_in_collective_heat_network_mekko: Waste (burner)
     energy_chp_supercritical_waste_mix_in_collective_heat_network_mekko: Waste (CHP)
     energy_chp_ultra_supercritical_lignite_in_collective_heat_network_mekko: Lignite (CHP)
     energy_chps_coal_in_collective_heat_network_mekko: Coal (CHP)
-    energy_chp_local_engine_network_gas_in_collective_heat_network_mekko: Natural gas (CHP engine)
+    energy_chp_local_engine_network_gas_in_collective_heat_network_mekko: Network gas (CHP engine)
     energy_chp_local_wood_pellets_in_collective_heat_network_mekko: Wood pellets (CHP)
-    energy_chp_combined_cycle_network_gas_in_collective_heat_network_mekko: Natural gas (CHP CCGT)
+    energy_chp_combined_cycle_network_gas_in_collective_heat_network_mekko: Network gas (CHP CCGT)
     energy_chp_local_engine_biogas_in_collective_heat_network_mekko: Biogas (CHP)
     energy_heat_burner_coal_in_collective_heat_network_mekko: Coal (burner)
     energy_heat_industry_residual_heat_in_collective_heat_network_mekko: Residual heat (industry)
@@ -217,8 +217,8 @@
     energy_hydrogen_steam_methane_reformer_for_mekko: Steam methane reformer
     energy_hydrogen_steam_methane_reformer_ccs_for_mekko: Steam methane reformer (CCS)
     energy_hydrogen_flexibility_p2g_electricity_for_mekko: Electrolysis (grid)
-    energy_hydrogen_electrolysis_solar_electricity_for_mekko: Electrolysis (solar)
-    energy_hydrogen_electrolysis_wind_electricity_for_mekko: Electrolysis (hydrogen)
+    energy_hydrogen_electrolysis_solar_electricity_for_mekko: Electrolysis (solar park)
+    energy_hydrogen_electrolysis_wind_electricity_for_mekko: Electrolysis (wind park)
     energy_hydrogen_biomass_gasification_ccs_for_mekko: Biomass gasification
     energy_hydrogen_biomass_gasification_ccs_for_mekko: Biomass gasification (CCS)
 
@@ -233,28 +233,28 @@
   queries:
     turk_number_of_units_of_households_space_heater_coal: Coal heater
     turk_number_of_units_of_households_space_heater_combined_hydrogen: Combi boiler hydorgen
-    turk_number_of_units_of_households_space_heater_combined_network_gas: Combi boiler natural gas
+    turk_number_of_units_of_households_space_heater_combined_network_gas: Combi boiler network gas
     turk_number_of_units_of_households_space_heater_crude_oil: Oil heater
     turk_number_of_units_of_households_space_heater_district_heating_steam_hot_water: District heating
     turk_number_of_units_of_households_space_heater_electricity: Electric heater
     turk_number_of_units_of_households_space_heater_heatpump_air_water_electricity: Heat pump (air)
     turk_number_of_units_of_households_space_heater_heatpump_ground_water_electricity: Heat pump (ground)
-    turk_number_of_units_of_households_space_heater_hybrid_heatpump_air_water_electricity: Hybrid heat pump (natural gas)
+    turk_number_of_units_of_households_space_heater_hybrid_heatpump_air_water_electricity: Hybrid heat pump (gas)
     turk_number_of_units_of_households_space_heater_hybrid_hydrogen_heatpump_air_water_electricity: Heat pump (hydrogen)
     turk_number_of_units_of_households_water_heater_heatpump_pvt_electricity: Heat pump (PVT)
-    turk_number_of_units_of_households_space_heater_network_gas: Natural gas heater
+    turk_number_of_units_of_households_space_heater_network_gas: Network gas heater
     turk_number_of_units_of_households_space_heater_wood_pellets: Wood pellet boiler
 
 - section: Services heating - number of units
   queries:
     turk_number_of_units_of_buildings_space_heater_coal: Coal heater
-    turk_number_of_units_of_buildings_space_heater_combined_hydrogen: Combi boiler hydorgen
-    turk_number_of_units_of_buildings_space_heater_network_gas: Combi boiler natural gas
+    turk_number_of_units_of_buildings_space_heater_combined_hydrogen: Combi boiler hydrogen
+    turk_number_of_units_of_buildings_space_heater_network_gas: Combi boiler gas
     turk_number_of_units_of_buildings_space_heater_crude_oil: Oil heater
     turk_number_of_units_of_buildings_space_heater_district_heating_steam_hot_water: District heating
     turk_number_of_units_of_buildings_space_heater_electricity: Electric heater
     turk_number_of_units_of_buildings_space_heater_heatpump_air_water_electricity: Heat pump (air)
-    turk_number_of_units_of_buildings_space_heater_heatpump_air_water_network_gas: Heat pump (natural gas)
+    turk_number_of_units_of_buildings_space_heater_heatpump_air_water_network_gas: Heat pump (gas)
     turk_number_of_units_of_buildings_space_heater_collective_heatpump_water_water_ts_electricity: Heat pump (thermal storage)
     turk_number_of_units_of_buildings_space_heater_wood_pellets: Wood pellet boiler
 
