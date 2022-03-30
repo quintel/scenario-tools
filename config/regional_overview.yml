@@ -94,7 +94,7 @@
     final_demand_of_hydrogen_in_other_energetic: Other sector
     final_demand_of_hydrogen_in_transport_energetic: Transport
 
-- section: Final Ddmand - natural gas
+- section: Final demand - natural gas
   queries:
     final_demand_of_natural_gas_and_derivatives_in_agriculture_energetic: Agriculture
     final_demand_of_natural_gas_and_derivatives_in_buildings_energetic: Buildings
