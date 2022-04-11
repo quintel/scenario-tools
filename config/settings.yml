@@ -8,7 +8,7 @@ output_file_folder: data/output
 
 # Where your local model is run
 local_engine_url: http://localhost:3000/api/v3
-local_model_url: http://localhost:4000
+local_model_url: http://localhost:3001
 
 # The separator your CSV files are using. The default is ',', but many European computers
 # export CSV with a ';' as separator from Excel instead.
