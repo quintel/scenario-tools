@@ -60,7 +60,7 @@ final_demand_of_biomass_products_in_energy_energetic,0.0,PJ,0.0
 final_demand_of_coal_and_derivatives_in_energy_energetic,0.0,PJ,0.0
 final_demand_of_electricity_in_energy_energetic,12.56324702,PJ,12.56324702
 final_demand_of_natural_gas_and_derivatives_in_energy_energetic,0.0,PJ,0.0
-final_demand_of_heat_in_energy_energetic,13.09014534403843,PJ,13.119969645423279
+final_demand_of_heat_in_energy_energetic,12.579523082471967,PJ,13.119969645423279
 final_demand_of_oil_and_derivatives_in_energy_energetic,0.0,PJ,0.0
 final_demand_of_biomass_products_in_bunkers,0.0,PJ,0.0
 final_demand_of_oil_and_derivatives_in_bunkers,0.0,PJ,0.0
@@ -132,7 +132,7 @@ final_demand_of_biomass_products_in_energy,0.0,PJ,0.0
 final_demand_of_coal_and_derivatives_in_energy,0.0,PJ,0.0
 final_demand_of_electricity_in_energy,12.56324702,PJ,12.56324702
 final_demand_of_natural_gas_and_derivatives_in_energy,0.0,PJ,0.0
-final_demand_of_heat_in_energy,13.09014534403843,PJ,13.119969645423279
+final_demand_of_heat_in_energy,12.579523082471967,PJ,13.119969645423279
 final_demand_of_oil_and_derivatives_in_energy,0.0,PJ,0.0
 final_demand_of_ambient_in_fertilizers_industry_energetic,0.0,PJ,0.0
 final_demand_of_ambient_in_food_industry_energetic,0.0,PJ,0.0
