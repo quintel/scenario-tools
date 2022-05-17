@@ -2,7 +2,7 @@
 
 This repository contains a Python tool to create and update scenarios in the [Energy Transition Model](https://pro.energytransitionmodel.com/) (ETM) and export scenario outcomes using an [API](https://docs.energytransitionmodel.com/api/intro). The tool can be operated by altering CSV input files. No coding experience is required.
 
-The full documentation of all features of the `scenario-tools` and how to use them is available on the [ETM docs](docs.energytransitionmodel.com/main/scenario-tools/introduction).
+The full documentation of all features of the `scenario-tools` and how to use them is available on the [ETM docs](https://docs.energytransitionmodel.com/main/scenario-tools/introduction).
 
 ### Installing
 
