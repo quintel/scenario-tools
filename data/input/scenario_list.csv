@@ -1,4 +1,2 @@
 short_name,title,area_code,end_year,description,id,protected,flexibility_order,heat_network_order,curve_file,heat_demand
-II305_EU,Berg en dal - II3050 Europees,GM1945_berg_en_dal,2050,,893833,,,,,
-II3050_NL,Berg en dal - II3050 Nationaal,GM1945_berg_en_dal,2050,,893834,,,,,
-II3050_REG,Berg en dal - II3050 Regionaal,GM1945_berg_en_dal,2050,,893835,,,,,
+bau,Bunnik 2050 BAU scenario,GM0312_bunnik,2050,,,,,,,
