@@ -1,2 +1,12 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,
+SOF_2020,SOF 2020 - wave 1,IE_ireland,2020,Wave 1 scenario commisioned by Eirgrid for the SOF,,,,
+SOF_2021,SOF 2021 - wave 1,IE_ireland,2021,Wave 1 scenario commisioned by Eirgrid for the SOF,,,,
+SOF_2022,SOF 2022 - wave 1,IE_ireland,2022,Wave 1 scenario commisioned by Eirgrid for the SOF,,,,
+SOF_2023,SOF 2023 - wave 1,IE_ireland,2023,Wave 1 scenario commisioned by Eirgrid for the SOF,,,,
+SOF_2024,SOF 2024 - wave 1,IE_ireland,2024,Wave 1 scenario commisioned by Eirgrid for the SOF,,,,
+SOF_2025,SOF 2025 - wave 1,IE_ireland,2025,Wave 1 scenario commisioned by Eirgrid for the SOF,,,,
+SOF_2026,SOF 2026 - wave 1,IE_ireland,2026,Wave 1 scenario commisioned by Eirgrid for the SOF,,,,
+SOF_2027,SOF 2027 - wave 1,IE_ireland,2027,Wave 1 scenario commisioned by Eirgrid for the SOF,,,,
+SOF_2028,SOF 2028 - wave 1,IE_ireland,2028,Wave 1 scenario commisioned by Eirgrid for the SOF,,,,
+SOF_2029,SOF 2029 - wave 1,IE_ireland,2029,Wave 1 scenario commisioned by Eirgrid for the SOF,,,,
+SOF_2030,SOF 2030 - wave 1,IE_ireland,2030,Wave 1 scenario commisioned by Eirgrid for the SOF,,,,
