@@ -1,2 +1,6 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,
+SWL_2030,Steenwijkerland in 2030,GM1708_steenwijkerland,2030,,2170988,,,
+SWL_2050_regionaal,Steenwijkerland in 2050,GM1708_steenwijkerland,2050,,2170989,,,
+SWL_2050_nationaal,Steenwijkerland in 2050,GM1708_steenwijkerland,2050,,2170990,,,
+SWL_2050_europees,Steenwijkerland in 2050,GM1708_steenwijkerland,2050,,2170991,,,
+SWL_2050_internationaal,Steenwijkerland in 2050,GM1708_steenwijkerland,2050,,2170992,,,
