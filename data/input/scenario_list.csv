@@ -1,6 +1,7 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-SWL_2030,Steenwijkerland in 2030,GM1708_steenwijkerland,2030,,2170988,,,
-SWL_2050_regionaal,Steenwijkerland in 2050,GM1708_steenwijkerland,2050,,2170989,,,
-SWL_2050_nationaal,Steenwijkerland in 2050,GM1708_steenwijkerland,2050,,2170990,,,
-SWL_2050_europees,Steenwijkerland in 2050,GM1708_steenwijkerland,2050,,2170991,,,
-SWL_2050_internationaal,Steenwijkerland in 2050,GM1708_steenwijkerland,2050,,2170992,,,
+SWL_2025,Steenwijkerland in 2025,GM1708_steenwijkerland,2025,,974167,,,
+SWL_2030,Steenwijkerland in 2030,GM1708_steenwijkerland,2030,,974168,,,
+SWL_2050_regionaal,Steenwijkerland in 2050,GM1708_steenwijkerland,2050,,974169,,,
+SWL_2050_nationaal,Steenwijkerland in 2050,GM1708_steenwijkerland,2050,,974170,,,
+SWL_2050_europees,Steenwijkerland in 2050,GM1708_steenwijkerland,2050,,974171,,,
+SWL_2050_internationaal,Steenwijkerland in 2050,GM1708_steenwijkerland,2050,,974172,,,
