@@ -71,10 +71,10 @@ capacity_of_energy_flexibility_mv_batteries_electricity,,,0,0,0,0
 capacity_of_energy_heat_burner_hydrogen,0,0,0,0,0,0
 capacity_of_energy_heat_burner_network_gas,0,0,0,0,0,0
 capacity_of_energy_heat_burner_waste_mix,0,0,0,0,0,0
-capacity_of_energy_heat_burner_wood_pellets,0,0,0,0,0,0
+capacity_of_energy_heat_burner_wood_pellets,18.77,18.77,18.77,18.77,18.77,18.77
 capacity_of_energy_heat_flexibility_p2h_boiler_electricity,,,,,,
 capacity_of_energy_heat_flexibility_p2h_heatpump_electricity,,,,,,
-capacity_of_energy_heat_heatpump_water_water_electricity,0,0,0,0,0,0
+capacity_of_energy_heat_heatpump_water_water_electricity,0.342,0.342,10,0.342,0.342,0.342
 capacity_of_energy_heat_solar_thermal,0,0,0,0,0,0
 capacity_of_energy_heat_well_geothermal,0,0,0,0,0,0
 capacity_of_energy_hydrogen_ammonia_reformer,,,,,,
