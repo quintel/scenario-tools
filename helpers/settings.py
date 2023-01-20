@@ -1,4 +1,8 @@
+from pathlib import Path
+
 import yaml
+
+BASE_PATH = Path('config')
 
 class Settings:
     '''Singleton class containing the settings from settings.yml'''
@@ -6,12 +10,21 @@ class Settings:
         def __init__(self, settings):
             self.settings = settings
 
-
         @classmethod
         def load(cls):
-            with open('config/settings.yml', 'r') as f:
+            return cls(
+                cls.read_file(BASE_PATH / 'settings.yml') |
+                cls.read_file(BASE_PATH / 'local.settings.yml')
+            )
+
+        @staticmethod
+        def read_file(file: Path):
+            if not file.exists(): return {}
+
+            with open(file, 'r') as f:
                 doc = yaml.load(f, Loader=yaml.FullLoader)
-            return cls(doc)
+
+            return doc
 
 
     instance = None

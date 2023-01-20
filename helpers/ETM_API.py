@@ -6,6 +6,7 @@ from contextlib import suppress
 from json.decoder import JSONDecodeError
 
 from helpers.helpers import exit, warn
+from helpers.settings import Settings
 
 
 class SessionWithUrlBase(requests.Session):
@@ -17,11 +18,14 @@ class SessionWithUrlBase(requests.Session):
         super(SessionWithUrlBase, self).__init__(*args, **kwargs)
         self.url_base = url_base
 
-    def request(self, method, url, **kwargs):
+    def request(self, method, url, headers={}, **kwargs):
         modified_url = self.url_base + url
 
+        if Settings.get('personal_etm_token'):
+            headers['Authorization'] = f"Bearer {Settings.get('personal_etm_token')}"
+
         return super(SessionWithUrlBase, self).request(
-            method, modified_url, **kwargs)
+            method, modified_url, headers=headers, **kwargs)
 
 
 class ETM_API(object):
@@ -202,6 +206,12 @@ class ETM_API(object):
 
         if response.status_code == 404:
             fail_info += f'Scenario {self.scenario.short_name} was not found.'
+
+        if response.status_code == 403:
+            fail_info += (
+                "You don't have access to this scenario. " +
+                "Please update your personal token (see the online docs)."
+            )
 
         with suppress(JSONDecodeError):
             fail_info += '\n ' + ',\n '.join(response.json()['errors'])
