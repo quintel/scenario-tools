@@ -5,3 +5,6 @@ Scenariodocumentatie.xlsx
 data/input/*.xlsx
 __pycache__
 .pytest_cache
+
+# Never push API tokens!
+config/local.settings.yml

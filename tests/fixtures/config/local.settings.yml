@@ -3,18 +3,18 @@
 # and name it 'local.settings.yml'. This way your personal tokens will be safe
 
 # Paste your personal ETM in this field. Never push this to GitHub!
-personal_etm_token:
+personal_etm_token: 1234-5678-90
 
 # Location of the input files, you can change this to be any folder on your computer
-input_file_folder: data/input
-input_curves_folder: data/input/curves
+# input_file_folder: data/input
+# input_curves_folder: data/input/curves
 
-output_file_folder: data/output
+# output_file_folder: data/output
 
 # Where your local model is run
-local_engine_url: http://localhost:3000/api/v3
-local_model_url: http://localhost:3001
+# local_engine_url: http://localhost:3000/api/v3
+# local_model_url: http://localhost:3001
 
 # The separator your CSV files are using. The default is ',', but many European computers
 # export CSV with a ';' as separator from Excel instead.
-csv_separator: ','
+# csv_separator: ','
