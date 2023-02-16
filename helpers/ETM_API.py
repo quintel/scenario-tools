@@ -18,14 +18,23 @@ class SessionWithUrlBase(requests.Session):
         super(SessionWithUrlBase, self).__init__(*args, **kwargs)
         self.url_base = url_base
 
+        # @Nora: should we get the proxies here or in the request function?
+        if Settings.get('proxy_servers'):
+            self.proxies = Settings.get('proxy_servers')
+
     def request(self, method, url, headers={}, **kwargs):
         modified_url = self.url_base + url
 
         if Settings.get('personal_etm_token'):
             headers['Authorization'] = f"Bearer {Settings.get('personal_etm_token')}"
 
+        # @Nora: should we define this? Or is it enough to include the user and pass in the proxy server URL?
+        # @Nora: do we need basic or digestive authentication?
+        if Settings.get('auth'):
+            auth = Settings.get('auth')
+
         return super(SessionWithUrlBase, self).request(
-            method, modified_url, headers=headers, **kwargs)
+            method, modified_url, headers=headers, auth=auth, **kwargs)
 
 
 class ETM_API(object):
