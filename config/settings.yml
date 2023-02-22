@@ -15,6 +15,12 @@ output_file_folder: data/output
 local_engine_url: http://localhost:3000/api/v3
 local_model_url: http://localhost:3001
 
+# URLs of your proxy server addresses (replace the examples below by your own settings)
+# Never push authenticated servers (including user name and password) to Github!
+proxy_servers:
+  # http: http://user:pass@proxy.sample.com:8080
+  # https: http://user:pass@secureproxy.sample.com:8080
+
 # The separator your CSV files are using. The default is ',', but many European computers
 # export CSV with a ';' as separator from Excel instead.
 csv_separator: ','

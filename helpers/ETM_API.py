@@ -18,6 +18,9 @@ class SessionWithUrlBase(requests.Session):
         super(SessionWithUrlBase, self).__init__(*args, **kwargs)
         self.url_base = url_base
 
+        if Settings.get('proxy_servers'):
+            self.proxies = Settings.get('proxy_servers')
+
     def request(self, method, url, headers={}, **kwargs):
         modified_url = self.url_base + url
 
