@@ -1,2 +1,10 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,
+SOEF_2022,ETM scenario for Shaping our electricity future 2022,IE_ireland,2022,,997955,,curves_2022,
+SOEF_2023,ETM scenario for Shaping our electricity future 2023,IE_ireland,2023,,997956,,curves_2023,
+SOEF_2024,ETM scenario for Shaping our electricity future 2024,IE_ireland,2024,,997957,,curves_2024,
+SOEF_2025,ETM scenario for Shaping our electricity future 2025,IE_ireland,2025,,997958,,curves_2025,
+SOEF_2026,ETM scenario for Shaping our electricity future 2026,IE_ireland,2026,,997959,,curves_2026,
+SOEF_2027,ETM scenario for Shaping our electricity future 2027,IE_ireland,2027,,997960,,curves_2027,
+SOEF_2028,ETM scenario for Shaping our electricity future 2028,IE_ireland,2028,,997961,,curves_2028,
+SOEF_2029,ETM scenario for Shaping our electricity future 2029,IE_ireland,2029,,997962,,curves_2029,
+SOEF_2030,ETM scenario for Shaping our electricity future 2030,IE_ireland,2030,,997963,,curves_2030,
