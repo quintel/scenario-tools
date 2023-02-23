@@ -1,0 +1,206 @@
+Section,Subsection,DEC,NAT,EUR,INT,Total,unit
+CO2 emissions,Total CO2 emissions (energetic use),1133231.7959516214,1752361.287124301,2811210.6938660922,1371059.7592934412,7067863.536235455,T
+CO2 emissions,Total CO2 emissions (non-energetic use),161746.46578832637,158925.14423013222,-68940.72616068437,136912.78641585165,388643.6702736259,T
+CO2 emissions,Other GHG emissions (energetic use),0.0,0.0,0.0,0.0,0.0,T
+CO2 emissions,Other GHG emission (non-energetic use),0.0,0.0,0.0,0.0,0.0,T
+CO2 emissions,Indirect and delayed CO2 emissions,0.0,0.0,0.0,0.0,0.0,T
+CO2 emissions,Industry - primary CO2 (energetic use),0.6522901903569346,1.3290975782384937,-0.4429726008582492,-0.47787135331911074,1.0605438144180686,mt
+CO2 emissions,Transport - primary CO2 (energetic use),0.07901818927502999,0.05613875354498485,0.24587681840611475,0.2462380486380706,0.6272718098642002,mt
+CO2 emissions,Households - primary CO2 (energetic use),-0.015504406991440893,-0.003698980092472339,0.14136051211037332,0.255529354935912,0.3776864799623721,mt
+CO2 emissions,Buildings - primary CO2 (energetic use),0.2762335091499977,0.2821264530155275,0.3245881672291779,0.32774467967115467,1.210692809065858,mt
+CO2 emissions,Agriculture - primary CO2 (energetic use),-0.023576125918846638,-0.007438851000428343,-0.004201589944086099,0.0012859837810475696,-0.03393058308231351,mt
+CO2 emissions,Other sector - primary CO2 (energetic use),0.016628709318930436,0.016628709318930436,0.016628709318930436,0.016628709318930436,0.06651483727572174,mt
+CO2 emissions,Energy sector - primary CO2 (energetic use),-0.008214423239931417,-0.0018882779324958976,-0.0019346088044950478,-0.013964943171275444,-0.026002253148197804,mt
+CO2 emissions,Non energetic and delayed emissions - primary CO2,0.16174646578832638,0.1589251442301322,-0.06894072616068435,0.13691278641585164,0.38864367027362584,mt
+CO2 emissions,International transport - primary CO2 (energetic use),0.0,0.0,0.0,0.0,0.0,mt
+Final demand - total,Industry,525.0816541902385,930.4635803799771,815.5696207950915,547.306269893622,2818.421125258929,PJ
+Final demand - total,Transport,264.13029930791396,238.2578781202418,290.60748060038236,309.11521489122146,1102.1108729197597,PJ
+Final demand - total,Households,228.34994869299993,228.09156507514786,247.23418232531222,255.63909170977118,959.3147878032312,PJ
+Final demand - total,Buildings,171.8436666754017,161.3178304941432,180.49989868849661,191.82959945193008,705.4909953099716,PJ
+Final demand - total,Agriculture,100.23649353842163,97.91306156146919,97.465424232419,97.48560079874801,393.1005801310578,PJ
+Final demand - total,Other sector,0.25434793501681535,0.25434793501681535,0.25434793501681535,0.25434793501681535,1.0173917400672614,PJ
+Final demand - total,Energy sector,32.079093691266685,21.70889784531755,36.1097234773896,22.938835809025573,112.83655082299941,PJ
+Final demand - biomass,Agriculture,11.078115095130455,11.078115095130455,14.770820126840606,7.384648580819876,44.311698897921396,PJ
+Final demand - biomass,Buildings,1.4563976172329987,1.2968187872615926,1.4974673981961846,1.7029489160687585,5.953632718759534,PJ
+Final demand - biomass,International,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - biomass,Energy sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - biomass,Households,2.980285865106039,2.894568617763888,3.1423200785979177,3.387297595381978,12.404472156849824,PJ
+Final demand - biomass,Industry,0.0,0.7216936810035532,2.1819062429150087,2.1819062429150087,5.085506166833571,PJ
+Final demand - biomass,Other sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - biomass,Transport,24.49884710876272,5.159237205303533,80.63520913025158,58.40454116902778,168.6978346133456,PJ
+Final demand - coal,Agriculture,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - coal,Buildings,0.1219772171898139,0.1219772171898139,0.1219772171898139,0.1219772171898139,0.4879088687592556,PJ
+Final demand - coal,International transport,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - coal,Energy sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - coal,Households,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - coal,Industry,7.406341914646395,8.003251353358069,8.006696072465873,5.611153549739983,29.027442890210317,PJ
+Final demand - coal,Other sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - coal,Transport,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - electricity,Agriculture,44.20635677892679,50.31142886404268,54.599590565350645,60.76029692877372,209.87767313709384,PJ
+Final demand - electricity,Buildings,124.07606680408884,108.8056671029873,127.022638854713,134.4623968172242,494.3667695790133,PJ
+Final demand - electricity,International transport,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - electricity,Energy sector,13.68824702,12.56324702,28.40324702,21.06824702,75.72298808,PJ
+Final demand - electricity,Households,127.73251530698164,119.47063132353965,124.7440032577779,129.1005596232151,501.0477095115143,PJ
+Final demand - electricity,Industry,396.5564677273354,569.3120439118394,427.355536598154,325.74094445182925,1718.964992689158,PJ
+Final demand - electricity,Other sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - electricity,Transport,180.18099179530643,200.86250549138526,168.24282072402974,126.13472479546637,675.4210428061879,PJ
+Final demand - geothermal,Agriculture,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - geothermal,Buildings,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - geothermal,International transport,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - geothermal,Energy sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - geothermal,Households,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - geothermal,Industry,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - geothermal,Other sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - geothermal,Transport,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - heat,Agriculture,44.95202166436439,36.52351760229607,28.09501354022774,16.855270059727005,126.4258228666152,PJ
+Final demand - heat,Buildings,23.778009490683537,31.758946595011153,18.336404281861164,13.901675960361738,87.77503632791759,PJ
+Final demand - heat,International transport,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - heat,Energy sector,18.390846671266686,9.145650825317551,7.706476457389603,1.8705887890255737,37.11356274299942,PJ
+Final demand - heat,Households,48.87668818773903,71.20638799699164,38.65053696675438,27.775840282132215,186.50945343361724,PJ
+Final demand - heat,Industry,0.5209299915384047,0.8031201231622507,4.08059484773221,2.153759965015937,7.558404927448802,PJ
+Final demand - heat,Other sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - heat,Transport,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - hydrogen,Agriculture,0.0,0.0,0.0,12.485385229427415,12.485385229427415,PJ
+Final demand - hydrogen,Buildings,0.0,0.0,3.3638202499072634,31.97405417706598,35.337874426973244,PJ
+Final demand - hydrogen,International transport,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - hydrogen,Energy sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - hydrogen,Households,0.0,0.0,11.450272308249549,88.1280457510415,99.57831805929105,PJ
+Final demand - hydrogen,Industry,105.43855910450627,341.5820475304961,237.49436941976606,175.91341439764363,860.428390452412,PJ
+Final demand - hydrogen,Other sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - hydrogen,Transport,46.90293064376097,32.236135423552994,20.57905507380295,124.57594892672726,224.2940700678442,PJ
+Final demand - natural gas,Agriculture,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - natural gas,Buildings,8.503163804217946,8.1369745932751,19.617260983621925,0.1946153346170641,36.452014715732034,PJ
+Final demand - natural gas,International transport,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - natural gas,Energy sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - natural gas,Households,25.81052254950534,22.44106304018539,59.58391843659862,0.0,107.83550402628936,PJ
+Final demand - natural gas,Industry,15.159319307634345,7.135206959854219,110.29580706131439,26.502838342366722,159.09317167116967,PJ
+Final demand - natural gas,Other sector,0.027489690556645702,0.027489690556645702,0.027489690556645702,0.027489690556645702,0.10995876222658281,PJ
+Final demand - natural gas,Transport,12.54752976008382,0.0,21.150395672298078,0.0,33.6979254323819,PJ
+Final demand - oil,Agriculture,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - oil,Buildings,3.8048856250446823,3.8048856250446823,3.8048856250446823,3.8048856250446823,15.21954250017873,PJ
+Final demand - oil,International transport,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - oil,Energy sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - oil,Households,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - oil,Industry,3.6144577726147654e-05,2.9062168202634817,26.154710552744003,9.202252944111498,38.26321646169671,PJ
+Final demand - oil,Other sector,0.22685824446016964,0.22685824446016964,0.22685824446016964,0.22685824446016964,0.9074329778406786,PJ
+Final demand - oil,Transport,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - solar thermal,Agriculture,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - solar thermal,Buildings,10.103166116943882,7.392560573373571,6.735444077962588,5.667045404357847,29.898216172637888,PJ
+Final demand - solar thermal,International transport,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - solar thermal,Energy sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - solar thermal,Households,22.949936783667876,12.078914096667305,9.663131277333845,7.247348458000382,51.93933061566941,PJ
+Final demand - solar thermal,Industry,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - solar thermal,Other sector,0.0,0.0,0.0,0.0,0.0,PJ
+Final demand - solar thermal,Transport,0.0,0.0,0.0,0.0,0.0,PJ
+Primary demand - total,Coal,9327690551.10021,9973495952.291882,10072287798.235687,7676745275.509798,37050219577.13757,MJ
+Primary demand - total,Solid biomass,70022814515.24458,87344131269.25262,258168003612.68854,117930444018.51176,533465393415.6975,MJ
+Primary demand - total,Natural gas,0.0,5676767871.356621,140068513162.78433,0.0,145745281034.14096,MJ
+Primary demand - total,Biogas,31425819090.22224,19962204753.23624,127143580258.5218,15660094044.450739,194191698146.43103,MJ
+Primary demand - total,Green gas,34469977517.67146,24678665509.000065,140686991670.06827,21746507415.24709,221582142111.9869,MJ
+Primary demand - total,Oil,50908480837.29354,110848914810.57574,233836200029.9099,117480140574.4994,513073736252.27856,MJ
+Primary demand - total,Liquid biofuels,24589588827.395325,8156159599.621893,106880625257.05046,67697499687.194145,207323873371.26184,MJ
+Primary demand - total,Uranium oxide,0.0,101662798777.60484,268571719034.5623,0.0,370234517812.1671,MJ
+Primary demand - total,Waste,38673318933.25138,23891880251.40083,27688425815.57028,25358456684.161953,115612081684.38445,MJ
+Primary demand - total,Renewable heat,50282342900.61176,19471474670.04088,16398575355.296432,12914393862.358229,99066786788.30731,MJ
+Primary demand - total,Renewable electricity,1195091424401.0708,1645948239548.7185,972366389349.6761,946476357362.7471,4759882410662.213,MJ
+Primary demand - total,Imported heat,0.0,0.0,0.0,0.0,0.0,MJ
+Primary demand - total,Imported electricity,87729614239.00624,78331862668.99199,113335460249.73369,113034079016.15474,392431016173.88666,MJ
+Primary demand - total,Imported hydrogen,0.0,0.0,1784800795.647421,310349729258.2407,312134530053.8881,MJ
+Conversion - electricity,Coal,0.0,0.0,0.0,0.0,0.0,PJ
+Conversion - electricity,Natural gas,0.0,0.0,0.0,0.0,0.0,PJ
+Conversion - electricity,Oil,0.0,0.0,0.0,0.0,0.0,PJ
+Conversion - electricity,Nuclear,0.0,193.6810616378717,514.475108268577,0.0,708.1561699064487,PJ
+Conversion - electricity,Biomass,0.0,0.0,0.0,0.0,0.0,PJ
+Conversion - electricity,Wind,805.5000006230713,1119.6000008639921,765.0000005815326,765.0000005815326,3455.1000026501288,PJ
+Conversion - electricity,Hydro,0.26706599999999997,0.26706599999999997,0.26706599999999997,0.26706599999999997,1.0682639999999999,PJ
+Conversion - electricity,Green gas,0.0,0.0,0.0,0.0,0.0,PJ
+Conversion - electricity,Geothermal,0.0,0.0,0.0,0.0,0.0,PJ
+Conversion - electricity,Waste,11.206119548482611,8.42145658158261,21.626800687595704,23.09626973397822,64.35064655163914,PJ
+Conversion - electricity,Solar,514.5479025106812,484.98593879000435,397.663731259312,314.7548463688533,1711.9524189288509,PJ
+Conversion - electricity,Import,190.08225968620536,149.23254626297413,217.10503768696174,209.79206031607862,766.2119039522198,PJ
+Conversion - electricity,Hydrogen,150.92631162386365,131.13592901092113,83.89414189936954,123.58530017094587,489.54168270510013,PJ
+Conversion - synthetic kerosene,Electricity,0.0,0.0,0.0,0.0,0.0,PJ
+Conversion - synthetic kerosene,Hydrogen,0.0,0.0,0.0,0.0,0.0,PJ
+Conversion - synthetic methanol,Electricity,0.0,0.0,0.0,0.0,0.0,PJ
+Conversion - synthetic methanol,Hydrogen,0.0,0.0,0.0,0.0,0.0,PJ
+Supply mix - electricity,Coal,0.0,0.0,0.0,0.0,0.0,PJ
+Supply mix - electricity,Natural gas,0.0,0.0,0.0,0.0,0.0,PJ
+Supply mix - electricity,Oil,0.0,0.0,0.0,0.0,0.0,PJ
+Supply mix - electricity,Nuclear,0.0,71.52641606286603,189.9956574835855,0.0,261.5220735464515,PJ
+Supply mix - electricity,Biomass,0.0,0.0,0.0,0.0,0.0,PJ
+Supply mix - electricity,Wind,805.5000006230713,1119.6000008639921,765.0000005815326,765.0000005815326,3455.1000026501288,PJ
+Supply mix - electricity,Hydro,0.26706599999999997,0.26706599999999997,0.26706599999999997,0.26706599999999997,1.0682639999999999,PJ
+Supply mix - electricity,Green gas,0.0,0.0,0.0,0.0,0.0,PJ
+Supply mix - electricity,Geothermal,0.0,0.0,0.0,0.0,0.0,PJ
+Supply mix - electricity,Waste,1.7238143420214351,0.9570148094430487,2.457429245958974,2.9957389810331274,8.133997378456586,PJ
+Supply mix - electricity,Solar,514.5479025106812,484.98593879000435,397.663731259312,314.7548463688533,1711.9524189288509,PJ
+Supply mix - electricity,Import,190.08225968620536,149.23254626297413,217.10503768696174,209.79206031607862,766.2119039522198,PJ
+Supply mix - electricity,Hydrogen,62.93390378684165,51.496912891707915,33.04941762392612,49.7783344395725,197.25856874204817,PJ
+Supply mix - electricity,Coal gas,0.0,0.0,0.0,0.0,0.0,PJ
+Supply mix - district heating (residential),Geothermal,21600000000.0,49680000000.0,31320000000.0,23760000000.0,126360000000.0,MJ
+Supply mix - district heating (residential),Wood pellets (burner),0.0,0.0,0.0,0.0,0.0,MJ
+Supply mix - district heating (residential),Heat pump,13949238197.874168,13051268946.068293,0.0,0.0,27000507143.94246,MJ
+Supply mix - district heating (residential),Import,0.0,0.0,0.0,0.0,0.0,MJ
+Supply mix - district heating (residential),Solar thermal,17229239999.999996,0.0,0.0,0.0,17229239999.999996,MJ
+Supply mix - district heating (residential),Network gas (backup burner),93225639.88763918,10871373726.075264,15119093526.886639,2354339747.1200285,28438032639.96957,MJ
+Supply mix - district heating (residential),Hydrogen,0.0,0.0,0.0,19180980646.57697,19180980646.57697,MJ
+Supply mix - district heating (residential),Network gas (burner),2959726761.3263016,0.0,0.0,0.0,2959726761.3263016,MJ
+Supply mix - district heating (residential),Waste (burner),0.0,0.0,0.0,0.0,0.0,MJ
+Supply mix - district heating (residential),Waste (CHP),10712.875837076188,0.0,0.0,0.0,10712.875837076188,MJ
+Supply mix - district heating (residential),Lignite (CHP),0.0,0.0,0.0,0.0,0.0,MJ
+Supply mix - district heating (residential),Coal (CHP),0.0,0.0,0.0,0.0,0.0,MJ
+Supply mix - district heating (residential),Network gas (CHP engine),0.0,0.0,0.0,0.0,0.0,MJ
+Supply mix - district heating (residential),Wood pellets (CHP),0.0,0.0,0.0,0.0,0.0,MJ
+Supply mix - district heating (residential),Network gas (CHP CCGT),0.0,0.0,0.0,0.0,0.0,MJ
+Supply mix - district heating (residential),Biogas (CHP),0.0,0.0,0.0,0.0,0.0,MJ
+Supply mix - district heating (residential),Coal (burner),0.0,0.0,0.0,0.0,0.0,MJ
+Supply mix - district heating (residential),Residual heat (industry),39925961077.27619,20117392304.971573,20627346695.70587,8877371043.994518,89548071121.94817,MJ
+Supply mix - district heating (residential),Power-to-heat (boiler),30597363940.91361,55879339317.1007,24560301432.164047,8329224712.950091,119366229403.12845,MJ
+Supply mix - district heating (residential),Power-to-heat (heat pump),30262036126.461807,23685830140.733353,16194090677.27132,8237941662.408054,78379898606.87453,MJ
+Supply mix - district heating (residential),Waste (CHP CCS),138304087.59392557,0.0,0.0,0.0,138304087.59392557,MJ
+Supply mix - hydrogen,Import,0.0,0.0,1.977892362265686,341.49693533434606,343.4748276966117,PJ
+Supply mix - hydrogen,Steam methane reformer,0.0,0.0,0.0,0.0,0.0,PJ
+Supply mix - hydrogen,Steam methane reformer (CCS),38.5022281295358,57.68634295741936,200.99771065302915,66.23991219965382,363.42619393963815,PJ
+Supply mix - hydrogen,Electrolysis (grid),232.21424016223506,263.29048688147134,156.84835478049078,93.03422794740735,745.3873097716045,PJ
+Supply mix - hydrogen,Electrolysis (solar park),0.0,0.0,0.0,0.0,0.0,PJ
+Supply mix - hydrogen,Electrolysis (wind park),91.2384,228.09599999999998,0.0,91.2384,410.5728,PJ
+Supply mix - hydrogen,Biomass gasification (CCS),0.0,0.0,0.0,0.0,0.0,PJ
+Supply mix - gas,Green gas,70.12305964642026,50.06222189515813,282.72979178975436,44.99966644683173,447.91473977816446,PJ
+Supply mix - gas,LNG,0.0,0.0,0.0,0.0,0.0,PJ
+Supply mix - gas,Natural gas (production),0.0,0.0,0.0,0.0,0.0,PJ
+Supply mix - gas,Natural gas (import),0.0,6.7542396091482395,155.2220522616295,0.0,161.97629187077774,PJ
+Household heating - number of units,Coal heater,0.0,0.0,0.0,0.0,0.0,
+Household heating - number of units,Combi boiler hydorgen,0.0,0.0,0.0,920000.0,920000.0,
+Household heating - number of units,Combi boiler network gas,0.0,460000.00000000023,460000.00000000035,0.0,920000.0000000006,
+Household heating - number of units,Oil heater,0.0,0.0,0.0,0.0,0.0,
+Household heating - number of units,District heating,1840000.0,2760000.0,1380000.0,920000.0,6900000.0,
+Household heating - number of units,Electric heater,368000.0,368000.0,368000.0,368000.0,1472000.0,
+Household heating - number of units,Heat pump (air),3864000.0,3864000.0,1840000.0,1840000.0,11408000.0,
+Household heating - number of units,Heat pump (ground),736000.0,736000.0,460000.0,460000.0,2392000.0,
+Household heating - number of units,Hybrid heat pump (gas),2300000.0,920000.0,3680000.0,0.0,6900000.0,
+Household heating - number of units,Heat pump (hydrogen),0.0,0.0,920000.0,4600000.0,5520000.0,
+Household heating - number of units,Heat pump (PVT),0.0,0.0,0.0,0.0,0.0,
+Household heating - number of units,Network gas heater,0.0,0.0,0.0,0.0,0.0,
+Household heating - number of units,Wood pellet boiler,92000.0,92000.0,92000.0,92000.0,368000.0,
+Services heating - number of units,Coal heater,0.0,0.0,0.0,0.0,0.0,
+Services heating - number of units,Combi boiler hydrogen,0.0,0.0,0.0,25859.594651414485,25859.594651414485,
+Services heating - number of units,Combi boiler gas,0.0,17173.633810634812,19830.802107895204,0.0,37004.43591853001,
+Services heating - number of units,Oil heater,0.0,0.0,0.0,0.0,0.0,
+Services heating - number of units,District heating,241261.82750122406,322239.81986500195,186048.97977588966,141052.33446226086,890602.9616043764,
+Services heating - number of units,Electric heater,9541.26825403104,8495.822692732785,9810.327879415863,11156.494791575842,39003.913617755534,
+Services heating - number of units,Heat pump (air),4600000.0,4600000.0,2300000.0,2300000.0,13800000.0,
+Services heating - number of units,Heat pump (gas),0.0,0.0,0.0,0.0,0.0,
+Services heating - number of units,Heat pump (thermal storage),0.0,0.0,0.0,0.0,0.0,
+Services heating - number of units,Wood pellet boiler,2382.915536134484,2121.817283378834,2450.1127204506397,2786.315619668042,9741.161159632,
+Transport passenger split - cars,CNG,0.0,0.0,9311805444.92842,0.0,9311805444.92842,pkm
+Transport passenger split - cars,Diesel,0.0,0.0,0.0,0.0,0.0,pkm
+Transport passenger split - cars,Electricity,159857056646.64648,159857056646.64648,158300692563.7831,130365276228.99785,608380082086.0739,pkm
+Transport passenger split - cars,Gasoline,0.0,0.0,0.0,9311805444.92842,9311805444.92842,pkm
+Transport passenger split - cars,Hydrogen,0.0,0.0,18623610889.85684,46559027224.64209,65182638114.49893,pkm
+Transport passenger split - cars,LPG,0.0,0.0,0.0,0.0,0.0,pkm
+Transport freight split - trucks,CNG,13793608613.025871,0.0,5141883191.586656,0.0,18935491804.612526,tkm
+Transport freight split - trucks,Diesel,0.0,0.0,51418831915.866554,39410310322.93105,90829142238.7976,tkm
+Transport freight split - trucks,Electricity,98525775807.32764,128547079789.6664,102837663831.73311,59115465484.39658,389025984913.1237,tkm
+Transport freight split - trucks,Gasoline,0.0,0.0,0.0,0.0,0.0,tkm
+Transport freight split - trucks,Hydrogen,59115465484.39658,42849026596.555466,0.0,98525775807.32764,200490267888.2797,tkm
+Transport freight split - trucks,LNG,25616701709.905186,0.0,11997727447.035532,0.0,37614429156.94072,tkm

@@ -1,2 +1,5 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,
+DEC,DEC,nl2019,2050,DEC,997681,,,
+NAT,NAT,nl2019,2050,NAT,997682,,,
+EUR,EUR,nl2019,2050,EUR,997683,,,
+INT,INT,nl2019,2050,INT,997684,,,
