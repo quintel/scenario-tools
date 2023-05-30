@@ -1,5 +1,15 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-kev2019,KEV,nl2019,2030,none,1008098,,,
-kev2020,KEV,nl2019,2030,none,1008100,,,
-kev2021,KEV,nl2019,2030,none,1008102,,,
-kev2022,KEV,nl2019,2030,none,1014616,,2030_price_curves,
+kev2022,Klimaat- en Energieverkenning 2022 ,nl2019,2030,"
+Dit scenario is een zo getrouw mogelijke benadering van de, **Klimaat- en Energieverkenning 2022 'KEV'** (PBL, TNO, CBS en RIVM).
+
+**Methode**
+</p>
+De KEV 2022 is op hoofdlijnen vertaald in het ETM op basis van de KEV publicatie, de KEV documentatie (tabellen en grafieken) en extra informatie aangeleverd door PBL. Hierbij zijn de volgende stappen toegepast:
+</p>
+
+1. De finale vraag per drager en per sector uit de KEV (beschikbaar in de Energiebalans 2019) is vergeleken met de startsituatie uit 2019 in het ETM om verschillen te kunnen duiden en correcties door te voeren.
+2. De KEV resultaten zijn vertaald in aannames ('slider settings') in het ETM om uit te komen op de finale vraag per drager en per sector in 2030. Voorbeelden hier van zijn de stijging in het aantal inwoners, stijging in het aantal elektrische auto's of de grotere hoeveelheid hybride warmtepompen.
+3. Ook de aanbod zijde (wind, zon, ..) is overgenomen zodat in ieder geval de hoeveelheid MW overeenkomt met de KEV publicatie (o.a. de stijging in wind en zon).
+
+Door de verschillen in scope en definities is het niet mogelijk om indicatoren direct met elkaar te vergelijken. De documentatie van alle aannames van dit ETM-scenario kunt u hier vinden: https://refman.energytransitionmodel.com/publications/2163
+",1014616,,2030_price_curves,
