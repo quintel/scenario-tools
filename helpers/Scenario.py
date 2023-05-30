@@ -75,8 +75,10 @@ class Scenario:
         Returns the scenario properties settings, like description, title, and protection status
         '''
         return {
-            'title': self.title if self.title else '',
-            'description': self.description if self.description else '',
+            'metadata': {
+                'title': self.title if self.title else '',
+                'description': self.description if self.description else '',
+            },
             'protected': self.protected
         }
 
