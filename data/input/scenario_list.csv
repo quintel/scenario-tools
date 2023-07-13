@@ -1,2 +1,6 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,
+2030_KEV_VV,2030 Vastgesteld en voorgenomen beleid KEV 2022 (Halffabricaat),GM1959_altena,2030,Halffabricaat gemaakt op basis van de KEV 2022,1031347,,,
+2050_DEC_II3050,2050 Decentraal II3050 scenario (Halffabricaat),GM1959_altena,2050,Halffabricaat gemaakt op basis van II3050,1031348,,,
+2050_NAT_II3050,2050 Nationaal II3050 scenario (Halffabricaat),GM1959_altena,2050,Halffabricaat gemaakt op basis van II3050,1031349,,,
+2050_EUR_II3050,2050 Europees II3050 scenario (Halffabricaat),GM1959_altena,2050,Halffabricaat gemaakt op basis van II3050,1031350,,,
+2050_INT_II3050,2050 Internationaal II3050 scenario (Halffabricaat),GM1959_altena,2050,Halffabricaat gemaakt op basis van II3050,1031351,,,
