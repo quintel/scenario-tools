@@ -1,2 +1,7 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,
+NAT,Nationaal II3050,nl2019,2050,,2359111,,,
+NAT_e,Nationaal - variant elektrisch,nl2019,2050,,2359112,,,
+NAT_g,Nationaal - variant duurzaam gas,nl2019,2050,,2359113,,,
+EU,Europees II3050,nl2019,2050,,2359114,,,
+EU_e,Europees - variant elektrisch,nl2019,2050,,2359115,,,
+EU_g,Europaas - variant duurzaam gas,nl2019,2050,,2359116,,,
