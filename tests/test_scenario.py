@@ -35,6 +35,11 @@ def test_collection_from_csv():
         assert scenario.short_name
         assert scenario.heat_demand is None
 
+    collection.add_settings_and_orders()
+    for scenario in collection:
+        print(scenario.heat_network_orders)
+        assert scenario.heat_network_orders['mt']
+
 
 def test_collection_export():
     Settings.add('input_file_folder', 'tests/fixtures/')

@@ -12,7 +12,7 @@ class Scenario:
     Creates a scenario object, containing all relevant scenario data
     to be sent to the ETM.
     """
-    ORDERS = ["heat_network_order"]
+    ORDERS = ["heat_network_order_lt", "heat_network_order_mt", "heat_network_order_ht"]
 
     ATTRIBUTES = [
         "short_name",
@@ -25,7 +25,6 @@ class Scenario:
         "curve_file",
         "custom_curves",
         "flexibility_order",
-        "heat_network_order",
         "heat_demand",
         'heat_demand_curves'
     ]
@@ -42,20 +41,32 @@ class Scenario:
             except KeyError:
                 setattr(self, key, None)
 
-        self._structure_orders()
         self.query_results = None
         self.user_values = {}
         self.api = None
         if self.id: self.id = int(self.id)
 
+    @property
+    def heat_network_orders(self):
+        return self._heat_network_orders
+
+    @heat_network_orders.setter
+    def heat_network_orders(self, value):
+        self._heat_network_orders = value
+        self._structure_orders()
+
+    @heat_network_orders.getter
+    def heat_network_orders(self):
+        try:
+            return self._heat_network_orders
+        except AttributeError:
+            return {}
 
     def _structure_orders(self):
         for order in self.ORDERS:
-            current_val = getattr(self, order)
+            current_val = self._heat_network_orders.pop(order, None)
             if not current_val == None:
-                to_list = current_val.split(" ")
-                setattr(self, order, to_list)
-
+                self._heat_network_orders[order.split("_")[-1]] = current_val.split(" ")
 
     def add_user_values(self, scenario_settings):
         self.user_values = scenario_settings
@@ -165,15 +176,18 @@ class ScenarioCollection:
             print(f"{scenario.short_name}: {model_url}/scenarios/{scenario.id}")
 
 
-    def add_settings(self):
+    def add_settings_and_orders(self):
         '''Adds the user values as stated in the scenario_settings to each scenario'''
         scenario_settings = ScenarioCollection.read_settings()
+        orders = ScenarioCollection.read_heat_network_orders()
 
         for scenario in self.collection:
             if scenario.short_name in scenario_settings:
                 scenario.user_values = scenario_settings[scenario.short_name].dropna().to_dict()
             else:
                 warn(f'    No scenario settings found for {scenario.short_name}')
+            if scenario.short_name in orders:
+                scenario.heat_network_orders = orders[scenario.short_name].dropna().to_dict()
 
 
     def setup_connections(self, session):
@@ -259,3 +273,8 @@ class ScenarioCollection:
         check_duplicate_index(settings)
 
         return settings
+
+    @staticmethod
+    def read_heat_network_orders():
+        '''Returns a DataFrame of the heat network orders csv'''
+        return read_csv('heat_network_orders', raises=False, index_col=0)

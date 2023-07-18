@@ -18,7 +18,7 @@ def default_scenario(test_data=None):
     index = [
         'short_name','title','area_code','end_year',
         'description','id','protected','flexibility_order',
-        'heat_network_order','curve_file','heat_demand'
+        'curve_file','heat_demand'
     ]
     test_data = test_data if test_data else [
         'test_scen',
@@ -29,7 +29,6 @@ def default_scenario(test_data=None):
         835167,
         '',
         'opac mv_batteries',
-        'energy_heat_burner_waste_mix energy_heat_burner_network_gas',
         '2050_price_curves',
         'heat_demand'
     ]
