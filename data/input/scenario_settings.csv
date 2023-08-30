@@ -1,4 +1,6 @@
 input,NAT,NAT_e,NAT_g,EU,EU_e,EU_g
+efficiency_buildings_space_heater_heatpump_air_water_electricity,,69,69,,69,69
+efficiency_households_space_heater_heatpump_air_water_electricity,,69,69,,69,69
 households_heater_combined_hydrogen_share,0,0,0,0,0,0
 households_heater_combined_network_gas_share,5,0,0,5,0,0
 households_heater_district_heating_steam_hot_water_share,30,30,30,15,15,15
