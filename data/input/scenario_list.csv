@@ -1,2 +1,5 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,
+npe_2030,NPE 2030,nl2019,2030,"""NPE""",1042088,,,
+npe_2035,NPE 2035,nl2020,2035,"""NPE""",1042090,,,
+npe_2040,NPE 2040,nl2021,2040,"""NPE""",1042092,,,
+npe_2050,NPE 2050,nl2022,2050,"""NPE""",1042094,,,
