@@ -1,5 +1,7 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-HR_2050_min_e,Holand Rijnland maximaal individueel,RES11_holland_rijnland,2050,,1030768,,,
-LD_2050_min_e,Leiderdorp minimaal elektrisch,GM0547_leiderdorp,2050,,1030769,,,
-HR_2050_max_e,Holand Rijnland maximaal collectief,RES11_holland_rijnland,2050,,1030770,,,
-LD_2050_max_e,Leiderdorp maximaal elektrisch,GM0547_leiderdorp,2050,,1030771,,,
+HR_2030_VV,Holland Rijnland vastgesteld en voorgenomend beleid,RES11_holland_rijnland,2030,Holland Rijnland vastgesteld en voorgenomend beleid,1031494,,,
+LD_2030_VV,Leiderdorp vastgesteld en voorgenomend beleid,GM0547_leiderdorp,2030,Leiderdorp vastgesteld en voorgenomend beleid,1031495,,,
+HR_2050_Max,Holland Rijnland maximaal individueel,RES11_holland_rijnland,2050,Maximaal elektrisch scenario,1031496,,,
+LD_2050_Max,Leiderdorp maximaal elektrisch,GM0547_leiderdorp,2050,Maximaal elektrisch scenario,1031497,,,
+HR_2050_Min,Holland Rijnland maximaal collectief,RES11_holland_rijnland,2050,Minimaal elektrisch scenario,1031498,,,
+LD_2050_Min,Leiderdorp minimaal elektrisch,GM0547_leiderdorp,2050,Minimaal elektrisch scenario,1031499,,,
