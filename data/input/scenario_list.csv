@@ -1,2 +1,2 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,
+2030_VV_KEV,Alphen 2030,GM0484_alphen_aan_den_rijn,2030,"""test scenario""",1044590,,,
