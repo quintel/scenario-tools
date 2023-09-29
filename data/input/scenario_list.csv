@@ -1,6 +1,7 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-amersfoort_2030,Amersfoort 2030,GM0307_amersfoort,2030,"""Scenario voor Amersfoort op basis van de KEV 2021.""",1042274,,,
-amersfoort_2050_dec,Amersfoort 2050 Decentrale intiatieven,GM0307_amersfoort,2050,"""Scenario voor Amersfoort op basis van het scenario II3050 Decentrale Initiatieven.""",1042303,,,
-amersfoort_2050_eur,Amersfoort 2050 Europese Integratie,GM0307_amersfoort,2051,"""Scenario voor Amersfoort op basis van het scenario II3050 Europese Integratie.""",1042304,,,
-amersfoort_2050_int,Amersfoort 2050 Internationale Handel,GM0307_amersfoort,2052,"""Scenario voor Amersfoort op basis van het scenario II3050 Internationale Handel.""",1042305,,,
-amersfoort_2050_nat,Amersfoort 2050 Nationaal Leiderschap,GM0307_amersfoort,2053,"""Scenario voor Amersfoort op basis van het scenario II3050 Nationaal Leiderschap.""",1042306,,,
+amersfoort_2030,Amersfoort 2030,GM0307_amersfoort,2030,"""Scenario voor Amersfoort op basis van de KEV 2021.""",1044753,,,
+amersfoort_2030_regionaal,Amersfoort 2030 met gemeentelijke beleidskeuzes,GM0307_amersfoort,2030,"""Scenario voor Amersfoort op basis van de KEV 2021 waarin parameters aangeleverd door de gemeente verwerkt zijn.""",1044712,,,
+amersfoort_2050_eur,Amersfoort 2050 Europese Integratie,GM0307_amersfoort,2050,"""Scenario voor Amersfoort op basis van het scenario II3050 Europese Integratie.""",1042304,,,
+amersfoort_2050_eur_regionaal,Amersfoort 2050 Europese Integratie met gemeentelijke beleidskeuzes,GM0307_amersfoort,2050,"""Scenario voor Amersfoort op basis van het scenario II3050 Europese Integratie waarin parameters aangeleverd door de gemeente verwerkt zijn.""",1044580,,,
+amersfoort_2050_nat,Amersfoort 2050 Nationaal Leiderschap,GM0307_amersfoort,2050,"""Scenario voor Amersfoort op basis van het scenario II3050 Nationaal Leiderschap.""",1042306,,,
+amersfoort_2050_nat_regionaal,Amersfoort 2050 Nationaal Leiderschap met gemeentelijke beleidskeuzes,GM0307_amersfoort,2050,"""Scenario voor Amersfoort op basis van het scenario II3050 Nationaal Leiderschap waarin parameters aangeleverd door de gemeente verwerkt zijn.""",1044581,,,
