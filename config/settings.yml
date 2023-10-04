@@ -3,7 +3,8 @@
 # and name it 'local.settings.yml'. This way your personal tokens will be safe
 
 # Paste your personal ETM in this field. Never push this to GitHub!
-personal_etm_token: etm_Ximdmzf7tXc7HT8ktY4ucPqUP6LwCKh6
+# personal_etm_token: etm_Ximdmzf7tXc7HT8ktY4ucPqUP6LwCKh6
+personal_etm_token: etm_dRiDv3qgm4WhnE2xw1ajrteFzKTn5rUm
 
 # Location of the input files, you can change this to be any folder on your computer
 input_file_folder: data/input
