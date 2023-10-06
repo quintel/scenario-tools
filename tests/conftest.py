@@ -17,7 +17,7 @@ def default_scenario(test_data=None):
     '''
     index = [
         'short_name','title','area_code','end_year',
-        'description','id','protected','flexibility_order',
+        'description','id','keep_compatible','flexibility_order',
         'heat_network_order','curve_file','heat_demand'
     ]
     test_data = test_data if test_data else [
