@@ -149,7 +149,7 @@ class ETM_API(object):
         """
         Update scenario properties such as title and description
         """
-        print(" Setting scenario title, description and protected status")
+        print(" Setting scenario title, description and keep_compatible status")
 
         put_data = {
             "scenario": self.scenario.properties_as_json()

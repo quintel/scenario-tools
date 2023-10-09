@@ -21,7 +21,7 @@ class Scenario:
         "area_code",
         "end_year",
         "description",
-        "protected",
+        "keep_compatible",
         "curve_file",
         "custom_curves",
         "flexibility_order",
@@ -35,7 +35,7 @@ class Scenario:
             try:
                 if pd.notna(scenario_list[key]):
                     setattr(self, key, scenario_list[key])
-                elif key == 'protected':
+                elif key == 'keep_compatible':
                     setattr(self, key, False)
                 else:
                     setattr(self, key, None)
@@ -79,7 +79,7 @@ class Scenario:
                 'title': self.title if self.title else '',
                 'description': self.description if self.description else '',
             },
-            'protected': self.protected
+            'keep_compatible': self.keep_compatible
         }
 
 
