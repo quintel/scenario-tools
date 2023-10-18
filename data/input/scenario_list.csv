@@ -1,2 +1,4 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-2030_VV_KEV,Alphen 2030,GM0484_alphen_aan_den_rijn,2030,"""test scenario""",1044590,,,
+Zoeterwoude_2030_VV,Zoeterwoude 2030,GM0638_zoeterwoude,2030,Halffabrikaat Zoeterwoude 2030 o.b.v. de KEV,1048867,,,
+Zoeterwoude_2050_max_e,Zoeterwoude 2050 max elektrisch,GM0638_zoeterwoude,2050,Halffabrikaat Zoeterwoude 2050 o.b.v. II3050 Decentrale Sturing,1048868,,,
+Zoeterwoude_2050_max_alt,Zoeterwoude 2050 max alternatieven,GM0638_zoeterwoude,2050,Halffabrikaat Zoeterwoude 2050 o.b.v. II3050 Europese Sturing,1048869,,,
