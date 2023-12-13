@@ -1,5 +1,5 @@
 short_name,title,area_code,end_year,description,id,heat_network_order,curve_file,heat_demand
-npe_2030,NPE 2030,nl2019,2030,"""NPE""",1045605,,,
-npe_2035,NPE 2035,nl2019,2035,"""NPE""",1045610,,,
-npe_2040,NPE 2040,nl2019,2040,"""NPE""",1045612,,,
-npe_2050,NPE 2050,nl2019,2050,"""NPE""",1045617,,,
+npe_2030,NPE 2030 - TEACOS ready,nl2019,2030,"""Dit is een concept versie van het concept Nationaal Plan Energiesysteem. Het scenario is gemaakt in opdracht van Economische Zaken en Klimaat en is primair voor intern gebruik. Er kan geen status worden ontleend aan dit scenario. In deze versie is de industrie uitgezet, zodat TEACOS data in de overige sector ingeladen kan worden""",1092620,,,
+npe_2035,NPE 2030 - TEACOS ready,nl2019,2035,"""Dit is een concept versie van het concept Nationaal Plan Energiesysteem. Het scenario is gemaakt in opdracht van Economische Zaken en Klimaat en is primair voor intern gebruik. Er kan geen status worden ontleend aan dit scenario. In deze versie is de industrie uitgezet, zodat TEACOS data in de overige sector ingeladen kan worden""",1092622,,,
+npe_2040,NPE 2030 - TEACOS ready,nl2019,2040,"""Dit is een concept versie van het concept Nationaal Plan Energiesysteem. Het scenario is gemaakt in opdracht van Economische Zaken en Klimaat en is primair voor intern gebruik. Er kan geen status worden ontleend aan dit scenario. In deze versie is de industrie uitgezet, zodat TEACOS data in de overige sector ingeladen kan worden""",1092627,,,
+npe_2050,NPE 2030 - TEACOS ready,nl2019,2050,"""Dit is een concept versie van het concept Nationaal Plan Energiesysteem. Het scenario is gemaakt in opdracht van Economische Zaken en Klimaat en is primair voor intern gebruik. Er kan geen status worden ontleend aan dit scenario. In deze versie is de industrie uitgezet, zodat TEACOS data in de overige sector ingeladen kan worden""",1092629,,,
