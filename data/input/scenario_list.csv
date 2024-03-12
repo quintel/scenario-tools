@@ -1,2 +1,9 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,False,energy_heat_burner_waste_mix energy_heat_burner_network_gas,2050_price_curves,
+II3050_2050_internationaal,,nl2019,2050,,1042634,,,,
+II3050_2050_europees,,nl2019,2050,,1042632,,,,
+II3050_2050_nationaal,,nl2019,2050,,1042094,,,,
+II3050_2050_decentraal,,nl2019,2050,,1042630,,,,
+II3050_2040_internationaal,,nl2019,2040,,1120282,,,,
+II3050_2040_europees,,nl2019,2040,,1120278,,,,
+II3050_2040_nationaal,,nl2019,2040,,1120284,,,,
+II3050_2040_decentraal,,nl2019,2040,,1120276,,,,
