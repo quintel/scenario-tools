@@ -1,7 +1,6 @@
 # external modules
 import sys
 import pandas as pd
-import numpy as np
 from datetime import datetime
 
 # project moduless
@@ -92,8 +91,7 @@ if __name__ == "__main__":
         
         # Obtain dictionary with slider resets
         scenario_settings_dict_reset = {k: 'reset' for k, v in scenario_settings_dict.items()}
-        break    
-    # print(df_output)
+
     # Write results to csv
     write_csv(df_output, f"{today}_slider_comparison_results_{short_name}")
     
