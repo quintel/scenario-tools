@@ -24,3 +24,7 @@ proxy_servers:
 # The separator your CSV files are using. The default is ',', but many European computers
 # export CSV with a ';' as separator from Excel instead.
 csv_separator: ','
+
+# The decimal separator your CSV files are using. The default is '.', but depending on the
+# national convenstions, comma could be used as a decimal seperator instead.
+decimal_seperator: '.'
