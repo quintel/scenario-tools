@@ -1,8 +1,8 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
-II3050_2050_internationaal,,nl2019,2050,,1042634,,,,
-II3050_2050_europees,,nl2019,2050,,1042632,,,,
-II3050_2050_nationaal,,nl2019,2050,,1042094,,,,
-II3050_2050_decentraal,,nl2019,2050,,1042630,,,,
+II3050_2050_internationaal,,nl2019,2050,,1120310,,,,
+II3050_2050_europees,,nl2019,2050,,1120312,,,,
+II3050_2050_nationaal,,nl2019,2050,,1120308,,,,
+II3050_2050_decentraal,,nl2019,2050,,1120314,,,,
 II3050_2040_internationaal,,nl2019,2040,,1120282,,,,
 II3050_2040_europees,,nl2019,2040,,1120278,,,,
 II3050_2040_nationaal,,nl2019,2040,,1120284,,,,

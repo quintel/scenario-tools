@@ -215,6 +215,7 @@ class ETM_API(object):
                 "You don't have access to this scenario. " +
                 "Please update your personal token (see the online docs)."
             )
+        print(response.status_code)
 
         with suppress(JSONDecodeError):
             fail_info += '\n ' + ',\n '.join(response.json()['errors'])
