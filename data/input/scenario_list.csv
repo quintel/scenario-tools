@@ -1,2 +1,2 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
-hr_wensbeeld,HR_Wensbeeld,RES11_holland_rijnland,2050,hello,1143424,TRUE,,,
+hr_wensbeeld,HR_Wensbeeld,RES11_holland_rijnland,2050,hello,1143410,True,,,

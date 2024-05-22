@@ -1,4 +1,4 @@
-input,test_scen
+input,hr_wensbeeld
 agriculture_bio_kerosene_in_crude_oil_share,0
 agriculture_biodiesel_in_crude_oil_share,0
 agriculture_burner_crude_oil_share,0
@@ -76,7 +76,6 @@ costs_heat_infra_indoors,100
 costs_heat_infra_outdoors,100
 costs_heat_network_storage_ht_steam_hot_water,0
 costs_hydrogen,30
-costs_hydrogen_storage,3.4
 costs_hydrogen_transport_compressed_trucks,50.1
 costs_hydrogen_transport_pipelines,1.6
 costs_imported_heat,1
@@ -135,10 +134,7 @@ energy_mixer_for_gas_power_fuel_bio_oil_share,0
 energy_mixer_for_gas_power_fuel_crude_oil_share,0
 energy_mixer_for_gas_power_fuel_natural_gas_share,100
 energy_regasification_lng_share,0
-energy_transport_hydrogen_compressed_trucks_share,1
-energy_transport_hydrogen_pipelines_share,99
 energy_treatment_natural_gas_share,100
-flexibility_heat_pump_space_heating_cop_cutoff,2.6
 flexibility_outdoor_temperature,0.6
 flh_of_energy_hydrogen_wind_turbine_offshore,4800
 flh_of_energy_power_wind_turbine_coastal,3300
