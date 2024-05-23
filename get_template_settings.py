@@ -20,4 +20,11 @@ if __name__ == "__main__":
         API_template = ETM_API(session, template)
         template.add_user_values(API_template.get_scenario_settings())
 
+        #TODO: Add getting curves
+
+        #TODO: Add getting orders: heat_network_order
+        template.add_heat_network_order(API_template.get_heat_network_order())
+        # print(template.heat_network_order)
+        
+
     templates.to_csv()

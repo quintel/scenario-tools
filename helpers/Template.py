@@ -10,7 +10,8 @@ class Template:
     ATTRIBUTES = [
         'id',
         'title',
-        'user_values'
+        'user_values',
+        'heat_network_order'
     ]
 
     def __init__(self, scenario_row):
@@ -28,6 +29,9 @@ class Template:
 
     def add_user_values(self, scenario_settings):
         self.user_values = scenario_settings
+
+    def add_heat_network_order(self, heat_network_order):
+        self.heat_network_order = heat_network_order
 
 
 class TemplateCollection:
