@@ -1,3 +1,3 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
-KEV_2030,KEV 2030 Doetinchem,GM0222_doetinchem,2030,,892503,True,,,
-2050_NAT,2050 NAT Doetinchem,GM0222_doetinchem,2030,,892504,True,,,
+KEV_2030,Basisscenario KEV 2030 - gemeente Doetinchem,GM0222_doetinchem,2030,,,TRUE,,,
+2050_NAT,Basisscenario II3050 Nationaal Leiderschap - gemeente Doetinchem,GM0222_doetinchem,2050,,,TRUE,,,
