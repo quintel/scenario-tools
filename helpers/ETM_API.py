@@ -1,6 +1,7 @@
 import io
 import pandas as pd
 import requests
+import json
 
 from contextlib import suppress
 from json.decoder import JSONDecodeError
@@ -127,6 +128,20 @@ class ETM_API(object):
         """
         yield from self._get_downloads(download_dict['annual_data'])
         yield from self._get_downloads(download_dict['hourly_data'], hourly=True)
+
+    
+    def get_heat_network_order(self):
+        """
+        Get the scanerio's heat network order.
+        """
+        #TODO: check if io.xxx can be used similar to get_data_download()
+        response = self.session.get(f"/scenarios/{self.scenario.id}/heat_network_order", params={"subtype": 'ht'})
+        responce_dict = json.loads(response.content.decode('utf-8'))
+
+        df = pd.DataFrame(responce_dict['order'], columns=['Order'])
+        print(df)
+        
+        # return pd.read_csv(io.StringIO(response.content.decode('utf-8')))
 
 
     # UPDATING ----------------------------------------------------------------
