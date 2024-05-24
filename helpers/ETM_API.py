@@ -129,19 +129,63 @@ class ETM_API(object):
         yield from self._get_downloads(download_dict['annual_data'])
         yield from self._get_downloads(download_dict['hourly_data'], hourly=True)
 
+
+    def get_custom_curves(self):
+        response = self.session.get(f"/scenarios/{self.scenario.id}/custom_curves")
+        # Filter the curve keys attached to the scenario
+        curves_data = json.loads(response.content)
+        curves_attached = [curve['key'] for curve in curves_data if curve['attached']]
+        # Create dataframe with containing all attached curves
+        df = pd.DataFrame()
+        for curve in curves_attached:
+            response = self.session.get(f"/scenarios/{self.scenario.id}/custom_curves/{curve}.csv")
+            # Decode and obtain float values of curve
+            decoded_response = response.content.decode('utf-8').split('\n')
+            float_values = [float(value) for value in decoded_response]
+            # Add curve to dataframe
+            df[curve] = float_values     
+
+        return df
+
     
-    def get_heat_network_order(self):
+    def get_heat_network_order(self, subtype='ht'):
         """
         Get the scanerio's heat network order.
         """
-        #TODO: check if io.xxx can be used similar to get_data_download()
-        response = self.session.get(f"/scenarios/{self.scenario.id}/heat_network_order", params={"subtype": 'ht'})
+        response = self.session.get(f"/scenarios/{self.scenario.id}/heat_network_order", params={"subtype": subtype})
         responce_dict = json.loads(response.content.decode('utf-8'))
 
-        df = pd.DataFrame(responce_dict['order'], columns=['Order'])
-        print(df)
+        return pd.DataFrame(responce_dict['order'], columns=['Order'])
+    
+
+    def get_forecast_storage_order(self):
+        """
+        Get the scanerio's forecast storage order.
+        """
+        response = self.session.get(f"/scenarios/{self.scenario.id}/forecast_storage_order")
+        responce_dict = json.loads(response.content.decode('utf-8'))
         
-        # return pd.read_csv(io.StringIO(response.content.decode('utf-8')))
+        return pd.DataFrame(responce_dict['order'], columns=['Order'])
+        
+    
+    def get_hydrogen_orders(self, subtype):
+        """
+        Get the scanerio's hydrogen supply and demand order.
+        """
+        response = self.session.get(f"/scenarios/{self.scenario.id}/hydrogen_{subtype}_order")
+        responce_dict = json.loads(response.content.decode('utf-8'))
+        
+        return pd.DataFrame(responce_dict['order'], columns=['Order'])
+    
+
+    def get_households_space_heating_producer_order(self):
+        """
+        Get the scanerio's households_space_heating_producer order.
+        """
+        response = self.session.get(f"/scenarios/{self.scenario.id}/households_space_heating_producer_order")
+        responce_dict = json.loads(response.content.decode('utf-8'))
+        
+        return pd.DataFrame(responce_dict['order'], columns=['Order'])
 
 
     # UPDATING ----------------------------------------------------------------
