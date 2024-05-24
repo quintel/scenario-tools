@@ -14,26 +14,24 @@ if __name__ == "__main__":
 
     print("Opening CSV file(s):")
     templates = TemplateCollection.from_csv()
-
+    #TODO: for print statement, let know which nr of total nr scenarios is being processes
+    print(f"\nProcessing {len(templates)} scenarios..")
     for template in templates:
         print(f"\nProcessing scenario template \"{template.title}\"..")
         API_template = ETM_API(session, template)
         template.add_user_values(API_template.get_scenario_settings())
 
-        #TODO: Add getting curves
+        # Get curve CSVs per template
+        print("Obtaining custom curve CSVs")
+        #TODO: create folder for custom curves in output folder
         template.add_custom_curves(API_template.get_custom_curves())
-        print(template.custom_curves)
-        template.custom_curves.to_csv(f"data/output/{template.title}_curves.csv", index=False)
+        template.custom_curves_to_csv()
 
-        #TODO: Orders: combine in 1 CSV output
+        # Add heat network orders per template
+        print("Obtaining heat network orders")
+        template.add_heat_network_orders(API_template.get_heat_network_orders())
 
-        # Heat network order
-        # heat_levels = ['ht', 'mt', 'lt']
-        # for l in heat_levels:
-        #     template.add_heat_network_orders(API_template.get_heat_network_order(subtype=l), subtype=l)
-        # df = template.get_heat_network_orders_csv(heat_levels)
-        # df.to_csv(f'data/output/heat_network_orders.csv')
-
+        #TODO: make below order obtains smart
         # Hydrogen supply and demand order
         # hydrogen_types = ['supply', 'demand']
         # for t in hydrogen_types:
@@ -53,5 +51,6 @@ if __name__ == "__main__":
         # df = template.get_households_space_heating_producer_order_csv()
         # df.to_csv(f'data/output/households_space_heating_producer_order.csv')
 
-
-    # templates.to_csv()
+    print("Exporting template settings CSV and heat network order CSV")
+    templates.to_csv()
+    templates.heat_network_orders_to_csv()
