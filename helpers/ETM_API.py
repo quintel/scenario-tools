@@ -174,14 +174,15 @@ class ETM_API(object):
 
     def update_heat_network_order(self):
         """
-        Update the scanerios heat network order in the ETM.
+        Update the scenarios heat network orders in the ETM.
         """
-        put_data = {"heat_network_order": {"order": self.scenario.heat_network_order}}
+        for network, order in self.scenario.heat_network_orders.items():
+            put_data = {"order": order, "subtype": network}
 
-        response = self.session.put(f'/scenarios/{self.scenario.id}/heat_network_order',
-                             json=put_data, headers={'Connection': 'close'})
+            response = self.session.put(f'/scenarios/{self.scenario.id}/heat_network_order',
+                                json=put_data, headers={'Connection': 'close'})
 
-        self.handle_response(response)
+            self.handle_response(response)
 
 
     def upload_custom_curve(self, curve_key, curve_data, curve_file_name):
@@ -253,7 +254,7 @@ class ETM_API(object):
 
     def _check_and_update_heat_network(self):
         '''Checks if heat network should be updated, and updates it'''
-        if not self.scenario.heat_network_order: return
+        if not self.scenario.heat_network_orders: return
 
         print(" Setting heat network order")
         self.update_heat_network_order()

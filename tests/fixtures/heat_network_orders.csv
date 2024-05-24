@@ -1,0 +1,4 @@
+order,test_scen
+heat_network_order_lt,
+heat_network_order_mt,energy_heat_burner_waste_mix energy_heat_burner_network_gas
+heat_network_order_ht,
