@@ -1,7 +1,6 @@
 import pandas as pd
 from pathlib import Path
 from helpers.file_helpers import read_csv, check_duplicates, get_folder
-from helpers import curves_lst
 
 class Template:
     """
@@ -15,9 +14,6 @@ class Template:
     ]
 #TODO: create one function for obtaining order csv
     ORDERS = [
-        'heat_network_order_ht',
-        'heat_network_order_mt',
-        'heat_network_order_lt',
         'hydrogen_supply_order',
         'hydrogen_demand_order',
         'forecasting_storage_order',
@@ -45,10 +41,14 @@ class Template:
         setattr(self, 'custom_curves', custom_curves)
 
 
-    def add_heat_network_orders(self, heat_network_order, subtype):
-        setattr(self, f'heat_network_order_{subtype}', heat_network_order)
-        return heat_network_order
-    
+    def custom_curves_to_csv(self):
+        self.custom_curves.to_csv(get_folder('output_file_folder') / f'{self.title}_custom_curves.csv', index=False)
+
+
+    def add_heat_network_orders(self, heat_network_orders):
+        heat_network_orders = heat_network_orders.rename(columns={0: self.title})
+        setattr(self, 'heat_network_orders', heat_network_orders)
+
 
     def add_hydrogen_orders(self, hydrogen_order, subtype):
         setattr(self, f'hydrogen_{subtype}_order', hydrogen_order)
@@ -134,6 +134,16 @@ class TemplateCollection:
         df.columns = cols
         df.to_csv(get_folder('output_file_folder') / 'template_settings.csv', index=True,
             header=True)
+        
+    def heat_network_orders_to_csv(self):
+        '''Exports the heat network orders to csv'''
+        titles = []
+        df = pd.DataFrame(index=[f'heat_network_order_{t}' for t in ['lt','mt','ht']])
+        for template in self.collection:
+            titles.append(template.title)
+            df = pd.concat([df, template.heat_network_orders], axis=1)
+        df.index.names = ['order']
+        df.to_csv(get_folder('output_file_folder') / 'heat_network_orders.csv', index=True)
 
 
     @classmethod
