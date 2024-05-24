@@ -148,14 +148,17 @@ class ETM_API(object):
         return df
 
     
-    def get_heat_network_order(self, subtype='ht'):
+    def get_heat_network_orders(self, subtypes=['lt','mt','ht']):
         """
-        Get the scanerio's heat network order.
+        Get the scanerio's heat network orders.
         """
-        response = self.session.get(f"/scenarios/{self.scenario.id}/heat_network_order", params={"subtype": subtype})
-        responce_dict = json.loads(response.content.decode('utf-8'))
-
-        return pd.DataFrame(responce_dict['order'], columns=['Order'])
+        df = pd.DataFrame()
+        for t in subtypes:
+            response = self.session.get(f"/scenarios/{self.scenario.id}/heat_network_order", params={"subtype": t})
+            response_dict = json.loads(response.content.decode('utf-8'))
+            df[f'heat_network_order_{t}'] = [' '.join(response_dict['order'])]
+        
+        return df.transpose()
     
 
     def get_forecast_storage_order(self):
@@ -163,9 +166,9 @@ class ETM_API(object):
         Get the scanerio's forecast storage order.
         """
         response = self.session.get(f"/scenarios/{self.scenario.id}/forecast_storage_order")
-        responce_dict = json.loads(response.content.decode('utf-8'))
+        response_dict = json.loads(response.content.decode('utf-8'))
         
-        return pd.DataFrame(responce_dict['order'], columns=['Order'])
+        return pd.DataFrame(response_dict['order'], columns=['Order'])
         
     
     def get_hydrogen_orders(self, subtype):
@@ -173,9 +176,9 @@ class ETM_API(object):
         Get the scanerio's hydrogen supply and demand order.
         """
         response = self.session.get(f"/scenarios/{self.scenario.id}/hydrogen_{subtype}_order")
-        responce_dict = json.loads(response.content.decode('utf-8'))
+        response_dict = json.loads(response.content.decode('utf-8'))
         
-        return pd.DataFrame(responce_dict['order'], columns=['Order'])
+        return pd.DataFrame(response_dict['order'], columns=['Order'])
     
 
     def get_households_space_heating_producer_order(self):
@@ -183,9 +186,9 @@ class ETM_API(object):
         Get the scanerio's households_space_heating_producer order.
         """
         response = self.session.get(f"/scenarios/{self.scenario.id}/households_space_heating_producer_order")
-        responce_dict = json.loads(response.content.decode('utf-8'))
+        response_dict = json.loads(response.content.decode('utf-8'))
         
-        return pd.DataFrame(responce_dict['order'], columns=['Order'])
+        return pd.DataFrame(response_dict['order'], columns=['Order'])
 
 
     # UPDATING ----------------------------------------------------------------
