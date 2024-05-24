@@ -1,2 +1,2 @@
-short_name,title,area_code,end_year,description,id,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,2050_price_curves,
+short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
+test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,False,2050_price_curves,

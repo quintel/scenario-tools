@@ -20,14 +20,14 @@ def verify_path(path):
     exit(f'Could not find {path}, please create the folder if it does not exist.')
 
 
-def read_csv(file, curve=False, raises=True, silent=False, **options):
+def read_csv(file, sep=Settings.get('csv_separator'), decimal=Settings.get('decimal_seperator'), curve=False, raises=True, silent=False, **options):
     '''Returns a pd.DataFrame'''
     path = get_folder('input_file_folder') if not curve else get_folder('input_curves_folder')
     path = path / f'{file}.csv'
 
     if path.exists():
         if not silent: print(f' Reading {file}')
-        return pd.read_csv(path, sep=Settings.get('csv_separator'), **options).dropna(how='all')
+        return pd.read_csv(path, sep=sep, decimal=decimal, **options).dropna(how='all')
 
     text = f"File '{file}.csv' not found in '{path.parent}' folder."
 
@@ -38,11 +38,11 @@ def read_csv(file, curve=False, raises=True, silent=False, **options):
         return pd.DataFrame()
 
 
-def write_csv(df, name, folder='', **options):
+def write_csv(df, name, folder='', sep=Settings.get('csv_separator'), decimal=Settings.get('decimal_seperator'), **options):
     path = get_folder('output_file_folder') / folder / f'{name}.csv'
     path.parent.mkdir(parents=True, exist_ok=True)
 
-    df.to_csv(path, **options)
+    df.to_csv(path, sep=sep, decimal=decimal, **options)
 
 
 def read_yml(file):
@@ -86,5 +86,3 @@ def data_download_dict():
         "annual_data": df["annual_data"].dropna().tolist(),
         "hourly_data": df["hourly_data"].dropna().tolist()
     }
-
-
