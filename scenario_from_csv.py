@@ -21,7 +21,7 @@ if __name__ == "__main__":
         scenarios.filter_query_only()
     else:
         curve_file_dict = load_curve_file_dict(scenarios)
-        scenarios.add_settings()
+        scenarios.add_settings_and_orders()
 
     query_list = query_list()
     data_download_dict = data_download_dict()
