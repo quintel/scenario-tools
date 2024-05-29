@@ -8,8 +8,11 @@ personal_etm_token:
 # Location of the input files, you can change this to be any folder on your computer
 input_file_folder: data/input
 input_curves_folder: data/input/curves
+input_orders_folder: data/input/orders
 
 output_file_folder: data/output
+output_curves_folder: data/output/curves
+output_orders_folder: data/output/orders
 
 # Where your local model is run
 local_engine_url: http://localhost:3000/api/v3

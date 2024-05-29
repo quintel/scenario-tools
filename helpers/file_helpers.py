@@ -6,11 +6,14 @@ from .settings import Settings
 from helpers.helpers import warn, exit
 
 def get_folder(kind):
-    '''kind can be input_file_folder, output_file_folder or input_curves_folder'''
-    if Settings.get(kind).startswith('data'):
-        return Path(__file__).parents[1] / Settings.get(kind)
-
-    return verify_path(Path(Settings.get(kind)).resolve())
+    '''
+    Kind can be input_file_folder, output_file_folder, input_curves_folder, 
+    input_orders_folder, output_curves_folder, output_orders_folder
+    '''
+    folder_path = Path(__file__).parents[1] / Settings.get(kind) if Settings.get(kind).startswith('data') else Path(Settings.get(kind)).resolve()
+    folder_path.mkdir(parents=True, exist_ok=True)
+    
+    return folder_path
 
 
 def verify_path(path):
@@ -20,9 +23,9 @@ def verify_path(path):
     exit(f'Could not find {path}, please create the folder if it does not exist.')
 
 
-def read_csv(file, sep=Settings.get('csv_separator'), decimal=Settings.get('decimal_seperator'), curve=False, raises=True, silent=False, **options):
+def read_csv(file, sep=Settings.get('csv_separator'), decimal=Settings.get('decimal_seperator'), curve=False, order=False, raises=True, silent=False, **options):
     '''Returns a pd.DataFrame'''
-    path = get_folder('input_file_folder') if not curve else get_folder('input_curves_folder')
+    path = get_folder('input_curves_folder') if curve else get_folder('input_orders_folder') if order else get_folder('input_file_folder')
     path = path / f'{file}.csv'
 
     if path.exists():
