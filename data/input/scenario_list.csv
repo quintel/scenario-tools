@@ -1,2 +1,4 @@
-short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,False,2050_price_curves,
+short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
+KEV_2030,KEV 2030 Nijmegen,GM0268_nijmegen,2030,,892503,True,,,
+2050_NAT_max_e,2050 NAT Nijmegen maximaal elektrisch,GM0268_nijmegen,2030,,892504,True,,2050_price_curves,
+2050_NAT_lok,2050 NPE Nijmegen lokale oplossingen,GM0268_nijmegen,2030,,892505,True,,2050_price_curves,
