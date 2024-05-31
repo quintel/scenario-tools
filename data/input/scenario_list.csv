@@ -1,4 +1,4 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
-KEV_2030,KEV 2030 Nijmegen,GM0268_nijmegen,2030,,892503,True,,,
-2050_NAT_max_e,2050 NAT Nijmegen maximaal elektrisch,GM0268_nijmegen,2030,,892504,True,,2050_price_curves,
-2050_NAT_lok,2050 NPE Nijmegen lokale oplossingen,GM0268_nijmegen,2030,,892505,True,,2050_price_curves,
+KEV_2030,KEV 2030 Nijmegen,GM0268_nijmegen,2030,Dit scenario is een regionalisatie van de KEV 2022 voor de gemeente Nijmegen.,1145775,True,,,
+2050_NAT_max_e,2050 NAT Nijmegen maximaal elektrisch,GM0268_nijmegen,2050,Dit scenario is een regionalisatie van het II3050-scenario Nationaal Leiderschap 2050 voor de gemeente Nijmegen. Hierbij is maximaal ingezet op elektrificerende technologie.,1145776,True,,2050_price_curves,
+2050_NAT_lok,2050 NPE Nijmegen lokale oplossingen,GM0268_nijmegen,2050,Dit scenario is een regionalisatie van het II3050-scenario Nationaal Leiderschap 2050 voor de gemeente Nijmegen. Dit scenario is aangevuld met lokale oplossingen.,1145777,True,,2050_price_curves,
