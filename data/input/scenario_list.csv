@@ -1,3 +1,4 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
+leeg_0,,GM0307_amersfoort,2030,,1147446,False,,,
 KEV_2023_2030,,GM0307_amersfoort,2030,,1122512,True,,,
 Amersfoort_2030,,GM0307_amersfoort,2030,,1122513,True,,,
