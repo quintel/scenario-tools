@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ,NAT_2040_LB,PV31_limburg_present,Hoog_E_2040_LB,Laag_E_2040_LB,unit
 final_demand_of_electricity_in_households_energetic,7.83600525525903,5.598143986,8.232074701529642,7.83600525525903,PJ
 final_demand_of_electricity_in_households_space_heating_energetic,2.7013268327595257,0.408003929987652,3.3433664727220105,2.7013268327595257,PJ
@@ -27,3 +28,6 @@ chps_to_mv_grid_in_sankey_agriculture,0.0,0.0,0.0,0.0,MJ
 conversion_from_solar_electricity_to_electricity,23.210609202198025,1.52804,19.19405442225715,18.493637352103274,PJ
 sankey_0_to_1_hydro_electricity_to_electricity,0.07789701661128,0.103,0.07789701661128,0.07789701661128,PJ
 land_use_solar_wind_wind_inland_large_electricity_output,1250.1540632520193,23.055555555555557,1076.8653811695613,736.0000006900001,GWh
+=======
+""
+>>>>>>> 42e1759 (Create scenario LB 2040)
