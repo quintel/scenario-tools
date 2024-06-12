@@ -14,43 +14,24 @@ if __name__ == "__main__":
 
     print("Opening CSV file(s):")
     templates = TemplateCollection.from_csv()
-    #TODO: for print statement, let know which nr of total nr scenarios is being processes
-    print(f"\nProcessing {len(templates)} scenarios..")
-    for template in templates:
-        print(f"\nProcessing scenario template \"{template.title}\"..")
+    print(f"\nProcessing {len(templates.collection)} scenarios..")
+    for index, template in enumerate(templates, start=1):
+        print(f"\nProcessing scenario template \"{template.title}\" ({index} of {len(templates.collection)} scenarios)")
         API_template = ETM_API(session, template)
         template.add_user_values(API_template.get_scenario_settings())
 
-        # Get curve CSVs per template
+        print('Obtaining heat network orders')
+        template.add_heat_network_orders(API_template.get_heat_network_orders(template.heat_orders))
+    
         print("Obtaining custom curve CSVs")
-        #TODO: create folder for custom curves in output folder
         template.add_custom_curves(API_template.get_custom_curves())
         template.custom_curves_to_csv()
 
-        # Add heat network orders per template
-        print("Obtaining heat network orders")
-        template.add_heat_network_orders(API_template.get_heat_network_orders())
-
-        #TODO: make below order obtains smart
-        # Hydrogen supply and demand order
-        # hydrogen_types = ['supply', 'demand']
-        # for t in hydrogen_types:
-        #     template.add_hydrogen_orders(API_template.get_hydrogen_orders(subtype=t), subtype=t)
-        # df = template.get_hydrogen_orders_csv(hydrogen_types)
-        # df.to_csv(f'data/output/hydrogen_orders.csv')
-
-
-        # Forecast storage order
-        # template.add_forecasting_storage_order(API_template.get_forecast_storage_order())
-        # df = template.get_forecasting_storage_order_csv()
-        # df.to_csv(f'data/output/forecasting_storage_order.csv')
-
-
-        # households_space_heating_producer_order order
-        # template.add_households_space_heating_producer_order(API_template.get_households_space_heating_producer_order())
-        # df = template.get_households_space_heating_producer_order_csv()
-        # df.to_csv(f'data/output/households_space_heating_producer_order.csv')
+        print("Obtaining custom orders CSVs")
+        template.add_custom_orders(API_template.get_custom_orders(template.custom_orders))
+        template.custom_orders_to_csv()
 
     print("Exporting template settings CSV and heat network order CSV")
     templates.to_csv()
     templates.heat_network_orders_to_csv()
+    print("Done!")

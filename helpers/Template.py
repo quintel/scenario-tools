@@ -12,11 +12,17 @@ class Template:
         'title',
         'user_values'
     ]
-#TODO: create one function for obtaining order csv
-    ORDERS = [
+
+    HEAT_ORDERS = [
+        "heat_network_order_lt", 
+        "heat_network_order_mt", 
+        "heat_network_order_ht"
+    ]
+
+    CUSTOM_ORDERS = [
         'hydrogen_supply_order',
         'hydrogen_demand_order',
-        'forecasting_storage_order',
+        'forecast_storage_order',
         'households_space_heating_producer_order'
     ]
 
@@ -31,7 +37,8 @@ class Template:
                 setattr(self, key, None)
 
         self.id = int(self.id)
-
+        self.heat_orders = self.HEAT_ORDERS
+        self.custom_orders = self.CUSTOM_ORDERS
 
     def add_user_values(self, scenario_settings):
         self.user_values = scenario_settings
@@ -42,63 +49,26 @@ class Template:
 
 
     def custom_curves_to_csv(self):
-        self.custom_curves.to_csv(get_folder('output_file_folder') / f'{self.title}_custom_curves.csv', index=False)
+        if not self.custom_curves.empty:
+            self.custom_curves.to_csv(get_folder('output_curves_folder') / f'{self.title}_custom_curves.csv', index=False)
+        else:
+            print("No custom curves uploaded for this scenario.")
 
 
+    def add_custom_orders(self, custom_orders):
+        setattr(self, 'custom_orders', custom_orders)
+
+
+    def custom_orders_to_csv(self):
+        if not self.custom_orders.empty:
+            self.custom_orders.to_csv(get_folder('output_orders_folder') / f'{self.title}_custom_orders.csv', index=False)
+        else:
+            print("No custom orders uploaded for this scenario.")
+        
+        
     def add_heat_network_orders(self, heat_network_orders):
         heat_network_orders = heat_network_orders.rename(columns={0: self.title})
         setattr(self, 'heat_network_orders', heat_network_orders)
-
-
-    def add_hydrogen_orders(self, hydrogen_order, subtype):
-        setattr(self, f'hydrogen_{subtype}_order', hydrogen_order)
-        return hydrogen_order
-    
-
-    def add_forecasting_storage_order(self, forecasting_storage_order):
-        setattr(self, 'forecasting_storage_order', forecasting_storage_order)
-        return forecasting_storage_order
-    
-
-    def add_households_space_heating_producer_order(self, households_space_heating_producer_order):
-        setattr(self, 'households_space_heating_producer_order', households_space_heating_producer_order)
-        return households_space_heating_producer_order
-    
-
-    def get_hydrogen_orders_csv(self, subtypes):
-        column_names = [f'hydrogen_{t}_order' for t in subtypes]
-        df = pd.DataFrame(columns = column_names)
-        for t in subtypes:
-            order_attr = f'hydrogen_{t}_order'
-            order_string = " ".join(getattr(self, order_attr)['Order'])
-            df[order_attr] = [order_string]
-        print(df)
-        return df
-    
-
-    def get_heat_network_orders_csv(self, heat_levels):
-        column_names = [f'heat_network_order_{l}' for l in heat_levels]
-        df = pd.DataFrame(columns = column_names)
-        for l in heat_levels:
-            order_attr = f'heat_network_order_{l}'
-            order_string = " ".join(getattr(self, order_attr)['Order'])
-            df[order_attr] = [order_string]
-        print(df)
-        return df
-    
-    def get_forecasting_storage_order_csv(self):
-        df = pd.DataFrame(columns = ['forecasting_storage_order'])
-        order_string = " ".join(self.forecasting_storage_order['Order'])
-        df['forecasting_storage_order'] = [order_string]
-        return df
-
-
-    def get_households_space_heating_producer_order_csv(self):
-        df = pd.DataFrame(columns = ['households_space_heating_producer_order'])
-        order_string = " ".join(self.households_space_heating_producer_order['Order'])
-        df['households_space_heating_producer_order'] = [order_string]
-        return df
-
 
 
 class TemplateCollection:
@@ -135,15 +105,14 @@ class TemplateCollection:
         df.to_csv(get_folder('output_file_folder') / 'template_settings.csv', index=True,
             header=True)
         
+
     def heat_network_orders_to_csv(self):
         '''Exports the heat network orders to csv'''
-        titles = []
         df = pd.DataFrame(index=[f'heat_network_order_{t}' for t in ['lt','mt','ht']])
         for template in self.collection:
-            titles.append(template.title)
             df = pd.concat([df, template.heat_network_orders], axis=1)
         df.index.names = ['order']
-        df.to_csv(get_folder('output_file_folder') / 'heat_network_orders.csv', index=True)
+        df.to_csv(get_folder('output_orders_folder') / 'heat_network_orders.csv', index=True)
 
 
     @classmethod
