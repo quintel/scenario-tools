@@ -5,6 +5,7 @@ import sys
 from helpers.ETM_API import ETM_API, SessionWithUrlBase
 from helpers.Scenario import ScenarioCollection
 from helpers.Curves import load_curve_file_dict
+from helpers.Orders import load_order_file_dict
 from helpers.helpers import process_arguments, print_bold
 from helpers.file_helpers import query_list, data_download_dict, write_csv
 
@@ -21,6 +22,7 @@ if __name__ == "__main__":
         scenarios.filter_query_only()
     else:
         curve_file_dict = load_curve_file_dict(scenarios)
+        order_file_dict = load_order_file_dict(scenarios)
         scenarios.add_settings_and_orders()
 
     query_list = query_list()
@@ -32,14 +34,14 @@ if __name__ == "__main__":
                    "outcomes will be collected, no changes to scenarios will "
                    "be made.")
 
-    for scenario in scenarios:
-        print(f"\nProcessing scenario {scenario.short_name}..")
+    for index, scenario in enumerate(scenarios, start=1):
+        print(f"\nProcessing scenario {scenario.short_name} ({index} of {len(scenarios)} scenarios)")
 
         if not query_only_mode:
             if scenario.heat_demand:
                 scenario.set_heat_demand_curves()
 
-            scenario.update(curve_file_dict)
+            scenario.update(curve_file_dict, order_file_dict)
 
         if query_list:
             print(' Getting queries')
@@ -56,5 +58,3 @@ if __name__ == "__main__":
 
     print("\n\nAll done! Open the scenarios in the Energy Transition Model:")
     scenarios.print_urls(model_url)
-
-

@@ -195,13 +195,14 @@ class ETM_API(object):
     # UPDATING ----------------------------------------------------------------
 
 
-    def update(self, curve_file_dict):
+    def update(self, curve_file_dict, order_file_dict):
         '''Updates everything at once'''
         self.update_properties()
 
         self._check_and_update_user_values()
         self._check_and_update_heat_network()
         self._check_and_update_curves(curve_file_dict)
+        self._check_and_update_orders(order_file_dict)
         self._check_and_update_heat_demand()
 
         if self.scenario.flexibility_order:
@@ -239,8 +240,11 @@ class ETM_API(object):
         """
         Update the scenarios heat network orders in the ETM.
         """
+        # print(self.scenario.heat_network_orders.items())
         for network, order in self.scenario.heat_network_orders.items():
+            # print(order)
             put_data = {"order": order, "subtype": network}
+            # print(put_data)
 
             response = self.session.put(f'/scenarios/{self.scenario.id}/heat_network_order',
                                 json=put_data, headers={'Connection': 'close'})
@@ -257,6 +261,22 @@ class ETM_API(object):
 
         response = self.session.put(f'/scenarios/{self.scenario.id}/custom_curves/{curve_key}',
                              files=put_data, headers={'Connection': 'close'})
+
+        self.handle_response(response)
+
+
+    #TODO: make orders a Scenario attribute similar to heat_network_order
+    def upload_custom_order(self, order_key, order_data):
+        """
+        Upload custom orders (excl. heat network order) to ETM
+        """
+        put_data = {"order": order_data[0].split()}
+        # print(put_data)
+        # print(order_key)
+        # print(f'/scenarios/{self.scenario.id}/{order_key}')
+        response = self.session.put(f'/scenarios/{self.scenario.id}/{order_key}',
+                             json=put_data, headers={'Connection': 'close'})
+        # print(response.content)
 
         self.handle_response(response)
 
@@ -326,11 +346,22 @@ class ETM_API(object):
     def _check_and_update_curves(self, curve_file_dict):
         '''Checks if curve files should be updated, and uploads them'''
         if not self.scenario.curve_file: return
-
-        print(" Uploading custom curves:")
+    
+        print(f"Uploading {(len(curve_file_dict[self.scenario.curve_file].curves))} custom curves:")
         for curve in curve_file_dict[self.scenario.curve_file].curves:
             print(f"  - {curve.key}")
             self.upload_custom_curve(curve.key, curve.data, self.scenario.curve_file)
+
+
+    def _check_and_update_orders(self, order_file_dict):
+        '''Checks if order files should be updated, and uploads them'''
+        if not self.scenario.order_file: return
+
+
+        print(" Uploading custom orders:")
+        for order in order_file_dict[self.scenario.order_file].orders:
+            print(f"  - {order.key}")
+            self.upload_custom_order(order.key, order.data)
 
 
     def _check_and_update_heat_demand(self):

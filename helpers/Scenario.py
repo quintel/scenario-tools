@@ -13,7 +13,8 @@ class Scenario:
     to be sent to the ETM.
     """
     ORDERS = ["heat_network_order_lt", "heat_network_order_mt", "heat_network_order_ht"]
-
+    
+    #TODO: would be nice to add custom_orders as attribute to Scenario
     ATTRIBUTES = [
         "short_name",
         "id",
@@ -23,6 +24,7 @@ class Scenario:
         "description",
         "keep_compatible",
         "curve_file",
+        "order_file",
         "custom_curves",
         "flexibility_order",
         "heat_demand",
@@ -94,6 +96,7 @@ class Scenario:
         }
 
 
+    #TODO: set custom_orders according to this function and use it in API
     def set_heat_demand_curves(self):
         '''
         Checks if a heat_demand folder was supplied, and sets self.heat_demand_curves
@@ -137,9 +140,9 @@ class Scenario:
         self.api = ETM_API(session, self)
 
 
-    def update(self, curve_file_dict):
+    def update(self, curve_file_dict, order_file_dict):
         '''Updates the scenario in ETM'''
-        self.api.update(curve_file_dict)
+        self.api.update(curve_file_dict, order_file_dict)
 
 
     def query(self, queries):
@@ -184,6 +187,23 @@ class ScenarioCollection:
         for scenario in self.collection:
             if scenario.short_name in scenario_settings:
                 scenario.user_values = scenario_settings[scenario.short_name].dropna().to_dict()
+                #TODO: remove depricated sliders
+                depricated_sliders = [
+                    'households_behavior_close_windows_turn_off_heating',
+                    'share_of_industry_chemicals_fertilizers_reused_residual_heat',
+                    'share_of_industry_chemicals_other_reused_residual_heat',
+                    'share_of_industry_chemicals_refineries_reused_residual_heat',
+                    'co2_emissions_of_imported_hydrogen_present',
+                    'share_of_industry_other_ict_reused_residual_heat',
+                    'output_of_energy_production_synthetic_kerosene',
+                    'costs_hydrogen_storage',
+                    'investment_costs_electric_cars',
+                    'industry_useful_demand_for_chemical_aggregated_industry_electricity_efficiency',
+                    'co2_emissions_of_imported_ammonia_present',
+                    'industry_useful_demand_for_chemical_aggregated_industry',
+                    'industry_useful_demand_for_chemical_aggregated_industry_useable_heat_efficiency'
+                    ]
+                [scenario.user_values.pop(slider) for slider in depricated_sliders if slider in scenario.user_values]
             else:
                 warn(f'    No scenario settings found for {scenario.short_name}')
             if scenario.short_name in orders:
