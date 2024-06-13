@@ -83,11 +83,11 @@ class ETM_API(object):
         return response.json()
 
 
-    def get_scenario_settings(self):
+    def get_scenario_settings(self, settings_type='user_values'):
         """
         Get an overview of all the modified inputs.
         """
-        return self.get_info(detailed=True)['user_values']
+        return self.get_info(detailed=True)[f'{settings_type}']
 
 
     def get_data_download(self, download_name, hourly=False):
