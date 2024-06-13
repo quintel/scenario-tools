@@ -19,6 +19,7 @@ if __name__ == "__main__":
         print(f"\nProcessing scenario template \"{template.title}\" ({index} of {len(templates.collection)} scenarios)")
         API_template = ETM_API(session, template)
         template.add_user_values(API_template.get_scenario_settings())
+        template.add_balanced_values(API_template.get_scenario_settings(settings_type='balanced_values'))
 
         print('Obtaining heat network orders')
         template.add_heat_network_orders(API_template.get_heat_network_orders(template.heat_orders))
@@ -32,6 +33,8 @@ if __name__ == "__main__":
         template.custom_orders_to_csv()
 
     print("Exporting template settings CSV and heat network order CSV")
-    templates.to_csv()
+    templates.to_csv('template_settings')
+    # Set to false to obtain balanced values
+    templates.to_csv('template_settings_balanced_values', user_values=False)
     templates.heat_network_orders_to_csv()
     print("Done!")
