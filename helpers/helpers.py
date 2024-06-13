@@ -8,6 +8,7 @@ PRO = ['pro', 'production']
 
 QUERY_ONLY = ['query_only', 'query-only', 'query', 'read_only', 'read-only',
     'read', 'results_only', 'results-only', 'results']
+COMPLETE = ['complete', 'Complete', 'compleet', 'Compleet']
 
 # PRINTING --------------------------------------------------------------------
 
@@ -37,12 +38,13 @@ def convert_to_lower(arr):
 
 
 def validate_arguments(args):
-    invalid = set(args) - set(LOCAL + BETA + PRO + QUERY_ONLY)
+    invalid = set(args) - set(LOCAL + BETA + PRO + QUERY_ONLY + COMPLETE)
     if invalid:
         print("\n\033[1m" + "WARNING: The following arguments are invalid and "
               f"will be ignored: {', '.join(invalid)}\033[0m"
               "\nPlease only use the following arguments:" +
               f"\nQuery-only mode: {QUERY_ONLY[0]}" +
+              f"\nQuery-only mode: {COMPLETE[0]}" +
               f"\nEnvironments: {PRO[0]}, {BETA[0]} or {LOCAL[0]}.\n")
 
 
@@ -66,6 +68,7 @@ def process_arguments(args):
 
     validate_arguments(arguments)
     query_only_mode = bool(set(QUERY_ONLY) & set(args))
+    complete_mode = bool(set(COMPLETE) & set(args))
     base_url, model_url = process_environment(arguments)
 
-    return base_url, model_url, query_only_mode
+    return base_url, model_url, query_only_mode, complete_mode
