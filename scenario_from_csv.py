@@ -10,7 +10,7 @@ from helpers.file_helpers import query_list, data_download_dict, write_csv
 
 if __name__ == "__main__":
 
-    base_url, model_url, query_only_mode = process_arguments(sys.argv)
+    base_url, model_url, query_only_mode,_ = process_arguments(sys.argv)
 
     print("Opening CSV files:")
 
