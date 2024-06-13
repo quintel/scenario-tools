@@ -10,7 +10,8 @@ class Template:
     ATTRIBUTES = [
         'id',
         'title',
-        'user_values'
+        'user_values',
+        'balanced_values'
     ]
 
     HEAT_ORDERS = [
@@ -40,8 +41,13 @@ class Template:
         self.heat_orders = self.HEAT_ORDERS
         self.custom_orders = self.CUSTOM_ORDERS
 
+
     def add_user_values(self, scenario_settings):
         self.user_values = scenario_settings
+
+    
+    def add_balanced_values(self, scenario_settings_balanced_values):
+        self.balanced_values = scenario_settings_balanced_values
     
 
     def add_custom_curves(self, custom_curves):
@@ -81,30 +87,30 @@ class TemplateCollection:
         yield from self.collection
 
 
-    def to_csv(self):
+    def to_csv(self, file_name, user_values=True):
         '''Exports the templates to csv'''
         ids = []
         titles = []
         all_keys = []
         for template in self.collection:
+            value_attribute_dict = template.user_values if user_values else template.balanced_values
             ids.append(template.id)
             titles.append(template.title)
-            for input in template.user_values.keys():
+            for input in value_attribute_dict.keys():
                 all_keys.append(input)
         cols = pd.MultiIndex.from_tuples(zip(titles, ids))
         unique_keys = list(set(all_keys))
 
         df = pd.DataFrame(columns=ids, index=unique_keys)
-
         for template in self.collection:
+            value_attribute_dict = template.user_values if user_values else template.balanced_values
             template_id = template.id
-            for input_key, val in template.user_values.items():
+            for input_key, val in value_attribute_dict.items():
                 df.loc[input_key, template_id] = val
 
         df.columns = cols
-        df.to_csv(get_folder('output_file_folder') / 'template_settings.csv', index=True,
+        df.to_csv(get_folder('output_file_folder') / f'{file_name}.csv', index=True,
             header=True)
-        
 
     def heat_network_orders_to_csv(self):
         '''Exports the heat network orders to csv'''
