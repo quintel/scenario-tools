@@ -56,5 +56,3 @@ if __name__ == "__main__":
 
     print("\n\nAll done! Open the scenarios in the Energy Transition Model:")
     scenarios.print_urls(model_url)
-
-
