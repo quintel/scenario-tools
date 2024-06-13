@@ -182,12 +182,14 @@ class ScenarioCollection:
     def add_settings_and_orders(self):
         '''Adds the user values as stated in the scenario_settings to each scenario'''
         scenario_settings = ScenarioCollection.read_settings()
+        scenario_settings_balanced_values = ScenarioCollection.read_settings_balanced_values()
         orders = ScenarioCollection.read_heat_network_orders()
 
         for scenario in self.collection:
             if scenario.short_name in scenario_settings:
                 scenario.user_values = scenario_settings[scenario.short_name].dropna().to_dict()
-                #TODO: remove depricated sliders
+                scenario.balanced_values = scenario_settings_balanced_values[scenario.short_name].dropna().to_dict()
+                #TODO: remove depricated_sliders list when merging with master
                 depricated_sliders = [
                     'households_behavior_close_windows_turn_off_heating',
                     'share_of_industry_chemicals_fertilizers_reused_residual_heat',
@@ -204,6 +206,7 @@ class ScenarioCollection:
                     'industry_useful_demand_for_chemical_aggregated_industry_useable_heat_efficiency'
                     ]
                 [scenario.user_values.pop(slider) for slider in depricated_sliders if slider in scenario.user_values]
+                [scenario.balanced_values.pop(slider) for slider in depricated_sliders if slider in scenario.balanced_values]
             else:
                 warn(f'    No scenario settings found for {scenario.short_name}')
             if scenario.short_name in orders:
@@ -290,6 +293,14 @@ class ScenarioCollection:
     def read_settings():
         '''Returns a DataFrame of the scenario settings csv'''
         settings = read_csv('scenario_settings', raises=False, index_col=0)
+        check_duplicate_index(settings)
+
+        return settings
+    
+    @staticmethod
+    def read_settings_balanced_values():
+        '''Returns a DataFrame of the scenario settings csv'''
+        settings = read_csv('scenario_settings_balanced_values', raises=False, index_col=0)
         check_duplicate_index(settings)
 
         return settings

@@ -200,6 +200,7 @@ class ETM_API(object):
         self.update_properties()
 
         self._check_and_update_user_values()
+        self._check_and_update_balanced_values()
         self._check_and_update_heat_network()
         self._check_and_update_curves(curve_file_dict)
         self._check_and_update_orders(order_file_dict)
@@ -236,15 +237,24 @@ class ETM_API(object):
         self.handle_response(response, fail_info=f"Error for scenario {self.scenario.short_name}")
 
 
+    def update_inputs_balanced_values(self):
+        """
+        Change inputs to ETM according to dictionary user_values. Also the
+        metrics are updated by passing a gquery via gquery_metrics
+        """
+        put_data = {"scenario": {"balanced_values": self.scenario.balanced_values}}
+        response = self.session.put(f'/scenarios/{self.scenario.id}', json=put_data,
+                             headers={'Connection': 'close'})
+
+        self.handle_response(response, fail_info=f"Error for scenario {self.scenario.short_name}")
+
+
     def update_heat_network_order(self):
         """
         Update the scenarios heat network orders in the ETM.
         """
-        # print(self.scenario.heat_network_orders.items())
         for network, order in self.scenario.heat_network_orders.items():
-            # print(order)
             put_data = {"order": order, "subtype": network}
-            # print(put_data)
 
             response = self.session.put(f'/scenarios/{self.scenario.id}/heat_network_order',
                                 json=put_data, headers={'Connection': 'close'})
@@ -271,12 +281,8 @@ class ETM_API(object):
         Upload custom orders (excl. heat network order) to ETM
         """
         put_data = {"order": order_data[0].split()}
-        # print(put_data)
-        # print(order_key)
-        # print(f'/scenarios/{self.scenario.id}/{order_key}')
         response = self.session.put(f'/scenarios/{self.scenario.id}/{order_key}',
                              json=put_data, headers={'Connection': 'close'})
-        # print(response.content)
 
         self.handle_response(response)
 
@@ -333,6 +339,14 @@ class ETM_API(object):
 
         print(" Setting sliders")
         self.update_inputs()
+    
+
+    def _check_and_update_balanced_values(self):
+        '''Checks if user values should be updated, and updates them'''
+        if not self.scenario.balanced_values: return
+
+        print(" Setting balanced slider values")
+        self.update_inputs_balanced_values()
 
 
     def _check_and_update_heat_network(self):
