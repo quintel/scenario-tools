@@ -1,2 +1,7 @@
-short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,False,2050_price_curves,
+short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
+KEV_2030,KEV 2030 Smallingerland,GM0090_smallingerland,2050,,1147326,False,,2030_price_curves,
+2050_NPE,2050 NPE,GM0090_smallingerland,2050,,1147327,False,,2050_price_curves,
+2050_NPE_LOK,2050 NPE Smallingerland aangevuld met lokaal beleid,GM0090_smallingerland,2050,,1147328,False,,2050_price_curves,
+2050_NPE_REG,22050 NPE Smallingerland geregionaliseerd,GM0090_smallingerland,2050,,1147329,False,,2050_price_curves,
+2050_NPE_min_e,2050 II3050 Smallingerland min-e,GM0090_smallingerland,2050,,1147330,False,,2050_price_curves,
+2050_NPE_max_e,2050 II3050 Smallingerland max-e,GM0090_smallingerland,2050,,1147331,False,,2050_price_curves,
