@@ -615,7 +615,7 @@ industry_steel_dri_network_gas_share,28,0,0,0,0,0
 industry_steel_production,105,,,,,
 industry_steel_scrap_hbi_eaf_share,0,25,25,25,25,25
 industry_useful_demand_for_aggregated_other_electricity_efficiency,,,,,,
-industry_useful_demand_for_aggregated_other_energetic,95,75.6,75.6,75.6,75.6,75.6
+industry_useful_demand_for_aggregated_other_energetic,95,75.6,103,75.6,103,140
 industry_useful_demand_for_aggregated_other_non_energetic,95,75.6,75.6,75.6,75.6,75.6
 industry_useful_demand_for_aggregated_other_useable_heat_efficiency,,,,,,
 industry_useful_demand_for_chemical_fertilizers,98,,,,,
