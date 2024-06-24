@@ -1,6 +1,7 @@
 import io
 import pandas as pd
 import requests
+import json
 
 from contextlib import suppress
 from json.decoder import JSONDecodeError
@@ -82,11 +83,11 @@ class ETM_API(object):
         return response.json()
 
 
-    def get_scenario_settings(self):
+    def get_scenario_settings(self, settings_type='user_values'):
         """
         Get an overview of all the modified inputs.
         """
-        return self.get_info(detailed=True)['user_values']
+        return self.get_info(detailed=True)[f'{settings_type}']
 
 
     def get_data_download(self, download_name, hourly=False):
@@ -127,6 +128,68 @@ class ETM_API(object):
         """
         yield from self._get_downloads(download_dict['annual_data'])
         yield from self._get_downloads(download_dict['hourly_data'], hourly=True)
+
+
+    def get_custom_curves(self):
+        '''
+        Get custom curves attached to the scenario. 
+        Collects custom curves in one pd.DataFrame output.
+        '''
+        response = self.session.get(f"/scenarios/{self.scenario.id}/custom_curves")
+        self.handle_response(
+            response,
+            fail_info="Error obtaining custom curves.\n")
+        
+        # Filter the curve keys attached to the scenario and create dataframe
+        curves_data = json.loads(response.content)
+        curves_attached = [curve['key'] for curve in curves_data if curve['attached']]
+        df = pd.DataFrame()
+        for curve in curves_attached:
+            response = self.session.get(f"/scenarios/{self.scenario.id}/custom_curves/{curve}.csv")
+            # Decode and obtain float values of curve
+            decoded_response = response.content.decode('utf-8').split('\n')
+            float_values = [float(value) for value in decoded_response]
+            # Add curve to dataframe
+            df[curve] = float_values     
+
+        return df
+    
+
+    def get_custom_orders(self, orders):
+        '''
+        Get custom orders for the scenario. Obtains custom orders in one 
+        string per order type. Returns pd.DataFrame with all custom orders.
+        '''
+        df = pd.DataFrame()
+        for order in orders:
+            response = self.session.get(f'/scenarios/{self.scenario.id}/{order}')
+            self.handle_response(
+                response,
+                fail_info=f"Error in obtaining custom order for '{order}'")
+
+            response_dict = json.loads(response.content.decode('utf-8'))
+            order_string = " ".join(response_dict['order'])
+            df[order] = [order_string]
+        
+        return df
+
+    
+    def get_heat_network_orders(self, heat_orders):
+        """
+        Get the scanerio's heat network orders.
+        """
+        temperature_level = [order.split('_')[-1] for order in heat_orders]
+        df = pd.DataFrame()
+        for t in temperature_level:
+            response = self.session.get(f"/scenarios/{self.scenario.id}/heat_network_order", params={"subtype": t})
+            self.handle_response(
+                response,
+                fail_info=f"Error in obtaining heat network order for temperature level '{t}'"
+            )
+            response_dict = json.loads(response.content.decode('utf-8'))
+            df[f'heat_network_order_{t}'] = [' '.join(response_dict['order'])]
+        
+        return df.transpose()
 
 
     # UPDATING ----------------------------------------------------------------
