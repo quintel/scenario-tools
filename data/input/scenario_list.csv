@@ -1,3 +1,3 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
-NAT_2040_NH,Nationale Leiderschap_2040_NAT_2040_NH,PV27_noord_holland,2040,Regionalisatie van II3050 scenario naar provincie (eerste testrun),2576128,True,,,
-NAT_2050_NH,Nationale Leiderschap_2050_NAT_2050_NH,PV27_noord_holland,2050,Regionalisatie van II3050 scenario naar provincie (eerste testrun),2576129,True,,,
+NAT_2040_NH,Nationale Leiderschap_2040_NAT_2040_NH,PV27_noord_holland,2040,Regionalisatie van II3050 scenario naar provincie (eerste testrun),1156277,True,,,
+NAT_2050_NH,Nationale Leiderschap_2050_NAT_2050_NH,PV27_noord_holland,2050,Regionalisatie van II3050 scenario naar provincie (eerste testrun),1156278,True,,,
