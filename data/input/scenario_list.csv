@@ -1,2 +1,4 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
-NAT_2040_LB,Nationale Leiderschap 2040 - regionalisatie provincie Limburg,PV31_limburg,2040,Nationale Leiderschap 2040 - regionalisatie provincie Limburg,2565830,True,,,
+NAT_2040_LB,Nationale Leiderschap 2040 - regionalisatie provincie Limburg,PV31_limburg,2040,Nationale Leiderschap 2040 - regionalisatie provincie Limburg,1156652,True,,2040_price_curves,
+Hoog_E_2040_LB,Hoge elektrificatie 2040 scenario voor de provincie Limburg,PV31_limburg,2040,Hoge elektrificatie 2040 scenario voor de provincie Limburg,1156653,True,,2040_price_curves,
+Laag_E_2040_LB,Lage elektrificatie 2040 scenario voor de provincie Limburg,PV31_limburg,2040,Lage elektrificatie 2040 scenario voor de provincie Limburg,1156654,True,,2040_price_curves,
