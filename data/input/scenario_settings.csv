@@ -67,7 +67,7 @@ capacity_of_agriculture_chp_engine_network_gas_dispatchable,21.92991663,21.92991
 capacity_of_agriculture_chp_engine_network_gas_must_run,7.286391653,7.286391653,7.286391653
 capacity_of_agriculture_chp_wood_pellets,0,0,0
 capacity_of_agriculture_flexibility_p2h_electricity,0,0,0
-capacity_of_buildings_solar_pv_solar_radiation,2240.423456,2240,4320
+capacity_of_buildings_solar_pv_solar_radiation,2240.423456,2240,1193.725623
 capacity_of_energy_battery_solar_pv_solar_radiation,0,0,0
 capacity_of_energy_battery_wind_turbine_inland,0,0,0
 capacity_of_energy_chp_combined_cycle_network_gas,8.985625206,8.985625206,8.985625206
