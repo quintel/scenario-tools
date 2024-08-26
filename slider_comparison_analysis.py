@@ -12,7 +12,7 @@ from helpers.file_helpers import write_csv, read_csv
 if __name__ == "__main__":
     # Set general variables
     today = datetime.now().strftime("%Y%m%d")
-    base_url, model_url, query_only_mode = process_arguments(sys.argv)
+    base_url, model_url, query_only_mode, _ = process_arguments(sys.argv)
     file_name = 'slider_comparison_settings'
     scenario_attributes_name = 'scenario_list'
     
