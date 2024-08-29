@@ -1,0 +1,11 @@
+,2050_NAT
+,1175814
+transport_ship_using_ammonia_share,0.0
+households_heater_crude_oil_share,0.0
+bunkers_ship_using_hydrogen_share,0.0
+transport_shipping_mixer_diesel_bio_ethanol_share,0.0
+bunkers_ship_using_ammonia_share,0.0
+transport_freight_train_using_coal_share,0.0
+households_heater_coal_share,0.0
+external_coupling_energy_distribution_coal_gas_chemical_feedstock_share,50.0
+external_coupling_energy_distribution_coal_gas_energy_production_share,50.0

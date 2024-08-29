@@ -1,2 +1,10 @@
-short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,False,2050_price_curves,
+short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
+2030_KEV_Emmen,2030 KEV scenario voor de gemeente Emmen,GM0114_emmen,2030,2030 KEV scenario voor de gemeente Emmen,1177092,True,,,
+2040_DEC_Emmen,2040 Decentrale initiatieven scenario voor de gemeente Emmen,GM0114_emmen,2040,2040 Decentrale initiatieven scenario voor de gemeente Emmen,1175831,True,,,
+2040_NAT_Emmen,2040 Nationale Leiderschap scenario voor de gemeente Emmen,GM0114_emmen,2040,2040 Nationale Leiderschap scenario voor de gemeente Emmen,1175832,True,,,
+2040_EUR_Emmen,2040 Europese Integratie scenario voor de gemeente Emmen,GM0114_emmen,2040,2040 Europese Integratie scenario voor de gemeente Emmen,1175833,True,,,
+2040_INT_Emmen,2040 Internationale Handel scenario voor de gemeente Emmen,GM0114_emmen,2040,2040 Internationale Handel scenario voor de gemeente Emmen,1175834,True,,,
+2050_DEC_Emmen,2050 Decentrale initiatieven scenario voor de gemeente Emmen,GM0114_emmen,2050,2050 Decentrale initiatieven scenario voor de gemeente Emmen,1175835,True,,,
+2050_NAT_Emmen,2050 Nationale Leiderschap scenario voor de gemeente Emmen,GM0114_emmen,2050,2050 Nationale Leiderschap scenario voor de gemeente Emmen,1175836,True,,,
+2050_EUR_Emmen,2050 Europese Integratie scenario voor de gemeente Emmen,GM0114_emmen,2050,2050 Europese Integratie scenario voor de gemeente Emmen,1175837,True,,,
+2050_INT_Emmen,2050 Internationale Handel scenario voor de gemeente Emmen,GM0114_emmen,2050,2050 Internationale Handel scenario voor de gemeente Emmen,1175838,True,,,
