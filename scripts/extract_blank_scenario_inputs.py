@@ -5,6 +5,7 @@ import csv
 base_url = "https://engine.energytransitionmodel.com/api/v3"
 
 # List of area codes for which you want to create blank scenarios
+# By default, the list contains all municipalities in the Netherlands as of baseyear 2019
 area_codes = [
     "GM0014_groningen",
     "GM0034_almere",
