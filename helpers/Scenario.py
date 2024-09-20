@@ -6,6 +6,8 @@ from helpers.heat_file_utils import (read_heat_demand_input, read_profiles,
 from helpers.heat_demand import generate_profiles
 from helpers.helpers import warn
 from helpers.ETM_API import ETM_API
+from helpers.buildings_profile_helper import BuildingsModel
+
 
 class Scenario:
     """
@@ -115,6 +117,25 @@ class Scenario:
                 read_heat_demand_input(self.heat_demand, 'irradiation'),
                 read_thermostat(self.heat_demand)
             )
+
+    def set_building_agriculture_curves(self):
+        '''Set the building and agriculture curves as Curve objects'''
+        if not self.heat_demand:
+            return
+
+        buildings_model = BuildingsModel()
+        buildings_model.load_from_folder(self.heat_demand)
+
+        # Use the separate curve generator method
+        self.heat_demand_curves = self.curve_generator(buildings_model)
+
+    def curve_generator(self, buildings_model):
+        '''Generate building and agriculture curves as a generator'''
+        building_curve, agriculture_curve = buildings_model.generate_curves(
+            buildings_model.temperature, buildings_model.wind_speed
+        )
+        yield building_curve
+        yield agriculture_curve
 
 
     def add_results_to_df(self, df, add_present=True):

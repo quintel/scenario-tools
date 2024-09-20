@@ -41,7 +41,7 @@ def read_thermostat(folder):
 
 def contains_heating_profiles(folder):
     '''
-    Checks if all 15 heating profiles are already in the folder
+    Checks if all 12 heating profiles are already in the folder
 
     Params:
         folder (str): The folder inside data/input/curves (see settings.yml)

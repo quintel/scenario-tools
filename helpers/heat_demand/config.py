@@ -3,9 +3,10 @@ from helpers.file_helpers import read_csv
 class InsulationConfig():
     INSULATION_TYPES = ["low", "medium", "high"]
     HOUSE_NAMES = [
-        "terraced_houses", "corner_houses",
+        "terraced_houses",
         "semi_detached_houses", "apartments", "detached_houses"
     ]
+    # removed "corner_houses" for now as we don't include them in the ETM
 
     J_TO_KWH = 2.77778e-7
     CM2_TO_M2 = 1e-4

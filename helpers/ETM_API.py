@@ -132,14 +132,14 @@ class ETM_API(object):
 
     def get_custom_curves(self):
         '''
-        Get custom curves attached to the scenario. 
+        Get custom curves attached to the scenario.
         Collects custom curves in one pd.DataFrame output.
         '''
         response = self.session.get(f"/scenarios/{self.scenario.id}/custom_curves")
         self.handle_response(
             response,
             fail_info="Error obtaining custom curves.\n")
-        
+
         # Filter the curve keys attached to the scenario and create dataframe
         curves_data = json.loads(response.content)
         curves_attached = [curve['key'] for curve in curves_data if curve['attached']]
@@ -150,14 +150,14 @@ class ETM_API(object):
             decoded_response = response.content.decode('utf-8').split('\n')
             float_values = [float(value) for value in decoded_response]
             # Add curve to dataframe
-            df[curve] = float_values     
+            df[curve] = float_values
 
         return df
-    
+
 
     def get_custom_orders(self, orders):
         '''
-        Get custom orders for the scenario. Obtains custom orders in one 
+        Get custom orders for the scenario. Obtains custom orders in one
         string per order type. Returns pd.DataFrame with all custom orders.
         '''
         df = pd.DataFrame()
@@ -170,10 +170,10 @@ class ETM_API(object):
             response_dict = json.loads(response.content.decode('utf-8'))
             order_string = " ".join(response_dict['order'])
             df[order] = [order_string]
-        
+
         return df
 
-    
+
     def get_heat_network_orders(self, heat_orders):
         """
         Get the scanerio's heat network orders.
@@ -188,7 +188,7 @@ class ETM_API(object):
             )
             response_dict = json.loads(response.content.decode('utf-8'))
             df[f'heat_network_order_{t}'] = [' '.join(response_dict['order'])]
-        
+
         return df.transpose()
 
 
@@ -202,7 +202,7 @@ class ETM_API(object):
         self._check_and_update_user_values()
         self._check_and_update_heat_network()
         self._check_and_update_curves(curve_file_dict)
-        self._check_and_update_heat_demand()
+        self._check_and_update_heat_demand(curve_file_dict)
 
         if self.scenario.flexibility_order:
             warn(" Flexibility order is no longer supported")
@@ -333,14 +333,20 @@ class ETM_API(object):
             self.upload_custom_curve(curve.key, curve.data, self.scenario.curve_file)
 
 
-    def _check_and_update_heat_demand(self):
+    def _check_and_update_heat_demand(self, curve_file_dict):
         '''Checks if heat demand should be updated, and updates it'''
-        if not self.scenario.heat_demand or not self.scenario.heat_demand_curves: return
+        if not self.scenario.heat_demand or not self.scenario.heat_demand_curves:
+            return
 
-        print(' Generating and uploading 15 heat demand curves, this may take a while:')
-        for curve in self.scenario.heat_demand_curves:
-            curve.to_csv(self.scenario.heat_demand)
-            splitted = curve.key.split('_')
-            print(f"  - Generated {' '.join(splitted[1:-1])} {splitted[-1]} insulation")
+        print(' Generating and uploading weather curves, this may take a while:')
+
+        # Iterate over the curve_file_dict directly
+        for curve_key, curve in curve_file_dict.items():
+            print(f"Uploading  - {curve_key}")
+
+            if not curve.data.any():
+                print(f"Curve {curve_key} has no data to upload.") # Final check
+                continue
+            # Upload each curve
             self.upload_custom_curve(f'weather/{curve.key}', curve.data, curve.key)
-            print(f"  - Uploaded curve")
+            print(f"  - Uploaded {curve_key}")

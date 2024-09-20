@@ -33,7 +33,7 @@ def generate_profiles(temp, irr, therm):
 
 def heat_demand_curve(house_type, insulation_type, temp, irr, therm):
     '''
-    Calculates the heat demand curve for a hous and insulation type
+    Calculates the heat demand curve for a house and insulation type
 
     Params:
         house_type (str): Type of house, e.g. apartments
