@@ -1,1 +1,1 @@
-from .heat_demand_profile_generator import generate_profiles
+from .heat_demand_profile_generator import HeatDemandGenerator

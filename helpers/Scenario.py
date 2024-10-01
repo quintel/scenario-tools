@@ -2,9 +2,9 @@ from pathlib import Path
 import pandas as pd
 
 from helpers.file_helpers import check_duplicate_index, read_csv, check_duplicates, get_folder
-from helpers.heat_file_utils import (read_heat_demand_input, read_profiles,
+from helpers.heat_demand.heat_demand_profile_generator import HeatDemandGenerator
+from helpers.heat_file_utils import (load_g2a_parameters, read_heat_demand_input, read_profiles,
     contains_heating_profiles, read_thermostat)
-from helpers.heat_demand import generate_profiles
 from helpers.helpers import warn
 from helpers.ETM_API import ETM_API
 from helpers.buildings_profile_helper import BuildingsModel
@@ -100,38 +100,31 @@ class Scenario:
 
 
     def set_heat_demand_curves(self):
-        '''
-        Checks if a heat_demand folder was supplied, and sets self.heat_demand_curves
-        accordingly.
-
-        self.heat_demand is a folder inside the input curves folder
-
-        self.heat_demand_curves links to a generator method, and can thus generate all 15
-        heat demand curves (Curve) iteratively
-        '''
-        if not self.heat_demand: return
-
-        elif contains_heating_profiles(self.heat_demand):
-            self.heat_demand_curves = read_profiles(self.heat_demand)
-
-        else:
-            self.heat_demand_curves = generate_profiles(
-                read_heat_demand_input(self.heat_demand, 'temperature'),
-                read_heat_demand_input(self.heat_demand, 'irradiation'),
-                read_thermostat(self.heat_demand)
-            )
-
-    def set_building_agriculture_curves(self, scenario_from_csv=False):
-        '''Set the building and agriculture curves as Curve objects'''
         if not self.heat_demand:
             return
-        buildings_model = BuildingsModel()
-        if scenario_from_csv == True:
-            buildings_model.load_from_folder(Path(Settings.get('input_curves_folder'), self.heat_demand))
-        else:
-            buildings_model.load_from_folder(self.heat_demand)
-        # Use the separate curve generator method
-        self.heat_demand_curves = self.curve_generator(buildings_model)
+
+        # Load all necessary data
+        temp = read_heat_demand_input(self.heat_demand, 'temperature')
+        irr = read_heat_demand_input(self.heat_demand, 'irradiation')
+        wind_speed = read_heat_demand_input(self.heat_demand, 'wind_speed')
+        therm = read_thermostat(self.heat_demand)
+        parameters = load_g2a_parameters(self.heat_demand)
+
+        # Initialize the unified generator
+        generator = HeatDemandGenerator(temp, irr, wind_speed, therm, parameters)
+
+        # Generate profiles
+        self.heat_demand_curves = generator.generate_all_profiles()
+
+
+    # def set_building_agriculture_curves(self):
+    #     '''Set the building and agriculture curves as Curve objects'''
+    #     if not self.heat_demand:
+    #         return
+    #     buildings_model = BuildingsModel()
+    #     buildings_model.load_from_folder(self.heat_demand)
+    #     # Use the separate curve generator method
+    #     self.heat_demand_curves = self.curve_generator(buildings_model)
 
     def curve_generator(self, buildings_model):
         '''Generate building and agriculture curves as a generator'''

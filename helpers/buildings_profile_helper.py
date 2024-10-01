@@ -1,6 +1,7 @@
 import pandas as pd
 from pathlib import Path
 from helpers.Curves import Curve
+from helpers.settings import Settings
 
 class BuildingsModel:
 
@@ -64,7 +65,7 @@ class BuildingsModel:
 
     def load_from_folder(self, folder: str):
         """Load G2A parameters, temperature, and wind speed from CSV files."""
-        folder_path = Path(folder)
+        folder_path = Path(Settings.get('input_curves_folder')) / folder
 
         # Load G2A parameters from CSV
         params_file = folder_path / "G2A_parameters.csv"

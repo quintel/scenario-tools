@@ -4,7 +4,6 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 import argparse
 import yaml
-import pandas as pd
 from helpers.ETM_API import ETM_API, SessionWithUrlBase
 from helpers.Scenario import ScenarioCollection
 from helpers.helpers import process_arguments
@@ -28,12 +27,6 @@ class HeatDemandCurveGenerator:
         scenario.set_heat_demand_curves()
         # Store the generated heat demand curves for further processing
         self.curves = list(scenario.heat_demand_curves)
-
-    def generate_building_curves(self, scenario):
-        scenario.heat_demand = str(Path(self.settings['input_curves_folder']).resolve() / scenario.heat_demand)
-        scenario.set_building_agriculture_curves()
-        # Store the generated building curves for further processing
-        self.curves.extend(scenario.heat_demand_curves)
 
     def create_etm_session(self, base_url=None):
         # Create a session using the helper class with base URL from settings
@@ -73,7 +66,6 @@ if __name__ == "__main__":
     for scenario in ScenarioCollection.from_csv():  # Load scenarios from scenario_list.csv
         print(f"Loaded scenario: {scenario.short_name}")
         generator.generate_heat_demand_curves(scenario)
-        generator.generate_building_curves(scenario)
         generator.export_curves(scenario)
 
         # Create the ETM session and upload the curves for this scenario
