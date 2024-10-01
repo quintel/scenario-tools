@@ -36,29 +36,6 @@ class HeatDemandCurveGenerator:
         # Store the generated building curves for further processing
         self.curves.extend(scenario.heat_demand_curves)
 
-    def load_user_weather_curves(self):
-        # Load weather curves from the input/curves folder
-        curves_folder = Path(self.settings['input_curves_folder']).resolve()
-
-        # Separate handling for generated and user-supplied weather curves
-        insulation_types = ["terraced_houses", "apartments", "semi_detached_houses", "detached_houses"]
-        insulation_levels = ["high", "medium", "low"]
-        generatable_curves = [f"insulation_{house_type}_{level}" for house_type in insulation_types for level in insulation_levels]
-        generatable_curves.extend(["buildings_heating", "agriculture_heating"])
-
-        # Load user-uploaded weather curves (files starting with 'weather_')
-        weather_curve_files = list(curves_folder.glob("weather_*.csv"))
-        self.weather_curves = {}
-
-        for weather_curve_file in weather_curve_files:
-            curve_file = CurveFile.from_csv(weather_curve_file)
-            self.weather_curves.update({curve.key: curve for curve in curve_file.curves})
-
-        # Handle missing generated curves
-        for curve_name in generatable_curves:
-            if curve_name not in self.weather_curves:
-                print(f"{curve_name} not found in input. Generating curve.")
-
     def create_etm_session(self, base_url=None):
         # Create a session using the helper class with base URL from settings
         session = SessionWithUrlBase(self.base_url)
@@ -76,7 +53,6 @@ class HeatDemandCurveGenerator:
     def prepare_curve_file_dict(self):
         # Create a dictionary for both heat demand curves and weather curves to be uploaded to ETM
         curve_file_dict = {curve.key: curve for curve in self.curves}
-        curve_file_dict.update(self.weather_curves)
         return curve_file_dict
 
     def export_curves(self, scenario):
@@ -98,15 +74,12 @@ if __name__ == "__main__":
     for scenario in ScenarioCollection.from_csv():  # Load scenarios from scenario_list.csv
         print(f"Loaded scenario: {scenario.short_name}")
         generator.generate_heat_demand_curves(scenario)
-        generator.load_user_weather_curves()
         generator.generate_building_curves(scenario)
-
         generator.export_curves(scenario)
 
         # Create the ETM session and upload the curves for this scenario
         session = generator.create_etm_session()
         generator.upload_to_etm(session, scenario)
     scenarios = ScenarioCollection.from_csv()
-    scenarios.export_scenario_outcomes()
     scenarios.export_ids()
     scenarios.print_urls(model_url)
