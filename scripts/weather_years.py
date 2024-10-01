@@ -8,12 +8,14 @@ import pandas as pd
 from helpers.ETM_API import ETM_API, SessionWithUrlBase
 from helpers.Scenario import ScenarioCollection
 from helpers.Curves import CurveFile
+from helpers.helpers import process_arguments
 
 class HeatDemandCurveGenerator:
-    def __init__(self, settings_path='config/local.settings.yml'):
+    def __init__(self, settings_path='config/local.settings.yml', base_url=None):
         self.settings = self.load_settings(settings_path)
         self.curves = None
         self.weather_curves = None
+        self.base_url = base_url
 
     def load_settings(self, settings_path):
         # Load the settings from the provided YAML file
@@ -57,9 +59,9 @@ class HeatDemandCurveGenerator:
             if curve_name not in self.weather_curves:
                 print(f"{curve_name} not found in input. Generating curve.")
 
-    def create_etm_session(self):
+    def create_etm_session(self, base_url=None):
         # Create a session using the helper class with base URL from settings
-        session = SessionWithUrlBase(self.settings['local_engine_url'])
+        session = SessionWithUrlBase(self.base_url)
         return session
 
     def upload_to_etm(self, session, scenario):
@@ -86,12 +88,13 @@ class HeatDemandCurveGenerator:
             curve.to_csv(folder=str(output_folder))
 
 if __name__ == "__main__":
+    base_url, model_url, query_only_mode,_ = process_arguments(sys.argv)
     parser = argparse.ArgumentParser(description="Generate and export weather curves.")
-    args = parser.parse_args()
 
+    print("Trying to upload to:", base_url)
     settings_path = 'config/local.settings.yml'  # Change this to point to your local settings file
 
-    generator = HeatDemandCurveGenerator(settings_path)
+    generator = HeatDemandCurveGenerator(settings_path, base_url)
     for scenario in ScenarioCollection.from_csv():  # Load scenarios from scenario_list.csv
         print(f"Loaded scenario: {scenario.short_name}")
         generator.generate_heat_demand_curves(scenario)

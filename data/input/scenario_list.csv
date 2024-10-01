@@ -1,2 +1,2 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-test_scenario,Schiermonnikoog,GM0088_schiermonnikoog, 2050,,2601962,False,,dummy_weather_data
+II3050WY,II3050WY,nl,2050,optional,1189107,False,,dummy_weather_data
