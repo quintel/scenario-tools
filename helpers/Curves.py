@@ -72,7 +72,7 @@ class Curve():
             folder (str): The folder in the curves folder where the curve should be written to.
                           Default '' writes straight to the curves folder (no subfolder).
         '''
-        path = get_folder('input_curves_folder') / folder / f'{self.key}.csv'
+        path = get_folder('output_curves_folder') / folder / f'{self.key}.csv'
 
         if path.exists():
             return

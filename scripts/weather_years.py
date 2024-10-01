@@ -7,7 +7,6 @@ import yaml
 import pandas as pd
 from helpers.ETM_API import ETM_API, SessionWithUrlBase
 from helpers.Scenario import ScenarioCollection
-from helpers.Curves import CurveFile
 from helpers.helpers import process_arguments
 
 class HeatDemandCurveGenerator:

@@ -38,6 +38,7 @@ if __name__ == "__main__":
         if not query_only_mode:
             if scenario.heat_demand:
                 scenario.set_heat_demand_curves()
+                scenario.set_building_agriculture_curves(True)
 
             scenario.update(curve_file_dict)
 

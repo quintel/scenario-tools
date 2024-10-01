@@ -1,3 +1,4 @@
+from pathlib import Path
 import pandas as pd
 
 from helpers.file_helpers import check_duplicate_index, read_csv, check_duplicates, get_folder
@@ -7,6 +8,8 @@ from helpers.heat_demand import generate_profiles
 from helpers.helpers import warn
 from helpers.ETM_API import ETM_API
 from helpers.buildings_profile_helper import BuildingsModel
+from helpers.settings import Settings
+
 
 
 class Scenario:
@@ -118,14 +121,15 @@ class Scenario:
                 read_thermostat(self.heat_demand)
             )
 
-    def set_building_agriculture_curves(self):
+    def set_building_agriculture_curves(self, scenario_from_csv=False):
         '''Set the building and agriculture curves as Curve objects'''
         if not self.heat_demand:
             return
-
         buildings_model = BuildingsModel()
-        buildings_model.load_from_folder(self.heat_demand)
-
+        if scenario_from_csv == True:
+            buildings_model.load_from_folder(Path(Settings.get('input_curves_folder'), self.heat_demand))
+        else:
+            buildings_model.load_from_folder(self.heat_demand)
         # Use the separate curve generator method
         self.heat_demand_curves = self.curve_generator(buildings_model)
 
@@ -170,7 +174,6 @@ class Scenario:
 
     def get_data_downloads(self, downloads):
         yield from self.api.get_data_downloads(downloads)
-
 
 
 class ScenarioCollection:

@@ -341,7 +341,7 @@ class ETM_API(object):
         print(' Generating and uploading weather curves, this may take a while:')
         if not curve_file_dict:
             for curve in self.scenario.heat_demand_curves:
-                curve.to_csv(self.scenario.heat_demand)
+                curve.to_csv(self.scenario.short_name)
                 splitted = curve.key.split('_')
                 print(f"  - Generated {' '.join(splitted[1:-1])} {splitted[-1]} insulation")
         # Iterate over the curve_file_dict directly
