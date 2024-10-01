@@ -333,20 +333,25 @@ class ETM_API(object):
             self.upload_custom_curve(curve.key, curve.data, self.scenario.curve_file)
 
 
-    def _check_and_update_heat_demand(self, curve_file_dict):
+    def _check_and_update_heat_demand(self, curve_file_dict=None):
         '''Checks if heat demand should be updated, and updates it'''
         if not self.scenario.heat_demand or not self.scenario.heat_demand_curves:
             return
 
         print(' Generating and uploading weather curves, this may take a while:')
-
+        if not curve_file_dict:
+            for curve in self.scenario.heat_demand_curves:
+                curve.to_csv(self.scenario.heat_demand)
+                splitted = curve.key.split('_')
+                print(f"  - Generated {' '.join(splitted[1:-1])} {splitted[-1]} insulation")
         # Iterate over the curve_file_dict directly
-        for curve_key, curve in curve_file_dict.items():
-            print(f"Uploading  - {curve_key}")
+        else:
+            for curve_key, curve in curve_file_dict.items():
+                print(f"Uploading  - {curve_key}")
 
-            if not curve.data.any():
-                print(f"Curve {curve_key} has no data to upload.") # Final check
-                continue
-            # Upload each curve
-            self.upload_custom_curve(f'weather/{curve.key}', curve.data, curve.key)
-            print(f"  - Uploaded {curve_key}")
+                if not curve.data.any():
+                    print(f"Curve {curve_key} has no data to upload.") # Final check
+                    continue
+                # Upload each curve
+                self.upload_custom_curve(f'weather/{curve.key}', curve.data, curve.key)
+                print(f"  - Uploaded {curve_key}")

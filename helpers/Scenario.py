@@ -267,7 +267,7 @@ class ScenarioCollection:
             if not scenario.id:
                 continue
             index = scenario_list['short_name'] == scenario.short_name
-            scenario_list.loc[index, 'id'] = str(scenario.id)
+            scenario_list.loc[index, 'id'] = int(scenario.id)
             changed = True
 
         if changed:

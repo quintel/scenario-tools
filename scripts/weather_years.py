@@ -91,7 +91,7 @@ if __name__ == "__main__":
     base_url, model_url, query_only_mode,_ = process_arguments(sys.argv)
     parser = argparse.ArgumentParser(description="Generate and export weather curves.")
 
-    print("Trying to upload to:", base_url)
+    print("Uploading to:", base_url)
     settings_path = 'config/local.settings.yml'  # Change this to point to your local settings file
 
     generator = HeatDemandCurveGenerator(settings_path, base_url)
@@ -106,3 +106,7 @@ if __name__ == "__main__":
         # Create the ETM session and upload the curves for this scenario
         session = generator.create_etm_session()
         generator.upload_to_etm(session, scenario)
+    scenarios = ScenarioCollection.from_csv()
+    scenarios.export_scenario_outcomes()
+    scenarios.export_ids()
+    scenarios.print_urls(model_url)
