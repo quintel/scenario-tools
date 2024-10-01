@@ -176,7 +176,7 @@ class ETM_API(object):
 
     def get_heat_network_orders(self, heat_orders):
         """
-        Get the scanerio's heat network orders.
+        Get the scenario's heat network orders.
         """
         temperature_level = [order.split('_')[-1] for order in heat_orders]
         df = pd.DataFrame()
