@@ -41,16 +41,16 @@ class WeatherYearsGenerator:
 
         # Validate availability of necessary data for each profile type
         if self.temp is None:
-            logger.warning("No temperature data provided. Cannot generate any heat demand profiles without temperature.")
+            logger.warning("Cannot generate any heat demand profiles without temperature or if they already exist.")
             self.can_generate_house = False
             self.can_generate_buildings_agriculture = False
 
         if self.irr is None or self.therm is None:
-            logger.warning("Cannot generate housing heat demand profiles without both irradiation and thermostat settings.")
+            logger.warning("Cannot generate housing heat demand profiles without both irradiation and thermostat settings or if they already exist.")
             self.can_generate_house = False
 
         if self.wind_speed is None or self.g2a_params is None:
-            logger.warning("Cannot generate building and agriculture heat demand profiles without both wind speed and G2A parameters.")
+            logger.warning("Cannot generate building and agriculture heat demand profiles without both wind speed and G2A parameters or if they already exist.")
             self.can_generate_buildings_agriculture = False
 
         # Validate inputs if all necessary data is present

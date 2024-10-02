@@ -56,6 +56,18 @@ def contains_heating_profiles(folder):
 
     return True
 
+def read_building_ag_profiles(folder):
+    curve_keys = ["buildings_heating", "agriculture_heating"]
+    for curve_key in curve_keys:
+        yield Curve(curve_key, read_heat_demand_input(folder, curve_key))
+
+def contains_building_ag_profiles(folder):
+    curve_keys = ["buildings_heating", "agriculture_heating"]
+    path = get_folder('input_curves_folder') / folder
+    for curve_key in curve_keys:
+        if not (path / f'{curve_key}.csv').exists():
+            return False
+    return True
 
 def read_profiles(folder):
     '''
