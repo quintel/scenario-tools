@@ -1,1 +1,1 @@
-from .heat_demand_profile_generator import HeatDemandGenerator
+from .weather_years_profile_generator import WeatherYearsGenerator

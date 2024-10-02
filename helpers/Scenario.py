@@ -1,8 +1,9 @@
+import logging
 from pathlib import Path
 import pandas as pd
 
 from helpers.file_helpers import check_duplicate_index, read_csv, check_duplicates, get_folder
-from helpers.heat_demand.heat_demand_profile_generator import HeatDemandGenerator
+from helpers.heat_demand.weather_years_profile_generator import WeatherYearsGenerator
 from helpers.heat_file_utils import (load_g2a_parameters, read_heat_demand_input, read_profiles,
     contains_heating_profiles, read_thermostat)
 from helpers.helpers import warn
@@ -103,37 +104,49 @@ class Scenario:
         if not self.heat_demand:
             return
 
-        # Load all necessary data
-        temp = read_heat_demand_input(self.heat_demand, 'temperature')
-        irr = read_heat_demand_input(self.heat_demand, 'irradiation')
-        wind_speed = read_heat_demand_input(self.heat_demand, 'wind_speed')
-        therm = read_thermostat(self.heat_demand)
-        parameters = load_g2a_parameters(self.heat_demand)
+        # Load all necessary data. If not found, set to None
+        temp = self._load_heat_data(read_heat_demand_input, 'temperature')
+        irr = self._load_heat_data(read_heat_demand_input, 'irradiation')
+        wind_speed = self._load_heat_data(read_heat_demand_input, 'wind_speed')
+        therm = self._load_heat_data(read_thermostat)
+        parameters = self._load_heat_data(load_g2a_parameters)
 
-        # Initialize the unified generator
-        generator = HeatDemandGenerator(temp, irr, wind_speed, therm, parameters)
-
-        # Generate profiles
+        # Initialize the weather years generator
+        generator = WeatherYearsGenerator(temp, irr, wind_speed, therm, parameters)
         self.heat_demand_curves = generator.generate_all_profiles()
 
+    def _load_heat_data(self, loader_function, data_type=None):
+        input_folder = Path(Settings.get('input_curves_folder')) / self.heat_demand
+        file_loc = self._determine_file_loc(loader_function, data_type, input_folder)
+        if file_loc and file_loc.exists():
+            try:
+                if data_type is None:
+                    data = loader_function(self.heat_demand)
+                else:
+                    data = loader_function(self.heat_demand, data_type)
+                return data
+            except FileNotFoundError as e:
+                logging.warning(f"File not found: {e.filename}")
+                return None
+            except IOError as e:
+                logging.warning(f"I/O error({e.errno}): {e.strerror}")
+                return None
+        else:
+            return None
 
-    # def set_building_agriculture_curves(self):
-    #     '''Set the building and agriculture curves as Curve objects'''
-    #     if not self.heat_demand:
-    #         return
-    #     buildings_model = BuildingsModel()
-    #     buildings_model.load_from_folder(self.heat_demand)
-    #     # Use the separate curve generator method
-    #     self.heat_demand_curves = self.curve_generator(buildings_model)
+    def _determine_file_loc(self, loader_function, data_type, input_folder):
 
-    def curve_generator(self, buildings_model):
-        '''Generate building and agriculture curves as a generator'''
-        building_curve, agriculture_curve = buildings_model.generate_curves(
-            buildings_model.temperature, buildings_model.wind_speed
-        )
-        yield building_curve
-        yield agriculture_curve
+        if loader_function == read_heat_demand_input and data_type:
+            filename = f"{data_type}.csv"
+        elif loader_function == read_thermostat:
+            filename = f"thermostat.csv"
+        elif loader_function == load_g2a_parameters:
+            filename = f"G2A_parameters.csv"
+        else:
+            logging.error(f"Unknown loader function: {loader_function}")
+            return None
 
+        return input_folder/ filename
 
     def add_results_to_df(self, df, add_present=True):
         if self.query_results is None or self.query_results.empty:
@@ -269,7 +282,6 @@ class ScenarioCollection:
         if changed:
             path = get_folder('input_file_folder') / "scenario_list.csv"
             scenario_list.to_csv(path, index=False, header=True)
-
 
     @classmethod
     def from_csv(cls, target="scenario_list"):
