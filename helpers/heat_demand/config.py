@@ -1,49 +1,53 @@
 from helpers.file_helpers import read_csv
 
+# Old config:
+
+    # R-value used for EU from ECN [m^2 K / W]
+    # R_VALUES = {
+    #     "terraced_houses": {"low": 0.306, "medium": 1.522, "high": 4.236},
+    #     "semi_detached_houses": {"low": 0.324, "medium": 1.483, "high": 4.346},
+    #     "apartments": {"low": 0.301, "medium": 1.694, "high": 4.400},
+    #     "detached_houses": {"low": 0.329, "medium": 1.545, "high": 4.455}
+    # }
+
+    # Fitting numbers used for EU
+    # BEHAVIOUR_FITTING_RESULTS = {
+    #     "terraced_houses": {'low': 0.0, 'medium': 0.0, 'high': 0.0},
+    #     "semi_detached_houses":  {'low': 0.0, 'medium': 0.0, 'high': 0.0},
+    #     "apartments": {'low': 0.0, 'medium': 0.0, 'high': 0.0},
+    #     "detached_houses": {'low': 0.0, 'medium': 0.0, 'high': 0.0}
+    # }
+
 class InsulationConfig():
     INSULATION_TYPES = ["low", "medium", "high"]
     HOUSE_NAMES = [
-        "terraced_houses",
-        "semi_detached_houses", "apartments", "detached_houses"
-    ]
-    # removed "corner_houses" for now as we don't include them in the ETM
+        "terraced_houses", "semi_detached_houses", "apartments", "detached_houses"
+        ]
 
     J_TO_KWH = 2.77778e-7
     CM2_TO_M2 = 1e-4
 
-    # ECN R-values [m^2 K / W]
+    # R-values used for nl2019 [m^2 K / W]
     R_VALUES = {
-        "terraced_houses": {"low": 0.306, "medium": 1.522, "high": 4.236},
-        "corner_houses": {"low": 0.327, "medium": 1.454, "high": 4.369},
-        "semi_detached_houses": {"low": 0.324, "medium": 1.483, "high": 4.346},
-        "apartments": {"low": 0.301, "medium": 1.694, "high": 4.400},
-        "detached_houses": {"low": 0.329, "medium": 1.545, "high": 4.455}
+        "terraced_houses": {"low": 0.72608224, "medium": 0.95303516, "high": 2.20833951},
+        "semi_detached_houses": {"low": 0.92629934, "medium": 1.20779267, "high": 2.90413756},
+        "apartments": {"low": 0.96937942, "medium": 1.39716924, "high": 2.95000949},
+        "detached_houses": {"low": 1.02227109, "medium": 1.2962618, "high": 3.10765405}
     }
 
     SURFACE_AREA = {
         "terraced_houses": 183,
-        "corner_houses": 239,
         "semi_detached_houses": 279,
         "apartments": 187,
         "detached_houses": 405
     }
 
-
-    # Magic 'fitting'? numbers from Dorine -> from a fitting done in the etdataset sister of this module?
-    # BEHAVIOUR_FITTING_RESULTS = {
-    #     "terraced_houses": {'low': 0.44224575, 'medium': 2.61042431, 'high': 0.59483274},
-    #     "corner_houses": {'low': 1.63456613, 'medium': 4.84495401, 'high': 0.96159576},
-    #     "semi_detached_houses":  {'low': 1.57962902, 'medium': 4.43499574, 'high': 0.45485638},
-    #     "apartments": {'low': -0.11691841, 'medium': 0.80467653, 'high': 2.78210071},
-    #     "detached_houses": {'low': 3.34031291, 'medium': 7.76537119, 'high': 2.74614981}
-    # }
-    # Magic 'fitting'? numbers from Dorine -> from a fitting done in the etdataset sister of this module?
+    # Fitting number used for nl2019
     BEHAVIOUR_FITTING_RESULTS = {
-        "terraced_houses": {'low': 0.0, 'medium': 0.0, 'high': 0.0},
-        "corner_houses": {'low': 0.0, 'medium': 0.0, 'high': 0.0},
-        "semi_detached_houses":  {'low': 0.0, 'medium': 0.0, 'high': 0.0},
-        "apartments": {'low': 0.0, 'medium': 0.0, 'high': 0.0},
-        "detached_houses": {'low': 0.0, 'medium': 0.0, 'high': 0.0}
+        "terraced_houses": {'low': 0.44224575, 'medium': 2.61042431, 'high': 0.59483274},
+        "semi_detached_houses":  {'low': 1.57962902, 'medium': 4.43499574, 'high': 0.45485638},
+        "apartments": {'low': -0.11691841, 'medium': 0.80467653, 'high': 2.78210071},
+        "detached_houses": {'low': 3.34031291, 'medium': 7.76537119, 'high': 2.74614981}
     }
 
     def __init__(self):
@@ -93,12 +97,17 @@ class InsulationConfig():
         return self.SURFACE_AREA
 
     def get_window_area(self, house_type=None):
-        if house_type == 'terraced_houses':
-            return 6.08289109 # Magic number from Dorine
-        if house_type:
-            return self.window_area
+        window_areas = {
+            'terraced_houses': 6.08289109,
+            'apartments': 5.53039382,
+            'semi_detached_houses': 5.80327128,
+            'detached_houses': 6.12774164
+        }
 
-        return {house_type: self.window_area for house_type in self.get_house_types()}
+        if house_type:
+            return window_areas.get(house_type, self.window_area)
+
+        return {house: self.window_area for house in self.HOUSE_NAMES}
 
 
     def get_behaviour(self, house_type=None, setting=None):
