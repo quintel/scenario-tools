@@ -1,11 +1,17 @@
+import logging
+from pathlib import Path
 import pandas as pd
 
 from helpers.file_helpers import check_duplicate_index, read_csv, check_duplicates, get_folder
-from helpers.heat_file_utils import (read_heat_demand_input, read_profiles,
+from helpers.heat_demand.weather_years_profile_generator import WeatherYearsGenerator
+from helpers.heat_file_utils import (contains_building_ag_profiles, load_g2a_parameters, read_building_ag_profiles, read_heat_demand_input, read_profiles,
     contains_heating_profiles, read_thermostat)
-from helpers.heat_demand import generate_profiles
 from helpers.helpers import warn
 from helpers.ETM_API import ETM_API
+from helpers.buildings_profile_helper import BuildingsModel
+from helpers.settings import Settings
+
+
 
 class Scenario:
     """
@@ -93,29 +99,85 @@ class Scenario:
             'keep_compatible': self.keep_compatible
         }
 
-
     def set_heat_demand_curves(self):
-        '''
-        Checks if a heat_demand folder was supplied, and sets self.heat_demand_curves
-        accordingly.
+        if not self.heat_demand:
+            return
 
-        self.heat_demand is a folder inside the input curves folder
+        input_folder = self.heat_demand
+        self.heat_demand_curves = self._check_for_heat_profiles(input_folder)
+        curves_length = len(self.heat_demand_curves)
 
-        self.heat_demand_curves links to a generator method, and can thus generate all 15
-        heat demand curves (Curve) iteratively
-        '''
-        if not self.heat_demand: return
+        # Initialize all variables to None
+        temp = irr = wind_speed = therm = parameters = None
+        if curves_length == 0:
+            # Load all necessary data
+            temp = self._load_heat_data(read_heat_demand_input, input_folder, 'temperature')
+            irr = self._load_heat_data(read_heat_demand_input, input_folder, 'irradiation')
+            wind_speed = self._load_heat_data(read_heat_demand_input, input_folder, 'wind_speed')
+            therm = self._load_heat_data(read_thermostat, input_folder)
+            parameters = self._load_heat_data(load_g2a_parameters, input_folder)
+        elif curves_length == 12:
+            # Load temperature, wind speed, and parameters only
+            temp = self._load_heat_data(read_heat_demand_input, input_folder, 'temperature')
+            wind_speed = self._load_heat_data(read_heat_demand_input, input_folder, 'wind_speed')
+            parameters = self._load_heat_data(load_g2a_parameters, input_folder)
+        elif curves_length == 2:
+            # Load temperature, irradiation, and thermostat data
+            temp = self._load_heat_data(read_heat_demand_input, input_folder, 'temperature')
+            irr = self._load_heat_data(read_heat_demand_input, input_folder, 'irradiation')
+            therm = self._load_heat_data(read_thermostat, input_folder)
 
-        elif contains_heating_profiles(self.heat_demand):
-            self.heat_demand_curves = read_profiles(self.heat_demand)
+        # Initialize the weather years generator with the loaded data
+        generator = WeatherYearsGenerator(temp, irr, wind_speed, therm, parameters)
+        new_profiles = generator.generate_all_profiles()
+        for profile in new_profiles:
+            self.heat_demand_curves.append(profile)
 
+    def _load_heat_data(self, loader_function, input_folder, data_type=None, ):
+        file_loc = self._determine_file_loc(loader_function, data_type, input_folder)
+        if file_loc and file_loc.exists():
+            try:
+                if data_type is None:
+                    data = loader_function(self.heat_demand)
+                else:
+                    data = loader_function(self.heat_demand, data_type)
+                return data
+            except FileNotFoundError as e:
+                logging.warning(f"File not found: {e.filename}")
+                return None
+            except IOError as e:
+                logging.warning(f"I/O error({e.errno}): {e.strerror}")
+                return None
         else:
-            self.heat_demand_curves = generate_profiles(
-                read_heat_demand_input(self.heat_demand, 'temperature'),
-                read_heat_demand_input(self.heat_demand, 'irradiation'),
-                read_thermostat(self.heat_demand)
-            )
+            return None
 
+    def _determine_file_loc(self, loader_function, data_type, input_folder):
+        if loader_function == read_heat_demand_input and data_type:
+            filename = f"{data_type}.csv"
+        elif loader_function == read_thermostat:
+            filename = f"thermostat.csv"
+        elif loader_function == load_g2a_parameters:
+            filename = f"G2A_parameters.csv"
+        else:
+            logging.error(f"Unknown loader function: {loader_function}")
+            return None
+
+        curves = get_folder('input_curves_folder')
+        return Path(curves, input_folder, filename)
+
+    def _check_for_heat_profiles(self, input_folder):
+        curves = []
+        if contains_heating_profiles(self.heat_demand):
+            print(f"Found housing heat profiles in {input_folder}, reading")
+            gen = read_profiles(input_folder)
+            for curve in gen:
+                curves.append(curve)
+        if contains_building_ag_profiles(self.heat_demand):
+            print(f"Found buildings and agriculture heat profiles in {input_folder}, reading")
+            gen = read_building_ag_profiles(input_folder)
+            for curve in gen:
+                curves.append(curve)
+        return curves
 
     def add_results_to_df(self, df, add_present=True):
         if self.query_results is None or self.query_results.empty:
@@ -149,7 +211,6 @@ class Scenario:
 
     def get_data_downloads(self, downloads):
         yield from self.api.get_data_downloads(downloads)
-
 
 
 class ScenarioCollection:
@@ -246,13 +307,12 @@ class ScenarioCollection:
             if not scenario.id:
                 continue
             index = scenario_list['short_name'] == scenario.short_name
-            scenario_list.loc[index, 'id'] = str(scenario.id)
+            scenario_list.loc[index, 'id'] = int(scenario.id)
             changed = True
 
         if changed:
             path = get_folder('input_file_folder') / "scenario_list.csv"
             scenario_list.to_csv(path, index=False, header=True)
-
 
     @classmethod
     def from_csv(cls, target="scenario_list"):

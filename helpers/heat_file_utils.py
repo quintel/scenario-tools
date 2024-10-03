@@ -4,7 +4,7 @@ from helpers.file_helpers import read_csv, get_folder
 from helpers.helpers import exit
 from helpers.heat_demand.config import insulation_config
 from helpers.Curves import Curve
-
+import pandas as pd
 
 def read_heat_demand_input(folder, file):
     '''
@@ -41,7 +41,7 @@ def read_thermostat(folder):
 
 def contains_heating_profiles(folder):
     '''
-    Checks if all 15 heating profiles are already in the folder
+    Checks if all 12 heating profiles are already in the folder
 
     Params:
         folder (str): The folder inside data/input/curves (see settings.yml)
@@ -56,6 +56,18 @@ def contains_heating_profiles(folder):
 
     return True
 
+def read_building_ag_profiles(folder):
+    curve_keys = ["buildings_heating", "agriculture_heating"]
+    for curve_key in curve_keys:
+        yield Curve(curve_key, read_heat_demand_input(folder, curve_key))
+
+def contains_building_ag_profiles(folder):
+    curve_keys = ["buildings_heating", "agriculture_heating"]
+    path = get_folder('input_curves_folder') / folder
+    for curve_key in curve_keys:
+        if not (path / f'{curve_key}.csv').exists():
+            return False
+    return True
 
 def read_profiles(folder):
     '''
@@ -69,3 +81,19 @@ def read_profiles(folder):
     '''
     for curve_key in insulation_config.curve_keys:
         yield Curve(curve_key, read_heat_demand_input(folder, curve_key))
+
+def load_g2a_parameters(folder):
+    """
+    Load G2A parameters from a CSV file.
+
+    Params:
+        folder (str or Path): The path to the folder containing G2A_parameters.csv
+
+    Returns:
+        pd.DataFrame: A DataFrame containing the G2A parameters.
+    """
+    path = get_folder('input_curves_folder') / folder
+    filepath = path / "G2A_parameters.csv"
+    if not filepath.exists():
+        raise FileNotFoundError(f"G2A_parameters.csv not found in {path}")
+    return pd.read_csv(filepath)

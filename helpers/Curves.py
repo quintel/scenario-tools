@@ -63,21 +63,21 @@ class Curve():
         self.key = key
         self.data = data
 
-
     def to_csv(self, folder=''):
-        '''
-        Export the Curve to a csv file, if that file does not yet exist
+        """
+        Export the Curve to a csv file if it does not already exist.
 
         Params:
-            folder (str): The folder in the curves folder where the curve should be written to.
-                          Default '' writes straight to the curves folder (no subfolder).
-        '''
-        path = get_folder('input_curves_folder') / folder / f'{self.key}.csv'
+            folder (str): Subfolder within the output_curves_folder where the curve should be written.
+                        Defaults to the output_curves_folder itself.
+        """
+        path = get_folder('output_curves_folder') / folder / f"{self.key}.csv"
+        path.parent.mkdir(parents=True, exist_ok=True)
 
-        if path.exists():
-            return
-
-        pd.Series(self.data).to_csv(path, index=False, header=False)
+        if not path.exists():
+            pd.Series(self.data).to_csv(path, index=False, header=False)
+        else:
+            print(f"File {path} already exists. Skipping export.")
 
 
 def load_curve_file_dict(scenarios):
