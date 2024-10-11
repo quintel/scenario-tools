@@ -1,5 +1,5 @@
 import pandas as pd
-
+pd.DataFrame.iteritems = pd.DataFrame.items
 from helpers.file_helpers import read_csv, get_folder, check_duplicates
 from helpers.helpers import exit
 
