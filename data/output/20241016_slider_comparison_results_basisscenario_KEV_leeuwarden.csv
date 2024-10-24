@@ -1,0 +1,10 @@
+set_name,output_gquery,unit,result_start_value,result_future_value
+Zonneparken bouwen,emissions_total,T,637209.0912322782,603490.4494986493
+Zonnepanelen op gebouwen,emissions_total,T,637209.0912322782,624682.1904300196
+Grote windmolens,emissions_total,T,637209.0912322782,631738.3703432275
+Kleine windmolens,emissions_total,T,637209.0912322782,638187.7152541365
+Aardgasvrij individueel,emissions_total,T,637209.0912322782,478603.3527724966
+Aardgasvrij collectief,emissions_total,T,637209.0912322782,640018.4251327952
+Gebouwen beter isoleren,emissions_total,T,637209.0912322782,497756.9077224567
+Gedragsaanpassing bewoners,emissions_total,T,637209.0912322782,630416.9325808503
+Industrie & bedrijven verduurzamen,emissions_total,T,637209.0912322782,637209.0912322782
