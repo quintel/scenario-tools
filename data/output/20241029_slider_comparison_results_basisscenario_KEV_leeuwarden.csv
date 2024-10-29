@@ -1,0 +1,11 @@
+set_name,output_gquery,unit,result_start_value,result_future_value
+Zonneparken bouwen,total_net_co2_emissions,mt,0.4538014357143162,0.43818116340264124
+Zonnepanelen op gebouwen,total_net_co2_emissions,mt,0.4538165741648323,0.45267187854705687
+Grote windmolens,total_net_co2_emissions,mt,0.4538165741648323,0.4519841108836633
+Kleine windmolens,total_net_co2_emissions,mt,0.4544707158524441,0.45362602680634095
+Aardgasvrij individueel,total_net_co2_emissions,mt,0.4544707158524441,0.44868509909433724
+Aardgasvrij collectief,total_net_co2_emissions,mt,0.4544707158524441,0.4495652726791676
+Gebouwen beter isoleren,total_net_co2_emissions,mt,0.4544707158524441,0.43464750524013873
+Gedragsaanpassing bewoners,total_net_co2_emissions,mt,0.4544707158524441,0.45260832916137544
+Industrie & bedrijven verduurzamen,total_net_co2_emissions,mt,0.4544707158524441,0.4489013460487136
+Basisscenario,total_net_co2_emissions,mt,0.4544707158524441,0.4538014357143162
