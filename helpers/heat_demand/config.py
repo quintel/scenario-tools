@@ -1,23 +1,5 @@
 from helpers.file_helpers import read_csv
 
-# Old config:
-
-    # R-value used for EU from ECN [m^2 K / W]
-    # R_VALUES = {
-    #     "terraced_houses": {"low": 0.306, "medium": 1.522, "high": 4.236},
-    #     "semi_detached_houses": {"low": 0.324, "medium": 1.483, "high": 4.346},
-    #     "apartments": {"low": 0.301, "medium": 1.694, "high": 4.400},
-    #     "detached_houses": {"low": 0.329, "medium": 1.545, "high": 4.455}
-    # }
-
-    # Fitting numbers used for EU
-    # BEHAVIOUR_FITTING_RESULTS = {
-    #     "terraced_houses": {'low': 0.0, 'medium': 0.0, 'high': 0.0},
-    #     "semi_detached_houses":  {'low': 0.0, 'medium': 0.0, 'high': 0.0},
-    #     "apartments": {'low': 0.0, 'medium': 0.0, 'high': 0.0},
-    #     "detached_houses": {'low': 0.0, 'medium': 0.0, 'high': 0.0}
-    # }
-
 class InsulationConfig():
     INSULATION_TYPES = ["low", "medium", "high"]
     HOUSE_NAMES = [
