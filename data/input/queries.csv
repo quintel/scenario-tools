@@ -1,7 +1,4 @@
 query
-lv_net_peak_load_future
-mv_net_peak_load_future
-hv_net_peak_load_future
 final_demand_of_ambient_energetic_in_bezier
 final_demand_of_ammonia_energetic_in_bezier
 final_demand_of_biomass_products_energetic_in_bezier
