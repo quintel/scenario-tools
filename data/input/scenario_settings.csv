@@ -1,4 +1,4 @@
-input,GM0482_A_besp_laag,GM0505_A_besp_laag,GM0512_A_besp_laag,GM0523_A_besp_laag,GM0531_A_besp_laag,GM1978_A_besp_laag,GM0590_A_besp_laag,GM0610_A_besp_laag,GM0642_A_besp_laag,GM0518_A_besp_laag,GM0503_A_besp_laag,GM1916_A_besp_laag,GM1842_A_besp_laag,GM1926_A_besp_laag,GM0603_A_besp_laag,GM0629_A_besp_laag,GM1783_A_besp_laag,GM0637_A_besp_laag,GM0484_A_besp_laag,GM0534_A_besp_laag,GM1884_A_besp_laag,GM0537_A_besp_laag,GM0546_A_besp_laag,GM0547_A_besp_laag,GM0553_A_besp_laag,GM0569_A_besp_laag,GM0575_A_besp_laag,GM0579_A_besp_laag,GM1525_A_besp_laag,GM0626_A_besp_laag,GM0638_A_besp_laag,GM1901_A_besp_laag,GM0513_A_besp_laag,GM1931_A_besp_laag,GM0627_A_besp_laag,GM1892_A_besp_laag,GM0613_A_besp_laag,GM0489_A_besp_laag,GM0502_A_besp_laag,GM0542_A_besp_laag,GM1621_A_besp_laag,GM0556_A_besp_laag,GM0597_A_besp_laag,GM0599_A_besp_laag,GM0606_A_besp_laag,GM0622_A_besp_laag,GM0501_A_besp_laag,GM1924_A_besp_laag,GM0530_A_besp_laag,GM1963_A_besp_laag,GM1930_A_besp_laag,GM0614_A_besp_laag
+input,GM0482_A_flex_laag,GM0505_A_flex_laag,GM0512_A_flex_laag,GM0523_A_flex_laag,GM0531_A_flex_laag,GM1978_A_flex_laag,GM0590_A_flex_laag,GM0610_A_flex_laag,GM0642_A_flex_laag,GM0518_A_flex_laag,GM0503_A_flex_laag,GM1916_A_flex_laag,GM1842_A_flex_laag,GM1926_A_flex_laag,GM0603_A_flex_laag,GM0629_A_flex_laag,GM1783_A_flex_laag,GM0637_A_flex_laag,GM0484_A_flex_laag,GM0534_A_flex_laag,GM1884_A_flex_laag,GM0537_A_flex_laag,GM0546_A_flex_laag,GM0547_A_flex_laag,GM0553_A_flex_laag,GM0569_A_flex_laag,GM0575_A_flex_laag,GM0579_A_flex_laag,GM1525_A_flex_laag,GM0626_A_flex_laag,GM0638_A_flex_laag,GM1901_A_flex_laag,GM0513_A_flex_laag,GM1931_A_flex_laag,GM0627_A_flex_laag,GM1892_A_flex_laag,GM0613_A_flex_laag,GM0489_A_flex_laag,GM0502_A_flex_laag,GM0542_A_flex_laag,GM1621_A_flex_laag,GM0556_A_flex_laag,GM0597_A_flex_laag,GM0599_A_flex_laag,GM0606_A_flex_laag,GM0622_A_flex_laag,GM0501_A_flex_laag,GM1924_A_flex_laag,GM0530_A_flex_laag,GM1963_A_flex_laag,GM1930_A_flex_laag,GM0614_A_flex_laag
 agriculture_bio_kerosene_in_crude_oil_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 agriculture_biodiesel_in_crude_oil_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 agriculture_burner_crude_oil_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -47,10 +47,10 @@ bunkers_ship_using_lng_share,100,100,100,100,100,100,100,100,100,100,100,100,100
 bunkers_useful_demand_planes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 bunkers_useful_demand_ships,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 capacity_costs_energy_flexibility_flow_batteries_electricity,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-capacity_of_industry_chemical_flexibility_load_shifting_electricity,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50
-capacity_of_industry_metal_flexibility_load_shifting_electricity,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50
-capacity_of_industry_other_flexibility_load_shifting_electricity,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50
-capacity_of_industry_other_ict_flexibility_load_shifting_electricity,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50
+capacity_of_industry_chemical_flexibility_load_shifting_electricity,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+capacity_of_industry_metal_flexibility_load_shifting_electricity,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+capacity_of_industry_other_flexibility_load_shifting_electricity,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+capacity_of_industry_other_ict_flexibility_load_shifting_electricity,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 change_in_energetic_emissions_other_ghg_agriculture,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135,135
 change_in_energetic_emissions_other_ghg_buildings,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 change_in_energetic_emissions_other_ghg_energy,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -297,7 +297,7 @@ households_cooling_heatpump_ground_water_electricity_share,9,9,9,9,9,9,9,9,9,9,9
 households_cooling_heatpump_surface_water_water_ts_electricity_share,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 households_flexibility_consumer_electricity_price,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 households_flexibility_consumer_gas_price,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-households_flexibility_p2p_electricity_market_penetration,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40
+households_flexibility_p2p_electricity_market_penetration,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 households_heater_combined_hydrogen_heat_output_capacity,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 households_heater_combined_network_gas_heat_output_capacity,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 households_heater_district_heating_ht_steam_hot_water_heat_output_capacity,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -478,14 +478,14 @@ transport_bicycle_using_electricity_share,50,50,50,50,50,50,50,50,50,50,50,50,50
 transport_bicycle_using_human_power_share,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50
 transport_bus_using_compressed_natural_gas_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_bus_using_diesel_mix_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-transport_bus_using_electricity_availability,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+transport_bus_using_electricity_availability,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_bus_using_electricity_share,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75
 transport_bus_using_gasoline_mix_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_bus_using_hydrogen_share,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25
 transport_bus_using_lng_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_car_using_compressed_natural_gas_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_car_using_diesel_mix_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-transport_car_using_electricity_availability,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20
+transport_car_using_electricity_availability,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_car_using_electricity_fast_charging_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_car_using_electricity_home_charging_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_car_using_electricity_share,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
@@ -532,7 +532,7 @@ transport_ships_efficiency,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0
 transport_trains_efficiency,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1
 transport_truck_using_compressed_natural_gas_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_truck_using_diesel_mix_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-transport_truck_using_electricity_availability,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+transport_truck_using_electricity_availability,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_truck_using_electricity_share,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85
 transport_truck_using_gasoline_mix_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_truck_using_hydrogen_share,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15
@@ -541,7 +541,7 @@ transport_useful_demand_freight_tonne_kms,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
 transport_useful_demand_passenger_kms,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4
 transport_van_using_compressed_natural_gas_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_van_using_diesel_mix_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-transport_van_using_electricity_availability,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+transport_van_using_electricity_availability,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_van_using_electricity_share,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
 transport_van_using_gasoline_mix_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 transport_van_using_hydrogen_share,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
