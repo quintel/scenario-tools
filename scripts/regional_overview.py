@@ -12,7 +12,7 @@ from helpers.file_helpers import read_yml
 
 if __name__ == "__main__":
 
-    base_url, _, _ = process_arguments(sys.argv)
+    base_url, _, _, _ = process_arguments(sys.argv)
 
     print('Opening CSV files:')
     scenarios = ScenarioCollection.from_csv('regional_overview_scenarios')
