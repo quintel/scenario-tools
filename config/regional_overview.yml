@@ -213,9 +213,11 @@
 
 - section: Supply mix - hydrogen
   queries:
-    energy_import_hydrogen_for_mekko: Import
-    energy_hydrogen_steam_methane_reformer_for_mekko: Steam methane reformer
-    energy_hydrogen_steam_methane_reformer_ccs_for_mekko: Steam methane reformer (CCS)
+    energy_import_hydrogen_baseload_for_mekko: Import (baseload)
+    energy_import_hydrogen_backup_for_mekko: Import (backup)
+    energy_hydrogen_steam_methane_reformer_must_run_for_mekko: Steam methane reformer (must-run)
+    energy_hydrogen_steam_methane_reformer_dispatchable_for_mekko: Steam methane reformer (dispatchable)
+    energy_hydrogen_steam_methane_reformer_ccs_must_run_for_mekko: Steam methane reformer (CCS) (must-run)
     energy_hydrogen_flexibility_p2g_electricity_for_mekko: Electrolysis (grid)
     energy_hydrogen_electrolysis_solar_electricity_for_mekko: Electrolysis (solar park)
     energy_hydrogen_electrolysis_wind_electricity_for_mekko: Electrolysis (wind park)
