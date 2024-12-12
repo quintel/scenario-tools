@@ -1,5 +1,2 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
-2050_DEC_Emmen,2050 Decentrale initiatieven scenario voor de gemeente Emmen,GM0114_emmen,2050,2050 Decentrale initiatieven scenario voor de gemeente Emmen,1249012,True,,,
-2050_NAT_Emmen,2050 Nationale Leiderschap scenario voor de gemeente Emmen,GM0114_emmen,2050,2050 Nationale Leiderschap scenario voor de gemeente Emmen,1249013,True,,,
-2050_EUR_Emmen,2050 Europese Integratie scenario voor de gemeente Emmen,GM0114_emmen,2050,2050 Europese Integratie scenario voor de gemeente Emmen,1249014,True,,,
-2050_INT_Emmen,2050 Internationale Handel scenario voor de gemeente Emmen,GM0114_emmen,2050,2050 Internationale Handel scenario voor de gemeente Emmen,1249015,True,,,
+2050_voorkeursscenario,2050 Voorkeursscenario voor de gemeente Emmen,GM0114_emmen,2050,"2050 scenario waarin de verwachte ontwikkelingen vanuit de gemeente zijn meegenomen. Dit betreft met name: industrie, mobiliteit, ruimteverwarming in de woningbouw",2565874,True,,,
