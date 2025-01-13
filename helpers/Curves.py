@@ -46,7 +46,7 @@ class CurveFile:
 
     def _add_curves(self, data_df):
         '''Create and add a Curve for each column in the data_df'''
-        for key, arr in data_df.iteritems():
+        for key, arr in data_df.items():
             self.curves.add(Curve(key, arr))
 
 
