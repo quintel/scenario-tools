@@ -134,8 +134,9 @@ class ETM_API(object):
         '''
         Get custom curves attached to the scenario.
         Collects custom curves in one pd.DataFrame output.
+        Internal curves (not visible in the frontend if uploaded) are included.
         '''
-        response = self.session.get(f"/scenarios/{self.scenario.id}/custom_curves")
+        response = self.session.get(f"/scenarios/{self.scenario.id}/custom_curves?include_internal=true")
         self.handle_response(
             response,
             fail_info="Error obtaining custom curves.\n")
