@@ -328,8 +328,9 @@ class ETM_API(object):
         '''Checks if curve files should be updated, and uploads them'''
         if not self.scenario.curve_file: return
 
-        print(" Uploading custom curves:")
-        for curve in curve_file_dict[self.scenario.curve_file].curves:
+        curves = curve_file_dict[self.scenario.curve_file].curves
+        print(f" Uploading {len(curves)} custom curves:")
+        for curve in curves:
             print(f"  - {curve.key}")
             self.upload_custom_curve(curve.key, curve.data, self.scenario.curve_file)
 
