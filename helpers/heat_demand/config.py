@@ -42,7 +42,7 @@ class InsulationConfig():
         ]
 
     def __set_heat_capacity_house(self):
-        '''Calculate and set the heat capactity of the house in kWh / K'''
+        '''Calculate and set the heat capacity of the house in kWh / K'''
         # Material constants
         density_concrete = 2400.0 # kg / m**3 (https://en.wikipedia.org/wiki/Properties_of_concrete)
         specific_heat_capacity_concrete = 880.0 # J / kg K (https://www.designingbuildings.co.uk/wiki/Specific_heat_capacity)
