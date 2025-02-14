@@ -59,7 +59,7 @@ class House:
 
 
     def set_energy_exchange(self):
-        '''Initialise energy exchage per delta T'''
+        '''Initialise energy exchange per delta T'''
         U = 1.0 / insulation_config.get_r_values(self.house_type, self.insulation_level)
         # factor 1000 to convert from Watt/K to kW/K
         self.energy_exchange_per_delta_T = (
