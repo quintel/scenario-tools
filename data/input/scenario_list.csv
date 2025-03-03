@@ -1,2 +1,5 @@
-short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,False,2050_price_curves,
+short_name,title,area_code,end_year,description,id,keep_compatible,curve_file
+KEV_2030,KEV 2030 Rotterdam,GM0599_rotterdam,2030,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Rotterdam.,1278940,True,2030_price_curves
+KEV_2035,KEV 2035 Rotterdam,GM0599_rotterdam,2035,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Rotterdam.,1278941,True,2030_price_curves
+Beleidspad_2050,Beleidspad 2050 Rotterdam,GM0599_rotterdam,2050,Dit scenario is op basis van inschatting van doogetrokken beleidspad 2030-2035 richting 2050.,1279078,True,
+pMIEK_2050_A,pMIEK Scenario A 2050 Rotterdam,GM0599_rotterdam,2050,Dit scenario gebaseerd op het pMIEk scenario voor Rotterdam. Dat scenario is gemaakt ter ondersteuning van het pMIEK 2.0 proces. Er zat geen aanbod in dat scenario.,1279080,True,pMIEK_NAT_50_curves
