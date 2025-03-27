@@ -1,2 +1,2 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
-2030_verkennend_scenario,Vervolg op basisscenario 2030 met opwek en aanpassingen doorgevoerd tijdens werksessie 2,GM0080_leeuwarden,2030,"Aangepaste versie van basisscenario met opwek, opgesteld tijdens werksessie 2. Aanpassingen omvatten o.a.: extra geothermie en woningen op warmtenetten, extra zon op veld, hogere isolatie woningen, hogere elektrificatie FrieslandCampina.",1273462,True,heat_network_orders.csv,,
+2030_doelstelling,Doelstellingsscenario voor Leeuwarden,GM0080_leeuwarden,2030,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Leeuwarden.,1283229,True,heat_network_orders.csv,,
