@@ -149,7 +149,7 @@ class ETM_API(object):
             response = self.session.get(f"/scenarios/{self.scenario.id}/custom_curves/{curve}.csv")
             # Decode and obtain float values of curve
             decoded_response = response.content.decode('utf-8').split('\n')
-            float_values = [float(value) for value in decoded_response]
+            float_values = [float(value) for value in decoded_response if value.strip()]
             # Add curve to dataframe
             df[curve] = float_values
 
