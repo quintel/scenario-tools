@@ -1,2 +1,3 @@
-short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,False,2050_price_curves,
+short_name,title,area_code,end_year,description,id,keep_compatible,heat_network_order,curve_file,heat_demand
+2050_veenendaal_max_alt,Veenendaal 2050 max-alt,GM0345_veenendaal,2050,"2050 scenario voor Veenendaal met maximale inzet op alternatieven. De regionalisatie van het NBNL KM-scenario vormt de basis voor dit scenario, aangevuld met data vanuit de gemeente en de aanpak uit het pMIEK-traject voor de provincie Utrecht.",171,True,heat_network_orders,KM_custom_curves,
+2050_veenendaal_max_e,Veenendaal 2050 max-e,GM0345_veenendaal,2050,"2050 scenario voor Veenendaal met maximale elektrificatie. De regionalisatie van het NBNL KM-scenario vormt de basis voor dit scenario, aangevuld met data vanuit de gemeente en de aanpak uit het pMIEK-traject voor de provincie Utrecht.",172,True,heat_network_orders,KM_custom_curves,
