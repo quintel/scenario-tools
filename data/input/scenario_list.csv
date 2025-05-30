@@ -1,4 +1,4 @@
 short_name,title,area_code,end_year,description,id,keep_compatible
-2030_KEV_deventer,2030 KEV scenario voor gemeente Deventer,GM0150_deventer,2030,2030 KEV scenario voor gemeente Deventer,1315484,True
-2050_KM_deventer,2050 Koersvaste Middenweg scenario voor gemeente Deventer,GM0150_deventer,2050,2050 Koersvaste Middenweg scenario voor gemeente Deventer,1315485,True
-2050_HA_deventer,2050 Horizon Aanvoer scenario voor gemeente Deventer,GM0150_deventer,2050,2050 Horizon Aanvoer scenario voor gemeente Deventer,1315486,True
+2030_KEV_deventer,2030 KEV scenario voor gemeente Deventer,GM0150_deventer,2030,2030 KEV scenario voor gemeente Deventer,1326471.0,True
+2050_max_e_deventer,2050 max-e voor gemeente Deventer,GM0150_deventer,2050,2050 max-e voor gemeente Deventer,1326472.0,True
+2050_max_alt_deventer,2050 max-alt scenario voor gemeente Deventer,GM0150_deventer,2050,2050 max-alt scenario voor gemeente Deventer,1326473.0,True
