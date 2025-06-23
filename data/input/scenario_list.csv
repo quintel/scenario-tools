@@ -1,4 +1,4 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file
-2030_KEV_Coevorden,2030 KEV scenario voor gemeente Coevorden,GM0109_coevorden,2030,2030 KEV scenario voor gemeente Coevorden,2685262.0,True,2030_price_curves
-2040_KM_Coevorden,2040 Koers Middenweg scenario voor gemeente Coevorden,GM0109_coevorden,2040,2040 Koers Middenweg scenario voor gemeente Coevorden,2685263.0,True,KM_custom_curves
-2050_KM_Coevorden,2050 Koers Middenweg scenario voor gemeente Coevorden,GM0109_coevorden,2050,2050 Koers Middenweg scenario voor gemeente Coevorden,2685264.0,True,KM_custom_curves
+2030_KEV_Coevorden,2030 KEV scenario voor gemeente Coevorden,GM0109_coevorden,2030,2030 KEV scenario voor gemeente Coevorden,1318715,True,2030_price_curves
+2040_KM_Coevorden,2040 Koers Middenweg scenario voor gemeente Coevorden,GM0109_coevorden,2040,2040 Koers Middenweg scenario voor gemeente Coevorden,1318716,True,KM_custom_curves
+2050_KM_Coevorden,2050 Koers Middenweg scenario voor gemeente Coevorden,GM0109_coevorden,2050,2050 Koers Middenweg scenario voor gemeente Coevorden,1318720,True,KM_custom_curves
