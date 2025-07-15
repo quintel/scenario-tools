@@ -1,4 +1,4 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-KEV_2030,KEV 2030 Het Hogeland,GM1966_het_hogeland,2030,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Het Hogeland.,1345739.0,True,,
-KEV_2035,KEV 2035 Het Hogeland,GM1966_het_hogeland,2035,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Het Hogeland.,1345761.0,True,,
-2050_KM,KM 2050 Het Hogeland,GM1966_het_hogeland,2050,Dit scenario is een regionalisatie van het KM-scenario van Netbeheer Nederland voor de gemeente Het Hogeland.,1345762.0,True,,
+KEV_2030,KEV 2030 Het Hogeland,GM1966_het_hogeland,2030,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Het Hogeland.,5211.0,True,,
+KEV_2035,KEV 2035 Het Hogeland,GM1966_het_hogeland,2035,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Het Hogeland.,5212.0,True,,
+2050_KM,KM 2050 Het Hogeland,GM1966_het_hogeland,2050,Dit scenario is een regionalisatie van het KM-scenario van Netbeheer Nederland voor de gemeente Het Hogeland.,5213.0,True,,
