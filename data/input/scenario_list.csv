@@ -1,5 +1,5 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file
-2030_KEV_deventer,2030 KEV scenario voor gemeente Deventer,GM0150_deventer,2030,2030 KEV scenario voor gemeente Deventer,4659.0,True,2030_price_curves
-2050_basispad_deventer,2050 Basispadscenario voor gemeente Deventer,GM0150_deventer,2050,2050 Basispadscenario voor gemeente Deventer,4660.0,True,KM_custom_curves
-2050_max_e_deventer,2050 max-e voor gemeente Deventer,GM0150_deventer,2050,2050 max-e voor gemeente Deventer,4661.0,True,KM_custom_curves
-2050_max_alt_deventer,2050 max-alt scenario voor gemeente Deventer,GM0150_deventer,2050,2050 max-alt scenario voor gemeente Deventer,4662.0,True,KM_custom_curves
+2030_KEV_deventer,2030 KEV scenario voor gemeente Deventer,GM0150_deventer,2030,2030 KEV scenario voor gemeente Deventer,5230.0,True,2030_price_curves
+2050_basispad_deventer,2050 Basispadscenario voor gemeente Deventer,GM0150_deventer,2050,2050 Basispadscenario voor gemeente Deventer,5231.0,True,KM_custom_curves
+2050_max_e_deventer,2050 max-e voor gemeente Deventer,GM0150_deventer,2050,2050 max-e voor gemeente Deventer,5232.0,True,KM_custom_curves
+2050_max_alt_deventer,2050 max-alt scenario voor gemeente Deventer,GM0150_deventer,2050,2050 max-alt scenario voor gemeente Deventer,5233.0,True,KM_custom_curves
