@@ -375,7 +375,7 @@ efficiency_industry_chp_wood_pellets_electricity,18.3,18.3,18.3
 efficiency_industry_chp_wood_pellets_heat,47,47,47
 efficiency_transport_flexibility_p2p_electricity,87,87,87
 electricity_interconnector_1_capacity,,,
-electricity_interconnector_1_co2_emissions_future,86.05627937,86.05627937,86.05627937
+electricity_interconnector_1_co2_emissions_future,86,86,86
 electricity_interconnector_1_co2_emissions_present,,,
 electricity_interconnector_1_export_availability,100,100,100
 electricity_interconnector_1_import_availability,21,95,100
