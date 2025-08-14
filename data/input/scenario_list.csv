@@ -1,2 +1,11 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,False,2050_price_curves,
+amsterdam,validatie,GM0363_amsterdam,2050,,1357574.0,,,
+eemsdelta,validatie,GM1979_eemsdelta,2050,,1357575.0,,,
+deventer,validatie,GM0150_deventer,2050,,1357576.0,,,
+rotterdam,validatie,GM0599_rotterdam,2050,,1357577.0,,,
+leiden,validatie,GM0546_leiden,2050,,1357578.0,,,
+westland,validatie,GM1783_westland,2050,,1357579.0,,,
+utrecht,validatie,GM0344_utrecht,2050,,1357580.0,,,
+amersfoort,validatie,GM0307_amersfoort,2050,,1357581.0,,,
+coevorden,validatie,GM0109_coevorden,2050,,1357582.0,,,
+steenwijkerland,validatie,GM1708_steenwijkerland,2050,,1357583.0,,,
