@@ -1,6 +1,2 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-KM_2050,KM scenario,nl2019,2050,KM scenario ,8797,False,,
-KM_2040,KM scenario,nl2019,2040,KM scenario ,11182,False,,
-KM_2030,KM scenario,nl2019,2030,KM scenario ,11183,False,,
-KM_2025,KM scenario,nl2019,2025,KM scenario ,11281,False,,
-KM_2035,KM scenario,nl2019,2035,KM scenario ,11282,False,,
+2050_NatL,II3050 v2 - National Leadership - stable,nl2019,2050,II3050 v2 - National Leadership - stable,11557,FALSE,electricity_curve,
