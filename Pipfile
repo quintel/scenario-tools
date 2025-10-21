@@ -13,6 +13,7 @@ pyyaml = '*'
 pylint = '*'
 pytest = "*"
 requests-mock = "*"
+ipykernel = "*"
 
 [requires]
 python_version = "3.9"
