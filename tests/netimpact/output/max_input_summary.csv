@@ -1,135 +1,278 @@
 file,time_of_max,key,value,filter
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_appliances_electricity,314.1651,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_cooling_airconditioning_electricity,23.7639,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_cooling_collective_heatpump_water_water_ts_electricity,2.6818,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_cooling_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_cooling_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_lighting_efficient_fluorescent_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_lighting_led_electricity,192.1378,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_lighting_standard_fluorescent_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_space_heater_collective_heatpump_water_water_ts_electricity,249.9737,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_space_heater_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_space_heater_heatpump_air_water_electricity,288.9523,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_space_heater_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_space_heater_hybrid_crude_oil_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_space_heater_hybrid_heatpump_air_water_electricity,318.1847,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,buildings_space_heater_hybrid_hydrogen_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_cooker_halogen_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_cooker_induction_electricity,39.4587,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_cooker_resistive_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_cooling_airconditioning_electricity,4.9433,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_cooling_heatpump_air_water_electricity,1.9604,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_cooling_heatpump_ground_water_electricity,0.0961,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_cooling_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_final_demand_for_appliances_electricity,293.0089,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_flexibility_p2p_electricity,1556.4915,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_lighting_efficient_fluorescent_electricity,1.7371,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_lighting_incandescent_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_lighting_led_electricity,23.9471,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_space_heater_electricity,983.4799,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_space_heater_heatpump_air_water_electricity,790.9257,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_space_heater_heatpump_ground_water_electricity,236.0677,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_space_heater_heatpump_pvt_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_space_heater_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_space_heater_hybrid_crude_oil_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_space_heater_hybrid_heatpump_air_water_electricity,826.1255,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_space_heater_hybrid_hydrogen_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_water_heater_heatpump_air_water_electricity,76.7541,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_water_heater_heatpump_ground_water_electricity,14.0201,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_water_heater_heatpump_pvt_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_water_heater_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_water_heater_hybrid_crude_oil_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_water_heater_hybrid_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_water_heater_hybrid_hydrogen_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,households_water_heater_resistive_electricity,28.3354,Gebouwde_omgeving
-ZH_KM_merit_order.csv,2050-02-05 12:00,agriculture_flexibility_p2h_hydrogen_electricity,0.0,Glastuinbouw
-ZH_KM_merit_order.csv,2050-02-05 12:00,agriculture_flexibility_p2h_network_gas_electricity,10.2941,Glastuinbouw
-ZH_KM_merit_order.csv,2050-02-05 12:00,agriculture_geothermal,20.8256,Glastuinbouw
-ZH_KM_merit_order.csv,2050-02-05 12:00,agriculture_heatpump_water_water_electricity,82.0952,Glastuinbouw
-ZH_KM_merit_order.csv,2050-02-05 12:00,agriculture_heatpump_water_water_ts_electricity,16.3456,Glastuinbouw
-ZH_KM_merit_order.csv,2050-02-05 12:00,agriculture_useful_demand_electricity,1100.8586,Glastuinbouw
-ZH_KM_merit_order.csv,2050-02-05 12:00,energy_power_sector_own_use_electricity,48.8815,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_final_demand_for_other_dsr_load_shifting_electricity,0.0,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_final_demand_for_other_ict_dsr_load_shifting_electricity,54.6371,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_final_demand_for_other_ict_electricity,520.9587,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_final_demand_for_other_non_specified_electricity,256.7044,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_heat_well_geothermal,0.0,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_other_food_captured_co2_electricity,0.0,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_other_food_flexibility_p2h_hydrogen_electricity,0.0,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_other_food_flexibility_p2h_network_gas_electricity,0.0,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_other_food_heater_electricity,53.6825,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_other_paper_captured_co2_electricity,0.0,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_other_paper_flexibility_p2h_hydrogen_electricity,1.1181,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_other_paper_flexibility_p2h_network_gas_electricity,1.3666,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_other_paper_heater_electricity,0.0,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_useful_demand_for_other_food_electricity,213.8195,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,industry_useful_demand_for_other_paper_electricity,2.307,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,other_final_demand_electricity,0.0,Industrie
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_bicycle_using_electricity,3.0403,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_bus_flexibility_p2p_electricity,0.0,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_bus_using_electricity,4.7646,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_car_flexibility_p2p_electricity,648.2126,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_car_using_electricity,1174.8092,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_freight_train_using_electricity,5.7274,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_motorcycle_using_electricity,2.6197,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_passenger_train_using_electricity,65.4889,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_plane_using_electricity,0.0,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_ship_using_electricity,0.0,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_tram_using_electricity,5.6143,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_truck_flexibility_p2p_electricity,0.0,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_truck_using_electricity,86.6625,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_van_flexibility_p2p_electricity,0.0,Mobiliteit
-ZH_KM_merit_order.csv,2050-02-05 12:00,transport_van_using_electricity,48.1678,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_appliances_electricity,510.8078,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_cooling_airconditioning_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_cooling_collective_heatpump_water_water_ts_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_cooling_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_cooling_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_lighting_efficient_fluorescent_electricity,89.2522,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_lighting_led_electricity,171.1945,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_lighting_standard_fluorescent_electricity,111.5652,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_collective_heatpump_water_water_ts_electricity,28.7677,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_electricity,543.838,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_heatpump_air_water_electricity,60.5906,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_hybrid_crude_oil_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_hybrid_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_hybrid_hydrogen_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooker_halogen_electricity,9.0276,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooker_induction_electricity,13.5414,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooker_resistive_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooling_airconditioning_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooling_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooling_heatpump_ground_water_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooling_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_final_demand_for_appliances_electricity,387.265,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_flexibility_p2p_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_lighting_efficient_fluorescent_electricity,16.186,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_lighting_incandescent_electricity,31.7939,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_lighting_led_electricity,11.8505,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_electricity,98.2583,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_heatpump_air_water_electricity,264.4727,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_heatpump_ground_water_electricity,23.2231,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_heatpump_pvt_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_hybrid_crude_oil_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_hybrid_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_hybrid_hydrogen_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_heatpump_air_water_electricity,42.3878,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_heatpump_ground_water_electricity,4.4729,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_heatpump_pvt_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_hybrid_crude_oil_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_hybrid_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_hybrid_hydrogen_heatpump_air_water_electricity,0.0,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_resistive_electricity,20.4476,Gebouwde_omgeving
-ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_flexibility_p2h_hydrogen_electricity,0.0,Glastuinbouw
-ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_flexibility_p2h_network_gas_electricity,0.0,Glastuinbouw
-ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_geothermal,0.0,Glastuinbouw
-ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_heatpump_water_water_electricity,0.0,Glastuinbouw
-ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_heatpump_water_water_ts_electricity,0.0,Glastuinbouw
-ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_useful_demand_electricity,1173.773,Glastuinbouw
-ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_sector_own_use_electricity,48.8815,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chemical_fertilizers_transformation_external_coupling_node,0.0,Energie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chemical_other_transformation_external_coupling_node,0.0,Energie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chemical_refineries_transformation_external_coupling_node,0.0,Energie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_compressor_network_gas,0.0,Energie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_direct_air_capture_co2_electricity,0.0,Energie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_offshore_sequestration_co2_electricity,0.0,Energie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_hv_network_loss,323.7641,Energie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_hybrid_curtailed_electricity,0.0,Energie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_sector_own_use_electricity,48.8815,Energie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_production_synthetic_kerosene_dispatchable,0.0,Energie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_production_synthetic_kerosene_must_run,0.0,Energie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_production_synthetic_methanol,0.0,Energie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_10_exported_electricity,0.0,Export
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_11_exported_electricity,0.0,Export
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_12_exported_electricity,0.0,Export
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_1_exported_electricity,0.0,Export
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_2_exported_electricity,0.0,Export
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_3_exported_electricity,0.0,Export
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_4_exported_electricity,0.0,Export
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_5_exported_electricity,0.0,Export
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_6_exported_electricity,0.0,Export
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_7_exported_electricity,0.0,Export
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_8_exported_electricity,0.0,Export
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_9_exported_electricity,0.0,Export
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_flexibility_curtailment_electricity,0.0,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_flexibility_flow_batteries_electricity,1330.0,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_flexibility_hv_opac_electricity,0.0,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_flexibility_mv_batteries_electricity,2016.9546,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_flexibility_pumped_storage_electricity,0.0,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_boiler_ht_electricity,0.0,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_boiler_lt_electricity,0.0,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_boiler_mt_electricity,0.0,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_flexibility_p2h_boiler_ht_electricity,0.0,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_flexibility_p2h_boiler_mt_electricity,259.612,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_flexibility_p2h_heatpump_ht_electricity,0.0,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_flexibility_p2h_heatpump_mt_electricity,25.1139,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_heatpump_drink_water_water_ts_lt_electricity,0.0,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_heatpump_drink_water_water_ts_mt_electricity,0.0,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_heatpump_surface_water_water_ts_lt_electricity,2.419,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_heatpump_surface_water_water_ts_mt_electricity,40.3941,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_heatpump_waste_water_water_ts_lt_electricity,1.1418,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_heatpump_waste_water_water_ts_mt_electricity,84.0634,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_heatpump_water_water_ht_electricity,0.0,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_heatpump_water_water_lt_electricity,0.0,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_heatpump_water_water_mt_electricity,0.0,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_well_deep_ht_geothermal,0.0,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_well_deep_mt_geothermal,21.872,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_well_shallow_heatpump_mt_geothermal,24.2415,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_well_shallow_lt_geothermal,0.086,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_hydrogen_flexibility_p2g_electricity,2916.6479,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_hydrogen_hybrid_electrolysis_wind_electricity,1633.3333,Flex (warmtenetten)
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_appliances_electricity,315.9202,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_cooling_airconditioning_electricity,23.7639,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_cooling_collective_heatpump_water_water_ts_electricity,2.6818,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_cooling_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_cooling_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_lighting_efficient_fluorescent_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_lighting_led_electricity,193.2112,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_lighting_standard_fluorescent_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_space_heater_collective_heatpump_water_water_ts_electricity,229.1723,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_space_heater_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_space_heater_heatpump_air_water_electricity,288.9523,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_space_heater_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_space_heater_hybrid_crude_oil_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_space_heater_hybrid_heatpump_air_water_electricity,318.1847,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_space_heater_hybrid_hydrogen_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_cooker_halogen_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_cooker_induction_electricity,39.1664,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_cooker_resistive_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_cooling_airconditioning_electricity,4.9433,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_cooling_heatpump_air_water_electricity,1.9604,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_cooling_heatpump_ground_water_electricity,0.0961,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_cooling_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_final_demand_for_appliances_electricity,290.8385,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_flexibility_p2p_electricity,1669.7687,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_lighting_efficient_fluorescent_electricity,1.7242,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_lighting_incandescent_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_lighting_led_electricity,23.7697,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_space_heater_electricity,983.4799,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_space_heater_heatpump_air_water_electricity,676.1759,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_space_heater_heatpump_ground_water_electricity,213.0493,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_space_heater_heatpump_pvt_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_space_heater_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_space_heater_hybrid_crude_oil_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_space_heater_hybrid_heatpump_air_water_electricity,826.1255,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_space_heater_hybrid_hydrogen_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_water_heater_heatpump_air_water_electricity,71.8785,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_water_heater_heatpump_ground_water_electricity,13.9706,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_water_heater_heatpump_pvt_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_water_heater_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_water_heater_hybrid_crude_oil_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_water_heater_hybrid_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_water_heater_hybrid_hydrogen_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_water_heater_resistive_electricity,28.2353,Gebouwde omgeving
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemical_other_captured_co2_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_fertilizers_captured_combustion_co2_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_fertilizers_captured_processes_co2_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_fertilizers_flexibility_p2h_hydrogen_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_fertilizers_flexibility_p2h_network_gas_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_other_flexibility_p2h_hydrogen_electricity,55.7488,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_other_flexibility_p2h_network_gas_electricity,46.6469,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_other_heater_electricity,464.1136,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_other_heatpump_water_water_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_other_steam_recompression_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_refineries_captured_co2_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_refineries_flexibility_p2h_hydrogen_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_refineries_flexibility_p2h_network_gas_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_final_demand_for_chemical_dsr_load_shifting_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_final_demand_for_metal_aluminium_electricity,0.6944,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_final_demand_for_metal_dsr_load_shifting_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_final_demand_for_metal_other_metals_electricity,4.5296,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_final_demand_for_other_dsr_load_shifting_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_final_demand_for_other_ict_dsr_load_shifting_electricity,54.6371,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_final_demand_for_other_ict_electricity,512.4879,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_final_demand_for_other_non_specified_electricity,256.0011,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_heat_well_geothermal,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_other_food_captured_co2_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_other_food_flexibility_p2h_hydrogen_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_other_food_flexibility_p2h_network_gas_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_other_food_heater_electricity,48.783,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_other_paper_captured_co2_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_other_paper_flexibility_p2h_hydrogen_electricity,1.1181,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_other_paper_flexibility_p2h_network_gas_electricity,1.3666,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_other_paper_heater_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_steel_blastfurnace_bof,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_steel_blastfurnace_bof_captured_co2_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_steel_cyclonefurnace_bof,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_steel_cyclonefurnace_bof_captured_co2_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_steel_dri_hydrogen,1.5949,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_steel_dri_network_gas,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_steel_dri_network_gas_captured_co2_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_steel_external_coupling_node,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_steel_external_coupling_node_captured_co2_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_steel_scrap_hbi_eaf,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_useful_demand_for_chemical_fertilizers_electricity,0.0,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_useful_demand_for_chemical_other_electricity,292.9966,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_useful_demand_for_chemical_refineries_electricity,78.4589,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_useful_demand_for_other_food_electricity,213.2337,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_useful_demand_for_other_paper_electricity,2.3007,Industrie
+ZH_KM_merit_order.csv,2050-01-31 12:00,agriculture_flexibility_p2h_hydrogen_electricity,0.0,Landbouw
+ZH_KM_merit_order.csv,2050-01-31 12:00,agriculture_flexibility_p2h_network_gas_electricity,10.2941,Landbouw
+ZH_KM_merit_order.csv,2050-01-31 12:00,agriculture_geothermal,19.0926,Landbouw
+ZH_KM_merit_order.csv,2050-01-31 12:00,agriculture_heatpump_water_water_electricity,75.2637,Landbouw
+ZH_KM_merit_order.csv,2050-01-31 12:00,agriculture_heatpump_water_water_ts_electricity,14.9854,Landbouw
+ZH_KM_merit_order.csv,2050-01-31 12:00,agriculture_useful_demand_electricity,1107.0087,Landbouw
+ZH_KM_merit_order.csv,2050-01-31 12:00,other_final_demand_electricity,0.0,Overig
+ZH_KM_merit_order.csv,2050-01-31 12:00,bunkers_final_demand_for_aviation_electricity,0.0,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,bunkers_final_demand_for_shipping_electricity,0.0,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_bicycle_using_electricity,2.4763,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_bus_flexibility_p2p_electricity,0.0,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_bus_using_electricity,23.0682,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_car_flexibility_p2p_electricity,0.0,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_car_using_electricity,1244.566,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_freight_train_using_electricity,5.1123,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_motorcycle_using_electricity,2.1337,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_passenger_train_using_electricity,53.3407,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_plane_using_electricity,0.0,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_ship_using_electricity,12.1773,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_tram_using_electricity,4.5728,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_truck_flexibility_p2p_electricity,0.0,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_truck_using_electricity,132.1602,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_van_flexibility_p2p_electricity,0.0,Transport
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_van_using_electricity,127.1027,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chemical_fertilizers_transformation_external_coupling_node,0.0,Energie
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chemical_other_transformation_external_coupling_node,0.0,Energie
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chemical_refineries_transformation_external_coupling_node,0.0,Energie
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_compressor_network_gas,0.3722,Energie
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_direct_air_capture_co2_electricity,0.0,Energie
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_offshore_sequestration_co2_electricity,0.0,Energie
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_hv_network_loss,144.6399,Energie
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_hybrid_curtailed_electricity,0.0,Energie
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_sector_own_use_electricity,48.8815,Energie
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_production_synthetic_kerosene_dispatchable,0.0,Energie
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_production_synthetic_kerosene_must_run,0.0,Energie
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_production_synthetic_methanol,0.0,Energie
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_10_exported_electricity,0.0,Export
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_11_exported_electricity,0.0,Export
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_12_exported_electricity,0.0,Export
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_1_exported_electricity,0.0,Export
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_2_exported_electricity,0.0,Export
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_3_exported_electricity,0.0,Export
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_4_exported_electricity,0.0,Export
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_5_exported_electricity,0.0,Export
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_6_exported_electricity,0.0,Export
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_7_exported_electricity,0.0,Export
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_8_exported_electricity,0.0,Export
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_9_exported_electricity,0.0,Export
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_flexibility_curtailment_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_flexibility_flow_batteries_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_flexibility_hv_opac_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_flexibility_mv_batteries_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_flexibility_pumped_storage_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_boiler_ht_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_boiler_lt_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_boiler_mt_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_flexibility_p2h_boiler_ht_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_flexibility_p2h_boiler_mt_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_flexibility_p2h_heatpump_ht_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_flexibility_p2h_heatpump_mt_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_heatpump_drink_water_water_ts_lt_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_heatpump_drink_water_water_ts_mt_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_heatpump_surface_water_water_ts_lt_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_heatpump_surface_water_water_ts_mt_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_heatpump_waste_water_water_ts_lt_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_heatpump_waste_water_water_ts_mt_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_heatpump_water_water_ht_electricity,14.6667,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_heatpump_water_water_lt_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_heatpump_water_water_mt_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_well_deep_ht_geothermal,5.3526,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_well_deep_mt_geothermal,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_well_shallow_heatpump_mt_geothermal,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_well_shallow_lt_geothermal,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_hydrogen_flexibility_p2g_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_hydrogen_hybrid_electrolysis_wind_electricity,0.0,Flex (warmtenetten)
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_appliances_electricity,510.8078,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_cooling_airconditioning_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_cooling_collective_heatpump_water_water_ts_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_cooling_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_cooling_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_lighting_efficient_fluorescent_electricity,89.2522,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_lighting_led_electricity,171.1945,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_lighting_standard_fluorescent_electricity,111.5652,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_collective_heatpump_water_water_ts_electricity,28.7677,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_electricity,543.838,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_heatpump_air_water_electricity,60.5906,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_hybrid_crude_oil_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_hybrid_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_space_heater_hybrid_hydrogen_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooker_halogen_electricity,9.0276,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooker_induction_electricity,13.5414,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooker_resistive_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooling_airconditioning_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooling_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooling_heatpump_ground_water_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_cooling_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_final_demand_for_appliances_electricity,387.265,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_flexibility_p2p_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_lighting_efficient_fluorescent_electricity,16.186,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_lighting_incandescent_electricity,31.7939,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_lighting_led_electricity,11.8505,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_electricity,98.2583,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_heatpump_air_water_electricity,264.4727,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_heatpump_ground_water_electricity,23.2231,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_heatpump_pvt_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_hybrid_crude_oil_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_hybrid_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_space_heater_hybrid_hydrogen_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_heatpump_air_water_electricity,42.3878,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_heatpump_ground_water_electricity,4.4729,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_heatpump_pvt_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_heatpump_surface_water_water_ts_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_hybrid_crude_oil_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_hybrid_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_hybrid_hydrogen_heatpump_air_water_electricity,0.0,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_water_heater_resistive_electricity,20.4476,Gebouwde omgeving
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemical_other_captured_co2_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_fertilizers_captured_combustion_co2_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_fertilizers_captured_processes_co2_electricity,0.0051,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_fertilizers_flexibility_p2h_hydrogen_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_fertilizers_flexibility_p2h_network_gas_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_other_flexibility_p2h_hydrogen_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_other_flexibility_p2h_network_gas_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_other_heater_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_other_heatpump_water_water_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_other_steam_recompression_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_refineries_captured_co2_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_refineries_flexibility_p2h_hydrogen_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_refineries_flexibility_p2h_network_gas_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_final_demand_for_chemical_dsr_load_shifting_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_final_demand_for_metal_aluminium_electricity,3.472,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_final_demand_for_metal_dsr_load_shifting_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_final_demand_for_metal_other_metals_electricity,3.0197,Industrie
 ZH_empty_merit_order.csv,2030-12-07 09:00,industry_final_demand_for_other_dsr_load_shifting_electricity,0.0,Industrie
 ZH_empty_merit_order.csv,2030-12-07 09:00,industry_final_demand_for_other_ict_dsr_load_shifting_electricity,0.0,Industrie
 ZH_empty_merit_order.csv,2030-12-07 09:00,industry_final_demand_for_other_ict_electricity,37.4489,Industrie
@@ -143,21 +286,42 @@ ZH_empty_merit_order.csv,2030-12-07 09:00,industry_other_paper_captured_co2_elec
 ZH_empty_merit_order.csv,2030-12-07 09:00,industry_other_paper_flexibility_p2h_hydrogen_electricity,0.0,Industrie
 ZH_empty_merit_order.csv,2030-12-07 09:00,industry_other_paper_flexibility_p2h_network_gas_electricity,0.0,Industrie
 ZH_empty_merit_order.csv,2030-12-07 09:00,industry_other_paper_heater_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_steel_blastfurnace_bof,0.8742,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_steel_blastfurnace_bof_captured_co2_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_steel_cyclonefurnace_bof,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_steel_cyclonefurnace_bof_captured_co2_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_steel_dri_hydrogen,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_steel_dri_network_gas,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_steel_dri_network_gas_captured_co2_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_steel_external_coupling_node,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_steel_external_coupling_node_captured_co2_electricity,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_steel_scrap_hbi_eaf,0.0,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_useful_demand_for_chemical_fertilizers_electricity,0.013,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_useful_demand_for_chemical_other_electricity,259.2891,Industrie
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_useful_demand_for_chemical_refineries_electricity,261.5297,Industrie
 ZH_empty_merit_order.csv,2030-12-07 09:00,industry_useful_demand_for_other_food_electricity,246.8329,Industrie
 ZH_empty_merit_order.csv,2030-12-07 09:00,industry_useful_demand_for_other_paper_electricity,3.551,Industrie
-ZH_empty_merit_order.csv,2030-12-07 09:00,other_final_demand_electricity,0.0,Industrie
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_bicycle_using_electricity,0.0795,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_bus_flexibility_p2p_electricity,0.0,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_bus_using_electricity,1.1342,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_car_flexibility_p2p_electricity,0.0,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_car_using_electricity,88.0837,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_freight_train_using_electricity,1.3719,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_motorcycle_using_electricity,0.8478,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_passenger_train_using_electricity,70.451,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_plane_using_electricity,0.0,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_ship_using_electricity,0.0,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_tram_using_electricity,6.6796,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_truck_flexibility_p2p_electricity,0.0,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_truck_using_electricity,0.0259,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_van_flexibility_p2p_electricity,0.0,Mobiliteit
-ZH_empty_merit_order.csv,2030-12-07 09:00,transport_van_using_electricity,0.4011,Mobiliteit
+ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_flexibility_p2h_hydrogen_electricity,0.0,Landbouw
+ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_flexibility_p2h_network_gas_electricity,0.0,Landbouw
+ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_geothermal,0.0,Landbouw
+ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_heatpump_water_water_electricity,0.0,Landbouw
+ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_heatpump_water_water_ts_electricity,0.0,Landbouw
+ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_useful_demand_electricity,1173.773,Landbouw
+ZH_empty_merit_order.csv,2030-12-07 09:00,other_final_demand_electricity,0.0,Overig
+ZH_empty_merit_order.csv,2030-12-07 09:00,bunkers_final_demand_for_aviation_electricity,0.0,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,bunkers_final_demand_for_shipping_electricity,0.0,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_bicycle_using_electricity,0.0795,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_bus_flexibility_p2p_electricity,0.0,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_bus_using_electricity,1.1342,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_car_flexibility_p2p_electricity,0.0,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_car_using_electricity,88.0837,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_freight_train_using_electricity,1.3719,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_motorcycle_using_electricity,0.8478,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_passenger_train_using_electricity,70.451,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_plane_using_electricity,0.0,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_ship_using_electricity,0.0,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_tram_using_electricity,6.6796,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_truck_flexibility_p2p_electricity,0.0,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_truck_using_electricity,0.0259,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_van_flexibility_p2p_electricity,0.0,Transport
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_van_using_electricity,0.4011,Transport

@@ -1,0 +1,241 @@
+file,time_of_max,key,value,filter
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_supercritical_ccs_waste_mix,66.0732,Afvalverbrandingscentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_supercritical_waste_mix,0.0,Afvalverbrandingscentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_wood_pellets_ccs_dispatchable,0.0,Biomassa
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_wood_pellets_ccs_must_run,0.0,Biomassa
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_wood_pellets_dispatchable,0.0,Biomassa
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_wood_pellets_must_run,0.0,Biomassa
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_ultra_supercritical_lignite,0.0,Bruinkoolcentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_ultra_supercritical_oxyfuel_ccs_lignite,0.0,Bruinkoolcentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,agriculture_flexibility_p2h_hydrogen_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,agriculture_flexibility_p2h_network_gas_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_flexibility_p2h_boiler_ht_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_flexibility_p2h_boiler_mt_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_flexibility_p2h_heatpump_ht_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_heat_flexibility_p2h_heatpump_mt_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_hydrogen_flexibility_p2g_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_fertilizers_flexibility_p2h_hydrogen_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_fertilizers_flexibility_p2h_network_gas_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_other_flexibility_p2h_hydrogen_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_other_flexibility_p2h_network_gas_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_refineries_flexibility_p2h_hydrogen_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chemicals_refineries_flexibility_p2h_network_gas_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_other_food_flexibility_p2h_hydrogen_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_other_food_flexibility_p2h_network_gas_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_other_paper_flexibility_p2h_hydrogen_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_other_paper_flexibility_p2h_network_gas_electricity,0.0,Flex (conversie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_battery_solar_electricity,475.2867,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_battery_wind_electricity,151.6343,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_flexibility_flow_batteries_electricity,0.0,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_flexibility_hv_opac_electricity,0.0,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_flexibility_mv_batteries_electricity,0.0,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_flexibility_pumped_storage_electricity,0.0,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_flexibility_p2p_electricity,0.0,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_bus_flexibility_p2p_electricity,0.0,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_car_flexibility_p2p_electricity,0.0,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_truck_flexibility_p2p_electricity,0.0,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,transport_van_flexibility_p2p_electricity,0.0,Flex (opslag)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_final_demand_for_chemical_dsr_load_shifting_electricity,0.0,Flex (vraagsturing)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_final_demand_for_metal_dsr_load_shifting_electricity,0.0,Flex (vraagsturing)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_final_demand_for_other_dsr_load_shifting_electricity,0.0,Flex (vraagsturing)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_final_demand_for_other_ict_dsr_load_shifting_electricity,0.0,Flex (vraagsturing)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_combined_cycle_ccs_network_gas,0.0,Gascentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_combined_cycle_network_gas,0.0,Gascentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_engine_network_gas,0.0,Gascentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_turbine_network_gas,0.0,Gascentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_ultra_supercritical_network_gas,0.0,Gascentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_geothermal,0.0,Geothermie
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_10_imported_electricity,0.0,Import
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_11_imported_electricity,0.0,Import
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_12_imported_electricity,0.0,Import
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_1_imported_electricity,2424.8005,Import
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_2_imported_electricity,0.0,Import
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_3_imported_electricity,0.0,Import
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_4_imported_electricity,0.0,Import
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_5_imported_electricity,0.0,Import
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_6_imported_electricity,0.0,Import
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_7_imported_electricity,0.0,Import
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_8_imported_electricity,0.0,Import
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_interconnector_9_imported_electricity,0.0,Import
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_nuclear_gen2_uranium_oxide,0.0,Kerncentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_nuclear_gen3_uranium_oxide,0.0,Kerncentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_nuclear_small_modular_reactor_uranium_oxide,0.0,Kerncentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_combined_cycle_ccs_coal,0.0,Kolencentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_combined_cycle_coal,0.0,Kolencentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_combined_cycle_coal_gas,0.0,Kolencentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_supercritical_coal,0.0,Kolencentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_ultra_supercritical_ccs_coal,0.0,Kolencentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_ultra_supercritical_coal,0.0,Kolencentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_ultra_supercritical_cofiring_coal,0.0,Kolencentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_engine_diesel,0.0,Oliecentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_ultra_supercritical_crude_oil,0.0,Oliecentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_production_synthetic_kerosene_dispatchable,0.0,Transportbrandstoffen
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_coal_gas,0.0,WKK (industrie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chp_combined_cycle_gas_power_fuelmix,0.0,WKK (industrie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chp_engine_gas_power_fuelmix,0.0,WKK (industrie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chp_turbine_gas_power_fuelmix,0.0,WKK (industrie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chp_turbine_hydrogen,0.0,WKK (industrie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chp_ultra_supercritical_coal,0.0,WKK (industrie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,industry_chp_wood_pellets,0.0,WKK (industrie)
+ZH_KM_merit_order.csv,2050-01-31 12:00,agriculture_chp_engine_biogas,0.0,WKK (landbouw)
+ZH_KM_merit_order.csv,2050-01-31 12:00,agriculture_chp_engine_network_gas_dispatchable,0.0,WKK (landbouw)
+ZH_KM_merit_order.csv,2050-01-31 12:00,agriculture_chp_engine_network_gas_must_run,0.0,WKK (landbouw)
+ZH_KM_merit_order.csv,2050-01-31 12:00,agriculture_chp_wood_pellets,0.0,WKK (landbouw)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_combined_cycle_ht_network_gas,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_combined_cycle_mt_network_gas,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_local_engine_ht_biogas,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_local_engine_ht_network_gas,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_local_engine_mt_biogas,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_local_engine_mt_network_gas,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_local_ht_wood_pellets_ccs_dispatchable,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_local_ht_wood_pellets_ccs_must_run,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_local_ht_wood_pellets_dispatchable,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_local_ht_wood_pellets_must_run,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_local_mt_wood_pellets_ccs_dispatchable,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_local_mt_wood_pellets_ccs_must_run,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_local_mt_wood_pellets_dispatchable,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_local_mt_wood_pellets_must_run,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_supercritical_ccs_ht_waste_mix,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_supercritical_ccs_mt_waste_mix,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_supercritical_ht_waste_mix,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_supercritical_mt_waste_mix,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_ultra_supercritical_cofiring_ht_coal,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_ultra_supercritical_cofiring_mt_coal,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_ultra_supercritical_ht_coal,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_ultra_supercritical_ht_lignite,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_ultra_supercritical_mt_coal,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_chp_ultra_supercritical_mt_lignite,0.0,WKK (warmtenet)
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_hydro_mountain,0.0,Waterkracht
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_hydro_river,0.0,Waterkracht
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_combined_cycle_hydrogen,0.0,Waterstofcentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_turbine_hydrogen,0.0,Waterstofcentrales
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_wind_turbine_coastal,0.0,Wind aan de kust
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_wind_turbine_inland,572.8221,Wind op land
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_hybrid_wind_turbine_offshore,3196.2111,Wind op zee
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_wind_turbine_offshore,7534.6777,Wind op zee
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_solar_csp_solar_radiation,0.0,Zon
+ZH_KM_merit_order.csv,2050-01-31 12:00,buildings_solar_pv_solar_radiation,2465.3909,Zon op dak
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_solar_pv_solar_radiation,2447.6168,Zon op dak
+ZH_KM_merit_order.csv,2050-01-31 12:00,households_solar_pvt_solar_radiation,0.0,Zon op dak
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_solar_pv_solar_radiation,479.1472,Zon op land
+ZH_KM_merit_order.csv,2050-01-31 12:00,energy_power_solar_pv_offshore,0.0,Zon op zee
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_supercritical_ccs_waste_mix,0.0,Afvalverbrandingscentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_supercritical_waste_mix,66.0732,Afvalverbrandingscentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_wood_pellets_ccs_dispatchable,0.0,Biomassa
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_wood_pellets_ccs_must_run,0.0,Biomassa
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_wood_pellets_dispatchable,0.0,Biomassa
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_wood_pellets_must_run,0.0,Biomassa
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_ultra_supercritical_lignite,0.0,Bruinkoolcentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_ultra_supercritical_oxyfuel_ccs_lignite,0.0,Bruinkoolcentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_flexibility_p2h_hydrogen_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_flexibility_p2h_network_gas_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_flexibility_p2h_boiler_ht_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_flexibility_p2h_boiler_mt_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_flexibility_p2h_heatpump_ht_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_heat_flexibility_p2h_heatpump_mt_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_hydrogen_flexibility_p2g_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_fertilizers_flexibility_p2h_hydrogen_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_fertilizers_flexibility_p2h_network_gas_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_other_flexibility_p2h_hydrogen_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_other_flexibility_p2h_network_gas_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_refineries_flexibility_p2h_hydrogen_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chemicals_refineries_flexibility_p2h_network_gas_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_other_food_flexibility_p2h_hydrogen_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_other_food_flexibility_p2h_network_gas_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_other_paper_flexibility_p2h_hydrogen_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_other_paper_flexibility_p2h_network_gas_electricity,0.0,Flex (conversie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_battery_solar_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_battery_wind_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_flexibility_flow_batteries_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_flexibility_hv_opac_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_flexibility_mv_batteries_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_flexibility_pumped_storage_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_flexibility_p2p_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_bus_flexibility_p2p_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_car_flexibility_p2p_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_truck_flexibility_p2p_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,transport_van_flexibility_p2p_electricity,0.0,Flex (opslag)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_final_demand_for_chemical_dsr_load_shifting_electricity,0.0,Flex (vraagsturing)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_final_demand_for_metal_dsr_load_shifting_electricity,0.0,Flex (vraagsturing)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_final_demand_for_other_dsr_load_shifting_electricity,0.0,Flex (vraagsturing)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_final_demand_for_other_ict_dsr_load_shifting_electricity,0.0,Flex (vraagsturing)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_combined_cycle_ccs_network_gas,0.0,Gascentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_combined_cycle_network_gas,0.0,Gascentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_engine_network_gas,0.0,Gascentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_turbine_network_gas,0.0,Gascentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_ultra_supercritical_network_gas,0.0,Gascentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_geothermal,0.0,Geothermie
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_10_imported_electricity,0.0,Import
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_11_imported_electricity,0.0,Import
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_12_imported_electricity,0.0,Import
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_1_imported_electricity,4507.5684,Import
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_2_imported_electricity,0.0,Import
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_3_imported_electricity,0.0,Import
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_4_imported_electricity,0.0,Import
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_5_imported_electricity,0.0,Import
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_6_imported_electricity,0.0,Import
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_7_imported_electricity,0.0,Import
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_8_imported_electricity,0.0,Import
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_interconnector_9_imported_electricity,0.0,Import
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_nuclear_gen2_uranium_oxide,0.0,Kerncentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_nuclear_gen3_uranium_oxide,0.0,Kerncentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_nuclear_small_modular_reactor_uranium_oxide,0.0,Kerncentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_combined_cycle_ccs_coal,0.0,Kolencentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_combined_cycle_coal,0.0,Kolencentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_combined_cycle_coal_gas,0.7182,Kolencentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_supercritical_coal,0.0,Kolencentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_ultra_supercritical_ccs_coal,0.0,Kolencentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_ultra_supercritical_coal,0.0,Kolencentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_ultra_supercritical_cofiring_coal,0.0,Kolencentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_engine_diesel,0.0,Oliecentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_ultra_supercritical_crude_oil,0.0,Oliecentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_production_synthetic_kerosene_dispatchable,0.0,Transportbrandstoffen
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_coal_gas,0.1123,WKK (industrie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chp_combined_cycle_gas_power_fuelmix,0.0,WKK (industrie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chp_engine_gas_power_fuelmix,0.0,WKK (industrie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chp_turbine_gas_power_fuelmix,0.0,WKK (industrie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chp_turbine_hydrogen,0.0,WKK (industrie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chp_ultra_supercritical_coal,0.0,WKK (industrie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,industry_chp_wood_pellets,0.0,WKK (industrie)
+ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_chp_engine_biogas,13.9353,WKK (landbouw)
+ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_chp_engine_network_gas_dispatchable,0.0,WKK (landbouw)
+ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_chp_engine_network_gas_must_run,0.0,WKK (landbouw)
+ZH_empty_merit_order.csv,2030-12-07 09:00,agriculture_chp_wood_pellets,0.0,WKK (landbouw)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_combined_cycle_ht_network_gas,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_combined_cycle_mt_network_gas,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_local_engine_ht_biogas,6.2829,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_local_engine_ht_network_gas,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_local_engine_mt_biogas,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_local_engine_mt_network_gas,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_local_ht_wood_pellets_ccs_dispatchable,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_local_ht_wood_pellets_ccs_must_run,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_local_ht_wood_pellets_dispatchable,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_local_ht_wood_pellets_must_run,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_local_mt_wood_pellets_ccs_dispatchable,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_local_mt_wood_pellets_ccs_must_run,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_local_mt_wood_pellets_dispatchable,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_local_mt_wood_pellets_must_run,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_supercritical_ccs_ht_waste_mix,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_supercritical_ccs_mt_waste_mix,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_supercritical_ht_waste_mix,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_supercritical_mt_waste_mix,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_ultra_supercritical_cofiring_ht_coal,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_ultra_supercritical_cofiring_mt_coal,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_ultra_supercritical_ht_coal,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_ultra_supercritical_ht_lignite,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_ultra_supercritical_mt_coal,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_chp_ultra_supercritical_mt_lignite,0.0,WKK (warmtenet)
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_hydro_mountain,0.0,Waterkracht
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_hydro_river,0.0,Waterkracht
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_combined_cycle_hydrogen,0.0,Waterstofcentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_turbine_hydrogen,0.0,Waterstofcentrales
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_wind_turbine_coastal,0.0,Wind aan de kust
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_wind_turbine_inland,112.3674,Wind op land
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_hybrid_wind_turbine_offshore,0.0,Wind op zee
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_wind_turbine_offshore,0.0,Wind op zee
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_solar_csp_solar_radiation,0.0,Zon
+ZH_empty_merit_order.csv,2030-12-07 09:00,buildings_solar_pv_solar_radiation,118.9389,Zon op dak
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_solar_pv_solar_radiation,130.3964,Zon op dak
+ZH_empty_merit_order.csv,2030-12-07 09:00,households_solar_pvt_solar_radiation,0.0,Zon op dak
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_solar_pv_solar_radiation,17.8534,Zon op land
+ZH_empty_merit_order.csv,2030-12-07 09:00,energy_power_solar_pv_offshore,0.0,Zon op zee

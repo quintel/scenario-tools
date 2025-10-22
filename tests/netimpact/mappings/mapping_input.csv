@@ -1,0 +1,164 @@
+﻿key,filter
+agriculture_flexibility_p2h_hydrogen_electricity.input (MW),Landbouw
+agriculture_flexibility_p2h_network_gas_electricity.input (MW),Landbouw
+agriculture_geothermal.input (MW),Landbouw
+agriculture_heatpump_water_water_electricity.input (MW),Landbouw
+agriculture_heatpump_water_water_ts_electricity.input (MW),Landbouw
+agriculture_useful_demand_electricity.input (MW),Landbouw
+buildings_appliances_electricity.input (MW),Gebouwde omgeving
+buildings_cooling_airconditioning_electricity.input (MW),Gebouwde omgeving
+buildings_cooling_collective_heatpump_water_water_ts_electricity.input (MW),Gebouwde omgeving
+buildings_cooling_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+buildings_cooling_heatpump_surface_water_water_ts_electricity.input (MW),Gebouwde omgeving
+buildings_lighting_efficient_fluorescent_electricity.input (MW),Gebouwde omgeving
+buildings_lighting_led_electricity.input (MW),Gebouwde omgeving
+buildings_lighting_standard_fluorescent_electricity.input (MW),Gebouwde omgeving
+buildings_space_heater_collective_heatpump_water_water_ts_electricity.input (MW),Gebouwde omgeving
+buildings_space_heater_electricity.input (MW),Gebouwde omgeving
+buildings_space_heater_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+buildings_space_heater_heatpump_surface_water_water_ts_electricity.input (MW),Gebouwde omgeving
+buildings_space_heater_hybrid_crude_oil_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+buildings_space_heater_hybrid_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+buildings_space_heater_hybrid_hydrogen_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+bunkers_final_demand_for_aviation_electricity.input (MW),Transport
+bunkers_final_demand_for_shipping_electricity.input (MW),Transport
+energy_chemical_fertilizers_transformation_external_coupling_node.input (MW),Energie
+energy_chemical_other_transformation_external_coupling_node.input (MW),Energie
+energy_chemical_refineries_transformation_external_coupling_node.input (MW),Energie
+energy_compressor_network_gas.input (MW),Energie
+energy_direct_air_capture_co2_electricity.input (MW),Energie
+energy_flexibility_curtailment_electricity.input (MW),Flex (opslag)
+energy_flexibility_flow_batteries_electricity.input (MW),Flex (opslag)
+energy_flexibility_hv_opac_electricity.input (MW),Flex (opslag)
+energy_flexibility_mv_batteries_electricity.input (MW),Flex (opslag)
+energy_flexibility_pumped_storage_electricity.input (MW),Flex (opslag)
+energy_heat_boiler_ht_electricity.input (MW),Flex (warmtenetten)
+energy_heat_boiler_lt_electricity.input (MW),Flex (warmtenetten)
+energy_heat_boiler_mt_electricity.input (MW),Flex (warmtenetten)
+energy_heat_flexibility_p2h_boiler_ht_electricity.input (MW),Flex (warmtenetten)
+energy_heat_flexibility_p2h_boiler_mt_electricity.input (MW),Flex (warmtenetten)
+energy_heat_flexibility_p2h_heatpump_ht_electricity.input (MW),Flex (warmtenetten)
+energy_heat_flexibility_p2h_heatpump_mt_electricity.input (MW),Flex (warmtenetten)
+energy_heat_heatpump_drink_water_water_ts_lt_electricity.input (MW),Flex (warmtenetten)
+energy_heat_heatpump_drink_water_water_ts_mt_electricity.input (MW),Flex (warmtenetten)
+energy_heat_heatpump_surface_water_water_ts_lt_electricity.input (MW),Flex (warmtenetten)
+energy_heat_heatpump_surface_water_water_ts_mt_electricity.input (MW),Flex (warmtenetten)
+energy_heat_heatpump_waste_water_water_ts_lt_electricity.input (MW),Flex (warmtenetten)
+energy_heat_heatpump_waste_water_water_ts_mt_electricity.input (MW),Flex (warmtenetten)
+energy_heat_heatpump_water_water_ht_electricity.input (MW),Flex (warmtenetten)
+energy_heat_heatpump_water_water_lt_electricity.input (MW),Flex (warmtenetten)
+energy_heat_heatpump_water_water_mt_electricity.input (MW),Flex (warmtenetten)
+energy_heat_well_deep_ht_geothermal.input (MW),Flex (warmtenetten)
+energy_heat_well_deep_mt_geothermal.input (MW),Flex (warmtenetten)
+energy_heat_well_shallow_heatpump_mt_geothermal.input (MW),Flex (warmtenetten)
+energy_heat_well_shallow_lt_geothermal.input (MW),Flex (warmtenetten)
+energy_hydrogen_flexibility_p2g_electricity.input (MW),Flex (warmtenetten)
+energy_hydrogen_hybrid_electrolysis_wind_electricity.input (MW),Flex (warmtenetten)
+energy_interconnector_10_exported_electricity.input (MW),Export
+energy_interconnector_11_exported_electricity.input (MW),Export
+energy_interconnector_12_exported_electricity.input (MW),Export
+energy_interconnector_1_exported_electricity.input (MW),Export
+energy_interconnector_2_exported_electricity.input (MW),Export
+energy_interconnector_3_exported_electricity.input (MW),Export
+energy_interconnector_4_exported_electricity.input (MW),Export
+energy_interconnector_5_exported_electricity.input (MW),Export
+energy_interconnector_6_exported_electricity.input (MW),Export
+energy_interconnector_7_exported_electricity.input (MW),Export
+energy_interconnector_8_exported_electricity.input (MW),Export
+energy_interconnector_9_exported_electricity.input (MW),Export
+energy_offshore_sequestration_co2_electricity.input (MW),Energie
+energy_power_hv_network_loss.input (MW),Energie
+energy_power_hybrid_curtailed_electricity.input (MW),Energie
+energy_power_sector_own_use_electricity.input (MW),Energie
+energy_production_synthetic_kerosene_dispatchable.input (MW),Energie
+energy_production_synthetic_kerosene_must_run.input (MW),Energie
+energy_production_synthetic_methanol.input (MW),Energie
+households_cooker_halogen_electricity.input (MW),Gebouwde omgeving
+households_cooker_induction_electricity.input (MW),Gebouwde omgeving
+households_cooker_resistive_electricity.input (MW),Gebouwde omgeving
+households_cooling_airconditioning_electricity.input (MW),Gebouwde omgeving
+households_cooling_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+households_cooling_heatpump_ground_water_electricity.input (MW),Gebouwde omgeving
+households_cooling_heatpump_surface_water_water_ts_electricity.input (MW),Gebouwde omgeving
+households_final_demand_for_appliances_electricity.input (MW),Gebouwde omgeving
+households_flexibility_p2p_electricity.input (MW),Gebouwde omgeving
+households_lighting_efficient_fluorescent_electricity.input (MW),Gebouwde omgeving
+households_lighting_incandescent_electricity.input (MW),Gebouwde omgeving
+households_lighting_led_electricity.input (MW),Gebouwde omgeving
+households_space_heater_electricity.input (MW),Gebouwde omgeving
+households_space_heater_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+households_space_heater_heatpump_ground_water_electricity.input (MW),Gebouwde omgeving
+households_space_heater_heatpump_pvt_electricity.input (MW),Gebouwde omgeving
+households_space_heater_heatpump_surface_water_water_ts_electricity.input (MW),Gebouwde omgeving
+households_space_heater_hybrid_crude_oil_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+households_space_heater_hybrid_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+households_space_heater_hybrid_hydrogen_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+households_water_heater_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+households_water_heater_heatpump_ground_water_electricity.input (MW),Gebouwde omgeving
+households_water_heater_heatpump_pvt_electricity.input (MW),Gebouwde omgeving
+households_water_heater_heatpump_surface_water_water_ts_electricity.input (MW),Gebouwde omgeving
+households_water_heater_hybrid_crude_oil_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+households_water_heater_hybrid_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+households_water_heater_hybrid_hydrogen_heatpump_air_water_electricity.input (MW),Gebouwde omgeving
+households_water_heater_resistive_electricity.input (MW),Gebouwde omgeving
+industry_chemical_other_captured_co2_electricity.input (MW),Industrie
+industry_chemicals_fertilizers_captured_combustion_co2_electricity.input (MW),Industrie
+industry_chemicals_fertilizers_captured_processes_co2_electricity.input (MW),Industrie
+industry_chemicals_fertilizers_flexibility_p2h_hydrogen_electricity.input (MW),Industrie
+industry_chemicals_fertilizers_flexibility_p2h_network_gas_electricity.input (MW),Industrie
+industry_chemicals_other_flexibility_p2h_hydrogen_electricity.input (MW),Industrie
+industry_chemicals_other_flexibility_p2h_network_gas_electricity.input (MW),Industrie
+industry_chemicals_other_heater_electricity.input (MW),Industrie
+industry_chemicals_other_heatpump_water_water_electricity.input (MW),Industrie
+industry_chemicals_other_steam_recompression_electricity.input (MW),Industrie
+industry_chemicals_refineries_captured_co2_electricity.input (MW),Industrie
+industry_chemicals_refineries_flexibility_p2h_hydrogen_electricity.input (MW),Industrie
+industry_chemicals_refineries_flexibility_p2h_network_gas_electricity.input (MW),Industrie
+industry_final_demand_for_chemical_dsr_load_shifting_electricity.input (MW),Industrie
+industry_final_demand_for_metal_aluminium_electricity.input (MW),Industrie
+industry_final_demand_for_metal_dsr_load_shifting_electricity.input (MW),Industrie
+industry_final_demand_for_metal_other_metals_electricity.input (MW),Industrie
+industry_final_demand_for_other_dsr_load_shifting_electricity.input (MW),Industrie
+industry_final_demand_for_other_ict_dsr_load_shifting_electricity.input (MW),Industrie
+industry_final_demand_for_other_ict_electricity.input (MW),Industrie
+industry_final_demand_for_other_non_specified_electricity.input (MW),Industrie
+industry_heat_well_geothermal.input (MW),Industrie
+industry_other_food_captured_co2_electricity.input (MW),Industrie
+industry_other_food_flexibility_p2h_hydrogen_electricity.input (MW),Industrie
+industry_other_food_flexibility_p2h_network_gas_electricity.input (MW),Industrie
+industry_other_food_heater_electricity.input (MW),Industrie
+industry_other_paper_captured_co2_electricity.input (MW),Industrie
+industry_other_paper_flexibility_p2h_hydrogen_electricity.input (MW),Industrie
+industry_other_paper_flexibility_p2h_network_gas_electricity.input (MW),Industrie
+industry_other_paper_heater_electricity.input (MW),Industrie
+industry_steel_blastfurnace_bof.input (MW),Industrie
+industry_steel_blastfurnace_bof_captured_co2_electricity.input (MW),Industrie
+industry_steel_cyclonefurnace_bof.input (MW),Industrie
+industry_steel_cyclonefurnace_bof_captured_co2_electricity.input (MW),Industrie
+industry_steel_dri_hydrogen.input (MW),Industrie
+industry_steel_dri_network_gas.input (MW),Industrie
+industry_steel_dri_network_gas_captured_co2_electricity.input (MW),Industrie
+industry_steel_external_coupling_node.input (MW),Industrie
+industry_steel_external_coupling_node_captured_co2_electricity.input (MW),Industrie
+industry_steel_scrap_hbi_eaf.input (MW),Industrie
+industry_useful_demand_for_chemical_fertilizers_electricity.input (MW),Industrie
+industry_useful_demand_for_chemical_other_electricity.input (MW),Industrie
+industry_useful_demand_for_chemical_refineries_electricity.input (MW),Industrie
+industry_useful_demand_for_other_food_electricity.input (MW),Industrie
+industry_useful_demand_for_other_paper_electricity.input (MW),Industrie
+other_final_demand_electricity.input (MW),Overig
+transport_bicycle_using_electricity.input (MW),Transport
+transport_bus_flexibility_p2p_electricity.input (MW),Transport
+transport_bus_using_electricity.input (MW),Transport
+transport_car_flexibility_p2p_electricity.input (MW),Transport
+transport_car_using_electricity.input (MW),Transport
+transport_freight_train_using_electricity.input (MW),Transport
+transport_motorcycle_using_electricity.input (MW),Transport
+transport_passenger_train_using_electricity.input (MW),Transport
+transport_plane_using_electricity.input (MW),Transport
+transport_ship_using_electricity.input (MW),Transport
+transport_tram_using_electricity.input (MW),Transport
+transport_truck_flexibility_p2p_electricity.input (MW),Transport
+transport_truck_using_electricity.input (MW),Transport
+transport_van_flexibility_p2p_electricity.input (MW),Transport
+transport_van_using_electricity.input (MW),Transport

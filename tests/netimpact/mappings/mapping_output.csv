@@ -1,0 +1,121 @@
+﻿key,filter
+agriculture_chp_engine_biogas.output (MW),WKK (landbouw)
+agriculture_chp_engine_network_gas_dispatchable.output (MW),WKK (landbouw)
+agriculture_chp_engine_network_gas_must_run.output (MW),WKK (landbouw)
+agriculture_chp_wood_pellets.output (MW),WKK (landbouw)
+agriculture_flexibility_p2h_hydrogen_electricity.output (MW),Flex (conversie)
+agriculture_flexibility_p2h_network_gas_electricity.output (MW),Flex (conversie)
+buildings_solar_pv_solar_radiation.output (MW),Zon op dak
+energy_battery_solar_electricity.output (MW),Flex (opslag)
+energy_battery_wind_electricity.output (MW),Flex (opslag)
+energy_chp_coal_gas.output (MW),WKK (industrie)
+energy_chp_combined_cycle_ht_network_gas.output (MW),WKK (warmtenet)
+energy_chp_combined_cycle_mt_network_gas.output (MW),WKK (warmtenet)
+energy_chp_local_engine_ht_biogas.output (MW),WKK (warmtenet)
+energy_chp_local_engine_ht_network_gas.output (MW),WKK (warmtenet)
+energy_chp_local_engine_mt_biogas.output (MW),WKK (warmtenet)
+energy_chp_local_engine_mt_network_gas.output (MW),WKK (warmtenet)
+energy_chp_local_ht_wood_pellets_ccs_dispatchable.output (MW),WKK (warmtenet)
+energy_chp_local_ht_wood_pellets_ccs_must_run.output (MW),WKK (warmtenet)
+energy_chp_local_ht_wood_pellets_dispatchable.output (MW),WKK (warmtenet)
+energy_chp_local_ht_wood_pellets_must_run.output (MW),WKK (warmtenet)
+energy_chp_local_mt_wood_pellets_ccs_dispatchable.output (MW),WKK (warmtenet)
+energy_chp_local_mt_wood_pellets_ccs_must_run.output (MW),WKK (warmtenet)
+energy_chp_local_mt_wood_pellets_dispatchable.output (MW),WKK (warmtenet)
+energy_chp_local_mt_wood_pellets_must_run.output (MW),WKK (warmtenet)
+energy_chp_supercritical_ccs_ht_waste_mix.output (MW),WKK (warmtenet)
+energy_chp_supercritical_ccs_mt_waste_mix.output (MW),WKK (warmtenet)
+energy_chp_supercritical_ht_waste_mix.output (MW),WKK (warmtenet)
+energy_chp_supercritical_mt_waste_mix.output (MW),WKK (warmtenet)
+energy_chp_ultra_supercritical_cofiring_ht_coal.output (MW),WKK (warmtenet)
+energy_chp_ultra_supercritical_cofiring_mt_coal.output (MW),WKK (warmtenet)
+energy_chp_ultra_supercritical_ht_coal.output (MW),WKK (warmtenet)
+energy_chp_ultra_supercritical_ht_lignite.output (MW),WKK (warmtenet)
+energy_chp_ultra_supercritical_mt_coal.output (MW),WKK (warmtenet)
+energy_chp_ultra_supercritical_mt_lignite.output (MW),WKK (warmtenet)
+energy_flexibility_flow_batteries_electricity.output (MW),Flex (opslag)
+energy_flexibility_hv_opac_electricity.output (MW),Flex (opslag)
+energy_flexibility_mv_batteries_electricity.output (MW),Flex (opslag)
+energy_flexibility_pumped_storage_electricity.output (MW),Flex (opslag)
+energy_heat_flexibility_p2h_boiler_ht_electricity.output (MW),Flex (conversie)
+energy_heat_flexibility_p2h_boiler_mt_electricity.output (MW),Flex (conversie)
+energy_heat_flexibility_p2h_heatpump_ht_electricity.output (MW),Flex (conversie)
+energy_heat_flexibility_p2h_heatpump_mt_electricity.output (MW),Flex (conversie)
+energy_hydrogen_flexibility_p2g_electricity.output (MW),Flex (conversie)
+energy_interconnector_10_imported_electricity.output (MW),Import
+energy_interconnector_11_imported_electricity.output (MW),Import
+energy_interconnector_12_imported_electricity.output (MW),Import
+energy_interconnector_1_imported_electricity.output (MW),Import
+energy_interconnector_2_imported_electricity.output (MW),Import
+energy_interconnector_3_imported_electricity.output (MW),Import
+energy_interconnector_4_imported_electricity.output (MW),Import
+energy_interconnector_5_imported_electricity.output (MW),Import
+energy_interconnector_6_imported_electricity.output (MW),Import
+energy_interconnector_7_imported_electricity.output (MW),Import
+energy_interconnector_8_imported_electricity.output (MW),Import
+energy_interconnector_9_imported_electricity.output (MW),Import
+energy_power_combined_cycle_ccs_coal.output (MW),Kolencentrales
+energy_power_combined_cycle_ccs_network_gas.output (MW),Gascentrales
+energy_power_combined_cycle_coal.output (MW),Kolencentrales
+energy_power_combined_cycle_coal_gas.output (MW),Kolencentrales
+energy_power_combined_cycle_hydrogen.output (MW),Waterstofcentrales
+energy_power_combined_cycle_network_gas.output (MW),Gascentrales
+energy_power_engine_diesel.output (MW),Oliecentrales
+energy_power_engine_network_gas.output (MW),Gascentrales
+energy_power_geothermal.output (MW),Geothermie
+energy_power_hybrid_wind_turbine_offshore.output (MW),Wind op zee
+energy_power_hydro_mountain.output (MW),Waterkracht
+energy_power_hydro_river.output (MW),Waterkracht
+energy_power_nuclear_gen2_uranium_oxide.output (MW),Kerncentrales
+energy_power_nuclear_gen3_uranium_oxide.output (MW),Kerncentrales
+energy_power_nuclear_small_modular_reactor_uranium_oxide.output (MW),Kerncentrales
+energy_power_solar_csp_solar_radiation.output (MW),Zon
+energy_power_solar_pv_offshore.output (MW),Zon op zee
+energy_power_solar_pv_solar_radiation.output (MW),Zon op land
+energy_power_supercritical_ccs_waste_mix.output (MW),Afvalverbrandingscentrales
+energy_power_supercritical_coal.output (MW),Kolencentrales
+energy_power_supercritical_waste_mix.output (MW),Afvalverbrandingscentrales
+energy_power_turbine_hydrogen.output (MW),Waterstofcentrales
+energy_power_turbine_network_gas.output (MW),Gascentrales
+energy_power_ultra_supercritical_ccs_coal.output (MW),Kolencentrales
+energy_power_ultra_supercritical_coal.output (MW),Kolencentrales
+energy_power_ultra_supercritical_cofiring_coal.output (MW),Kolencentrales
+energy_power_ultra_supercritical_crude_oil.output (MW),Oliecentrales
+energy_power_ultra_supercritical_lignite.output (MW),Bruinkoolcentrales
+energy_power_ultra_supercritical_network_gas.output (MW),Gascentrales
+energy_power_ultra_supercritical_oxyfuel_ccs_lignite.output (MW),Bruinkoolcentrales
+energy_power_wind_turbine_coastal.output (MW),Wind aan de kust
+energy_power_wind_turbine_inland.output (MW),Wind op land
+energy_power_wind_turbine_offshore.output (MW),Wind op zee
+energy_power_wood_pellets_ccs_dispatchable.output (MW),Biomassa
+energy_power_wood_pellets_ccs_must_run.output (MW),Biomassa
+energy_power_wood_pellets_dispatchable.output (MW),Biomassa
+energy_power_wood_pellets_must_run.output (MW),Biomassa
+energy_production_synthetic_kerosene_dispatchable.output (MW),Transportbrandstoffen
+households_flexibility_p2p_electricity.output (MW),Flex (opslag)
+households_solar_pv_solar_radiation.output (MW),Zon op dak
+households_solar_pvt_solar_radiation.output (MW),Zon op dak
+industry_chemicals_fertilizers_flexibility_p2h_hydrogen_electricity.output (MW),Flex (conversie)
+industry_chemicals_fertilizers_flexibility_p2h_network_gas_electricity.output (MW),Flex (conversie)
+industry_chemicals_other_flexibility_p2h_hydrogen_electricity.output (MW),Flex (conversie)
+industry_chemicals_other_flexibility_p2h_network_gas_electricity.output (MW),Flex (conversie)
+industry_chemicals_refineries_flexibility_p2h_hydrogen_electricity.output (MW),Flex (conversie)
+industry_chemicals_refineries_flexibility_p2h_network_gas_electricity.output (MW),Flex (conversie)
+industry_chp_combined_cycle_gas_power_fuelmix.output (MW),WKK (industrie)
+industry_chp_engine_gas_power_fuelmix.output (MW),WKK (industrie)
+industry_chp_turbine_gas_power_fuelmix.output (MW),WKK (industrie)
+industry_chp_turbine_hydrogen.output (MW),WKK (industrie)
+industry_chp_ultra_supercritical_coal.output (MW),WKK (industrie)
+industry_chp_wood_pellets.output (MW),WKK (industrie)
+industry_final_demand_for_chemical_dsr_load_shifting_electricity.output (MW),Flex (vraagsturing)
+industry_final_demand_for_metal_dsr_load_shifting_electricity.output (MW),Flex (vraagsturing)
+industry_final_demand_for_other_dsr_load_shifting_electricity.output (MW),Flex (vraagsturing)
+industry_final_demand_for_other_ict_dsr_load_shifting_electricity.output (MW),Flex (vraagsturing)
+industry_other_food_flexibility_p2h_hydrogen_electricity.output (MW),Flex (conversie)
+industry_other_food_flexibility_p2h_network_gas_electricity.output (MW),Flex (conversie)
+industry_other_paper_flexibility_p2h_hydrogen_electricity.output (MW),Flex (conversie)
+industry_other_paper_flexibility_p2h_network_gas_electricity.output (MW),Flex (conversie)
+transport_bus_flexibility_p2p_electricity.output (MW),Flex (opslag)
+transport_car_flexibility_p2p_electricity.output (MW),Flex (opslag)
+transport_truck_flexibility_p2p_electricity.output (MW),Flex (opslag)
+transport_van_flexibility_p2p_electricity.output (MW),Flex (opslag)
