@@ -1,2 +1,5 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,False,2050_price_curves,
+hvb_all_electric_50,Hart van Brabant all-electric variant zonder flex,RES09_hart_van_brabant,2050,Quintel versie van scenario met NL Koersvaste Middenweg prijscurve,13110,True,nl_km_50_price_curve,
+hvb_max_alt_50,Hart van Brabant maximaal alternatieven zonder flex,RES09_hart_van_brabant,2050,Quintel versie van scenario met NL Koersvaste Middenweg prijscurve,13111,True,nl_km_50_price_curve,
+hvb_all_electric_50_flex,Hart van Brabant all-electric variant met flex,RES09_hart_van_brabant,2050,"Versie van Hart van Brabant all-electric scenario met flexibiliteitsopties, zoals batterijen, productiebeperking en vraagsturing.",13490,True,nl_km_50_price_curve,
+hvb_max_alt_50_flex,Hart van Brabant all-electric variant met flex,RES09_hart_van_brabant,2050,"Versie van Hart van Brabant max-alt scenario met flexibiliteitsopties, zoals batterijen, productiebeperking en vraagsturing.",13912,True,nl_km_50_price_curve,
