@@ -1,3 +1,6 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-2050_KM,KM ontkoppeld,nl2019,2050,KM ontkoppeld,27965.0,False,,
-2050_verminderd,Circulair scenario,nl2019,2050,Circulair scenario,27963.0,False,,
+2050_KM,Copy of KM scenario,nl2019,2050,Copy of KM scenario,29277,False,,
+2050_KGG_midden,Circulair strategies KGG scenario (midden),nl2019,2050,Circulair strategies KGG scenario (midden),29338,False,,
+2050_KGG_hoog,Circulair strategies KGG scenario (hoog),nl2019,2050,Circulair strategies KGG scenario (hoog),29340,False,,
+2050_GP_midden,Circulair strategies Greenpeace scenario (midden),nl2019,2050,Circulair strategies Greenpeace scenario (midden),29341,False,,
+2050_GP_hoog,Circulair strategies Greenpeace scenario (hoog),nl2019,2050,Circulair strategies Greenpeace scenario (hoog),29342,False,,
