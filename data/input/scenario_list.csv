@@ -1,2 +1,4 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,False,2050_price_curves,
+2030_KEV,KEV 2030 Veldhoven,GM0861_veldhoven,2030,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Veldhoven.,31163.0,True,KEV2030_price_curve,
+2040_KM,KM 2040 Veldhoven,GM0861_veldhoven,2040,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Veldhoven.,31164.0,True,KM2040_custom_curves,
+2050_KM,KM 2050 Veldhoven,GM0861_veldhoven,2050,Dit scenario is een regionalisatie van het KM-scenario van Netbeheer Nederland voor de gemeente Veldhoven.,31165.0,True,KM2050_custom_curves,
