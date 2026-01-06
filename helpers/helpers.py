@@ -56,8 +56,8 @@ def process_environment(args):
         base_url = Settings.get('local_engine_url')
         model_url = Settings.get('local_model_url')
     else:
-        base_url = "https://engine.energytransitionmodel.com/api/v3"
-        model_url = "https://pro.energytransitionmodel.com"
+        base_url = "https://2025-01.engine.energytransitionmodel.com/api/v3"
+        model_url = "https://2025-01.energytransitionmodel.com"
 
     return base_url, model_url
 
