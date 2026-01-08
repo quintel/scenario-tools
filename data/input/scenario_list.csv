@@ -1,4 +1,5 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
+KM_Berg en Dal,KM_Berg en Dal,GM1945_berg_en_dal,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederlandmet lokale wijzigingen voor het jaar 2050,32393.0,True,KM2050_custom_curves,
 KM_Aalten,KM_Aalten,GM0197_aalten,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederland voor het jaar 2050,31941.0,True,KM2050_custom_curves,
 KM_Apeldoorn,KM_Apeldoorn,GM0200_apeldoorn,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederland voor het jaar 2050,31942.0,True,KM2050_custom_curves,
 KM_Arnhem,KM_Arnhem,GM0202_arnhem,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederland voor het jaar 2050,31943.0,True,KM2050_custom_curves,
