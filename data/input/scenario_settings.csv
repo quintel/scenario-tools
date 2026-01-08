@@ -61,6 +61,7 @@ transport_useful_demand_freight_tonne_kms,,0,0,0.35,0.35,,0,0,0.52,0.52,,0,0,0.6
 transport_useful_demand_passenger_kms,,0,0,-0.32,-0.53,,0,0,-0.46,-0.77,,0,0,-0.61,-1.02
 transport_van_using_electricity_availability,,0,3.55,3.55,7.1,,0,5.16,5.16,10.32,,0,6.77,6.77,13.55
 wtp_of_energy_heat_flexibility_p2h_boiler_electricity,,16.6,16.6,16.6,16.6,,15.52,15.52,15.52,15.52,,14.43,14.43,14.43,14.43
-capacity_of_energy_flexibility_mv_batteries_electricity,,0,0,0,0,,0,0,0,0,,0,0,0,0
-capacity_of_energy_power_hybrid_wind_turbine_offshore,,10893.55,9804.19,10457.81,9477.39,,15845.16,14260.65,15211.35,13785.29,,20796.77,18717.1,19964.9,18093.19
-capacity_of_energy_power_wind_turbine_offshore,,10800.68,10800.68,10800.68,10800.68,,15275.09,15275.09,15275.09,15275.09,,19749.49,19749.49,19749.49,19749.49
+capacity_of_energy_flexibility_mv_batteries_electricity,,3832.26,0,0,0,,5574.19,0,0,0,,7316.13,0,0,0
+capacity_of_energy_power_hybrid_wind_turbine_offshore,,10893.55,10893.55,10893.55,10893.55,,15845.16,15845.16,15845.16,15845.16,,20796.77,20796.77,20796.77,20796.77
+capacity_of_energy_power_wind_turbine_offshore,,11026.98,10008.65,9103.47,7745.7,,15604.24,14123.04,12806.42,10831.48,,20181.51,18237.43,16509.36,13917.26
+capacity_of_energy_flexibility_flow_batteries_electricity,,2129.03,638.71,21.29,0,,3096.77,929.03,30.97,0,,4064.52,1219.35,40.65,0
