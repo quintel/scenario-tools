@@ -1,2 +1,3 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,False,2050_price_curves,
+2030_KEV,KEV 2030 provincie Utrecht,PV26_utrecht,2030,Regionalisatie provincie Utrecht o.b.v. de KEV.,1413630.0,False,,
+2035_KEV,KEV 2035 provincie Utrecht,PV26_utrecht,2035,Regionalisatie provincie Utrecht o.b.v. de KEV.,1413631.0,False,,
