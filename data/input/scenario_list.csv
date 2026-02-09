@@ -1,5 +1,7 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-2050_K_KGG_midden,Meer koolstoffen strategie KGG scenario (midden),nl2019,2050,Meer koolstoffen strategie KGG scenario (midden),33384,False,,
-2050_K_KGG_hoog,Meer koolstoffen strategie KGG scenario (hoog),nl2019,2050,Meer koolstoffen strategie KGG scenario (hoog),33385,False,,
-2050_K_GP_midden,Meer koolstoffen strategie Greenpeace scenario (midden),nl2019,2050,Meer koolstoffen strategie Greenpeace scenario (midden),33386,False,,
-2050_K_GP_hoog,Meer koolstoffen strategie Greenpeace scenario (hoog),nl2019,2050,Meer koolstoffen strategie Greenpeace scenario (hoog),33387,False,,
+2050_B_GP_midden,Besparen strategie Greenpeace scenario (midden),nl2019,2050,Besparen strategie Greenpeace scenario (midden),34522,False,,
+2050_B_GP_hoog,Besparen strategie Greenpeace scenario (hoog),nl2019,2050,Besparen strategie Greenpeace scenario (hoog),34523,False,,
+2050_W_KGG_midden,Meer warmte strategie KGG scenario (midden),nl2019,2050,Meer warmte strategie KGG scenario (midden),34524,False,,
+2050_W_KGG_hoog,Meer warmte strategie KGG scenario (hoog),nl2019,2050,Meer warmte strategie KGG scenario (hoog),34525,False,,
+2050_W_GP_midden,Meer warmte strategie Greenpeace scenario (midden),nl2019,2050,Meer warmte strategie Greenpeace scenario (midden),34526,False,,
+2050_W_GP_hoog,Meer warmte strategie Greenpeace scenario (hoog),nl2019,2050,Meer warmte strategie Greenpeace scenario (hoog),34527,False,,
