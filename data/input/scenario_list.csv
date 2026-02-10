@@ -1,4 +1,4 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-2030_KEV,KEV 2030 regionalisatie gemeente Meppel,GM0119_meppel,2030,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Meppel.,1425104,True,2030_price_curves,
-2035_KEV,KEV 2035 regionalisatie gemeente Meppel,GM0119_meppel,2035,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Meppel.,1425105,True,2035_price_curves,
-2040_KM,KM 2040 regionalisatie gemeente Meppel,GM0119_meppel,2040,Dit scenario is een regionalisatie van het KM-scenario van Netbeheer Nederland voor de gemeente Meppel.,1425106,True,KM_custom_curves,
+2030_KEV,KEV 2030 regionalisatie gemeente Meppel,GM0119_meppel,2030,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Meppel.,1425104,True,,
+2035_KEV,KEV 2035 regionalisatie gemeente Meppel,GM0119_meppel,2035,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Meppel.,1425105,True,,
+2040_KM,KM 2040 regionalisatie gemeente Meppel,GM0119_meppel,2040,Dit scenario is een regionalisatie van het KM-scenario van Netbeheer Nederland voor de gemeente Meppel.,1425106,True,,
