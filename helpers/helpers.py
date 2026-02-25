@@ -60,8 +60,8 @@ def process_environment(args):
         base_url = "https://2025-01.engine.energytransitionmodel.com/api/v3"
         model_url = "https://2025-01.energytransitionmodel.com"
     else:
-        base_url = "https://engine.energytransitionmodel.com/api/v3"
-        model_url = "https://energytransitionmodel.com"
+        base_url = "https://2025-01.engine.energytransitionmodel.com/api/v3"
+        model_url = "https://2025-01.energytransitionmodel.com"
 
     return base_url, model_url
 
