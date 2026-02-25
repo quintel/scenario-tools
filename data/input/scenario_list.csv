@@ -1,3 +1,2 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-2040_B_regio,Variant B 2040 Veldhoven - We doen het met de regio,GM0861_veldhoven,2040,In deze scenariovariant voor 2040 werkt de gemeente intensief samen met de regio.,34223.0,True,KM2040_custom_curves,
-2050_B_regio,Variant B 2050 Veldhoven - We doen het met de regio,GM0861_veldhoven,2050,In deze scenariovariant voor 2050 werkt de gemeente intensief samen met de regio.,34224.0,True,KM2050_custom_curves,
+2024_Heden,Vertaling 2019 naar 2024 data,GM0861_veldhoven,2024,Dit is een data-update naar het heden van de 2019 dataste,34669,True,,
