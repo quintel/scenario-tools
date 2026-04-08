@@ -1,2 +1,3 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,False,2050_price_curves,
+2040_KM_drechtsteden,Geregionaliseerd KM-scenario Drechtsteden 2040,ES18_drechtsteden,2040,"Dit scenario is een geregionaliseerd KM-scenario voor Drechtsteden voor 2040. De inputs zijn bepaald op basis van de KM-scenario's voor de gemeenten Dordrecht, Papendrecht, Sliedrecht, Zwijndrecht, Hendrik-Ido-Ambacht Alblasserdam, Hardinxveld-Giessendam.",1441656.0,True,,
+2050_KM_drechtsteden,Geregionaliseerd KM-scenario Drechtsteden 2050,ES18_drechtsteden,2050,"Dit scenario is een geregionaliseerd KM-scenario voor Drechtsteden voor 2050. De inputs zijn bepaald op basis van de KM-scenario's voor de gemeenten Dordrecht, Papendrecht, Sliedrecht, Zwijndrecht, Hendrik-Ido-Ambacht Alblasserdam, Hardinxveld-Giessendam.",1441657.0,True,,
