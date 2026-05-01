@@ -1,4 +1,8 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-2030_KEV,KEV 2030 regionalisatie gemeente Meppel,GM0119_meppel,2030,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Meppel.,1425104,True,,
-2035_KEV,KEV 2035 regionalisatie gemeente Meppel,GM0119_meppel,2035,Dit scenario is een regionalisatie van de KEV 2024 voor de gemeente Meppel.,1425105,True,,
-2040_KM,KM 2040 regionalisatie gemeente Meppel,GM0119_meppel,2040,Dit scenario is een regionalisatie van het KM-scenario van Netbeheer Nederland voor de gemeente Meppel.,1425106,True,,
+2030_Meppel_basis,Conceptscenario 2030 gemeente Meppel o.b.v. KEV-regionalisatie,GM0119_meppel,2030,Conceptscenario 2030 gemeente Meppel o.b.v. KEV-regionalisatie,1448726,True,,
+2035_Meppel_basis,Conceptscenario 2035 gemeente Meppel o.b.v. KEV-regionalisatie,GM0119_meppel,2035,Conceptscenario 2035 gemeente Meppel o.b.v. KEV-regionalisatie,1448727,True,,
+2040_KM_Meppel,KM-regionalisatie 2040 voor gemeente Meppel,GM0119_meppel,2040,KM-regionalisatie 2040 voor gemeente Meppel,1448728,True,,
+2040_Meppel_basis,Conceptscenario 2040 gemeente Meppel o.b.v. KM-regionalisatie,GM0119_meppel,2040,Conceptscenario 2040 gemeente Meppel o.b.v. KM-regionalisatie,1448729,True,,
+2040_B_variant_Meppel,Conceptscenariovariant B: Verdergaande elektrificatie,GM0119_meppel,2040,"In het basisscenario zit nog CO2-uitstoot doordat de landelijke mix van gas (m.n. ingezet in industrie) en olie (m.n. ingezet in transport) in 2040 nog niet CO2-neutraal is. Elektriciteit is in 2040 al wel CO2-neutraal, daarom zet dit scenario in op verdergaande elektrificatie.",1448730,True,,
+2040_C_variant_Meppel,Conceptscenariovariant C: Alternatieve energiedragers,GM0119_meppel,2040,"In de werksessie is netcongestie als zware beperkende factor genoemd. Dit scenario zet maximaal in op duurzame alternatieven voor elektriciteit (waterstof, warmte en groen gas) ",1448731,True,,
+2040_D_variant_Meppel,Conceptscenariovariant D: Netrealistisch,GM0119_meppel,2040,Binnen de mogelijkheden van voorziene en mogelijke uitbreiding van energie-infrastructuur,1448732,True,,
