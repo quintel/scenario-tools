@@ -1,3 +1,2 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-2040_KM_drechtsteden,Geregionaliseerd KM-scenario Drechtsteden 2040,ES18_drechtsteden,2040,"Dit scenario is een geregionaliseerd KM-scenario voor Drechtsteden voor 2040. De inputs zijn bepaald op basis van de KM-scenario's voor de gemeenten Dordrecht, Papendrecht, Sliedrecht, Zwijndrecht, Hendrik-Ido-Ambacht Alblasserdam, Hardinxveld-Giessendam.",1441656.0,True,,
-2050_KM_drechtsteden,Geregionaliseerd KM-scenario Drechtsteden 2050,ES18_drechtsteden,2050,"Dit scenario is een geregionaliseerd KM-scenario voor Drechtsteden voor 2050. De inputs zijn bepaald op basis van de KM-scenario's voor de gemeenten Dordrecht, Papendrecht, Sliedrecht, Zwijndrecht, Hendrik-Ido-Ambacht Alblasserdam, Hardinxveld-Giessendam.",1441657.0,True,,
+2023_blanco,Leeg scenario voor Drechtsteden,ES18_drechtsteden,2030,Dit is een leeg scenario voor de regio Drechtsteden,1451042.0,True,,
