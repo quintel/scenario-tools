@@ -1,2 +1,11 @@
 short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
-test_scen,Scenario-Tools Test Scenario,GM0363_amsterdam,2050,"""test scenario""",892503,False,2050_price_curves,
+KM_Bernheze,KM_Bernheze,GM1721_bernheze,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederland voor het jaar 2050,,TRUE,KM2050_custom_curves_latest,
+KM_Boekel,KM_Boekel,GM0755_boekel,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederland voor het jaar 2050,,TRUE,KM2050_custom_curves_latest,
+KM_Boxtel,KM_Boxtel,GM0757_boxtel,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederland voor het jaar 2050,,TRUE,KM2050_custom_curves_latest,
+KM_Land van Cuijk,KM_Land van Cuijk,GM1982_land_van_cuijk,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederland voor het jaar 2050,,TRUE,KM2050_custom_curves_latest,
+KM_Maashorst,KM_Maashorst,GM1991_maashorst,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederland voor het jaar 2050,,TRUE,KM2050_custom_curves_latest,
+KM_Meierijstad,KM_Meierijstad,GM1948_meierijstad,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederland voor het jaar 2050,,TRUE,KM2050_custom_curves_latest,
+KM_Oss,KM_Oss,GM0828_oss,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederland voor het jaar 2050,,TRUE,KM2050_custom_curves_latest,
+KM_'s-Hertogenbosch,KM_'s-Hertogenbosch,GM0796_s_hertogenbosch,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederland voor het jaar 2050,,TRUE,KM2050_custom_curves_latest,
+KM_Sint-Michielsgestel,KM_Sint-Michielsgestel,GM0845_sint_michielsgestel,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederland voor het jaar 2050,,TRUE,KM2050_custom_curves_latest,
+KM_Vught,KM_Vught,GM0865_vught,2050,Dit scenario is een regionalisatie van het Koersvaste Middenweg scenario van Netbeheer Nederland voor het jaar 2050,,TRUE,KM2050_custom_curves_latest,
