@@ -5,6 +5,7 @@ from .settings import Settings
 BETA = ['beta', 'staging']
 LOCAL = ['local', 'localhost']
 PRO = ['pro', 'production']
+STABLE = ['stable']
 
 QUERY_ONLY = ['query_only', 'query-only', 'query', 'read_only', 'read-only',
     'read', 'results_only', 'results-only', 'results']
@@ -38,7 +39,7 @@ def convert_to_lower(arr):
 
 
 def validate_arguments(args):
-    invalid = set(args) - set(LOCAL + BETA + PRO + QUERY_ONLY + COMPLETE)
+    invalid = set(args) - set(LOCAL + BETA + PRO + STABLE + QUERY_ONLY + COMPLETE)
     if invalid:
         print("\n\033[1m" + "WARNING: The following arguments are invalid and "
               f"will be ignored: {', '.join(invalid)}\033[0m"
@@ -55,6 +56,9 @@ def process_environment(args):
     elif set(args) & set(LOCAL):
         base_url = Settings.get('local_engine_url')
         model_url = Settings.get('local_model_url')
+    elif set(args) & set(STABLE):
+        base_url = "https://2025-01.engine.energytransitionmodel.com/api/v3"
+        model_url = "https://2025-01.energytransitionmodel.com"
     else:
         base_url = "https://engine.energytransitionmodel.com/api/v3"
         model_url = "https://energytransitionmodel.com"
