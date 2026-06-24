@@ -1,0 +1,11 @@
+short_name,title,area_code,end_year,description,id,keep_compatible,curve_file,heat_demand
+KM_Gouda+pMIEK_A1,KM_Gouda+pMIEK_A1,GM0513_gouda,2050,,1462130,FALSE,,
+KM_Waddinxveen+pMIEK_A1,KM_Waddinxveen+pMIEK_A1,GM0627_waddinxveen,2050,,1462131,FALSE,,
+KM_Zuidplas+pMIEK_A1,KM_Zuidplas+pMIEK_A1,GM1892_zuidplas,2050,,1462132,FALSE,,
+KM_Bodegraven-Reeuwijk+pMIEK_A1,KM_Bodegraven-Reeuwijk+pMIEK_A1,GM1901_bodegraven_reeuwijk,2050,,1462133,FALSE,,
+KM_Krimpenerwaard+pMIEK_A1,KM_Krimpenerwaard+pMIEK_A1,GM1931_krimpenerwaard,2050,,1462134,FALSE,,
+KM_Gouda+pMIEK_D1,KM_Gouda+pMIEK_D1,GM0513_gouda,2050,,1462135,FALSE,,
+KM_Waddinxveen+pMIEK_D1,KM_Waddinxveen+pMIEK_D1,GM0627_waddinxveen,2050,,1462136,FALSE,,
+KM_Zuidplas+pMIEK_D1,KM_Zuidplas+pMIEK_D1,GM1892_zuidplas,2050,,1462137,FALSE,,
+KM_Bodegraven-Reeuwijk+pMIEK_D1,KM_Bodegraven-Reeuwijk+pMIEK_D1,GM1901_bodegraven_reeuwijk,2050,,1462138,FALSE,,
+KM_Krimpenerwaard+pMIEK_D1,KM_Krimpenerwaard+pMIEK_D1,GM1931_krimpenerwaard,2050,,1462139,FALSE,,
