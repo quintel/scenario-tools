@@ -40,9 +40,9 @@ buildings_space_heater_collective_heatpump_water_water_ts_electricity_share,16.5
 buildings_space_heater_combined_hydrogen_share,0,0,0,0,5,5
 buildings_space_heater_district_heating_ht_steam_hot_water_share,0,0,0,0,0,0
 buildings_space_heater_district_heating_lt_steam_hot_water_share,0,0,0,0,0,0
-buildings_space_heater_district_heating_mt_steam_hot_water_share,14.9,20,5.1,5.1,46.2,46.2
+buildings_space_heater_district_heating_mt_steam_hot_water_share,14.9,20,6.2,6.2,46.2,46.2
 buildings_space_heater_electricity_share,0,0,0,0,0,0
-buildings_space_heater_heatpump_air_water_electricity_share,13.5,22.5,94.9,94.9,24.5,24.5
+buildings_space_heater_heatpump_air_water_electricity_share,13.5,22.5,93.8,93.8,24.5,24.5
 buildings_space_heater_heatpump_air_water_network_gas_share,0,0,0,0,0,0
 buildings_space_heater_heatpump_surface_water_water_ts_electricity_share,0,0,0,0,0,0
 buildings_space_heater_hybrid_heatpump_air_water_electricity_share,23.25,35,0,0,13.8,13.8
@@ -356,11 +356,11 @@ households_heater_district_heating_ht_steam_hot_water_share,0,0,0,0,0,0
 households_heater_district_heating_lt_steam_hot_water_heat_output_capacity,10,10,10,10,10,10
 households_heater_district_heating_lt_steam_hot_water_share,0.75,0.95,0,0,0,0
 households_heater_district_heating_mt_steam_hot_water_heat_output_capacity,10,10,10,10,10,10
-households_heater_district_heating_mt_steam_hot_water_share,14.62,19.05,5.1,5.1,46.2,46.2
+households_heater_district_heating_mt_steam_hot_water_share,14.62,19.05,6.2,6.2,46.2,46.2
 households_heater_electricity_heat_output_capacity,6,6,6,6,6,6
 households_heater_electricity_share,5,8,0,0,0,0
 households_heater_heatpump_air_water_electricity_heat_output_capacity,10,10,10,10,10,10
-households_heater_heatpump_air_water_electricity_share,24.34,37.5,94.9,94.9,18.75,18.75
+households_heater_heatpump_air_water_electricity_share,24.34,37.5,93.8,93.8,18.75,18.75
 households_heater_heatpump_ground_water_electricity_heat_output_capacity,10,10,10,10,10,10
 households_heater_heatpump_ground_water_electricity_share,10.51,12.5,0,0,6.25,6.25
 households_heater_heatpump_pvt_electricity_heat_output_capacity,7.8,7.8,7.8,7.8,7.8,7.8
